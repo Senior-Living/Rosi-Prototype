@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosi 1.0</title>
+</head>
+
+<body>
+    <h1>Add an Activity</h1>
+    <form action="/submitActivity" method="POST">
+
+
+        <label for="activityName">Activity Name:</label><br>
+        <input type="text" id="activityName" name="activityName" required><br><br>
+
+        <label for="activityType">Activity Type:</label><br>
+        <select id="activityType" name="activityType" required>
+            <option value="introverted">Introverted</option>
+            <option value="extroverted">Extroverted</option>
+        </select><br><br>
+
+        <label for="frequency">Frequency:</label><br>
+        <select id="frequency" name="frequency" required>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+        </select><br><br>
+
+        <label for="duration">Duration:</label><br>
+        <select id="duration" name="duration" required>
+            <option value="daily">1 Hour</option>
+            <option value="weekly">2 Hours</option>
+        </select><br><br>
+
+        <label for="activityDescription">Activity Description:</label><br>
+        <textarea id="activityName" name="activityName" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="precautions">Precautions:</label><br>
+        <textarea id="precautions" name="precautions" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="followup">Followup:</label><br>
+        <textarea id="followup" name="followup" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
