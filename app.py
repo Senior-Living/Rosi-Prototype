@@ -56,8 +56,25 @@ def submitUser():
 
     collectionUser.insert_one(submission_data)  # Insert data into MongoDB collection
 
+    suggestedActivities = collectionActivity.find({"activity_type": personality})  # Adjust the filter based on your data structure
 
-    return f"Form submitted successfully!<br>First Name: {firstname}<br>Last Name: {lastname}<br>Age: {age}<br>Gender: {gender}<br>Province: {province}<br>City: {city}<br>Language: {language}<br>Personality Type: {personality}"
+    suggestedActivity = suggestedActivities[0].get("activity_name")
+
+    print("Suggested Activity:" +  suggestedActivity)
+
+    return f"Form submitted successfully!<br>First Name: {firstname}<br>Last Name: {lastname}<br>Age: {age}<br>Gender: {gender}<br>Province: {province}<br>City: {city}<br>Language: {language}<br>Personality Type: {personality} <br> Suggested Activity: {suggestedActivity}"
+
+
+@app.route('/introvertedActivities')
+def introverted_activities():
+    activities = collectionActivity.find({"activity_type": "Introverted"})  # Adjust the filter based on your data structure
+
+
+    for activity in introverted_activities:
+        print(activity.get("activity_type"))  # This will print each activity document
+
+    return introverted_activities
+
 
 @app.route('/submitActivity', methods=['POST'])
 def submit_activity():
