@@ -1,3 +1,4 @@
+import json
 from flask import Flask, render_template, request
 from pymongo import MongoClient
 
@@ -8,6 +9,28 @@ client = MongoClient('mongodb://localhost:27017/')
 db = client['local']  # Database name
 collectionUser = db['ROSIUserConn']  # Collection name
 collectionActivity = db['ROSIActivityConn']  # Collection name
+
+# Route to insert data from JSON file into MongoDB
+@app.route('/import_activities')
+def import_activities():
+    # Path to your JSON file
+    json_file_path = 'activities.json'
+
+    try:
+        # Open and load the JSON file
+        with open(json_file_path, 'r') as file:
+            activities = json.load(file)  # This should be a list of dictionaries
+
+        # Insert the activities into the collection
+        if isinstance(activities, list):
+            collectionActivity.insert_many(activities)
+        else:
+            collectionActivity.insert_one(activities)
+
+        return "Activities imported successfully!"
+    
+    except Exception as e:
+        return f"An error occurred: {str(e)}"
 
 @app.route('/')
 def home():
