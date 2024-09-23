@@ -16,8 +16,8 @@
         <label for="name">Last Name:</label><br>
         <input type="text" id="lastname" name="lastname" required><br><br>
         
-        <label for="name">Age:</label><br>
-        <input type="text" id="age" name="age" required><br><br>
+        <label for="dateOfBirth">Date of Birth:</label><br>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" required><br><br>        
 
         <label for="gender">Gender:</label><br>
         <select id="gender" name="gender" required>
@@ -26,7 +26,150 @@
             <option value="other">Other</option>
         </select><br><br>
 
-        <label for="province">Province/Territory:</label><br>
+        <label>Select Your Interests:</label><br>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="interests" value="gardening"> Gardening</label><br>
+            <label><input type="checkbox" name="interests" value="reading"> Reading</label><br>
+            <label><input type="checkbox" name="interests" value="walking"> Walking</label><br>
+            <label><input type="checkbox" name="interests" value="knitting"> Knitting</label><br>
+            <label><input type="checkbox" name="interests" value="cooking"> Cooking</label><br>
+            <label><input type="checkbox" name="interests" value="bird_watching"> Bird Watching</label><br>
+            <label><input type="checkbox" name="interests" value="puzzles"> Puzzles</label><br>
+            <label><input type="checkbox" name="interests" value="board_games"> Board Games</label><br>
+            <label><input type="checkbox" name="interests" value="painting"> Painting</label><br>
+            <label><input type="checkbox" name="interests" value="music"> Listening to Music</label><br>
+            <label><input type="checkbox" name="interests" value="dance"> Dancing</label><br>
+            <label><input type="checkbox" name="interests" value="arts"> Arts and Crafts</label>
+        </div><br>
+
+
+
+        <label for="personality">Personality Type:</label><br>
+        <select id="personality" name="personality" required title="Introverted = solo, extroverted = talking">
+            <option value="introverted">Introverted</option>
+            <option value="extroverted">Extroverted</option>
+        </select><br><br>
+
+        <label>Select Your Social Goals:</label><br>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="socialGoals" value="make_new_friends"> Make new friends</label><br>
+            <label><input type="checkbox" name="socialGoals" value="attend_social_events"> Attend social events</label><br>
+            <label><input type="checkbox" name="socialGoals" value="volunteer"> Volunteer</label><br>
+            <label><input type="checkbox" name="socialGoals" value="join_a_club"> Join a club</label><br>
+            <label><input type="checkbox" name="socialGoals" value="improve_communication_skills"> Improve communication skills</label><br>
+            <label><input type="checkbox" name="socialGoals" value="participate_in_group_activities"> Participate in group activities</label><br>
+            <label><input type="checkbox" name="socialGoals" value="reconnect_with_old_friends"> Reconnect with old friends</label><br>
+            <label><input type="checkbox" name="socialGoals" value="host_gatherings"> Host gatherings</label><br>
+            <label><input type="checkbox" name="socialGoals" value="attend_workshops"> Attend workshops or classes</label><br>
+            <label><input type="checkbox" name="socialGoals" value="join_a_support_group"> Join a support group</label>
+        </div><br>
+
+
+        <label>Select Your Health Conditions:</label><br>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="healthConditions" value="diabetes"> Diabetes</label><br>
+            <label><input type="checkbox" name="healthConditions" value="hypertension"> Hypertension</label><br>
+            <label><input type="checkbox" name="healthConditions" value="heart_disease"> Heart Disease</label><br>
+            <label><input type="checkbox" name="healthConditions" value="arthritis"> Arthritis</label><br>
+            <label><input type="checkbox" name="healthConditions" value="asthma"> Asthma</label><br>
+            <label><input type="checkbox" name="healthConditions" value="chronic_obstructive_pulmonary_disease"> Chronic Obstructive Pulmonary Disease (COPD)</label><br>
+            <label><input type="checkbox" name="healthConditions" value="allergies"> Allergies</label><br>
+            <label><input type="checkbox" name="healthConditions" value="depression"> Depression</label><br>
+            <label><input type="checkbox" name="healthConditions" value="anxiety"> Anxiety</label><br>
+            <label><input type="checkbox" name="healthConditions" value="cancer"> Cancer</label>
+        </div><br>
+        
+
+        <label>Do you have any accessibility needs? (Select all that apply)</label><br>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="accessibilityNeeds" value="Wheelchair accessibility"> Wheelchair accessibility</label><br>
+            <label><input type="checkbox" name="accessibilityNeeds" value="Visual impairment support"> Visual impairment support (e.g., large print, braille)</label><br>
+            <label><input type="checkbox" name="accessibilityNeeds" value="Hearing impairment support"> Hearing impairment support (e.g., sign language interpreter, hearing loops)</label><br>
+            <label><input type="checkbox" name="accessibilityNeeds" value="Cognitive support"> Cognitive support (e.g., easy-to-read materials, simplified instructions)</label><br>
+            <label><input type="checkbox" name="accessibilityNeeds" value="Assistance with mobility"> Assistance with mobility (e.g., walking aids, personal assistance)</label><br>
+            <label><input type="checkbox" name="accessibilityNeeds" value="Accessible transportation options"> Accessible transportation options</label><br>
+            <label><input type="checkbox" name="accessibilityNeeds" value="Adjustable seating"> Adjustable seating or workstations</label><br>
+            <label><input type="checkbox" name="accessibilityNeeds" value="Accessible restrooms"> Accessible restrooms</label><br>
+            <label><input type="checkbox" name="accessibilityNeeds" value="Assistance animals"> Assistance animals (e.g., service dogs)</label><br>
+            <label><input type="checkbox" name="accessibilityNeeds" value="Communication aids"> Communication aids (e.g., speech-generating devices)</label>
+        </div><br>
+
+
+        <label for="availableHours">Available Hours:</label><br>
+        <input type="number" id="availableHours" name="availableHours" required placeholder="Enter available hours"><br><br>
+
+        <label for="monthlyBudget">Monthly Budget:</label><br>
+        <input type="number" id="monthlyBudget" name="monthlyBudget" required placeholder="Enter monthly budget"><br><br>
+
+        <label for="independentTravel">Can you travel independently using public or personal transport?</label><br>
+        <input type="radio" id="travelYes" name="independentTravel" value="Yes" required>
+        <label for="travelYes">Yes</label><br>
+        <input type="radio" id="travelNo" name="independentTravel" value="No">
+        <label for="travelNo">No</label><br><br>
+
+        <label for="zipCode">Postal Code:</label><br>
+        <input type="text" id="zipCode" name="zipCode" pattern="[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d" title="Please enter a valid Canadian postal code (e.g., A1A 1A1)" required><br><br>
+
+
+        <label>Preferred Activity Type:</label><br>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="activityPreference" value="online"> Online</label><br>
+            <label><input type="checkbox" name="activityPreference" value="in-person"> In-Person</label>
+        </div><br>
+
+
+        <label for="distanceOptions">Preferred Distance:</label><br>
+        <select id="distanceOptions" name="distanceOptions" required>
+            <option value="-2">Less than 2 km</option>
+            <option value="-5">Less than 5 km</option>
+            <option value="-10">Less than 10 km</option>
+            <option value="-20">Up to 20 km</option>
+            <option value="-50">Less than 50 km</option>
+        </select><br><br>
+
+        <label>Group Size Preference:</label><br>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="groupSizePreference" value="1"> 1 person</label><br>
+            <label><input type="checkbox" name="groupSizePreference" value="2"> 2 people</label><br>
+            <label><input type="checkbox" name="groupSizePreference" value="4"> 4 people</label><br>
+            <label><input type="checkbox" name="groupSizePreference" value="6"> 6 people</label><br>
+            <label><input type="checkbox" name="groupSizePreference" value="10+"> 10 or more people</label>
+        </div><br>
+        
+        <label>Time Preference:</label><br>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="timePreference" value="morning"> Morning</label><br>
+            <label><input type="checkbox" name="timePreference" value="afternoon"> Afternoon</label><br>
+            <label><input type="checkbox" name="timePreference" value="evening"> Evening</label><br>
+            <label><input type="checkbox" name="timePreference" value="night"> Night</label>
+        </div><br>
+        
+
+        <label for="language">Language:</label><br>
+        <select id="language" name="language" required>
+            <option value="English">English</option>
+            <option value="French">French</option>
+        </select><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <label for="province">Province/Territory:</label><br>
         <select id="province" name="province" required>
             <option value="Alberta">Alberta</option>
             <option value="British Columbia">British Columbia</option>
@@ -47,17 +190,9 @@
         <input type="text" id="city" name="city" required><br><br>
 
 
-        <label for="language">Language:</label><br>
-        <select id="language" name="language" required>
-            <option value="English">English</option>
-            <option value="French">French</option>
-        </select><br><br>
 
-        <label for="personality">Personality Type:</label><br>
-        <select id="personality" name="personality" required title="Introverted = solo, extroverted = talking">
-            <option value="introverted">Introverted</option>
-            <option value="extroverted">Extroverted</option>
-        </select><br><br>
+
+
 
         <h1> User Goals </h1>
 
@@ -277,7 +412,7 @@
             <option value="Yes">Yes</option>
             <option value="No">No</option>
         </select><br><br>
-
+ -->
 
         <input type="submit" value="Submit">
     </form>

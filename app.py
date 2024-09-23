@@ -10,6 +10,9 @@ db = client['local']  # Database name
 collectionUser = db['ROSIUserConn']  # Collection name
 collectionActivity = db['ROSIActivityConn']  # Collection name
 
+
+
+
 # Route to insert data from JSON file into MongoDB
 @app.route('/import_activities')
 def import_activities():
@@ -31,6 +34,28 @@ def import_activities():
     
     except Exception as e:
         return f"An error occurred: {str(e)}"
+    
+# Route to insert data from JSON file into MongoDB
+@app.route('/import_users')
+def import_users():
+    # Path to your JSON file
+    json_file_path = 'users.json'
+
+    try:
+        # Open and load the JSON file
+        with open(json_file_path, 'r') as file:
+            users = json.load(file)  # This should be a list of dictionaries
+
+        # Insert the activities into the collection
+        if isinstance(users, list):
+            collectionUser.insert_many(users)
+        else:
+            collectionActivity.insert_one(users)
+
+        return "Users imported successfully!"
+    
+    except Exception as e:
+        return f"An error occurred: {str(e)}"
 
 @app.route('/')
 def home():
@@ -49,74 +74,70 @@ def submitUser():
     #User Demographics 
     firstname = request.form.get('firstname')
     lastname = request.form.get('lastname')
-    age = request.form.get('age')
+    dateOfBirth = request.form.get('dateOfBirth')
     gender = request.form.get('gender')
-    province = request.form.get('province')
-    city = request.form.get('city')
-    language = request.form.get('language')
+    interests = request.form.getlist('interests')
     personality = request.form.get('personality')
+    social_goals = request.form.getlist('socialGoals')
+    health_conditions = request.form.getlist('healthConditions')
+    accessibility_needs = request.form.getlist('accessibilityNeeds')
+    available_hours = request.form.get('availableHours')
+    monthly_budget = request.form.get('monthlyBudget')
+    independent_travel = request.form.get('independentTravel')
+    zip_code = request.form.get('zipCode')
+    activity_preferences = request.form.getlist('activityPreference')
+    preferred_distance = request.form.get('distanceOptions')
+    group_size_preference = request.form.getlist('groupSizePreference')
+    time_preference = request.form.getlist('timePreference')
+    language = request.form.get('language')
 
-    #User Goals
+    # Print statements for all retrieved data
+    print("First Name:", firstname)
+    print("Last Name:", lastname)
+    print("Date of Birth:", dateOfBirth)
+    print("Gender:", gender)
+    print("Interests:", interests)
+    print("Personality:", personality)
+    print("Social Goals:", social_goals)
+    print("Health Conditions:", health_conditions)
+    print("Accessibility Needs:", accessibility_needs)
+    print("Available Hours:", available_hours)
+    print("Monthly Budget:", monthly_budget)
+    print("Can Travel Independently:", independent_travel)
+    print("ZIP Code:", zip_code)
+    print("Activity Preferences:", activity_preferences)
+    print("Preferred Distance:", preferred_distance)
+    print("Group Size Preference:", group_size_preference)
+    print("Time Preference:", time_preference)
+    print("Language:", language)
 
-    #Activity Preferences
-    #User Social Engagement Levels
-    #Social Assistance Options
-    #Health Conditions
-    #Language Needs 
-    #Accessibility Needs
-    #Environment 
-    #Group Size Preferences
-    #Personality Questions
-    #User Finance Budget 
-    #Transportation Options
-    #Computer and Internet Access and Skills
-    #Events 
-    #Activity Confirmation
-
-
-    # You can process the form data here
-    # For now, we'll just print it out to the console
-    print(f"First Name: {firstname}")
-    print(f"Last Name: {lastname}")
-    print(f"Age: {age}")
-    print(f"Gender: {gender}")
-    print(f"Province: {province}")
-    print(f"City: {city}")
-    print(f"Language: {language}")
-    print(f"Personality Type: {personality}")
 
     submission_data = {
-        "firstname": firstname,
-        "lastname": lastname,
-        "age": age,
-        "gender": gender,
-        "province": province,
-        "city": city,
-        "language": language,
-        "personality": personality
-    }
+    "firstname": firstname,
+    "lastname": lastname,
+    "dateOfBirth": dateOfBirth,
+    "gender": gender,
+    "interests": interests,
+    "personality": personality,
+    "social_goals": social_goals,
+    "health_conditions": health_conditions,
+    "accessibility_needs": accessibility_needs,
+    "available_hours": available_hours,
+    "monthly_budget": monthly_budget,
+    "independent_travel": independent_travel,
+    "zip_code": zip_code,
+    "activity_preferences": activity_preferences,
+    "preferred_distance": preferred_distance,
+    "group_size_preference": group_size_preference,
+    "time_preference": time_preference,
+    "language": language
+}
+
 
     collectionUser.insert_one(submission_data)  # Insert data into MongoDB collection
 
-    suggestedActivities = collectionActivity.find({"activity_type": personality})  # Adjust the filter based on your data structure
 
-    suggestedActivity = suggestedActivities[0].get("activity_name")
-
-    print("Suggested Activity:" +  suggestedActivity)
-
-    return f"Form submitted successfully!<br>First Name: {firstname}<br>Last Name: {lastname}<br>Age: {age}<br>Gender: {gender}<br>Province: {province}<br>City: {city}<br>Language: {language}<br>Personality Type: {personality} <br> Suggested Activity: {suggestedActivity}"
-
-
-@app.route('/introvertedActivities')
-def introverted_activities():
-    activities = collectionActivity.find({"activity_type": "Introverted"})  # Adjust the filter based on your data structure
-
-
-    for activity in introverted_activities:
-        print(activity.get("activity_type"))  # This will print each activity document
-
-    return introverted_activities
-
+    return f"Form submitted successfully!"
 
 @app.route('/submitActivity', methods=['POST'])
 def submit_activity():
@@ -152,6 +173,102 @@ def submit_activity():
         <p><strong>Precautions:</strong> {precautions}</p>
         <p><strong>Followup:</strong> {followup}</p>
     """
+@app.route('/introvertedActivities')
+def introverted_activities():
+    activities = collectionActivity.find({"activity_type": "Introverted"})  # Adjust the filter based on your data structure
+
+
+    for activity in introverted_activities:
+        print(activity.get("activity_type"))  # This will print each activity document
+
+    return introverted_activities
+
+
+def calcHealthScore(healthConditions):
+    # Define the penalties for each health condition
+    health_penalties = {
+        "diabetes": 15,
+        "hypertension": 10,
+        "heart_disease": 20,
+        "arthritis": 10,
+        "asthma": 8,
+        "chronic_obstructive_pulmonary_disease": 20,
+        "allergies": 5,
+        "depression": 15,
+        "anxiety": 10,
+        "cancer": 30
+    }
+
+    # Calculate the total penalty based on selected conditions
+    total_penalty = sum(health_penalties[condition] for condition in healthConditions if condition in health_penalties)
+
+    # Calculate health score
+    health_score = 100 - total_penalty
+
+    # Ensure health score does not go below 0
+    return max(health_score, 0)
+
+def calcAccessibilityScore(accessibilityNeeds):
+    # Define the penalties for each accessibility need
+    accessibility_penalties = {
+        "Wheelchair accessibility": 15,
+        "Visual impairment support": 12,
+        "Hearing impairment support": 12,
+        "Cognitive support": 10,
+        "Assistance with mobility": 10,
+        "Accessible transportation options": 8,
+        "Adjustable seating": 6,
+        "Accessible restrooms": 5,
+        "Assistance animals": 5,
+        "Communication aids": 4,
+    }
+
+    # Calculate the total penalty based on selected needs
+    total_penalty = sum(accessibility_penalties[need] for need in accessibilityNeeds if need in accessibility_penalties)
+
+    # Calculate accessibility score
+    accessibility_score = 100 - total_penalty
+
+    # Ensure accessibility score does not go below 0
+    return max(accessibility_score, 0)
+
+# New route to get health score for Jane Doe
+@app.route('/get_health_score_jane')
+def get_health_score_jane():
+    try:
+        # Find Jane Doe in the database
+        user = collectionUser.find_one({"firstname": "Jane", "lastname": "Smith"})
+
+        if user:
+            # Extract health conditions
+            health_conditions = user.get('healthConditions', [])
+
+            print(health_conditions)
+            # Calculate health score
+            health_score = calcHealthScore(health_conditions)
+
+            return f"Health Score for Jane Smith: {health_score}"
+        else:
+            return "User Jane Smith not found."
+
+    except Exception as e:
+        return f"An error occurred: {str(e)}"
+    
+@app.route('/get_accessibility_score/<string:name>', methods=['GET'])
+def get_accessibility_score(name):
+    # Fetch user data from MongoDB
+    user = collectionUser.find_one({"firstname": "Jane", "lastname": "Smith"})
+    
+    if user:
+        # Get accessibility needs from the user data
+        accessibility_needs = user.get("accessibilityNeeds", [])
+        
+        # Calculate the accessibility score
+        score = calcAccessibilityScore(accessibility_needs)
+        
+        return f"Accessibility Score for {name}: {score}"
+    else:
+        return f"User {name} not found.", 404
 
 
 if __name__ == '__main__':
