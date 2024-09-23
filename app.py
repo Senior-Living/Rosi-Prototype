@@ -46,6 +46,7 @@ def page2():
 
 @app.route('/submitUser', methods=['POST'])
 def submitUser():
+    #User Demographics 
     firstname = request.form.get('firstname')
     lastname = request.form.get('lastname')
     age = request.form.get('age')
@@ -54,6 +55,24 @@ def submitUser():
     city = request.form.get('city')
     language = request.form.get('language')
     personality = request.form.get('personality')
+
+    #User Goals
+
+    #Activity Preferences
+    #User Social Engagement Levels
+    #Social Assistance Options
+    #Health Conditions
+    #Language Needs 
+    #Accessibility Needs
+    #Environment 
+    #Group Size Preferences
+    #Personality Questions
+    #User Finance Budget 
+    #Transportation Options
+    #Computer and Internet Access and Skills
+    #Events 
+    #Activity Confirmation
+
 
     # You can process the form data here
     # For now, we'll just print it out to the console
