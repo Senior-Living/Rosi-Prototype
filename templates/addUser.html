@@ -28,40 +28,33 @@
 
         <label>Select Your Interests:</label><br>
         <div class="checkbox-group">
-            <label><input type="checkbox" name="interests" value="gardening"> Gardening</label><br>
-            <label><input type="checkbox" name="interests" value="reading"> Reading</label><br>
-            <label><input type="checkbox" name="interests" value="walking"> Walking</label><br>
-            <label><input type="checkbox" name="interests" value="knitting"> Knitting</label><br>
-            <label><input type="checkbox" name="interests" value="cooking"> Cooking</label><br>
-            <label><input type="checkbox" name="interests" value="bird_watching"> Bird Watching</label><br>
-            <label><input type="checkbox" name="interests" value="puzzles"> Puzzles</label><br>
+            <label><input type="checkbox" name="interests" value="gardening">Music</label><br>
+            <label><input type="checkbox" name="interests" value="reading">Arts and Crafts</label><br>
+            <label><input type="checkbox" name="interests" value="physicalActivities">Physical Activities(Yoga, Walking, etc.)</label><br>
+            <label><input type="checkbox" name="interests" value="games">Games(Board Games, Card Games, etc.)</label><br>
+            <label><input type="checkbox" name="interests" value="learning">Learning(Languages,History,etc.)</label><br>
+            <label><input type="checkbox" name="interests" value="socializing">Socializing/Networking</label><br>
+            <label><input type="checkbox" name="interests" value="volunteering">Volunteering</label><br>
             <label><input type="checkbox" name="interests" value="board_games"> Board Games</label><br>
-            <label><input type="checkbox" name="interests" value="painting"> Painting</label><br>
-            <label><input type="checkbox" name="interests" value="music"> Listening to Music</label><br>
-            <label><input type="checkbox" name="interests" value="dance"> Dancing</label><br>
-            <label><input type="checkbox" name="interests" value="arts"> Arts and Crafts</label>
         </div><br>
 
 
-
         <label for="personality">Personality Type:</label><br>
-        <select id="personality" name="personality" required title="Introverted = solo, extroverted = talking">
+        <select id="personality" name="personality" required title="Introverted = solo, extroverted = talking, Ambivert = mix of both">
             <option value="introverted">Introverted</option>
             <option value="extroverted">Extroverted</option>
+            <option value="ambivert">Ambivert</option>
         </select><br><br>
 
         <label>Select Your Social Goals:</label><br>
         <div class="checkbox-group">
-            <label><input type="checkbox" name="socialGoals" value="make_new_friends"> Make new friends</label><br>
-            <label><input type="checkbox" name="socialGoals" value="attend_social_events"> Attend social events</label><br>
-            <label><input type="checkbox" name="socialGoals" value="volunteer"> Volunteer</label><br>
-            <label><input type="checkbox" name="socialGoals" value="join_a_club"> Join a club</label><br>
-            <label><input type="checkbox" name="socialGoals" value="improve_communication_skills"> Improve communication skills</label><br>
-            <label><input type="checkbox" name="socialGoals" value="participate_in_group_activities"> Participate in group activities</label><br>
-            <label><input type="checkbox" name="socialGoals" value="reconnect_with_old_friends"> Reconnect with old friends</label><br>
-            <label><input type="checkbox" name="socialGoals" value="host_gatherings"> Host gatherings</label><br>
-            <label><input type="checkbox" name="socialGoals" value="attend_workshops"> Attend workshops or classes</label><br>
-            <label><input type="checkbox" name="socialGoals" value="join_a_support_group"> Join a support group</label>
+            <label><input type="checkbox" name="socialGoals" value="makeNewFriends">Make new friends</label><br>
+            <label><input type="checkbox" name="socialGoals" value="attendSocialEvents">Strengthen existing friendships</label><br>
+            <label><input type="checkbox" name="socialGoals" value="groupActivities">Participate in group activities</label><br>
+            <label><input type="checkbox" name="socialGoals" value="individualActivities">Participate in individual activities</label><br>
+            <label><input type="checkbox" name="socialGoals" value="learnNewSkills">Learn new skills</label><br>
+            <label><input type="checkbox" name="socialGoals" value="stayPhysicallyActive">Stay Physically Active</label><br>
+            <label><input type="checkbox" name="socialGoals" value="mentalWellBeing">Improve Mental Well-Being</label><br>
         </div><br>
 
 
@@ -82,18 +75,11 @@
 
         <label>Do you have any accessibility needs? (Select all that apply)</label><br>
         <div class="checkbox-group">
-            <label><input type="checkbox" name="accessibilityNeeds" value="Wheelchair accessibility"> Wheelchair accessibility</label><br>
-            <label><input type="checkbox" name="accessibilityNeeds" value="Visual impairment support"> Visual impairment support (e.g., large print, braille)</label><br>
-            <label><input type="checkbox" name="accessibilityNeeds" value="Hearing impairment support"> Hearing impairment support (e.g., sign language interpreter, hearing loops)</label><br>
-            <label><input type="checkbox" name="accessibilityNeeds" value="Cognitive support"> Cognitive support (e.g., easy-to-read materials, simplified instructions)</label><br>
-            <label><input type="checkbox" name="accessibilityNeeds" value="Assistance with mobility"> Assistance with mobility (e.g., walking aids, personal assistance)</label><br>
-            <label><input type="checkbox" name="accessibilityNeeds" value="Accessible transportation options"> Accessible transportation options</label><br>
-            <label><input type="checkbox" name="accessibilityNeeds" value="Adjustable seating"> Adjustable seating or workstations</label><br>
-            <label><input type="checkbox" name="accessibilityNeeds" value="Accessible restrooms"> Accessible restrooms</label><br>
-            <label><input type="checkbox" name="accessibilityNeeds" value="Assistance animals"> Assistance animals (e.g., service dogs)</label><br>
-            <label><input type="checkbox" name="accessibilityNeeds" value="Communication aids"> Communication aids (e.g., speech-generating devices)</label>
+            <label><input type="checkbox" name="accessibilityNeeds" value="Wheelchair accessibility">Wheelchair accessibility</label><br>
+            <label><input type="checkbox" name="accessibilityNeeds" value="assistanceWithMobility">Assistance with Mobility</label><br>
+            <label><input type="checkbox" name="accessibilityNeeds" value="visionSupport"> Vision support</label><br>
+            <label><input type="checkbox" name="accessibilityNeeds" value="hearingSupport"> Hearing support </label><br>
         </div><br>
-
 
         <label for="availableHours">Available Hours:</label><br>
         <input type="number" id="availableHours" name="availableHours" required placeholder="Enter available hours"><br><br>
@@ -120,28 +106,23 @@
 
         <label for="distanceOptions">Preferred Distance:</label><br>
         <select id="distanceOptions" name="distanceOptions" required>
-            <option value="-2">Less than 2 km</option>
-            <option value="-5">Less than 5 km</option>
-            <option value="-10">Less than 10 km</option>
-            <option value="-20">Up to 20 km</option>
-            <option value="-50">Less than 50 km</option>
+            <option value="close">Less than 1 km</option>
+            <option value="moderate">1-5 km</option>
+            <option value="far">5-10 km</option>
         </select><br><br>
 
         <label>Group Size Preference:</label><br>
         <div class="checkbox-group">
-            <label><input type="checkbox" name="groupSizePreference" value="1"> 1 person</label><br>
-            <label><input type="checkbox" name="groupSizePreference" value="2"> 2 people</label><br>
-            <label><input type="checkbox" name="groupSizePreference" value="4"> 4 people</label><br>
-            <label><input type="checkbox" name="groupSizePreference" value="6"> 6 people</label><br>
-            <label><input type="checkbox" name="groupSizePreference" value="10+"> 10 or more people</label>
+            <label><input type="checkbox" name="groupSizePreference" value="small">2-5 person (Small)</label><br>
+            <label><input type="checkbox" name="groupSizePreference" value="medium">5-10 people (Medium)</label><br>
+            <label><input type="checkbox" name="groupSizePreference" value="large">10+ people (Large)</label>
         </div><br>
         
         <label>Time Preference:</label><br>
         <div class="checkbox-group">
-            <label><input type="checkbox" name="timePreference" value="morning"> Morning</label><br>
-            <label><input type="checkbox" name="timePreference" value="afternoon"> Afternoon</label><br>
-            <label><input type="checkbox" name="timePreference" value="evening"> Evening</label><br>
-            <label><input type="checkbox" name="timePreference" value="night"> Night</label>
+            <label><input type="checkbox" name="timePreference" value="morning">Morning (7am-12pm)</label><br>
+            <label><input type="checkbox" name="timePreference" value="afternoon">Afternoon(12pm-5pm)</label><br>
+            <label><input type="checkbox" name="timePreference" value="evening">Evening(5pm-9pm)</label><br>
         </div><br>
         
 
@@ -152,21 +133,162 @@
         </select><br><br>
 
 
+        
+        <label>Social Classifier:</label>
+
+        <label> Meal Setting</label>
+
+        <label>Where do you typically eat your meals?</label><br>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="locationOfMeals" value="atHome">At your Home</label><br>
+                <label><input type="checkbox" name="locationOfMeals" value="diningHall">Dining Hall</label><br>
+                <label><input type="checkbox" name="locationOfMeals" value="elsewhere">Elsewhere</label><br>
+        </div><br>
+
+        <label>How often do you eat your meals alone? </label><br>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="eatAloneFreq" value="always">Always</label><br>
+                <label><input type="checkbox" name="eatAloneFreq" value="often">Often</label><br>
+                <label><input type="checkbox" name="eatAloneFreq" value="sometimes">Sometimes</label><br>
+                <label><input type="checkbox" name="eatAloneFreq" value="rarely">Rarely</label><br>
+                <label><input type="checkbox" name="eatAloneFreq" value="never">Never</label><br>
+        </div><br>
+
+        <label>How often do you eat your meals with others? </label><br>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="eatWithOthersFreq" value="always">Always</label><br>
+                <label><input type="checkbox" name="eatWithOthersFreq" value="often">Often</label><br>
+                <label><input type="checkbox" name="eatWithOthersFreq" value="sometimes">Sometimes</label><br>
+                <label><input type="checkbox" name="eatWithOthersFreq" value="rarely">Rarely</label><br>
+                <label><input type="checkbox" name="eatWithOthersFreq" value="never">Never</label><br>
+        </div><br>
 
 
+        <h2>Recreational Activities and Time</h2>
 
+        <label for="awareOfCommActivity">Are you aware of the recreational activities available in your building or community?</label><br>
+        <select id="awareOfCommActivity" name="awareOfCommActivity" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
 
+        <label for="attendCommActivity">Do you attend any of these recreational activities?</label><br>
+        <select id="attendCommAcitivity" name="attendCommAcitivity" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
 
+        <label for="freqAttendCommActivity">If yes, how often do you attend?</label><br>
+        <select id="freqAttendCommActivity" name="freqAttendCommActivity" required>
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Occasionally">Occasionally</option>
+            <option value="Rarely">Rarely</option>
+            <option value="Never">Never</option>
+        </select><br><br>
 
+        <label for="weeklyOutdoorHoursForActivities">How many hours do you spend outside your apartment for recreational activities each week?</label><br>
+        <input type="number" id="weeklyOutdoorHoursForActivities" name="weeklyOutdoorHoursForActivities" required placeholder="Enter hours"><br><br>
 
+        <label for="weeklyIndoorHoursForActivities">How many hours do you spend inside your apartment for recreational activities each week?</label><br>
+        <input type="number" id="weeklyIndoorHoursForActivities" name="weeklyIndoorHoursForActivities" required placeholder="Enter hours"><br><br>
 
+        <h2>Social Interactions</h2>
 
+        <label for="hasBuildingFriends">Do you have any friends or acquaintances in your building or from the activities you attend?</label><br>
+        <select id="hasBuildingFriends" name="hasBuildingFriends" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
 
+        <label for="freqMeetFriends">How often do you meet with friends or acquaintances?</label><br>
+        <select id="freqMeetFriends" name="freqMeetFriends" required>
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Occasionally">Occasionally</option>
+            <option value="Rarely">Rarely</option>
+            <option value="Never">Never</option>
+        </select><br><br>
 
+        <h2>Volunteering</h2>
 
+        <label for="doesVolunteer">Do you volunteer in any capacity? </label><br>
+        <select id="doesVolunteer" name="doesVolunteer" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
 
+        <label for="freqDoesVolunteer">If yes, how often do you volunteer?</label><br>
+        <select id="freqDoesVolunteer" name="freqDoesVolunteer" required>
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Occasionally">Occasionally</option>
+            <option value="Rarely">Rarely</option>
+            <option value="Never">Never</option>
+        </select><br><br>
 
+        <h2>Family Visits</h2>
 
+        <label for="doesFamilyVisit">Does your family visit you?</label><br>
+        <select id="doesFamilyVisit" name="doesFamilyVisit" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="freqDoesVolunteer">If yes, how often do you volunteer?</label><br>
+        <select id="freqDoesVolunteer" name="freqDoesVolunteer" required>
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Occasionally">Occasionally</option>
+            <option value="Rarely">Rarely</option>
+            <option value="Never">Never</option>
+        </select><br><br>
+
+        <h2>Emotional Well-being</h2>
+
+        <label for="senseOfEmptiness">I experience a general sense of emptiness</label><br>
+        <select id="senseOfEmptiness" name="senseOfEmptiness" required></select>
+            <option value="Yes">Yes</option>
+            <option value="More or less">More or less</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="missCompanionship">I miss having people around me.</label><br>
+        <select id="missCompanionship" name="missCompanionship" required></select>
+            <option value="Yes">Yes</option>
+            <option value="More or less">More or less</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="feelRejected">I often feel rejected.</label><br>
+        <select id="feelRejected" name="feelRejected" required></select>
+            <option value="Yes">Yes</option>
+            <option value="More or less">More or less</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <h2>Social Support</h2>
+
+        <label for="peopleToRelyOn">There are plenty of people I can rely on when I have problems.</label><br>
+        <select id="peopleToRelyOn" name="peopleToRelyOn" required></select>
+            <option value="Yes">Yes</option>
+            <option value="More or less">More or less</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="peopleITrust">There are many people I can trust completely.</label><br>
+        <select id="peopleITrust" name="peopleITrust" required></select>
+            <option value="Yes">Yes</option>
+            <option value="More or less">More or less</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="peopleIAmCloseTo">There are enough people I feel close to.</label><br>
+        <select id="peopleIAmCloseTo" name="peopleIAmCloseTo" required></select>
+            <option value="Yes">Yes</option>
+            <option value="More or less">More or less</option>
+            <option value="No">No</option>
+        </select><br><br>
 
 
         <!-- <label for="province">Province/Territory:</label><br>
