@@ -9,6 +9,7 @@ client = MongoClient('mongodb://localhost:27017/')
 db = client['local']  # Database name
 collectionUser = db['ROSIUserConn']  # Collection name
 collectionActivity = db['ROSIActivityConn']  # Collection name
+collectionSocialClassifier = db['ROSISocialClassifierConn']  # Collection name
 
 
 
@@ -91,6 +92,18 @@ def submitUser():
     time_preference = request.form.getlist('timePreference')
     language = request.form.get('language')
 
+    socClas1EatWOthers = request.form.get('socClas1EatWOthers')    
+    socClas2HobbiesInside = request.form.get('socClas2HobbiesInside')    
+    socClas3HobbiesOutside = request.form.get('socClas3HobbiesOutside')    
+    socClas4TV = request.form.get('socClas4TV')    
+    socClas5Browsing = request.form.get('socClas5Browsing')    
+    socClas6TalkPhone = request.form.get('socClas6TalkPhone')    
+    socClas7MeetFamFriend = request.form.get('socClas7MeetFamFriend')    
+    socClas8GroupConvo = request.form.get('socClas8GroupConvo')    
+    socClas9Text = request.form.get('socClas9Text')    
+    socClas10Volunteer = request.form.get('socClas10Volunteer')    
+    socClas11Essential = request.form.get('socClas11Essential')    
+
     # Print statements for all retrieved data
     print("First Name:", firstname)
     print("Last Name:", lastname)
@@ -111,30 +124,74 @@ def submitUser():
     print("Time Preference:", time_preference)
     print("Language:", language)
 
+    print("Social Classifiers")
 
-    submission_data = {
-    "firstname": firstname,
-    "lastname": lastname,
-    "dateOfBirth": dateOfBirth,
-    "gender": gender,
-    "interests": interests,
-    "personality": personality,
-    "social_goals": social_goals,
-    "health_conditions": health_conditions,
-    "accessibility_needs": accessibility_needs,
-    "available_hours": available_hours,
-    "monthly_budget": monthly_budget,
-    "independent_travel": independent_travel,
-    "zip_code": zip_code,
-    "activity_preferences": activity_preferences,
-    "preferred_distance": preferred_distance,
-    "group_size_preference": group_size_preference,
-    "time_preference": time_preference,
-    "language": language
-}
+    print("Eating with Others:", socClas1EatWOthers)
+    print("Hobbies Inside:", socClas2HobbiesInside)
+    print("Hobbies Outside:", socClas3HobbiesOutside)
+    print("Watching TV:", socClas4TV)
+    print("Browsing the Internet:", socClas5Browsing)
+    print("Meeting Family and Friends:", socClas7MeetFamFriend)
+    print("Group Conversations:", socClas8GroupConvo)
+    print("Text Messaging:", socClas9Text)
+    print("Volunteering:", socClas10Volunteer)
+    print("Essential Activities:", socClas11Essential)
+
+    socialClassifierStats = [
+        socClas1EatWOthers,
+        socClas2HobbiesInside,
+        socClas3HobbiesOutside,
+        socClas4TV,
+        socClas5Browsing,
+        socClas7MeetFamFriend,
+        socClas8GroupConvo,
+        socClas9Text,
+        socClas10Volunteer,
+        socClas11Essential
+    ]
 
 
-    collectionUser.insert_one(submission_data)  # Insert data into MongoDB collection
+
+    socialScore = calcSocialScore(socialClassifierStats)
+
+
+    user_submission_data = {
+        "firstname": firstname,
+        "lastname": lastname,
+        "dateOfBirth": dateOfBirth,
+        "gender": gender,
+        "interests": interests,
+        "personality": personality,
+        "social_goals": social_goals,
+        "health_conditions": health_conditions,
+        "accessibility_needs": accessibility_needs,
+        "available_hours": available_hours,
+        "monthly_budget": monthly_budget,
+        "independent_travel": independent_travel,
+        "zip_code": zip_code,
+        "activity_preferences": activity_preferences,
+        "preferred_distance": preferred_distance,
+        "group_size_preference": group_size_preference,
+        "time_preference": time_preference,
+        "language": language,
+        "socialScore": socialScore
+    }
+
+    
+
+
+    user_insert_result = collectionUser.insert_one(user_submission_data)
+    user_id = user_insert_result.inserted_id  # Get the userId
+
+    socialClassifier_submission_data = {
+        "user_id": str(user_id),
+        "social_score": socialScore,
+        "social_classifier_stats" : socialClassifierStats
+    }
+    
+    print("socialScore: " + socialScore)
+
+    collectionSocialClassifier.insert_one(socialClassifier_submission_data)
 
 
     return f"Form submitted successfully!"
@@ -184,29 +241,45 @@ def introverted_activities():
     return introverted_activities
 
 
-def calcHealthScore(healthConditions):
-    # Define the penalties for each health condition
-    health_penalties = {
-        "diabetes": 15,
-        "hypertension": 10,
-        "heart_disease": 20,
-        "arthritis": 10,
-        "asthma": 8,
-        "chronic_obstructive_pulmonary_disease": 20,
-        "allergies": 5,
-        "depression": 15,
-        "anxiety": 10,
-        "cancer": 30
+def calcSocialScore(stats):
+
+    scoring_map = {
+        "never": 0,
+        "1-3TimesAYear": 1,
+        "quarterly": 2,
+        "bimonthly": 3,
+        "onceAMonth": 4,
+        "twiceAMonth": 5,
+        "onceEvery3Weeks": 6,
+        "1-3TimesAWeek": 7,
+        "4-6TimesAWeek": 8,
+        "everyDay": 9
     }
 
-    # Calculate the total penalty based on selected conditions
-    total_penalty = sum(health_penalties[condition] for condition in healthConditions if condition in health_penalties)
 
-    # Calculate health score
-    health_score = 100 - total_penalty
 
-    # Ensure health score does not go below 0
-    return max(health_score, 0)
+    totalScore = 0
+    res = ""
+
+
+    for elem in stats:
+        print(elem)
+        print(scoring_map.get(elem))
+        totalScore = totalScore + scoring_map.get(elem)
+
+    if totalScore <21:
+        res = "Low"
+    elif totalScore <41:
+        res = "Low-Medium"
+    elif totalScore <61:
+        res = "Medium"
+    elif totalScore <81:
+        res = "High"
+    else:
+        res = "Very High"
+
+    return res
+    
 
 def calcAccessibilityScore(accessibilityNeeds):
     # Define the penalties for each accessibility need
