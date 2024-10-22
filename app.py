@@ -104,6 +104,17 @@ def submitUser():
     socClas10Volunteer = request.form.get('socClas10Volunteer')    
     socClas11Essential = request.form.get('socClas11Essential')    
 
+    socClas1aWishPart = request.form.get('socClas1aWishPart')
+    socClas1bTypesOfMealsInterested = request.form.getlist('socClas1bTypesOfMealsInterested')
+    socClas1cTypesOfMealsParticipated = request.form.getlist('socClas1cTypesOfMealsParticipated')
+    socClas1dWishPartMoreActivity = request.form.get('socClas1dWishPartMoreActivity')
+
+    socClas2aWishTimeInsideHobbies = request.form.get('socClas2aWishTimeInsideHobbies')
+    socClas2bTypesOfInsideHobbies = request.form.getlist('socClas2bTypesOfInsideHobbies')
+    socClas2cTypesOfIndoorActivitiesParticipated = request.form.getlist('socClas2cTypesOfIndoorActivitiesParticipated')
+    socClas2dWishPartMoreIndoorActivities = request.form.get('socClas2dWishPartMoreIndoorActivities')
+
+
     # Print statements for all retrieved data
     print("First Name:", firstname)
     print("Last Name:", lastname)
@@ -131,11 +142,24 @@ def submitUser():
     print("Hobbies Outside:", socClas3HobbiesOutside)
     print("Watching TV:", socClas4TV)
     print("Browsing the Internet:", socClas5Browsing)
+    print("Talking on the phone", socClas6TalkPhone)
     print("Meeting Family and Friends:", socClas7MeetFamFriend)
     print("Group Conversations:", socClas8GroupConvo)
     print("Text Messaging:", socClas9Text)
     print("Volunteering:", socClas10Volunteer)
     print("Essential Activities:", socClas11Essential)
+
+    print(f"1a. Wish to participate in meals or social dining events: {socClas1aWishPart}")
+    print(f"1b. Types of meals the user is interested in: {', '.join(socClas1bTypesOfMealsInterested) if socClas1bTypesOfMealsInterested else 'None'}")
+    print(f"1c. Types of meals the user has participated in: {', '.join(socClas1cTypesOfMealsParticipated) if socClas1cTypesOfMealsParticipated else 'None'}")
+    print(f"1d. Wish to participate in more social activities around meals: {socClas1dWishPartMoreActivity}")
+
+    print(f"2a. Wish to spend time on hobbies or recreational activities inside the home: {socClas2aWishTimeInsideHobbies}")
+    print(f"2b. Types of indoor hobbies the user is interested in: {', '.join(socClas2bTypesOfInsideHobbies) if socClas2bTypesOfInsideHobbies else 'None'}")
+    print(f"2c. Types of indoor activities the user has participated in: {', '.join(socClas2cTypesOfIndoorActivitiesParticipated) if socClas2cTypesOfIndoorActivitiesParticipated else 'None'}")
+    print(f"2d. Wish to participate in more indoor activities: {socClas2dWishPartMoreIndoorActivities}")
+
+
 
     socialClassifierStats = [
         socClas1EatWOthers,
@@ -143,11 +167,23 @@ def submitUser():
         socClas3HobbiesOutside,
         socClas4TV,
         socClas5Browsing,
+        socClas6TalkPhone,
         socClas7MeetFamFriend,
         socClas8GroupConvo,
         socClas9Text,
         socClas10Volunteer,
         socClas11Essential
+    ]
+
+    extraClassifierStats1 = [
+        socClas1aWishPart,
+        socClas1bTypesOfMealsInterested,
+        socClas1cTypesOfMealsParticipated,
+        socClas1dWishPartMoreActivity,
+        socClas2aWishTimeInsideHobbies,
+        socClas2bTypesOfInsideHobbies,
+        socClas2cTypesOfIndoorActivitiesParticipated,
+        socClas2dWishPartMoreIndoorActivities
     ]
 
 
@@ -186,7 +222,25 @@ def submitUser():
     socialClassifier_submission_data = {
         "user_id": str(user_id),
         "social_score": socialScore,
-        "social_classifier_stats" : socialClassifierStats
+        "socClas1EatWOthers" : socClas1EatWOthers,
+        "socClas2HobbiesInside" : socClas2HobbiesInside,
+        "socClas3HobbiesOutside": socClas3HobbiesOutside,
+        "socClas4TV": socClas4TV,
+        "socClas5Browsing": socClas5Browsing,
+        "socClas6TalkPhone": socClas6TalkPhone,
+        "socClas7MeetFamFriend": socClas7MeetFamFriend,
+        "socClas8GroupConvo": socClas8GroupConvo,
+        "socClas9Text": socClas9Text,
+        "socClas10Volunteer": socClas10Volunteer,
+        "socClas11Essential": socClas11Essential,
+        "socClas1aWishPart": socClas1aWishPart,
+        "socClas1bTypesOfMealsInterested": socClas1bTypesOfMealsInterested,
+        "socClas1cTypesOfMealsParticipated": socClas1cTypesOfMealsParticipated,
+        "socClas1dWishPartMoreActivity": socClas1dWishPartMoreActivity,
+        "socClas2aWishTimeInsideHobbies": socClas2aWishTimeInsideHobbies,
+        "socClas2bTypesOfInsideHobbies": socClas2bTypesOfInsideHobbies,
+        "socClas2cTypesOfIndoorActivitiesParticipated": socClas2cTypesOfIndoorActivitiesParticipated,
+        "socClas2dWishPartMoreIndoorActivities": socClas2dWishPartMoreIndoorActivities
     }
     
     print("socialScore: " + socialScore)

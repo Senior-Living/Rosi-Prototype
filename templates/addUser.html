@@ -150,15 +150,17 @@
         </div>
         <br>
 
-        <div id="socClas1aWishPart" style="display:none;">
+        <div id="socClas1aWishPartDisplay" style="display:none;">
             <label>1a. Do you wish you participated in meals or social dining events?</label><br>
-            <select id="socClass1aWishPart" name="socClass1aWishPart" required>
+            <select id="socClas1aWishPart" name="socClas1aWishPart" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <div id="socClas1bTypesOfMealsInterested" style="display:none;">
+        
+
+        <div id="socClas1bTypesOfMealsInterestedDisplay" style="display:none;">
             <label>1b. What types of meals or social dining events would you participate in?</label>
             <br>
                 <div class="checkbox-group">
@@ -180,7 +182,7 @@
             <br>
         </div>
 
-        <div id="socClas1cTypesOfMealsParticipated" style="display:none;">
+        <div id="socClas1cTypesOfMealsParticipatedDisplay" style="display:none;">
             <label>1c. What types of meals or social dining events do you participate in?</label>
             <br>
                 <div class="checkbox-group">
@@ -202,9 +204,9 @@
             <br>
         </div>
 
-        <div id="socClass1dWishPartMoreActivity" style="display:none;">
-            <label>Do you wish you participated in meals or social dining events?</label><br>
-            <select id="socClass1dWishPartMoreActivity" name="socClass1dWishPartMoreActivity" required>
+        <div id="socClas1dWishPartMoreActivityDisplay" style="display:none;">
+            <label>1d. Do you wish you participated in meals or social dining events?</label><br>
+            <select id="socClas1dWishPartMoreActivity" name="socClas1dWishPartMoreActivity" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
@@ -226,7 +228,7 @@
             </div>
         <br>
 
-        <div id="socClas2aWishTimeInsideHobbies" style="display:none;">
+        <div id="socClas2aWishTimeInsideHobbiesDisplay" style="display:none;">
             <label>2a. Do you wish you spent time on hobbies or recreational activities inside the home?</label><br>
             <select id="socClas2aWishTimeInsideHobbies" name="socClas2aWishTimeInsideHobbies" required>
                 <option value="Yes">Yes</option>
@@ -234,49 +236,58 @@
             </select><br><br>
         </div>
 
-        <div id="socClas2bTypesOfInsideHobbies" style="display:none;">
+        <div id="socClas2bTypesOfInsideHobbiesDisplay" style="display:none;">
             <label>2b. What types of meals or social dining events would you participate in?</label>
             <br>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="communityDining">Reading Books or Magazines</label><br>
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="themedDinners">Knitting or Crocheting</label><br>
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="potluckMeals">Gardening Indoors</label><br>
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="teaAndCoffeeSocials">Listening to Music</label><br>
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="birthdayAnniversaryMeals">Watching Movies or TV Shows</label><br>
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="buffetOrBrunchGatherings">Playing Puzzles or Games</label><br>
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="holidayFeastEvents">Crafting or Painting</label><br>
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="outdoorBBQs">Cooking or Baking</label><br>
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="picnicLunches">Photography</label><br>
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="familyBBQDays">Writing (journals, blogs, etc.)</label><br>
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="farmToTableEvent">Brain Games and Memory Exercises</label><br>
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="chefTable">Meditation and Relaxation Sessions</label><br>
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="progressiveDinners">Indoor Bowling or Golf Putting</label><br>
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="happyhour">Learning New Skills (e.g., Technology)</label><br>     
-                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="happyhour">Exercising at Home (yoga, weights, etc.)</label><br>                                   
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="readingBooks">Reading Books or Magazines</label><br>
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="knittingAndCrochet">Knitting or Crocheting</label><br>
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="gardening">Gardening Indoors</label><br>
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="listeningToMusic">Listening to Music</label><br>
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="watchingMoviesTvShows">Watching Movies or TV Shows</label><br>
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="playingPuzzleOrGames">Playing Puzzles or Games</label><br>
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="craftingOrPainting">Crafting or Painting</label><br>
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="cookingBaking">Cooking or Baking</label><br>
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="photography">Photography</label><br>
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="writing">Writing (journals, blogs, etc.)</label><br>
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="brainGamesMemoryExercises">Brain Games and Memory Exercises</label><br>
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="meditationRelaxation">Meditation and Relaxation Sessions</label><br>
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="indoorBowlingGolfPutting">Indoor Bowling or Golf Putting</label><br>
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="learningNewSkills">Learning New Skills (e.g., Technology)</label><br>     
+                    <label><input type="checkbox" name="socClas2bTypesOfInsideHobbies" value="exercising">Exercising at Home (yoga, weights, etc.)</label><br>                                   
                 </div>
             <br>
         </div>
 
-        <div id="socClas2cTypesOfIndoorActivitiesParticipated" style="display:none;">
+        <div id="socClas2cTypesOfIndoorActivitiesParticipatedDisplay" style="display:none;">
             <label>2c. What types of indoor hobbies or recreational activities do you participate in?</label>
             <br>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="communityDining">Reading Books or Magazines</label><br>
-                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="themedDinners">Knitting or Crocheting</label><br>
-                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="potluckMeals">Gardening Indoors</label><br>
-                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="teaAndCoffeeSocials">Listening to Music</label><br>
-                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="birthdayAnniversaryMeals">Watching Movies or TV Shows</label><br>
-                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="buffetOrBrunchGatherings">Playing Puzzles or Games</label><br>
-                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="holidayFeastEvents">Holiday Feast Events</label><br>
-                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="outdoorBBQs">Outdoor BBQs</label><br>
-                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="picnicLunches">Picnic Lunches</label><br>
-                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="familyBBQDays">Family BBQ Days</label><br>
-                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="farmToTableEvent">Farm-to-Table Events</label><br>
-                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="chefTable">Chef Table</label><br>
-                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="progressiveDinners">Progressive Dinners</label><br>
-                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="happyhour">Happy Hour</label><br>                    
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="readingBooks">Reading Books or Magazines</label><br>
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="knittingAndCrochet">Knitting or Crocheting</label><br>
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="gardening">Gardening Indoors</label><br>
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="listeningToMusic">Listening to Music</label><br>
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="watchingMoviesTvShows">Watching Movies or TV Shows</label><br>
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="playingPuzzleOrGames">Playing Puzzles or Games</label><br>
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="craftingOrPainting">Crafting or Painting</label><br>
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="cookingBaking">Cooking or Baking</label><br>
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="photography">Photography</label><br>
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="writing">Writing (journals, blogs, etc.)</label><br>
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="brainGamesMemoryExercises">Brain Games and Memory Exercises</label><br>
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="meditationRelaxation">Meditation and Relaxation Sessions</label><br>
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="indoorBowlingGolfPutting">Indoor Bowling or Golf Putting</label><br>
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="learningNewSkills">Learning New Skills (e.g., Technology)</label><br>     
+                    <label><input type="checkbox" name="socClas2cTypesOfIndoorActivitiesParticipated" value="exercising">Exercising at Home (yoga, weights, etc.)</label><br>                   
                 </div>
             <br>
+        </div>
+
+        <div id="socClas2dWishPartMoreIndoorActivitiesDisplay" style="display:none;">
+            <label>2d. Do you wish you spent more time on hobbies or recreational activities inside the home?</label><br>
+            <select id="socClas2dWishPartMoreIndoorActivities" name="socClas2dWishPartMoreIndoorActivities" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
         </div>
 
         <label>3. How often do you spend time on hobbies or recreational activities outside your apartment?</label>
@@ -431,12 +442,63 @@
             radio.addEventListener('change', function() {
                 // Check if the selected value is "never"
                 if (this.value === 'never') {
-                    document.getElementById('socClass1aWishPart').style.display = 'block'; // Show the question
+                    document.getElementById('socClas1aWishPartDisplay').style.display = 'block'; // Show the question
+                    document.getElementById('socClas1bTypesOfMealsInterestedDisplay').style.display = 'block'; // Show 1b
+                    document.getElementById('socClas1cTypesOfMealsParticipatedDisplay').style.display = 'none'; 
+                    document.getElementById('socClas1dWishPartMoreActivityDisplay').style.display = 'none';
+                    
                 } else {
-                    document.getElementById('socClass1aWishPart').style.display = 'none';  // Hide the question
+                    document.getElementById('socClas1aWishPartDisplay').style.display = 'none';  // Hide the question
+                    document.getElementById('socClas1bTypesOfMealsInterestedDisplay').style.display = 'none'; // Hide 1b
+                    document.getElementById('socClas1cTypesOfMealsParticipatedDisplay').style.display = 'block'; 
+                    document.getElementById('socClas1dWishPartMoreActivityDisplay').style.display = 'block';
+
                 }
             });
         });
+
+        document.getElementById('socClas1aWishPart').addEventListener('change', function() {
+            const selectedValue = this.value; // Get the value from the dropdown
+
+            // Check the selected value and display 1b, 1c, and 1d conditionally
+            if (selectedValue === 'Yes') {
+                document.getElementById('socClas1bTypesOfMealsInterestedDisplay').style.display = 'block'; // Show 1b
+            } else if (selectedValue === 'No') {
+                document.getElementById('socClas1bTypesOfMealsInterestedDisplay').style.display = 'none'; // Hide 1b
+            }
+        });
+
+        document.querySelectorAll('input[name="socClas2HobbiesInside"]').forEach((radio) => {
+            radio.addEventListener('change', function() {
+                // Check if the selected value is "never"
+                if (this.value === 'never') {
+                    document.getElementById('socClas2aWishTimeInsideHobbiesDisplay').style.display = 'block'; // Show the question
+                    document.getElementById('socClas2bTypesOfInsideHobbiesDisplay').style.display = 'block'; // Show 1b
+                    document.getElementById('socClas2cTypesOfIndoorActivitiesParticipatedDisplay').style.display = 'none'; 
+                    document.getElementById('socClas2dWishPartMoreIndoorActivitiesDisplay').style.display = 'none';
+                    
+                } else {
+                    document.getElementById('socClas2aWishTimeInsideHobbiesDisplay').style.display = 'none';  // Hide the question
+                    document.getElementById('socClas2bTypesOfInsideHobbiesDisplay').style.display = 'none'; // Hide 1b
+                    document.getElementById('socClas2cTypesOfIndoorActivitiesParticipatedDisplay').style.display = 'block'; 
+                    document.getElementById('socClas2dWishPartMoreIndoorActivitiesDisplay').style.display = 'block';
+
+                }
+            });
+        });
+
+        document.getElementById('socClas2aWishTimeInsideHobbies').addEventListener('change', function() {
+            const selectedValue = this.value; // Get the value from the dropdown
+
+            // Check the selected value and display 1b, 1c, and 1d conditionally
+            if (selectedValue === 'Yes') {
+                document.getElementById('socClas2bTypesOfInsideHobbiesDisplay').style.display = 'block'; // Show 1b
+            } else if (selectedValue === 'No') {
+                document.getElementById('socClas2bTypesOfInsideHobbiesDisplay').style.display = 'none'; // Hide 1b
+            }
+        });
+
+
 
     </script>
     
