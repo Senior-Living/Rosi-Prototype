@@ -321,6 +321,8 @@ def calcSocialScore(stats):
         print(scoring_map.get(elem))
         totalScore = totalScore + scoring_map.get(elem)
 
+    print(totalScore)
+
     if totalScore <21:
         res = "Low"
     elif totalScore <41:
