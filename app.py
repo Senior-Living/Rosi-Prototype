@@ -323,13 +323,13 @@ def calcSocialScore(stats):
 
     print(totalScore)
 
-    if totalScore <21:
+    if totalScore <30:
         res = "Low"
-    elif totalScore <41:
+    elif totalScore <45:
         res = "Low-Medium"
-    elif totalScore <61:
+    elif totalScore <60:
         res = "Medium"
-    elif totalScore <81:
+    elif totalScore <70:
         res = "High"
     else:
         res = "Very High"
