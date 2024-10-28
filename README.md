@@ -9,10 +9,15 @@ Install Flask
 pip --version (check if pip installer is installed)
 
 Install the program's files
+pip3 install -r requirements.txt
+or
 pip install -r requirements.txt
 
+
 Run the application 
-python app.py
+python app.py or
+python3 app.py
+
 
 ### Mongodb (Database)
 
