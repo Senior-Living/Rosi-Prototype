@@ -303,8 +303,8 @@ def calcSocialScore(stats):
         "quarterly": 2,
         "bimonthly": 3,
         "onceAMonth": 4,
-        "twiceAMonth": 5,
-        "onceEvery3Weeks": 6,
+        "3timesAMonth": 5,
+        "twiceAMonth": 6,
         "1-3TimesAWeek": 7,
         "4-6TimesAWeek": 8,
         "everyDay": 9
@@ -337,67 +337,67 @@ def calcSocialScore(stats):
     return res
     
 
-def calcAccessibilityScore(accessibilityNeeds):
-    # Define the penalties for each accessibility need
-    accessibility_penalties = {
-        "Wheelchair accessibility": 15,
-        "Visual impairment support": 12,
-        "Hearing impairment support": 12,
-        "Cognitive support": 10,
-        "Assistance with mobility": 10,
-        "Accessible transportation options": 8,
-        "Adjustable seating": 6,
-        "Accessible restrooms": 5,
-        "Assistance animals": 5,
-        "Communication aids": 4,
-    }
+# def calcAccessibilityScore(accessibilityNeeds):
+#     # Define the penalties for each accessibility need
+#     accessibility_penalties = {
+#         "Wheelchair accessibility": 15,
+#         "Visual impairment support": 12,
+#         "Hearing impairment support": 12,
+#         "Cognitive support": 10,
+#         "Assistance with mobility": 10,
+#         "Accessible transportation options": 8,
+#         "Adjustable seating": 6,
+#         "Accessible restrooms": 5,
+#         "Assistance animals": 5,
+#         "Communication aids": 4,
+#     }
 
-    # Calculate the total penalty based on selected needs
-    total_penalty = sum(accessibility_penalties[need] for need in accessibilityNeeds if need in accessibility_penalties)
+#     # Calculate the total penalty based on selected needs
+#     total_penalty = sum(accessibility_penalties[need] for need in accessibilityNeeds if need in accessibility_penalties)
 
-    # Calculate accessibility score
-    accessibility_score = 100 - total_penalty
+#     # Calculate accessibility score
+#     accessibility_score = 100 - total_penalty
 
-    # Ensure accessibility score does not go below 0
-    return max(accessibility_score, 0)
+#     # Ensure accessibility score does not go below 0
+#     return max(accessibility_score, 0)
 
-# New route to get health score for Jane Doe
-@app.route('/get_health_score_jane')
-def get_health_score_jane():
-    try:
-        # Find Jane Doe in the database
-        user = collectionUser.find_one({"firstname": "Jane", "lastname": "Smith"})
+# # New route to get health score for Jane Doe
+# @app.route('/get_health_score_jane')
+# def get_health_score_jane():
+#     try:
+#         # Find Jane Doe in the database
+#         user = collectionUser.find_one({"firstname": "Jane", "lastname": "Smith"})
 
-        if user:
-            # Extract health conditions
-            health_conditions = user.get('healthConditions', [])
+#         if user:
+#             # Extract health conditions
+#             health_conditions = user.get('healthConditions', [])
 
-            print(health_conditions)
-            # Calculate health score
-            health_score = calcHealthScore(health_conditions)
+#             print(health_conditions)
+#             # Calculate health score
+#             health_score = calcHealthScore(health_conditions)
 
-            return f"Health Score for Jane Smith: {health_score}"
-        else:
-            return "User Jane Smith not found."
+#             return f"Health Score for Jane Smith: {health_score}"
+#         else:
+#             return "User Jane Smith not found."
 
-    except Exception as e:
-        return f"An error occurred: {str(e)}"
+#     except Exception as e:
+#         return f"An error occurred: {str(e)}"
     
-@app.route('/get_accessibility_score/<string:name>', methods=['GET'])
-def get_accessibility_score(name):
-    # Fetch user data from MongoDB
-    user = collectionUser.find_one({"firstname": "Jane", "lastname": "Smith"})
+# @app.route('/get_accessibility_score/<string:name>', methods=['GET'])
+# def get_accessibility_score(name):
+#     # Fetch user data from MongoDB
+#     user = collectionUser.find_one({"firstname": "Jane", "lastname": "Smith"})
     
-    if user:
-        # Get accessibility needs from the user data
-        accessibility_needs = user.get("accessibilityNeeds", [])
+#     if user:
+#         # Get accessibility needs from the user data
+#         accessibility_needs = user.get("accessibilityNeeds", [])
         
-        # Calculate the accessibility score
-        score = calcAccessibilityScore(accessibility_needs)
+#         # Calculate the accessibility score
+#         score = calcAccessibilityScore(accessibility_needs)
         
-        return f"Accessibility Score for {name}: {score}"
-    else:
-        return f"User {name} not found.", 404
+#         return f"Accessibility Score for {name}: {score}"
+#     else:
+#         return f"User {name} not found.", 404
 
 
 if __name__ == '__main__':
