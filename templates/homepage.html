@@ -4,11 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROSI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            position: relative; /* Allows absolute positioning of the logo */
+        }
+
+        .logo {
+            position: absolute; /* Position the logo absolutely */
+            top: 20px; /* Distance from the top */
+            left: 20px; /* Distance from the left */
+            max-width: 150px;
+            border-radius: 15px;
+        }
+
+        .hero-title {
+            font-size: 3.5em;
+            color: #000000;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #000000;
+            background-color: #F6E58D;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #BDA55D;
+        }
+
+        .hero-image {
+            width: 80%;               /* Make the image responsive */
+            height: auto;             /* Maintain aspect ratio */
+            max-height: 800px;        /* Set a maximum height */
+            object-fit: cover;        /* Cover the area without stretching */
+            border-radius: 15px;      /* Rounded corners (optional) */
+            margin-top: 20px;         /* Space above the image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+    </style>
 </head>
 <body>
-    <h1>ROSI</h1>
-    <img src="{{ url_for('static', filename='images/logo2.png') }}" alt="Logo">
-    <button onclick="location.href='/addUser'" type="button">Add an User</button>
-    <button onclick="location.href='/addActivity'" type="button">Add an Activity</button>
+    <img src="{{ url_for('static', filename='images/logo2.png') }}" alt="Logo" class="logo">
+    <h1 class="hero-title">ROSI</h1>
+
+    <img src="{{ url_for('static', filename='images/seniors.jpeg') }}" alt="" class="hero-image">
+    
+    <div class="section">
+        <h2 class="section-title">Would you like a personally selected activity?</h2>
+        <a href="/addUser" class="btn">Get Prescription</a>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Would you like to add a new activity to the list of activities?</h2>
+        <a href="/addActivity" class="btn">Add Activity</a>
+    </div>
 </body>
 </html>

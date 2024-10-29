@@ -3,10 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosi 1.0</title>
+    <title>Rosi</title>
 </head>
 <body>
-    <h1>Add a User</h1>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox-group {
+    margin-bottom: 20px;
+}
+
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+}
+
+input[type="submit"] {
+    background-color: #F6E58D; /* Primary color */
+    color: black; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 12px 20px; /* Padding for top/bottom and left/right */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+/* Hover effect */
+input[type="submit"]:hover {
+    background-color: #BDA55D; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Active effect */
+input[type="submit"]:active {
+    transform: translateY(0); /* Return to normal position */
+}
+
+/* Focus effect */
+input[type="submit"]:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(246, 229, 141, 0.8); /* Subtle glow effect */
+}
+    </style>
+    <h1>Get started with your Prescription Today</h1>
     <form action="/submitUser" method="POST">
 
         <h1> User Demographics </h1>
