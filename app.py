@@ -11,6 +11,8 @@ collectionUser = db['ROSIUserConn']  # Collection name
 collectionActivity = db['ROSIActivityConn']  # Collection name
 collectionSocialClassifier = db['ROSISocialClassifierConn']  # Collection name
 
+#℞OSI, not ROSI
+
 
 
 
@@ -175,18 +177,41 @@ def submitUser():
         socClas11Essential
     ]
 
-    extraClassifierStats1 = [
-        socClas1aWishPart,
-        socClas1bTypesOfMealsInterested,
+    # extraClassifierStats1 = [
+    #     socClas1aWishPart,
+    #     socClas1bTypesOfMealsInterested,
+    #     socClas1cTypesOfMealsParticipated,
+    #     socClas1dWishPartMoreActivity,
+    #     socClas2aWishTimeInsideHobbies,
+    #     socClas2bTypesOfInsideHobbies,
+    #     socClas2cTypesOfIndoorActivitiesParticipated,
+    #     socClas2dWishPartMoreIndoorActivities
+    # ]
+
+    extraClassifierStatsFreq = [
         socClas1cTypesOfMealsParticipated,
-        socClas1dWishPartMoreActivity,
-        socClas2aWishTimeInsideHobbies,
-        socClas2bTypesOfInsideHobbies,
-        socClas2cTypesOfIndoorActivitiesParticipated,
-        socClas2dWishPartMoreIndoorActivities
+        socClas2cTypesOfIndoorActivitiesParticipated
     ]
 
+    #Step 1
+    activeDomains = determineActiveDomain(socialClassifierStats)
 
+    #Step 2
+    freqPerDomain = countActivitiesPerDomain(extraClassifierStatsFreq)
+
+    #Step 3
+    pointsPerDomain = determineScorePerDomain(freqPerDomain,extraClassifierStatsFreq)
+
+
+    #Step 4
+    primaryDomain, primaryDomainFreq = findPrimaryDomain(socialClassifierStats)
+
+
+
+    
+    print(primaryDomain)
+    print(primaryDomainFreq)
+    print(freqPerDomain)
 
     socialScore = calcSocialScore(socialClassifierStats)
 
@@ -212,9 +237,6 @@ def submitUser():
         "language": language,
         "socialScore": socialScore
     }
-
-    
-
 
     user_insert_result = collectionUser.insert_one(user_submission_data)
     user_id = user_insert_result.inserted_id  # Get the userId
@@ -301,15 +323,14 @@ def calcSocialScore(stats):
         "never": 0,
         "1-3TimesAYear": 1,
         "quarterly": 2,
-        "bimonthly": 3,
+        "moreThanQuarterlyButLessThanMonthly": 3,
         "onceAMonth": 4,
-        "3timesAMonth": 5,
-        "twiceAMonth": 6,
+        "twiceAMonth": 5,
+        "moreThanTwiceAMonthButLessThanWeekly": 6,
         "1-3TimesAWeek": 7,
         "4-6TimesAWeek": 8,
         "everyDay": 9
     }
-
 
 
     totalScore = 0
@@ -337,67 +358,80 @@ def calcSocialScore(stats):
     return res
     
 
-# def calcAccessibilityScore(accessibilityNeeds):
-#     # Define the penalties for each accessibility need
-#     accessibility_penalties = {
-#         "Wheelchair accessibility": 15,
-#         "Visual impairment support": 12,
-#         "Hearing impairment support": 12,
-#         "Cognitive support": 10,
-#         "Assistance with mobility": 10,
-#         "Accessible transportation options": 8,
-#         "Adjustable seating": 6,
-#         "Accessible restrooms": 5,
-#         "Assistance animals": 5,
-#         "Communication aids": 4,
-#     }
+def findPrimaryDomain(socialClassifierStats):
+    scoring_map = {
+        "never": 0,
+        "1-3TimesAYear": 1,
+        "quarterly": 2,
+        "moreThanQuarterlyButLessThanMonthly": 3,
+        "onceAMonth": 4,
+        "twiceAMonth": 5,
+        "moreThanTwiceAMonthButLessThanWeekly": 6,
+        "1-3TimesAWeek": 7,
+        "4-6TimesAWeek": 8,
+        "everyDay": 9
+    }
 
-#     # Calculate the total penalty based on selected needs
-#     total_penalty = sum(accessibility_penalties[need] for need in accessibilityNeeds if need in accessibility_penalties)
+    resActivity = ""
+    resFreq = -1
 
-#     # Calculate accessibility score
-#     accessibility_score = 100 - total_penalty
 
-#     # Ensure accessibility score does not go below 0
-#     return max(accessibility_score, 0)
+    for elem in socialClassifierStats:
+        print(elem)
+        print(scoring_map.get(elem))
+        if scoring_map.get(elem) > resFreq:
+            resActivity = elem
+            resFreq = scoring_map.get(elem)
 
-# # New route to get health score for Jane Doe
-# @app.route('/get_health_score_jane')
-# def get_health_score_jane():
-#     try:
-#         # Find Jane Doe in the database
-#         user = collectionUser.find_one({"firstname": "Jane", "lastname": "Smith"})
+    return resActivity, resFreq
 
-#         if user:
-#             # Extract health conditions
-#             health_conditions = user.get('healthConditions', [])
+def countActivitiesPerDomain(extraClassifierStatsFreq):
+    domainMap = {
+        "eatingMealsWithOthers",
+        "spendingTimeOnHobbiesOrRecreationAtHome",
+        "attendingHobbiesOrRecreationalActivitiesOutsideHome",
+        "watchingTV",
+        "browsingOnline",
+        "talkingOnThePhoneOrVideoCall",
+        "meetingFamilyFriendsOrAcquaintancesInPerson",
+        "engagingInGroupConversations",
+        "texting",
+        "volunteeringOrHelpingOthers",
+        "goingOutForEssentialActivities",
+    }
 
-#             print(health_conditions)
-#             # Calculate health score
-#             health_score = calcHealthScore(health_conditions)
 
-#             return f"Health Score for Jane Smith: {health_score}"
-#         else:
-#             return "User Jane Smith not found."
+    for elem in extraClassifierStatsFreq:
+        pass
 
-#     except Exception as e:
-#         return f"An error occurred: {str(e)}"
+
+#Finished
+def determineActiveDomain(socialClassifierStats):
+
+    domainMap = {
+        "eatingMealsWithOthers",
+        "spendingTimeOnHobbiesOrRecreationAtHome",
+        "attendingHobbiesOrRecreationalActivitiesOutsideHome",
+        "watchingTV",
+        "browsingOnline",
+        "talkingOnThePhoneOrVideoCall",
+        "meetingFamilyFriendsOrAcquaintancesInPerson",
+        "engagingInGroupConversations",
+        "texting",
+        "volunteeringOrHelpingOthers",
+        "goingOutForEssentialActivities",
+    }
+
+    activeDomains = []
     
-# @app.route('/get_accessibility_score/<string:name>', methods=['GET'])
-# def get_accessibility_score(name):
-#     # Fetch user data from MongoDB
-#     user = collectionUser.find_one({"firstname": "Jane", "lastname": "Smith"})
-    
-#     if user:
-#         # Get accessibility needs from the user data
-#         accessibility_needs = user.get("accessibilityNeeds", [])
-        
-#         # Calculate the accessibility score
-#         score = calcAccessibilityScore(accessibility_needs)
-        
-#         return f"Accessibility Score for {name}: {score}"
-#     else:
-#         return f"User {name} not found.", 404
+
+    for i in range(len(socialClassifierStats)):
+        if socialClassifierStats[i] != "never":
+            activeDomains.append(domainMap[i])
+
+    return activeDomains
+
+
 
 
 if __name__ == '__main__':

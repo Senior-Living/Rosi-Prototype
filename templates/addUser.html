@@ -241,10 +241,10 @@ input[type="submit"]:focus {
             <label><input type="radio" name="socClas1EatWOthers" value="never">Never</label><br>
             <label><input type="radio" name="socClas1EatWOthers" value="1-3TimesAYear">1-3 times a year</label><br>
             <label><input type="radio" name="socClas1EatWOthers" value="quarterly">Quarterly</label><br>
-            <label><input type="radio" name="socClas1EatWOthers" value="bimonthly">Bimonthly</label><br>
+            <label><input type="radio" name="socClas1EatWOthers" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
             <label><input type="radio" name="socClas1EatWOthers" value="onceAMonth">Once a month</label><br>
             <label><input type="radio" name="socClas1EatWOthers" value="twiceAMonth">Twice a month</label><br>
-            <label><input type="radio" name="socClas1EatWOthers" value="onceEvery3Weeks">Once every 3 weeks</label><br>
+            <label><input type="radio" name="socClas1EatWOthers" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
             <label><input type="radio" name="socClas1EatWOthers" value="1-3TimesAWeek">1-3 times a week</label><br>
             <label><input type="radio" name="socClas1EatWOthers" value="4-6TimesAWeek">4-6 times a week</label><br>
             <label><input type="radio" name="socClas1EatWOthers" value="everyDay">Every day</label><br>
@@ -319,10 +319,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas2HobbiesInside" value="never">Never</label><br>
                 <label><input type="radio" name="socClas2HobbiesInside" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas2HobbiesInside" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas2HobbiesInside" value="bimonthly">Bimonthly</label><br>
+                <label><input type="radio" name="socClas2HobbiesInside" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
                 <label><input type="radio" name="socClas2HobbiesInside" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas2HobbiesInside" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas2HobbiesInside" value="onceEvery3Weeks">Once every 3 weeks</label><br>
+                <label><input type="radio" name="socClas2HobbiesInside" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
                 <label><input type="radio" name="socClas2HobbiesInside" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas2HobbiesInside" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas2HobbiesInside" value="everyDay">Every day</label><br>
@@ -397,15 +397,86 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas3HobbiesOutside" value="never">Never</label><br>
                 <label><input type="radio" name="socClas3HobbiesOutside" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas3HobbiesOutside" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas3HobbiesOutside" value="bimonthly">Bimonthly</label><br>
+                <label><input type="radio" name="socClas3HobbiesOutside" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
                 <label><input type="radio" name="socClas3HobbiesOutside" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas3HobbiesOutside" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas3HobbiesOutside" value="onceEvery3Weeks">Once every 3 weeks</label><br>
+                <label><input type="radio" name="socClas3HobbiesOutside" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
                 <label><input type="radio" name="socClas3HobbiesOutside" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas3HobbiesOutside" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas3HobbiesOutside" value="everyDay">Every day</label><br>
             </div>
         <br>
+
+        <div id="socClas3HobbiesOutsideDisplay" style="display:none;">
+            <label>3a. Do you wish you spent time on outdoor hobbies or recreational activities?</label><br>
+            <select id="socClas3aWishHobbiesOutside" name="socClas3aWishHobbiesOutside" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+        </div>
+
+        <div id="socClas3bTypesOfOutsideHobbiesDisplay" style="display:none;">
+            <label>3b. What types of outdoor hobbies or recreational activities do you wish to participate in?</label>
+            <br>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="bookClubs">Book Clubs</label><br>
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="knittingClubs">Knitting Clubs</label><br>
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="gardeningClubs">Gardening Clubs</label><br>
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="attendingExerciseOrFitnessClasses">Attending Exercise or Fitness Classes</label><br>
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="gentleExerciseClasses">Gentle Exercise Classes</label><br>
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="walkingGroups">Walking Groups</label><br>
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="walkingAloneOrWithAPet">Walking Alone or With a Pet</label><br>
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="chairExercisesForLimitedMobility">Chair Exercises for Limited Mobility</label><br>
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="dancingSessionsWithMusicFromTheirEra">Dancing Sessions with Music from Their Era</label><br>
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="attendingMusicConcertsOrPerformances">Attending Music Concerts or Performances</label><br>
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="theaterOrMovieOutings">Theater or Movie Outings</label><br>
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="attendingCommunityCenterClasses">Attending Community Center Classes</label><br>
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="tripsToMuseumsOrArtGalleries">Trips to Museums or Art Galleries</label><br>
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="outdoorPhotographyExcursions">Outdoor Photography Excursions</label><br>     
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="participatingInGroupTravelOrDayTrips">Participating in Group Travel or Day Trips</label><br>            
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="shortBikeRide">Short Bike Ride</label><br>                                   
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="artAndCraftWorkshops">Art and Craft Workshops</label><br>                                   
+                    <label><input type="checkbox" name="socClas3bTypesOfOutsideHobbies" value="educationalTalksAndLectures">Educational Talks and Lectures</label><br>                                   
+                       
+                </div>
+            <br>
+        </div>
+
+        <div id="socClas3cTypesOfOutdoorActivitiesParticipatedDisplay" style="display:none;">
+            <label>3c. What types of outdoor hobbies or recreational activities do you participate in?</label>
+            <br>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="bookClubs">Book Clubs</label><br>
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="knittingClubs">Knitting Clubs</label><br>
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="gardeningClubs">Gardening Clubs</label><br>
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="attendingExerciseOrFitnessClasses">Attending Exercise or Fitness Classes</label><br>
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="gentleExerciseClasses">Gentle Exercise Classes</label><br>
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="walkingGroups">Walking Groups</label><br>
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="walkingAloneOrWithAPet">Walking Alone or With a Pet</label><br>
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="chairExercisesForLimitedMobility">Chair Exercises for Limited Mobility</label><br>
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="dancingSessionsWithMusicFromTheirEra">Dancing Sessions with Music from Their Era</label><br>
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="attendingMusicConcertsOrPerformances">Attending Music Concerts or Performances</label><br>
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="theaterOrMovieOutings">Theater or Movie Outings</label><br>
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="attendingCommunityCenterClasses">Attending Community Center Classes</label><br>
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="tripsToMuseumsOrArtGalleries">Trips to Museums or Art Galleries</label><br>
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="outdoorPhotographyExcursions">Outdoor Photography Excursions</label><br>     
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="participatingInGroupTravelOrDayTrips">Participating in Group Travel or Day Trips</label><br>            
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="shortBikeRide">Short Bike Ride</label><br>                                   
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="artAndCraftWorkshops">Art and Craft Workshops</label><br>                                   
+                <label><input type="checkbox" name="socClas3cTypesOfOutsideHobbies" value="educationalTalksAndLectures">Educational Talks and Lectures</label><br>                                   
+                   
+            </div>
+            <br>
+        </div>
+
+        <div id="socClas3dWishPartMoreOutdoorActivitiesDisplay" style="display:none;">
+            <label>3d. Do you wish you spent more time on hobbies or recreational activities outside the home?</label><br>
+            <select id="socClas3dWishPartMoreOutdoorActivities" name="socClas3dWishPartMoreOutdoorActivities" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+        </div>
+
 
         <label>4. How often do you spend time on watching TV?</label>
         <br>
@@ -413,15 +484,59 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas4TV" value="never">Never</label><br>
                 <label><input type="radio" name="socClas4TV" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas4TV" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas4TV" value="bimonthly">Bimonthly</label><br>
+                <label><input type="radio" name="socClas4TV" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
                 <label><input type="radio" name="socClas4TV" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas4TV" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas4TV" value="onceEvery3Weeks">Once every 3 weeks</label><br>
+                <label><input type="radio" name="socClas4TV" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
                 <label><input type="radio" name="socClas4TV" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas4TV" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas4TV" value="everyDay">Every day</label><br>
             </div>
         <br>
+
+        <div id="socClas4aWishTVDisplay" style="display:none;">
+            <label>4a. Do you wish you watched more TV shows or movies?</label><br>
+            <select id="socClas4aWishTV" name="socClas4aWishTV" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+        </div>
+
+        <div id="socClas4bTypesOfTVDisplay" style="display:none;">
+            <label>4b. What type of programs or movies do you wish to watch?</label>
+            <br>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="socClas4bTypesOfTV" value="news">News</label><br>
+                    <label><input type="checkbox" name="socClas4bTypesOfTV" value="tvShows">TV Shows</label><br>
+                    <label><input type="checkbox" name="socClas4bTypesOfTV" value="documentaries">Documentaries</label><br>
+                    <label><input type="checkbox" name="socClas4bTypesOfTV" value="movies">Movies</label><br>
+                    <label><input type="checkbox" name="socClas4bTypesOfTV" value="sports">Sports</label><br>
+                    <label><input type="checkbox" name="socClas4bTypesOfTV" value="youTubeVideos">YouTube Videos</label><br>                
+                </div>
+            <br>
+        </div>
+
+        <div id="socClas4cTypesOfTVDisplay" style="display:none;">
+            <label>4c. What type of programs or movies do you typically watch?</label>
+            <br>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="socClas4cTypesOfTV" value="news">News</label><br>
+                <label><input type="checkbox" name="socClas4cTypesOfTV" value="tvShows">TV Shows</label><br>
+                <label><input type="checkbox" name="socClas4cTypesOfTV" value="documentaries">Documentaries</label><br>
+                <label><input type="checkbox" name="socClas4cTypesOfTV" value="movies">Movies</label><br>
+                <label><input type="checkbox" name="socClas4cTypesOfTV" value="sports">Sports</label><br>
+                <label><input type="checkbox" name="socClas4cTypesOfTV" value="youTubeVideos">YouTube Videos</label><br>                
+            </div>
+            <br>
+        </div>
+
+        <div id="socClas4dWishPartMoreTVDisplay" style="display:none;">
+            <label>4d. Do you wish you watched more TV shows or movies?</label><br>
+            <select id="socClas4dWishPartMoreTV" name="socClas4dWishPartMoreTV" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+        </div>
 
         <label>5. How often do you spend time on browsing online?</label>
         <br>
@@ -429,15 +544,57 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas5Browsing" value="never">Never</label><br>
                 <label><input type="radio" name="socClas5Browsing" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas5Browsing" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas5Browsing" value="bimonthly">Bimonthly</label><br>
+                <label><input type="radio" name="socClas5Browsing" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
                 <label><input type="radio" name="socClas5Browsing" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas5Browsing" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas5Browsing" value="onceEvery3Weeks">Once every 3 weeks</label><br>
+                <label><input type="radio" name="socClas5Browsing" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
                 <label><input type="radio" name="socClas5Browsing" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas5Browsing" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas5Browsing" value="everyDay">Every day</label><br>
             </div>
         <br>
+
+        <div id="socClas5aWishBrowsingDisplay" style="display:none;">
+            <label>5a. Do you wish you spent time browsing online or engaging in online activities?</label><br>
+            <select id="socClas5aWishBrowsing" name="socClas5aWishBrowsing" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+        </div>
+
+        <div id="socClas4bTypesOfBrowsingDisplay" style="display:none;">
+            <label>5b. Which of the following do you wish to browse online?</label>
+            <br>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="socClas5bTypesOfTV" value="newsWebsites">News Websites</label><br>
+                    <label><input type="checkbox" name="socClas5bTypesOfTV" value="socialMedia">Social Media</label><br>
+                    <label><input type="checkbox" name="socClas5bTypesOfTV" value="blogsOrArticles">Blogs or Articles</label><br>
+                    <label><input type="checkbox" name="socClas5bTypesOfTV" value="onlineForumsOrDiscussionGroups">Online Forums or Discussion Groups</label><br>
+                    <label><input type="checkbox" name="socClas5bTypesOfTV" value="shoppingSites">Shopping Sites</label><br>
+                </div>
+            <br>
+        </div>
+
+        <div id="socClas5cTypesOfBrowsingDisplay" style="display:none;">
+            <label>5c. Which of the following do you browse online?</label>
+            <br>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="socClas5cTypesOfTV" value="newsWebsites">News Websites</label><br>
+                <label><input type="checkbox" name="socClas5cTypesOfTV" value="socialMedia">Social Media</label><br>
+                <label><input type="checkbox" name="socClas5cTypesOfTV" value="blogsOrArticles">Blogs or Articles</label><br>
+                <label><input type="checkbox" name="socClas5cTypesOfTV" value="onlineForumsOrDiscussionGroups">Online Forums or Discussion Groups</label><br>
+                <label><input type="checkbox" name="socClas5cTypesOfTV" value="shoppingSites">Shopping Sites</label><br>
+            </div>
+            <br>
+        </div>
+
+        <div id="socClas5dWishPartMoreBrowsingDisplay" style="display:none;">
+            <label>5d. Do you wish you spent more time browsing online or engaging in online activities?</label><br>
+            <select id="socClas5dWishPartMoreBrowsing" name="socClas5dWishPartMoreBrowsing" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+        </div>
 
         <label>6. How often do you spend time talking on the phone?</label>
         <br>
@@ -445,10 +602,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas6TalkPhone" value="never">Never</label><br>
                 <label><input type="radio" name="socClas6TalkPhone" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas6TalkPhone" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas6TalkPhone" value="bimonthly">Bimonthly</label><br>
+                <label><input type="radio" name="socClas6TalkPhone" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
                 <label><input type="radio" name="socClas6TalkPhone" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas6TalkPhone" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas6TalkPhone" value="onceEvery3Weeks">Once every 3 weeks</label><br>
+                <label><input type="radio" name="socClas6TalkPhone" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
                 <label><input type="radio" name="socClas6TalkPhone" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas6TalkPhone" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas6TalkPhone" value="everyDay">Every day</label><br>
@@ -461,10 +618,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas7MeetFamFriend" value="never">Never</label><br>
                 <label><input type="radio" name="socClas7MeetFamFriend" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas7MeetFamFriend" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas7MeetFamFriend" value="bimonthly">Bimonthly</label><br>
+                <label><input type="radio" name="socClas7MeetFamFriend" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
                 <label><input type="radio" name="socClas7MeetFamFriend" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas7MeetFamFriend" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas7MeetFamFriend" value="onceEvery3Weeks">Once every 3 weeks</label><br>
+                <label><input type="radio" name="socClas7MeetFamFriend" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
                 <label><input type="radio" name="socClas7MeetFamFriend" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas7MeetFamFriend" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas7MeetFamFriend" value="everyDay">Every day</label><br>
@@ -477,10 +634,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas8GroupConvo" value="never">Never</label><br>
                 <label><input type="radio" name="socClas8GroupConvo" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas8GroupConvo" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas8GroupConvo" value="bimonthly">Bimonthly</label><br>
+                <label><input type="radio" name="socClas8GroupConvo" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
                 <label><input type="radio" name="socClas8GroupConvo" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas8GroupConvo" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas8GroupConvo" value="onceEvery3Weeks">Once every 3 weeks</label><br>
+                <label><input type="radio" name="socClas8GroupConvo" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
                 <label><input type="radio" name="socClas8GroupConvo" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas8GroupConvo" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas8GroupConvo" value="everyDay">Every day</label><br>
@@ -493,10 +650,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas9Text" value="never">Never</label><br>
                 <label><input type="radio" name="socClas9Text" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas9Text" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas9Text" value="bimonthly">Bimonthly</label><br>
+                <label><input type="radio" name="socClas9Text" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
                 <label><input type="radio" name="socClas9Text" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas9Text" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas9Text" value="onceEvery3Weeks">Once every 3 weeks</label><br>
+                <label><input type="radio" name="socClas9Text" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
                 <label><input type="radio" name="socClas9Text" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas9Text" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas9Text" value="everyDay">Every day</label><br>
@@ -509,10 +666,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas10Volunteer" value="never">Never</label><br>
                 <label><input type="radio" name="socClas10Volunteer" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas10Volunteer" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas10Volunteer" value="bimonthly">Bimonthly</label><br>
+                <label><input type="radio" name="socClas10Volunteer" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
                 <label><input type="radio" name="socClas10Volunteer" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas10Volunteer" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas10Volunteer" value="onceEvery3Weeks">Once every 3 weeks</label><br>
+                <label><input type="radio" name="socClas10Volunteer" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
                 <label><input type="radio" name="socClas10Volunteer" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas10Volunteer" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas10Volunteer" value="everyDay">Every day</label><br>
@@ -525,10 +682,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas11Essential" value="never">Never</label><br>
                 <label><input type="radio" name="socClas11Essential" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas11Essential" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas11Essential" value="bimonthly">Bimonthly</label><br>
+                <label><input type="radio" name="socClas11Essential" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
                 <label><input type="radio" name="socClas11Essential" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas11Essential" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas11Essential" value="onceEvery3Weeks">Once every 3 weeks</label><br>
+                <label><input type="radio" name="socClas11Essential" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
                 <label><input type="radio" name="socClas11Essential" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas11Essential" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas11Essential" value="everyDay">Every day</label><br>
