@@ -106,15 +106,60 @@ def submitUser():
     socClas10Volunteer = request.form.get('socClas10Volunteer')    
     socClas11Essential = request.form.get('socClas11Essential')    
 
-    socClas1aWishPart = request.form.get('socClas1aWishPart')
-    socClas1bTypesOfMealsInterested = request.form.getlist('socClas1bTypesOfMealsInterested')
-    socClas1cTypesOfMealsParticipated = request.form.getlist('socClas1cTypesOfMealsParticipated')
-    socClas1dWishPartMoreActivity = request.form.get('socClas1dWishPartMoreActivity')
+    socClas1aEatWOthers = request.form.get('socClas1aEatWOthers')
+    socClas1bEatWOthers = request.form.getlist('socClas1bEatWOthers')
+    socClas1cEatWOthers = request.form.getlist('socClas1cEatWOthers')
+    socClas1dEatWOthers = request.form.get('socClas1dEatWOthers')
 
-    socClas2aWishTimeInsideHobbies = request.form.get('socClas2aWishTimeInsideHobbies')
-    socClas2bTypesOfInsideHobbies = request.form.getlist('socClas2bTypesOfInsideHobbies')
-    socClas2cTypesOfIndoorActivitiesParticipated = request.form.getlist('socClas2cTypesOfIndoorActivitiesParticipated')
-    socClas2dWishPartMoreIndoorActivities = request.form.get('socClas2dWishPartMoreIndoorActivities')
+    socClas2aHobbiesInside = request.form.get('socClas2aHobbiesInside')
+    socClas2bHobbiesInside = request.form.getlist('socClas2bHobbiesInside')
+    socClas2cHobbiesInside = request.form.getlist('socClas2cHobbiesInside')
+    socClas2dHobbiesInside = request.form.get('socClas2dHobbiesInside')
+
+    socClas3aHobbiesOutside = request.form.get('socClas3aHobbiesOutside')
+    socClas3bHobbiesOutside = request.form.get('socClas3bHobbiesOutside')
+    socClas3cHobbiesOutside = request.form.get('socClas3cHobbiesOutside')
+    socClas3dHobbiesOutside = request.form.get('socClas3dHobbiesOutside')
+
+    socClas4aTV = request.form.get('socClas4aTV')
+    socClas4bTV = request.form.get('socClas4bTV')
+    socClas4cTV = request.form.get('socClas4cTV')
+    socClas4dTV = request.form.get('socClas4dTV')
+
+    socClas5aBrowsing = request.form.get('socClas5aBrowsing')
+    socClas5bBrowsing = request.form.get('socClas5bBrowsing')
+    socClas5cBrowsing = request.form.get('socClas5cBrowsing')
+    socClas5dBrowsing = request.form.get('socClas5dBrowsing')
+
+    socClas6aTalkPhone = request.form.get('socClas6aTalkPhone')
+    socClas6bTalkPhone = request.form.get('socClas6bTalkPhone')
+    socClas6cTalkPhone = request.form.get('socClas6cTalkPhone')
+    socClas6dTalkPhone = request.form.get('socClas6dTalkPhone')
+
+    socClas7aMeetFFA = request.form.get('socClas7aMeetFFA')
+    socClas7bMeetFFA = request.form.get('socClas7bMeetFFA')
+    socClas7cMeetFFA = request.form.get('socClas7cMeetFFA')
+    socClas7dMeetFFA = request.form.get('socClas7dMeetFFA')
+
+    socClas8aGroupConvo = request.form.get('socClas8aGroupConvo')
+    socClas8bGroupConvo = request.form.get('socClas8bGroupConvo')
+    socClas8cGroupConvo = request.form.get('socClas8cGroupConvo')
+    socClas8dGroupConvo = request.form.get('socClas8dGroupConvo')
+
+    socClas9aText = request.form.get('socClas9aText')
+    socClas9bText = request.form.get('socClas9bText')
+    socClas9cText = request.form.get('socClas9cText')
+    socClas9dText = request.form.get('socClas9dText')
+
+    socClas10aVolunteer = request.form.get('socClas10aVolunteer')
+    socClas10bVolunteer = request.form.get('socClas10bVolunteer')
+    socClas10cVolunteer = request.form.get('socClas10cVolunteer')
+    socClas10dVolunteer = request.form.get('socClas10dVolunteer')
+
+    socClas11aEssential = request.form.get('socClas11aEssential')
+    socClas11bEssential = request.form.get('socClas11bEssential')
+    socClas11cEssential = request.form.get('socClas11cEssential')
+    socClas11dEssential = request.form.get('socClas11dEssential')
 
 
     # Print statements for all retrieved data
@@ -151,15 +196,60 @@ def submitUser():
     print("Volunteering:", socClas10Volunteer)
     print("Essential Activities:", socClas11Essential)
 
-    print(f"1a. Wish to participate in meals or social dining events: {socClas1aWishPart}")
-    print(f"1b. Types of meals the user is interested in: {', '.join(socClas1bTypesOfMealsInterested) if socClas1bTypesOfMealsInterested else 'None'}")
-    print(f"1c. Types of meals the user has participated in: {', '.join(socClas1cTypesOfMealsParticipated) if socClas1cTypesOfMealsParticipated else 'None'}")
-    print(f"1d. Wish to participate in more social activities around meals: {socClas1dWishPartMoreActivity}")
+    print(f"1a. Wish to participate in meals or social dining events: {socClas1aEatWOthers}")
+    print(f"1b. Types of meals the user is interested in: {', '.join(socClas1bEatWOthers) if socClas1bEatWOthers else 'None'}")
+    print(f"1c. Types of meals the user has participated in: {', '.join(socClas1cEatWOthers) if socClas1cEatWOthers else 'None'}")
+    print(f"1d. Wish to participate in more social activities around meals: {socClas1dEatWOthers}")
 
-    print(f"2a. Wish to spend time on hobbies or recreational activities inside the home: {socClas2aWishTimeInsideHobbies}")
-    print(f"2b. Types of indoor hobbies the user is interested in: {', '.join(socClas2bTypesOfInsideHobbies) if socClas2bTypesOfInsideHobbies else 'None'}")
-    print(f"2c. Types of indoor activities the user has participated in: {', '.join(socClas2cTypesOfIndoorActivitiesParticipated) if socClas2cTypesOfIndoorActivitiesParticipated else 'None'}")
-    print(f"2d. Wish to participate in more indoor activities: {socClas2dWishPartMoreIndoorActivities}")
+    print(f"2a. Wish to spend time on hobbies or recreational activities inside the home: {socClas2aHobbiesInside}")
+    print(f"2b. Types of indoor hobbies the user is interested in: {', '.join(socClas2bHobbiesInside) if socClas2bHobbiesInside else 'None'}")
+    print(f"2c. Types of indoor activities the user has participated in: {', '.join(socClas2cHobbiesInside) if socClas2cHobbiesInside else 'None'}")
+    print(f"2d. Wish to participate in more indoor activities: {socClas2dHobbiesInside}")
+
+    print("Hobbies Outside 3a:", socClas3aHobbiesOutside or "Not provided")
+    print("Hobbies Outside 3b:", socClas3bHobbiesOutside or "Not provided")
+    print("Hobbies Outside 3c:", socClas3cHobbiesOutside or "Not provided")
+    print("Hobbies Outside 3d:", socClas3dHobbiesOutside or "Not provided")
+
+    print("TV 4a:", socClas4aTV or "Not provided")
+    print("TV 4b:", socClas4bTV or "Not provided")
+    print("TV 4c:", socClas4cTV or "Not provided")
+    print("TV 4d:", socClas4dTV or "Not provided")
+
+    print("Browsing 5a:", socClas5aBrowsing or "Not provided")
+    print("Browsing 5b:", socClas5bBrowsing or "Not provided")
+    print("Browsing 5c:", socClas5cBrowsing or "Not provided")
+    print("Browsing 5d:", socClas5dBrowsing or "Not provided")
+
+    print("Talk Phone 6a:", socClas6aTalkPhone or "Not provided")
+    print("Talk Phone 6b:", socClas6bTalkPhone or "Not provided")
+    print("Talk Phone 6c:", socClas6cTalkPhone or "Not provided")
+    print("Talk Phone 6d:", socClas6dTalkPhone or "Not provided")
+
+    print("Meet FFA 7a:", socClas7aMeetFFA or "Not provided")
+    print("Meet FFA 7b:", socClas7bMeetFFA or "Not provided")
+    print("Meet FFA 7c:", socClas7cMeetFFA or "Not provided")
+    print("Meet FFA 7d:", socClas7dMeetFFA or "Not provided")
+
+    print("Group Conversation 8a:", socClas8aGroupConvo or "Not provided")
+    print("Group Conversation 8b:", socClas8bGroupConvo or "Not provided")
+    print("Group Conversation 8c:", socClas8cGroupConvo or "Not provided")
+    print("Group Conversation 8d:", socClas8dGroupConvo or "Not provided")
+
+    print("Text 9a:", socClas9aText or "Not provided")
+    print("Text 9b:", socClas9bText or "Not provided")
+    print("Text 9c:", socClas9cText or "Not provided")
+    print("Text 9d:", socClas9dText or "Not provided")
+
+    print("Volunteer 10a:", socClas10aVolunteer or "Not provided")
+    print("Volunteer 10b:", socClas10bVolunteer or "Not provided")
+    print("Volunteer 10c:", socClas10cVolunteer or "Not provided")
+    print("Volunteer 10d:", socClas10dVolunteer or "Not provided")
+
+    print("Essential 11a:", socClas11aEssential or "Not provided")
+    print("Essential 11b:", socClas11bEssential or "Not provided")
+    print("Essential 11c:", socClas11cEssential or "Not provided")
+    print("Essential 11d:", socClas11dEssential or "Not provided")
 
 
 
@@ -357,7 +447,8 @@ def calcSocialScore(stats):
 
     return res
     
-
+#Finished
+#Step 3
 def findPrimaryDomain(socialClassifierStats):
     scoring_map = {
         "never": 0,
@@ -385,6 +476,7 @@ def findPrimaryDomain(socialClassifierStats):
 
     return resActivity, resFreq
 
+#Step 2
 def countActivitiesPerDomain(extraClassifierStatsFreq):
     domainMap = {
         "eatingMealsWithOthers",
@@ -406,6 +498,7 @@ def countActivitiesPerDomain(extraClassifierStatsFreq):
 
 
 #Finished
+#Step 1
 def determineActiveDomain(socialClassifierStats):
 
     domainMap = {
