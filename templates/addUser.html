@@ -1008,7 +1008,281 @@ input[type="submit"]:focus {
             }
         });
 
+        document.querySelectorAll('input[name="socClas3HobbiesOutside"]').forEach((radio) => {
+            radio.addEventListener('change', function() {
+                // Check if the selected value is "never"
+                if (this.value === 'never') {
+                    document.getElementById('socClas3aHobbiesOutside').style.display = 'block'; // Show the question
+                    document.getElementById('socClas3bHobbiesOutside').style.display = 'none'; // Show 1b
+                    document.getElementById('socClas3cHobbiesOutside').style.display = 'none'; 
+                    document.getElementById('socClas3dHobbiesOutside').style.display = 'none';
+                    
+                } else {
+                    document.getElementById('socClas3aHobbiesOutside').style.display = 'none';  // Hide the question
+                    document.getElementById('socClas3bHobbiesOutside').style.display = 'none'; // Hide 1b
+                    document.getElementById('socClas3cHobbiesOutside').style.display = 'block'; 
+                    document.getElementById('socClas3dHobbiesOutside').style.display = 'block';
 
+                }
+            });
+        });
+
+        document.getElementById('socClas3aHobbieOutside').addEventListener('change', function() {
+            const selectedValue = this.value; // Get the value from the dropdown
+
+            // Check the selected value and display 1b, 1c, and 1d conditionally
+            if (selectedValue === 'Yes') {
+                document.getElementById('socClas3bHobbiesOutside').style.display = 'block'; // Show 1b
+            } else if (selectedValue === 'No') {
+                document.getElementById('socClas3bHobbiesOutside').style.display = 'none'; // Hide 1b
+            }
+        });
+
+        document.querySelectorAll('input[name="socClas4TV"]').forEach((radio) => {
+            radio.addEventListener('change', function() {
+                // Check if the selected value is "never"
+                if (this.value === 'never') {
+                    document.getElementById('socClas4aTV').style.display = 'block'; // Show the question
+                    document.getElementById('socClas4bTV').style.display = 'none'; // Show 1b
+                    document.getElementById('socClas4cTV').style.display = 'none'; 
+                    document.getElementById('socClas4dTV').style.display = 'none';
+                    
+                } else {
+                    document.getElementById('socClas4aTV').style.display = 'none';  // Hide the question
+                    document.getElementById('socClas4bTV').style.display = 'none'; // Hide 1b
+                    document.getElementById('socClas4cTV').style.display = 'block'; 
+                    document.getElementById('socClas4dTV').style.display = 'block';
+
+                }
+            });
+        });
+
+        document.getElementById('socClas4aTV').addEventListener('change', function() {
+            const selectedValue = this.value; // Get the value from the dropdown
+
+            // Check the selected value and display 1b, 1c, and 1d conditionally
+            if (selectedValue === 'Yes') {
+                document.getElementById('socClas4bTV').style.display = 'block'; // Show 1b
+            } else if (selectedValue === 'No') {
+                document.getElementById('socClas4bTV').style.display = 'none'; // Hide 1b
+            }
+        });
+
+
+        document.querySelectorAll('input[name="socClas5Browsing"]').forEach((radio) => {
+            radio.addEventListener('change', function() {
+                // Check if the selected value is "never"
+                if (this.value === 'never') {
+                    document.getElementById('socClas5aBrowsing').style.display = 'block'; // Show the question
+                    document.getElementById('socClas5bBrowsing').style.display = 'none'; // Show 1b
+                    document.getElementById('socClas5cBrowsing').style.display = 'none'; 
+                    document.getElementById('socClas5dBrowsing').style.display = 'none';
+                    
+                } else {
+                    document.getElementById('socClas5aBrowsing').style.display = 'none';  // Hide the question
+                    document.getElementById('socClas5bBrowsing').style.display = 'none'; // Hide 1b
+                    document.getElementById('socClas5cBrowsing').style.display = 'block'; 
+                    document.getElementById('socClas5dBrowsing').style.display = 'block';
+
+                }
+            });
+        });
+
+        document.getElementById('socClas5aBrowsing').addEventListener('change', function() {
+            const selectedValue = this.value; // Get the value from the dropdown
+
+            // Check the selected value and display 1b, 1c, and 1d conditionally
+            if (selectedValue === 'Yes') {
+                document.getElementById('socClas5bBrowsing').style.display = 'block'; // Show 1b
+            } else if (selectedValue === 'No') {
+                document.getElementById('socClas5bBrowsing').style.display = 'none'; // Hide 1b
+            }
+        });
+
+
+        document.querySelectorAll('input[name="socClas6TalkPhone"]').forEach((radio) => {
+            radio.addEventListener('change', function() {
+                // Check if the selected value is "never"
+                if (this.value === 'never') {
+                    document.getElementById('socClas6aTalkPhone').style.display = 'block'; // Show the question
+                    document.getElementById('socClas6bTalkPhone').style.display = 'none'; // Show 1b
+                    document.getElementById('socClas6cTalkPhone').style.display = 'none'; 
+                    document.getElementById('socClas6dTalkPhone').style.display = 'none';
+                    
+                } else {
+                    document.getElementById('socClas6aTalkPhone').style.display = 'none';  // Hide the question
+                    document.getElementById('socClas6bTalkPhone').style.display = 'none'; // Hide 1b
+                    document.getElementById('socClas6cTalkPhone').style.display = 'block'; 
+                    document.getElementById('socClas6dTalkPhone').style.display = 'block';
+
+                }
+            });
+        });
+
+        document.getElementById('socClas6aTalkPhone').addEventListener('change', function() {
+            const selectedValue = this.value; // Get the value from the dropdown
+
+            // Check the selected value and display 1b, 1c, and 1d conditionally
+            if (selectedValue === 'Yes') {
+                document.getElementById('socClas6bTalkPhone').style.display = 'block'; // Show 1b
+            } else if (selectedValue === 'No') {
+                document.getElementById('socClas6bTalkPhone').style.display = 'none'; // Hide 1b
+            }
+        });
+
+
+        document.querySelectorAll('input[name="socClas7MeetFFA"]').forEach((radio) => {
+            radio.addEventListener('change', function() {
+                // Check if the selected value is "never"
+                if (this.value === 'never') {
+                    document.getElementById('socClas7aMeetFFA').style.display = 'block'; // Show the question
+                    document.getElementById('socClas7bMeetFFA').style.display = 'none'; // Show 1b
+                    document.getElementById('socClas7cMeetFFA').style.display = 'none'; 
+                    document.getElementById('socClas7dMeetFFA').style.display = 'none';
+                    
+                } else {
+                    document.getElementById('socClas7aMeetFFA').style.display = 'none';  // Hide the question
+                    document.getElementById('socClas7bMeetFFA').style.display = 'none'; // Hide 1b
+                    document.getElementById('socClas7cMeetFFA').style.display = 'block'; 
+                    document.getElementById('socClas7dMeetFFA').style.display = 'block';
+
+                }
+            });
+        });
+
+        document.getElementById('socClas7aMeetFFA').addEventListener('change', function() {
+            const selectedValue = this.value; // Get the value from the dropdown
+
+            // Check the selected value and display 1b, 1c, and 1d conditionally
+            if (selectedValue === 'Yes') {
+                document.getElementById('socClas7bMeetFFA').style.display = 'block'; // Show 1b
+            } else if (selectedValue === 'No') {
+                document.getElementById('socClas7bMeetFFA').style.display = 'none'; // Hide 1b
+            }
+        });
+
+        document.querySelectorAll('input[name="socClas8GroupConvo"]').forEach((radio) => {
+            radio.addEventListener('change', function() {
+                // Check if the selected value is "never"
+                if (this.value === 'never') {
+                    document.getElementById('socClas8aGroupConvo').style.display = 'block'; // Show the question
+                    document.getElementById('socClas8bGroupConvo').style.display = 'none'; // Show 1b
+                    document.getElementById('socClas8cGroupConvo').style.display = 'none'; 
+                    document.getElementById('socClas8dGroupConvo').style.display = 'none';
+                    
+                } else {
+                    document.getElementById('socClas8aGroupConvo').style.display = 'none';  // Hide the question
+                    document.getElementById('socClas8bGroupConvo').style.display = 'none'; // Hide 1b
+                    document.getElementById('socClas8cGroupConvo').style.display = 'block'; 
+                    document.getElementById('socClas8dGroupConvo').style.display = 'block';
+
+                }
+            });
+        });
+
+        document.getElementById('socClas8aGroupConvo').addEventListener('change', function() {
+            const selectedValue = this.value; // Get the value from the dropdown
+
+            // Check the selected value and display 1b, 1c, and 1d conditionally
+            if (selectedValue === 'Yes') {
+                document.getElementById('socClas8bGroupConvo').style.display = 'block'; // Show 1b
+            } else if (selectedValue === 'No') {
+                document.getElementById('socClas8bGroupConvo').style.display = 'none'; // Hide 1b
+            }
+        });
+
+
+        document.querySelectorAll('input[name="socClas9Text"]').forEach((radio) => {
+            radio.addEventListener('change', function() {
+                // Check if the selected value is "never"
+                if (this.value === 'never') {
+                    document.getElementById('socClas9aText').style.display = 'block'; // Show the question
+                    document.getElementById('socClas9bText').style.display = 'none'; // Show 1b
+                    document.getElementById('socClas9cText').style.display = 'none'; 
+                    document.getElementById('socClas9dText').style.display = 'none';
+                    
+                } else {
+                    document.getElementById('socClas9aText').style.display = 'none';  // Hide the question
+                    document.getElementById('socClas9bText').style.display = 'none'; // Hide 1b
+                    document.getElementById('socClas9cText').style.display = 'block'; 
+                    document.getElementById('socClas9dText').style.display = 'block';
+
+                }
+            });
+        });
+
+        document.getElementById('socClas9aText').addEventListener('change', function() {
+            const selectedValue = this.value; // Get the value from the dropdown
+
+            // Check the selected value and display 1b, 1c, and 1d conditionally
+            if (selectedValue === 'Yes') {
+                document.getElementById('socClas9bText').style.display = 'block'; // Show 1b
+            } else if (selectedValue === 'No') {
+                document.getElementById('socClas9bText').style.display = 'none'; // Hide 1b
+            }
+        });
+
+
+        document.querySelectorAll('input[name="socClas10Volunteer"]').forEach((radio) => {
+            radio.addEventListener('change', function() {
+                // Check if the selected value is "never"
+                if (this.value === 'never') {
+                    document.getElementById('socClas10aVolunteer').style.display = 'block'; // Show the question
+                    document.getElementById('socClas10bVolunteer').style.display = 'none'; // Show 1b
+                    document.getElementById('socClas10cVolunteer').style.display = 'none'; 
+                    document.getElementById('socClas10dVolunteer').style.display = 'none';
+                    
+                } else {
+                    document.getElementById('socClas10aVolunteer').style.display = 'none';  // Hide the question
+                    document.getElementById('socClas10bVolunteer').style.display = 'none'; // Hide 1b
+                    document.getElementById('socClas10cVolunteer').style.display = 'block'; 
+                    document.getElementById('socClas10dVolunteer').style.display = 'block';
+
+                }
+            });
+        });
+
+        document.getElementById('socClas10aVolunteer').addEventListener('change', function() {
+            const selectedValue = this.value; // Get the value from the dropdown
+
+            // Check the selected value and display 1b, 1c, and 1d conditionally
+            if (selectedValue === 'Yes') {
+                document.getElementById('socClas10bVolunteer').style.display = 'block'; // Show 1b
+            } else if (selectedValue === 'No') {
+                document.getElementById('socClas10bVolunteer').style.display = 'none'; // Hide 1b
+            }
+        });
+
+
+        document.querySelectorAll('input[name="socClas11Essentials"]').forEach((radio) => {
+            radio.addEventListener('change', function() {
+                // Check if the selected value is "never"
+                if (this.value === 'never') {
+                    document.getElementById('socClas11aEssentials').style.display = 'block'; // Show the question
+                    document.getElementById('socClas11bEssentials').style.display = 'none'; // Show 1b
+                    document.getElementById('socClas11cEssentials').style.display = 'none'; 
+                    document.getElementById('socClas11dEssentials').style.display = 'none';
+                    
+                } else {
+                    document.getElementById('socClas11aEssentials').style.display = 'none';  // Hide the question
+                    document.getElementById('socClas11bEssentials').style.display = 'none'; // Hide 1b
+                    document.getElementById('socClas11cEssentials').style.display = 'block'; 
+                    document.getElementById('socClas11dEssentials').style.display = 'block';
+
+                }
+            });
+        });
+
+        document.getElementById('socClas11aEssentials').addEventListener('change', function() {
+            const selectedValue = this.value; // Get the value from the dropdown
+
+            // Check the selected value and display 1b, 1c, and 1d conditionally
+            if (selectedValue === 'Yes') {
+                document.getElementById('socClas11bEssentials').style.display = 'block'; // Show 1b
+            } else if (selectedValue === 'No') {
+                document.getElementById('socClas11bEssentials').style.display = 'none'; // Hide 1b
+            }
+        });
 
 
     </script>
