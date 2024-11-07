@@ -20,6 +20,22 @@ h1 {
     margin-bottom: 20px;
 }
 
+.radio-grid {
+    display: grid;
+    grid-template-columns: auto repeat(10, 1fr); /* First column for row headers, then 4 columns for options */
+    gap: 5px;
+    align-items: center;
+    max-width: 600px;
+}
+.radio-grid .header {
+    text-align: center;
+    }
+.radio-grid .row-header {
+    font-weight: bold;
+    text-align: left;
+    padding-right: 10px;
+}
+
 form {
     background-color: white;
     border-radius: 8px;
@@ -195,10 +211,12 @@ input[type="submit"]:focus {
         <input type="number" id="monthlyBudget" name="monthlyBudget" required placeholder="Enter monthly budget"><br><br>
 
         <label class="section-title" for="independentTravel">Can you travel independently using public or personal transport?</label><br>
-        <input type="radio" id="travelYes" name="independentTravel" value="Yes" required>
-        <label for="travelYes">Yes</label><br>
-        <input type="radio" id="travelNo" name="independentTravel" value="No">
-        <label for="travelNo">No</label><br><br>
+        <label>
+            <input type="radio" id="travelYes" name="independentTravel" value="Yes" required> Yes
+        </label>
+        <label>
+            <input type="radio" id="travelNo" name="independentTravel" value="No"> No
+        </label>
 
         <label class="section-title" for="zipCode">Postal Code:</label><br>
         <input type="text" id="zipCode" name="zipCode" pattern="[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d" title="Please enter a valid Canadian postal code (e.g., A1A 1A1)" required><br><br>
@@ -241,21 +259,25 @@ input[type="submit"]:focus {
 
         <h1>Social Classifier:</h1>
 
+            
+
         <label class="section-title">1. How often do you eat your meals with others? </label>
         <br>
         <div class="radio-group">
             <label><input type="radio" name="socClas1EatWOthers" value="never">Never</label><br>
             <label><input type="radio" name="socClas1EatWOthers" value="1-3TimesAYear">1-3 times a year</label><br>
             <label><input type="radio" name="socClas1EatWOthers" value="quarterly">Quarterly</label><br>
-            <label><input type="radio" name="socClas1EatWOthers" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
+            <label><input type="radio" name="socClas1EatWOthers" value="twiceInThreeMonths">Twice in three months</label><br>
             <label><input type="radio" name="socClas1EatWOthers" value="onceAMonth">Once a month</label><br>
             <label><input type="radio" name="socClas1EatWOthers" value="twiceAMonth">Twice a month</label><br>
-            <label><input type="radio" name="socClas1EatWOthers" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
+            <label><input type="radio" name="socClas1EatWOthers" value="threeTimesAMonth">Three times a month</label><br>
             <label><input type="radio" name="socClas1EatWOthers" value="1-3TimesAWeek">1-3 times a week</label><br>
             <label><input type="radio" name="socClas1EatWOthers" value="4-6TimesAWeek">4-6 times a week</label><br>
             <label><input type="radio" name="socClas1EatWOthers" value="everyDay">Every day</label><br>
         </div>
         <br>
+
+        
 
         <div id="socClas1aEatWOthersDisplay" style="display:none;">
             <label class="section-title">1a. Do you wish to participate in meals or social dining events?</label><br>
@@ -271,9 +293,7 @@ input[type="submit"]:focus {
             <label class="section-title">1b. What types of meals or social dining events would you participate in?</label>
             <br>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="socClas1bEatWOthers" value="communityDining">Community Dining</label><br>
-                    <label><input type="checkbox" name="socClas1bEatWOthers" value="themedDinners">Themed Dinners (holiday or cultural themes)</label><br>
-                    <label><input type="checkbox" name="socClas1bEatWOthers" value="potluckMeals">Potluck Meals (sharing dishes)</label><br>
+                    <label><input type="checkbox" name="socClas1bEatWOthers" value="communityDining">Eat in the cafeteria or community dining</label><br>
                     <label><input type="checkbox" name="socClas1bEatWOthers" value="teaAndCoffeeSocials">Tea and Coffee Socials</label><br>
                     <label><input type="checkbox" name="socClas1bEatWOthers" value="birthdayAnniversaryMeals">Birthday or Anniversary Meals</label><br>
                     <label><input type="checkbox" name="socClas1bEatWOthers" value="buffetOrBrunchGatherings">Buffet or Brunch Gatherings</label><br>
@@ -281,9 +301,7 @@ input[type="submit"]:focus {
                     <label><input type="checkbox" name="socClas1bEatWOthers" value="outdoorBBQs">Outdoor BBQs</label><br>
                     <label><input type="checkbox" name="socClas1bEatWOthers" value="picnicLunches">Picnic Lunches</label><br>
                     <label><input type="checkbox" name="socClas1bEatWOthers" value="familyBBQDays">Family BBQ Days</label><br>
-                    <label><input type="checkbox" name="socClas1bEatWOthers" value="farmToTableEvent">Farm-to-Table Events</label><br>
-                    <label><input type="checkbox" name="socClas1bEatWOthers" value="chefTable">Chef Table</label><br>
-                    <label><input type="checkbox" name="socClas1bEatWOthers" value="progressiveDinners">Progressive Dinners</label><br>
+                    <label><input type="checkbox" name="socClas1bEatWOthers" value="iceCreamSocials">Ice Cream Socials</label><br>
                     <label><input type="checkbox" name="socClas1bEatWOthers" value="happyhour">Happy Hour</label><br>                    
                 </div>
             <br>
@@ -293,9 +311,7 @@ input[type="submit"]:focus {
             <label class="section-title">1c. What types of meals or social dining events do you participate in?</label>
             <br>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="communityDining">Community Dining</label><br>
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="themedDinners">Themed Dinners (holiday or cultural themes)</label><br>
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="potluckMeals">Potluck Meals (sharing dishes)</label><br>
+                    <label><input type="checkbox" name="socClas1cEatWOthers" value="communityDining">Community dining</label><br>
                     <label><input type="checkbox" name="socClas1cEatWOthers" value="teaAndCoffeeSocials">Tea and Coffee Socials</label><br>
                     <label><input type="checkbox" name="socClas1cEatWOthers" value="birthdayAnniversaryMeals">Birthday or Anniversary Meals</label><br>
                     <label><input type="checkbox" name="socClas1cEatWOthers" value="buffetOrBrunchGatherings">Buffet or Brunch Gatherings</label><br>
@@ -303,13 +319,65 @@ input[type="submit"]:focus {
                     <label><input type="checkbox" name="socClas1cEatWOthers" value="outdoorBBQs">Outdoor BBQs</label><br>
                     <label><input type="checkbox" name="socClas1cEatWOthers" value="picnicLunches">Picnic Lunches</label><br>
                     <label><input type="checkbox" name="socClas1cEatWOthers" value="familyBBQDays">Family BBQ Days</label><br>
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="farmToTableEvent">Farm-to-Table Events</label><br>
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="chefTable">Chef Table</label><br>
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="progressiveDinners">Progressive Dinners</label><br>
+                    <label><input type="checkbox" name="socClas1cEatWOthers" value="iceCreamSocials">Ice Cream Socials</label><br>
                     <label><input type="checkbox" name="socClas1cEatWOthers" value="happyhour">Happy Hour</label><br>                    
                 </div>
             <br>
         </div>
+
+        <div class="radio-grid">
+            <!-- Column Headers -->
+            <div></div> <!-- Empty cell for top-left corner -->
+            <div class="header">1-3 times a year</div>
+            <div class="header">Quarterly</div>
+            <div class="header">Twice in three months</div>
+            <div class="header">Once a month</div>
+            <div class="header">Twice a month </div>
+            <div class="header">Three times a month</div>
+            <div class="header">1-3 times a week</div>
+            <div class="header">4-6 times a week</div>
+            <div class="header">Every day</div>
+            <div class="header"></div>
+
+            <!-- Row 1 with Row Header -->
+            <div class="row-header">Community dining</div>
+            <label><input type="radio" name="communityDining" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="communityDining" value="quarterly"></label>
+            <label><input type="radio" name="communityDining" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="communityDining" value="onceAMonth"></label>
+            <label><input type="radio" name="communityDining" value="twiceAMonth"></label>
+            <label><input type="radio" name="communityDining" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="communityDining" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="communityDining" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="communityDining" value="everyDay"></label>
+            <div class="header"></div>
+
+            <!-- Row 2 with Row Header -->
+            <div class="row-header">Tea and Coffee Socials</div>
+            <label><input type="radio" name="teaAndCoffeeSocials" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="teaAndCoffeeSocials" value="quarterly"></label>
+            <label><input type="radio" name="teaAndCoffeeSocials" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="teaAndCoffeeSocials" value="onceAMonth"></label>
+            <label><input type="radio" name="teaAndCoffeeSocials" value="twiceAMonth"></label>
+            <label><input type="radio" name="teaAndCoffeeSocials" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="teaAndCoffeeSocials" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="teaAndCoffeeSocials" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="teaAndCoffeeSocials" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Birthday or Anniversary Meals</div>
+            <label><input type="radio" name="birthdayAnniversaryMeals" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="birthdayAnniversaryMeals" value="quarterly"></label>
+            <label><input type="radio" name="birthdayAnniversaryMeals" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="birthdayAnniversaryMeals" value="onceAMonth"></label>
+            <label><input type="radio" name="birthdayAnniversaryMeals" value="twiceAMonth"></label>
+            <label><input type="radio" name="birthdayAnniversaryMeals" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="birthdayAnniversaryMeals" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="birthdayAnniversaryMeals" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="birthdayAnniversaryMeals" value="everyDay"></label>
+        </div>
+
+        
 
         <div id="socClas1dEatWOthersDisplay" style="display:none;">
             <label class="section-title">1d. Do you wish to participate in more meals or social dining events?</label><br>
@@ -325,10 +393,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas2HobbiesInside" value="never">Never</label><br>
                 <label><input type="radio" name="socClas2HobbiesInside" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas2HobbiesInside" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas2HobbiesInside" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
+                <label><input type="radio" name="socClas2HobbiesInside" value="twiceInThreeMonths">Twice in three months</label><br>
                 <label><input type="radio" name="socClas2HobbiesInside" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas2HobbiesInside" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas2HobbiesInside" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
+                <label><input type="radio" name="socClas2HobbiesInside" value="threeTimesAMonth">Three times a month</label><br>
                 <label><input type="radio" name="socClas2HobbiesInside" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas2HobbiesInside" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas2HobbiesInside" value="everyDay">Every day</label><br>
@@ -403,10 +471,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas3HobbiesOutside" value="never">Never</label><br>
                 <label><input type="radio" name="socClas3HobbiesOutside" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas3HobbiesOutside" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas3HobbiesOutside" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
+                <label><input type="radio" name="socClas3HobbiesOutside" value="twiceInThreeMonths">Twice in three months</label><br>
                 <label><input type="radio" name="socClas3HobbiesOutside" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas3HobbiesOutside" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas3HobbiesOutside" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
+                <label><input type="radio" name="socClas3HobbiesOutside" value="threeTimesAMonth">Three times a month</label><br>
                 <label><input type="radio" name="socClas3HobbiesOutside" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas3HobbiesOutside" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas3HobbiesOutside" value="everyDay">Every day</label><br>
@@ -490,10 +558,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas4TV" value="never">Never</label><br>
                 <label><input type="radio" name="socClas4TV" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas4TV" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas4TV" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
+                <label><input type="radio" name="socClas4TV" value="twiceInThreeMonths">Twice in three months</label><br>
                 <label><input type="radio" name="socClas4TV" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas4TV" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas4TV" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
+                <label><input type="radio" name="socClas4TV" value="threeTimesAMonth">Three times a month</label><br>
                 <label><input type="radio" name="socClas4TV" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas4TV" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas4TV" value="everyDay">Every day</label><br>
@@ -550,10 +618,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas5Browsing" value="never">Never</label><br>
                 <label><input type="radio" name="socClas5Browsing" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas5Browsing" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas5Browsing" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
+                <label><input type="radio" name="socClas5Browsing" value="twiceInThreeMonths">Twice in three months</label><br>
                 <label><input type="radio" name="socClas5Browsing" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas5Browsing" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas5Browsing" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
+                <label><input type="radio" name="socClas5Browsing" value="threeTimesAMonth">Three times a month</label><br>
                 <label><input type="radio" name="socClas5Browsing" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas5Browsing" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas5Browsing" value="everyDay">Every day</label><br>
@@ -608,10 +676,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas6TalkPhone" value="never">Never</label><br>
                 <label><input type="radio" name="socClas6TalkPhone" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas6TalkPhone" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas6TalkPhone" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
+                <label><input type="radio" name="socClas6TalkPhone" value="twiceInThreeMonths">Twice in three months</label><br>
                 <label><input type="radio" name="socClas6TalkPhone" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas6TalkPhone" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas6TalkPhone" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
+                <label><input type="radio" name="socClas6TalkPhone" value="threeTimesAMonth">Three times a month</label><br>
                 <label><input type="radio" name="socClas6TalkPhone" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas6TalkPhone" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas6TalkPhone" value="everyDay">Every day</label><br>
@@ -666,10 +734,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas7MeetFFA" value="never">Never</label><br>
                 <label><input type="radio" name="socClas7MeetFFA" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas7MeetFFA" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas7MeetFFA" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
+                <label><input type="radio" name="socClas7MeetFFA" value="twiceInThreeMonths">Twice in three months</label><br>
                 <label><input type="radio" name="socClas7MeetFFA" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas7MeetFFA" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas7MeetFFA" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
+                <label><input type="radio" name="socClas7MeetFFA" value="threeTimesAMonth">Three times a month</label><br>
                 <label><input type="radio" name="socClas7MeetFFA" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas7MeetFFA" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas7MeetFFA" value="everyDay">Every day</label><br>
@@ -722,10 +790,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas8GroupConvo" value="never">Never</label><br>
                 <label><input type="radio" name="socClas8GroupConvo" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas8GroupConvo" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas8GroupConvo" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
+                <label><input type="radio" name="socClas8GroupConvo" value="twiceInThreeMonths">Twice in three months</label><br>
                 <label><input type="radio" name="socClas8GroupConvo" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas8GroupConvo" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas8GroupConvo" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
+                <label><input type="radio" name="socClas8GroupConvo" value="threeTimesAMonth">Three times a month</label><br>
                 <label><input type="radio" name="socClas8GroupConvo" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas8GroupConvo" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas8GroupConvo" value="everyDay">Every day</label><br>
@@ -776,10 +844,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas9Text" value="never">Never</label><br>
                 <label><input type="radio" name="socClas9Text" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas9Text" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas9Text" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
+                <label><input type="radio" name="socClas9Text" value="twiceInThreeMonths">Twice in three months</label><br>
                 <label><input type="radio" name="socClas9Text" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas9Text" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas9Text" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
+                <label><input type="radio" name="socClas9Text" value="threeTimesAMonth">Three times a month</label><br>
                 <label><input type="radio" name="socClas9Text" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas9Text" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas9Text" value="everyDay">Every day</label><br>
@@ -832,10 +900,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas10Volunteer" value="never">Never</label><br>
                 <label><input type="radio" name="socClas10Volunteer" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas10Volunteer" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas10Volunteer" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
+                <label><input type="radio" name="socClas10Volunteer" value="twiceInThreeMonths">Twice in three months</label><br>
                 <label><input type="radio" name="socClas10Volunteer" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas10Volunteer" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas10Volunteer" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
+                <label><input type="radio" name="socClas10Volunteer" value="threeTimesAMonth">Three times a month</label><br>
                 <label><input type="radio" name="socClas10Volunteer" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas10Volunteer" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas10Volunteer" value="everyDay">Every day</label><br>
@@ -900,10 +968,10 @@ input[type="submit"]:focus {
                 <label><input type="radio" name="socClas11Essential" value="never">Never</label><br>
                 <label><input type="radio" name="socClas11Essential" value="1-3TimesAYear">1-3 times a year</label><br>
                 <label><input type="radio" name="socClas11Essential" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas11Essential" value="moreThanQuarterlyButLessThanMonthly">More than quarterly but less than monthly</label><br>
+                <label><input type="radio" name="socClas11Essential" value="twiceInThreeMonths">Twice in three months</label><br>
                 <label><input type="radio" name="socClas11Essential" value="onceAMonth">Once a month</label><br>
                 <label><input type="radio" name="socClas11Essential" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas11Essential" value="moreThanTwiceAMonthButLessThanWeekly">More than twice a month but less than weekly</label><br>
+                <label><input type="radio" name="socClas11Essential" value="threeTimesAMonth">Three times a month</label><br>
                 <label><input type="radio" name="socClas11Essential" value="1-3TimesAWeek">1-3 times a week</label><br>
                 <label><input type="radio" name="socClas11Essential" value="4-6TimesAWeek">4-6 times a week</label><br>
                 <label><input type="radio" name="socClas11Essential" value="everyDay">Every day</label><br>
