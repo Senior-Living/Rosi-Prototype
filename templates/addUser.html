@@ -29,8 +29,12 @@ form {
     margin: auto;
 }
 
-label {
+.section-title {
     font-weight: bold;
+}
+
+label {
+    font-weight: normal;
     margin-bottom: 5px;
     display: block;
 }
@@ -53,7 +57,9 @@ input[type="checkbox"] {
 
 .checkbox-group {
     margin-bottom: 20px;
+    font-weight: normal; /* This makes the text less bold */
 }
+
 
 
 button {
@@ -111,23 +117,23 @@ input[type="submit"]:focus {
     <form action="/submitUser" method="POST">
 
         <h1> User Demographics </h1>
-        <label for="name">First Name:</label><br>
+        <label class="section-title" for="name">First Name:</label><br>
         <input type="text" id="firstname" name="firstname" required><br><br>
 
-        <label for="name">Last Name:</label><br>
+        <label class="section-title" for="name">Last Name:</label><br>
         <input type="text" id="lastname" name="lastname" required><br><br>
         
-        <label for="dateOfBirth">Date of Birth:</label><br>
+        <label class="section-title" for="dateOfBirth">Date of Birth:</label><br>
         <input type="date" id="dateOfBirth" name="dateOfBirth" required><br><br>        
 
-        <label for="gender">Gender:</label><br>
+        <label class="section-title" for="gender">Gender:</label><br>
         <select id="gender" name="gender" required>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
         </select><br><br>
 
-        <label>Select Your Interests:</label><br>
+        <label class="section-title">Select Your Interests:</label><br>
         <div class="checkbox-group">
             <label><input type="checkbox" name="interests" value="gardening">Music</label><br>
             <label><input type="checkbox" name="interests" value="reading">Arts and Crafts</label><br>
@@ -140,14 +146,14 @@ input[type="submit"]:focus {
         </div><br>
 
 
-        <label for="personality">Personality Type:</label><br>
+        <label class="section-title" for="personality">Personality Type:</label><br>
         <select id="personality" name="personality" required title="Introverted = solo, extroverted = talking, Ambivert = mix of both">
             <option value="introverted">Introverted</option>
             <option value="extroverted">Extroverted</option>
             <option value="ambivert">Ambivert</option>
         </select><br><br>
 
-        <label>Select Your Social Goals:</label><br>
+        <label class="section-title">Select Your Social Goals:</label><br>
         <div class="checkbox-group">
             <label><input type="checkbox" name="socialGoals" value="makeNewFriends">Make new friends</label><br>
             <label><input type="checkbox" name="socialGoals" value="attendSocialEvents">Strengthen existing friendships</label><br>
@@ -159,7 +165,7 @@ input[type="submit"]:focus {
         </div><br>
 
 
-        <label>Select Your Health Conditions:</label><br>
+        <label class="section-title">Select Your Health Conditions:</label><br>
         <div class="checkbox-group">
             <label><input type="checkbox" name="healthConditions" value="diabetes"> Diabetes</label><br>
             <label><input type="checkbox" name="healthConditions" value="hypertension"> Hypertension</label><br>
@@ -174,7 +180,7 @@ input[type="submit"]:focus {
         </div><br>
         
 
-        <label>Do you have any accessibility needs? (Select all that apply)</label><br>
+        <label class="section-title">Do you have any accessibility needs? (Select all that apply)</label><br>
         <div class="checkbox-group">
             <label><input type="checkbox" name="accessibilityNeeds" value="Wheelchair accessibility">Wheelchair accessibility</label><br>
             <label><input type="checkbox" name="accessibilityNeeds" value="assistanceWithMobility">Assistance with Mobility</label><br>
@@ -182,44 +188,44 @@ input[type="submit"]:focus {
             <label><input type="checkbox" name="accessibilityNeeds" value="hearingSupport"> Hearing support </label><br>
         </div><br>
 
-        <label for="availableHours">Available Hours:</label><br>
+        <label class="section-title" for="availableHours">Available Hours:</label><br>
         <input type="number" id="availableHours" name="availableHours" required placeholder="Enter available hours"><br><br>
 
-        <label for="monthlyBudget">Monthly Budget:</label><br>
+        <label class="section-title" for="monthlyBudget">Monthly Budget:</label><br>
         <input type="number" id="monthlyBudget" name="monthlyBudget" required placeholder="Enter monthly budget"><br><br>
 
-        <label for="independentTravel">Can you travel independently using public or personal transport?</label><br>
+        <label class="section-title" for="independentTravel">Can you travel independently using public or personal transport?</label><br>
         <input type="radio" id="travelYes" name="independentTravel" value="Yes" required>
         <label for="travelYes">Yes</label><br>
         <input type="radio" id="travelNo" name="independentTravel" value="No">
         <label for="travelNo">No</label><br><br>
 
-        <label for="zipCode">Postal Code:</label><br>
+        <label class="section-title" for="zipCode">Postal Code:</label><br>
         <input type="text" id="zipCode" name="zipCode" pattern="[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d" title="Please enter a valid Canadian postal code (e.g., A1A 1A1)" required><br><br>
 
 
-        <label>Preferred Activity Type:</label><br>
+        <label class="section-title">Preferred Activity Type:</label><br>
         <div class="checkbox-group">
             <label><input type="checkbox" name="activityPreference" value="online"> Online</label><br>
             <label><input type="checkbox" name="activityPreference" value="in-person"> In-Person</label>
         </div><br>
 
 
-        <label for="distanceOptions">Preferred Distance:</label><br>
+        <label class="section-title" for="distanceOptions">Preferred Distance:</label><br>
         <select id="distanceOptions" name="distanceOptions" required>
             <option value="close">Less than 1 km</option>
             <option value="moderate">1-5 km</option>
             <option value="far">5-10 km</option>
         </select><br><br>
 
-        <label>Group Size Preference:</label><br>
+        <label class="section-title">Group Size Preference:</label><br>
         <div class="checkbox-group">
             <label><input type="checkbox" name="groupSizePreference" value="small">2-5 person (Small)</label><br>
             <label><input type="checkbox" name="groupSizePreference" value="medium">5-10 people (Medium)</label><br>
             <label><input type="checkbox" name="groupSizePreference" value="large">10+ people (Large)</label>
         </div><br>
         
-        <label>Time Preference:</label><br>
+        <label class="section-title">Time Preference:</label><br>
         <div class="checkbox-group">
             <label><input type="checkbox" name="timePreference" value="morning">Morning (7am-12pm)</label><br>
             <label><input type="checkbox" name="timePreference" value="afternoon">Afternoon(12pm-5pm)</label><br>
@@ -227,7 +233,7 @@ input[type="submit"]:focus {
         </div><br>
         
 
-        <label for="language">Language:</label><br>
+        <label class="section-title" for="language">Language:</label><br>
         <select id="language" name="language" required>
             <option value="English">English</option>
             <option value="French">French</option>
@@ -235,7 +241,7 @@ input[type="submit"]:focus {
 
         <h1>Social Classifier:</h1>
 
-        <label>1. How often do you eat your meals with others? </label>
+        <label class="section-title">1. How often do you eat your meals with others? </label>
         <br>
         <div class="radio-group">
             <label><input type="radio" name="socClas1EatWOthers" value="never">Never</label><br>
@@ -252,7 +258,7 @@ input[type="submit"]:focus {
         <br>
 
         <div id="socClas1aEatWOthersDisplay" style="display:none;">
-            <label>1a. Do you wish you participated in meals or social dining events?</label><br>
+            <label class="section-title">1a. Do you wish to participate in meals or social dining events?</label><br>
             <select id="socClas1aEatWOthers" name="socClas1aEatWOthers" required>
                 <option value="Yes">Yes</option>
                 <option value="No" selected>No</option>
@@ -262,7 +268,7 @@ input[type="submit"]:focus {
         
 
         <div id="socClas1bEatWOthersDisplay" style="display:none;">
-            <label>1b. What types of meals or social dining events would you participate in?</label>
+            <label class="section-title">1b. What types of meals or social dining events would you participate in?</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas1bEatWOthers" value="communityDining">Community Dining</label><br>
@@ -284,7 +290,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas1cEatWOthersDisplay" style="display:none;">
-            <label>1c. What types of meals or social dining events do you participate in?</label>
+            <label class="section-title">1c. What types of meals or social dining events do you participate in?</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas1cEatWOthers" value="communityDining">Community Dining</label><br>
@@ -306,14 +312,14 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas1dEatWOthersDisplay" style="display:none;">
-            <label>1d. Do you wish you participated in meals or social dining events?</label><br>
+            <label class="section-title">1d. Do you wish to participate in more meals or social dining events?</label><br>
             <select id="socClas1dEatWOthers" name="socClas1dEatWOthers" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <label>2. How often do you spend time on hobbies or recreational activities inside your apartment?</label>
+        <label class="section-title">2. How often do you spend time on hobbies or recreational activities inside your apartment?</label>
         <br>
             <div class="radio-group">
                 <label><input type="radio" name="socClas2HobbiesInside" value="never">Never</label><br>
@@ -330,7 +336,7 @@ input[type="submit"]:focus {
         <br>
 
         <div id="socClas2aHobbiesInsideDisplay" style="display:none;">
-            <label>2a. Do you wish you spent time on hobbies or recreational activities inside the home?</label><br>
+            <label class="section-title">2a. Do you wish to spend time on hobbies or recreational activities inside the home?</label><br>
             <select id="socClas2aHobbiesInside" name="socClas2aHobbiesInside" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -338,7 +344,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas2bHobbiesInsideDisplay" style="display:none;">
-            <label>2b. What types of meals or social dining events would you participate in?</label>
+            <label class="section-title">2b. What types of meals or social dining events would you participate in?</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas2bHobbiesInside" value="readingBooks">Reading Books or Magazines</label><br>
@@ -361,7 +367,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas2cHobbiesInsideDisplay" style="display:none;">
-            <label>2c. What types of indoor hobbies or recreational activities do you participate in?</label>
+            <label class="section-title">2c. What types of indoor hobbies or recreational activities do you participate in?</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas2cHobbiesInside" value="readingBooks">Reading Books or Magazines</label><br>
@@ -384,14 +390,14 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas2dHobbiesInsideDisplay" style="display:none;">
-            <label>2d. Do you wish you spent more time on hobbies or recreational activities inside the home?</label><br>
+            <label class="section-title">2d. Do you wish to spend more time on hobbies or recreational activities inside the home?</label><br>
             <select id="socClas2dHobbiesInside" name="socClas2dHobbiesInside" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <label>3. How often do you spend time on hobbies or recreational activities outside your apartment?</label>
+        <label class="section-title">3. How often do you spend time on hobbies or recreational activities outside your apartment?</label>
         <br>
             <div class="radio-group">
                 <label><input type="radio" name="socClas3HobbiesOutside" value="never">Never</label><br>
@@ -408,7 +414,7 @@ input[type="submit"]:focus {
         <br>
 
         <div id="socClas3aHobbiesOutsideDisplay" style="display:none;">
-            <label>3a. Do you wish you spent time on outdoor hobbies or recreational activities?</label><br>
+            <label class="section-title">3a. Do you wish you to spend time on outdoor hobbies or recreational activities?</label><br>
             <select id="socClas3aHobbiesOutside" name="socClas3aHobbiesOutside" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -416,7 +422,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas3bHobbiesOutsideDisplay" style="display:none;">
-            <label>3b. What types of outdoor hobbies or recreational activities do you wish to participate in?</label>
+            <label class="section-title">3b. What types of outdoor hobbies or recreational activities do you wish to participate in?</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas3bHobbiesOutside" value="bookClubs">Book Clubs</label><br>
@@ -443,7 +449,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas3cHobbiesOutsideDisplay" style="display:none;">
-            <label>3c. What types of outdoor hobbies or recreational activities do you participate in?</label>
+            <label class="section-title">3c. What types of outdoor hobbies or recreational activities do you participate in?</label>
             <br>
             <div class="checkbox-group">
                 <label><input type="checkbox" name="socClas3cHobbiesOutside" value="bookClubs">Book Clubs</label><br>
@@ -470,7 +476,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas3dHobbiesOutsideDisplay" style="display:none;">
-            <label>3d. Do you wish you spent more time on hobbies or recreational activities outside the home?</label><br>
+            <label class="section-title">3d. Do you wish you spend more time on hobbies or recreational activities outside the home?</label><br>
             <select id="socClas3dHobbiesOutside" name="socClas3dHobbiesOutside" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -478,7 +484,7 @@ input[type="submit"]:focus {
         </div>
 
 
-        <label>4. How often do you spend time on watching TV?</label>
+        <label class="section-title">4. How often do you spend time on watching TV?</label>
         <br>
             <div class="radio-group">
                 <label><input type="radio" name="socClas4TV" value="never">Never</label><br>
@@ -495,7 +501,7 @@ input[type="submit"]:focus {
         <br>
 
         <div id="socClas4aTVDisplay" style="display:none;">
-            <label>4a. Do you wish you watched more TV shows or movies?</label><br>
+            <label class="section-title">4a. Do you wish to watch TV shows or movies?</label><br>
             <select id="socClas4aTV" name="socClas4aTV" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -503,7 +509,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas4bTVDisplay" style="display:none;">
-            <label>4b. What type of programs or movies do you wish to watch?</label>
+            <label class="section-title">4b. What type of programs or movies do you wish to watch?</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas4bTV" value="news">News</label><br>
@@ -517,7 +523,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas4cTVDisplay" style="display:none;">
-            <label>4c. What type of programs or movies do you typically watch?</label>
+            <label class="section-title">4c. What type of programs or movies do you typically watch?</label>
             <br>
             <div class="checkbox-group">
                 <label><input type="checkbox" name="socClas4cTV" value="news">News</label><br>
@@ -531,14 +537,14 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas4dTVDisplay" style="display:none;">
-            <label>4d. Do you wish you watched more TV shows or movies?</label><br>
+            <label class="section-title">4d. Do you wish to watch more TV shows or movies?</label><br>
             <select id="socClas4dTV" name="socClas4dTV" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <label>5. How often do you spend time on browsing online?</label>
+        <label class="section-title">5. How often do you spend time on browsing online?</label>
         <br>
             <div class="radio-group">
                 <label><input type="radio" name="socClas5Browsing" value="never">Never</label><br>
@@ -555,7 +561,7 @@ input[type="submit"]:focus {
         <br>
 
         <div id="socClas5aBrowsingDisplay" style="display:none;">
-            <label>5a. Do you wish you spent time browsing online or engaging in online activities?</label><br>
+            <label class="section-title">5a. Do you wish to spend time browsing online or engaging in online activities?</label><br>
             <select id="socClas5aBrowsing" name="socClas5aBrowsing" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -563,7 +569,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas5bBrowsingDisplay" style="display:none;">
-            <label>5b. Which of the following do you wish to browse online?</label>
+            <label class="section-title">5b. Which of the following topics do you wish to browse online?</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas5bBrowsing" value="newsWebsites">News Websites</label><br>
@@ -576,7 +582,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas5cBrowsingDisplay" style="display:none;">
-            <label>5c. Which of the following do you browse online?</label>
+            <label class="section-title">5c. Which of the following topics do you browse online?</label>
             <br>
             <div class="checkbox-group">
                 <label><input type="checkbox" name="socClas5cBrowsing" value="newsWebsites">News Websites</label><br>
@@ -589,14 +595,14 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas5dBrowsingDisplay" style="display:none;">
-            <label>5d. Do you wish you spent more time browsing online or engaging in online activities?</label><br>
+            <label class="section-title">5d. Do you wish to spend more time browsing online or engaging in online activities?</label><br>
             <select id="socClas5dBrowsing" name="socClas5dBrowsing" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <label>6. How often do you spend time talking on the phone?</label>
+        <label class="section-title">6. How often do you spend time talking on the phone?</label>
         <br>
             <div class="radio-group">
                 <label><input type="radio" name="socClas6TalkPhone" value="never">Never</label><br>
@@ -613,7 +619,7 @@ input[type="submit"]:focus {
         <br>
 
         <div id="socClas6aTalkPhoneDisplay" style="display:none;">
-            <label>6a.  Do you wish you spent time talking on the phone or video calling others?</label><br>
+            <label class="section-title">6a.  Do you wish to spend time talking on the phone or video calling others?</label><br>
             <select id="socClas6aTalkPhone" name="socClas6aTalkPhone" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -621,7 +627,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas6bTalkPhoneDisplay" style="display:none;">
-            <label>6b. Whom do you wish to talk to on the phone or video call?</label>
+            <label class="section-title">6b. Whom do you wish to talk to on the phone or video call?</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas6bTalkPhone" value="spouseOrPartner">Spouse or Partner</label><br>
@@ -634,7 +640,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas6cTalkPhoneDisplay" style="display:none;">
-            <label>6c. Who do you usually talk to on the phone or video call?</label>
+            <label class="section-title">6c. Who do you usually talk to on the phone or video call?</label>
             <br>
             <div class="checkbox-group">
                 <label><input type="checkbox" name="socClas6cTalkPhone" value="spouseOrPartner">Spouse or Partner</label><br>
@@ -647,14 +653,14 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas6dTalkPhoneDisplay" style="display:none;">
-            <label>6d. Do you wish you spent more time talking on the phone or video calling others?</label><br>
+            <label class="section-title">6d. Do you wish to spend more time talking on the phone or video calling others?</label><br>
             <select id="socClas6dTalkPhone" name="socClas6dTalkPhone" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <label>7. How often do you meet with family, friends or acquaintances in person?</label>
+        <label class="section-title">7. How often do you meet with family, friends or acquaintances in person?</label>
         <br>
             <div class="radio-group">
                 <label><input type="radio" name="socClas7MeetFFA" value="never">Never</label><br>
@@ -671,7 +677,7 @@ input[type="submit"]:focus {
         <br>
 
         <div id="socClas7aMeetFFADisplay" style="display:none;">
-            <label>7a. Do you wish you met family, friends, or acquaintances in person?</label><br>
+            <label class="section-title">7a. Do you wish to meet family, friends, or acquaintances in person?</label><br>
             <select id="socClas7aMeetFFA" name="socClas7aMeetFFA" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -679,7 +685,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas7bMeetFFADisplay" style="display:none;">
-            <label>7b. Where would you like to meet them?</label>
+            <label class="section-title">7b. Where would you like to meet them?</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas7bMeetFFA" value="atHome">At Home</label><br>
@@ -691,7 +697,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas7cMeetFFADisplay" style="display:none;">
-            <label>7c.  Where do you typically meet them?</label>
+            <label class="section-title">7c.  Where do you typically meet them?</label>
             <br>
             <div class="checkbox-group">
                 <label><input type="checkbox" name="socClas7cMeetFFA" value="atHome">At Home</label><br>
@@ -703,14 +709,14 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas7dMeetFFADisplay" style="display:none;">
-            <label>7d. Do you wish you met family, friends, or acquaintances in person more often?</label><br>
+            <label class="section-title">7d. Do you wish you met family, friends, or acquaintances in person more often?</label><br>
             <select id="socClas7dMoreMeetFFA" name="socClas7dMoreMeetFFA" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <label>8. How frequently do you participate in group conversations, either in person or online, with three or more people?</label>
+        <label class="section-title">8. How frequently do you participate in group conversations, either in person or online, with three or more people?</label>
         <br>
             <div class="radio-group">
                 <label><input type="radio" name="socClas8GroupConvo" value="never">Never</label><br>
@@ -727,7 +733,7 @@ input[type="submit"]:focus {
         <br>
 
         <div id="socClas8aGroupConvoDisplay" style="display:none;">
-            <label>8a. Do you wish you engaged in group conversations more often?</label><br>
+            <label class="section-title">8a. Do you wish to engage in group conversations more often?</label><br>
             <select id="socClas8aGroupConvo" name="socClas8aGroupConvo" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -735,7 +741,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas8bGroupConvoDisplay" style="display:none;">
-            <label>8b. Where do you wish to engage in these group conversations?</label>
+            <label class="section-title">8b. Where do you wish to engage in these group conversations?</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas8bGroupConvo" value="InPersonFamilyOrFriendsGatherings">In-person (family or friends’ gatherings)</label><br>
@@ -746,7 +752,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas8cGroupConvoDisplay" style="display:none;">
-            <label>8c. Where do you typically engage in these group conversations?</label>
+            <label class="section-title">8c. Where do you typically engage in these group conversations?</label>
             <br>
             <div class="checkbox-group">
                 <label><input type="checkbox" name="socClas8cGroupConvo" value="InPersonFamilyOrFriendsGatherings">In-person (family or friends’ gatherings)</label><br>
@@ -757,14 +763,14 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas8dGroupConvoDisplay" style="display:none;">
-            <label>8d. Do you wish you engaged in group conversations more often?</label><br>
+            <label class="section-title">8d. Do you wish to engage in group conversations more often?</label><br>
             <select id="socClas8dGroupConvo" name="socClas8dGroupConvo" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <label>9. How frequently do you text people?</label>
+        <label class="section-title">9. How frequently do you text people?</label>
         <br>
             <div class="radio-group">
                 <label><input type="radio" name="socClas9Text" value="never">Never</label><br>
@@ -781,7 +787,7 @@ input[type="submit"]:focus {
         <br>
 
         <div id="socClas9aTextDisplay" style="display:none;">
-            <label>9a. Do you wish you texted or messaged others?</label><br>
+            <label class="section-title">9a. Do you wish to text or message others?</label><br>
             <select id="socClas9aText" name="socClas9aText" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -789,7 +795,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas9bTextDisplay" style="display:none;">
-            <label>9b. What platform(s) do you wish to use for texting?</label>
+            <label class="section-title">9b. What platform(s) do you wish to use for texting?</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas9bText" value="sms">SMS (standard text messages)</label><br>
@@ -801,7 +807,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas9cTextDisplay" style="display:none;">
-            <label>9c. What platform(s) do you typically use for texting?</label>
+            <label class="section-title">9c. What platform(s) do you typically use for texting?</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas9cText" value="sms">SMS (standard text messages)</label><br>
@@ -813,14 +819,14 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas9dTextDisplay" style="display:none;">
-            <label>9d. Do you wish you texted or messaged others more often?</label><br>
+            <label class="section-title">9d. Do you wish to text or message others more often?</label><br>
             <select id="socClas9dText" name="socClas9dText" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <label>10. How frequently do you volunteer?</label>
+        <label class="section-title">10. How frequently do you volunteer?</label>
         <br>
             <div class="radio-group">
                 <label><input type="radio" name="socClas10Volunteer" value="never">Never</label><br>
@@ -837,7 +843,7 @@ input[type="submit"]:focus {
         <br>
 
         <div id="socClas10aVolunteerDisplay" style="display:none;">
-            <label>10a. Do you wish you to volunteer?</label><br>
+            <label class="section-title">10a. Do you wish you to volunteer?</label><br>
             <select id="socClas10aVolunteer" name="socClas10aVolunteer" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -845,7 +851,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas10bVolunteerDisplay" style="display:none;">
-            <label>10b. Please select the types of volunteer or helping activities you wish to participate in</label>
+            <label class="section-title">10b. Please select the types of volunteer or helping activities you wish to participate in</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas10bVolunteer" value="supportingFamilyFriendsOrCommunityMembers">Supporting Family, Friends, or Community Members</label><br>
@@ -863,7 +869,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas10cVolunteerDisplay" style="display:none;">
-            <label>10c. Please select the types of volunteer or helping activities you participate in</label>
+            <label class="section-title">10c. Please select the types of volunteer or helping activities you participate in</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas10cVolunteer" value="supportingFamilyFriendsOrCommunityMembers">Supporting Family, Friends, or Community Members</label><br>
@@ -881,14 +887,14 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas10dVolunteerDisplay" style="display:none;">
-            <label>10d. Do you wish you volunteered more often?</label><br>
+            <label class="section-title"> 10d. Do you wish to volunteer more often?</label><br>
             <select id="socClas10dVolunteer" name="socClas10dVolunteer" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <label>11. How frequently do you go out for essential activities (Shopping, Medical, etc.)?</label>
+        <label class="section-title">11. How frequently do you go out for essential activities (Shopping, Medical, etc.)?</label>
         <br>
             <div class="radio-group">
                 <label><input type="radio" name="socClas11Essential" value="never">Never</label><br>
@@ -905,7 +911,7 @@ input[type="submit"]:focus {
         <br>
 
         <div id="socClas10aEssentialDisplay" style="display:none;">
-            <label>11a. Do you wish you went out for essential activities often?</label><br>
+            <label class="section-title">11a. Do you wish you went out for essential activities often?</label><br>
             <select id="socClas10aEssential" name="socClas10aEssential" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -913,7 +919,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas11bEssentialDisplay" style="display:none;">
-            <label>11b. What types of essential activities do you wish to go out for? </label>
+            <label class="section-title">11b. What types of essential activities do you wish to go out for? </label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas10bEssential" value="groceryShopping">Grocery Shopping</label><br>
@@ -925,7 +931,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas11cEssentialDisplay" style="display:none;">
-            <label>11c. What types of essential activities do you go out for?</label>
+            <label class="section-title">11c. What types of essential activities do you go out for?</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas10cEssential" value="groceryShopping">Grocery Shopping</label><br>
@@ -937,7 +943,7 @@ input[type="submit"]:focus {
         </div>
 
         <div id="socClas11dEssentialDisplay" style="display:none;">
-            <label>11d. Do you wish you went out for essential activities more often?</label><br>
+            <label class="section-title">11d. Do you wish to go out for essential activities more often?</label><br>
             <select id="socClas11dEssential" name="socClas11dEssential" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
