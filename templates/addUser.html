@@ -22,7 +22,7 @@ h1 {
 
 .radio-grid {
     display: grid;
-    grid-template-columns: auto repeat(10, 1fr); /* First column for row headers, then 4 columns for options */
+    grid-template-columns: auto repeat(11, 1fr); /* First column for row headers, then 4 columns for options */
     gap: 5px;
     align-items: center;
     max-width: 600px;
@@ -41,7 +41,7 @@ form {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
 }
 
@@ -95,9 +95,9 @@ button:hover {
     background-color: #218838;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     form {
-        padding: 15px;
+        padding: 5px;
     }
 }
 
@@ -133,43 +133,30 @@ input[type="submit"]:focus {
     <form action="/submitUser" method="POST">
 
         <h1> User Demographics </h1>
-        <label class="section-title" for="name">First Name:</label><br>
+        <label class="section-title" for="name">1a. What is your First Name?</label><br>
         <input type="text" id="firstname" name="firstname" required><br><br>
 
-        <label class="section-title" for="name">Last Name:</label><br>
+        <label class="section-title" for="name">1b. What is your Last Name?</label><br>
         <input type="text" id="lastname" name="lastname" required><br><br>
         
-        <label class="section-title" for="dateOfBirth">Date of Birth:</label><br>
+        <label class="section-title" for="dateOfBirth">2. What is your Date of Birth?</label><br>
         <input type="date" id="dateOfBirth" name="dateOfBirth" required><br><br>        
 
-        <label class="section-title" for="gender">Gender:</label><br>
+        <label class="section-title" for="gender">3. Please select your gender:</label><br>
         <select id="gender" name="gender" required>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
         </select><br><br>
 
-        <label class="section-title">Select Your Interests:</label><br>
-        <div class="checkbox-group">
-            <label><input type="checkbox" name="interests" value="gardening">Music</label><br>
-            <label><input type="checkbox" name="interests" value="reading">Arts and Crafts</label><br>
-            <label><input type="checkbox" name="interests" value="physicalActivities">Physical Activities(Yoga, Walking, etc.)</label><br>
-            <label><input type="checkbox" name="interests" value="games">Games(Board Games, Card Games, etc.)</label><br>
-            <label><input type="checkbox" name="interests" value="learning">Learning(Languages,History,etc.)</label><br>
-            <label><input type="checkbox" name="interests" value="socializing">Socializing/Networking</label><br>
-            <label><input type="checkbox" name="interests" value="volunteering">Volunteering</label><br>
-            <label><input type="checkbox" name="interests" value="board_games"> Board Games</label><br>
-        </div><br>
-
-
-        <label class="section-title" for="personality">Personality Type:</label><br>
+        <label class="section-title" for="personality">4. Would you say you are more introverted or extroverted or a mix of both?</label><br>
         <select id="personality" name="personality" required title="Introverted = solo, extroverted = talking, Ambivert = mix of both">
             <option value="introverted">Introverted</option>
             <option value="extroverted">Extroverted</option>
             <option value="ambivert">Ambivert</option>
         </select><br><br>
 
-        <label class="section-title">Select Your Social Goals:</label><br>
+        <label class="section-title">5. Select Your Social Goals:</label><br>
         <div class="checkbox-group">
             <label><input type="checkbox" name="socialGoals" value="makeNewFriends">Make new friends</label><br>
             <label><input type="checkbox" name="socialGoals" value="attendSocialEvents">Strengthen existing friendships</label><br>
@@ -180,37 +167,43 @@ input[type="submit"]:focus {
             <label><input type="checkbox" name="socialGoals" value="mentalWellBeing">Improve Mental Well-Being</label><br>
         </div><br>
 
-
-        <label class="section-title">Select Your Health Conditions:</label><br>
+        <label class="section-title">6. Select from the following physical, mental or social health conditions that you may have at present:</label><br>
         <div class="checkbox-group">
-            <label><input type="checkbox" name="healthConditions" value="diabetes"> Diabetes</label><br>
-            <label><input type="checkbox" name="healthConditions" value="hypertension"> Hypertension</label><br>
-            <label><input type="checkbox" name="healthConditions" value="heart_disease"> Heart Disease</label><br>
             <label><input type="checkbox" name="healthConditions" value="arthritis"> Arthritis</label><br>
             <label><input type="checkbox" name="healthConditions" value="asthma"> Asthma</label><br>
-            <label><input type="checkbox" name="healthConditions" value="chronic_obstructive_pulmonary_disease"> Chronic Obstructive Pulmonary Disease (COPD)</label><br>
-            <label><input type="checkbox" name="healthConditions" value="allergies"> Allergies</label><br>
-            <label><input type="checkbox" name="healthConditions" value="depression"> Depression</label><br>
             <label><input type="checkbox" name="healthConditions" value="anxiety"> Anxiety</label><br>
-            <label><input type="checkbox" name="healthConditions" value="cancer"> Cancer</label>
+            <label><input type="checkbox" name="healthConditions" value="balanceIssues">Balance Issues</label><br>
+            <label><input type="checkbox" name="healthConditions" value="backPains">Back Pains</label><br>
+            <label><input type="checkbox" name="healthConditions" value="blindness">Blindness</label><br>
+            <label><input type="checkbox" name="healthConditions" value="lowBloodPressure">Low Blood Pressure</label><br>
+            <label><input type="checkbox" name="healthConditions" value="highBloodPressure">High Blood Pressure</label><br>
+            <label><input type="checkbox" name="healthConditions" value="copd"> COPD</label><br>
+            <label><input type="checkbox" name="healthConditions" value="hypertension"> Hypertension</label><br>
+            <label><input type="checkbox" name="healthConditions" value="depression"> Depression</label><br>
+            <label><input type="checkbox" name="healthConditions" value="deafness"> Deafness</label><br>
+            <label><input type="checkbox" name="healthConditions" value="loneliness">Loneliness</label><br>
+            <label><input type="checkbox" name="healthConditions" value="loseOfSpeechOrSpeechImpairment">Loss of Speech or Speech Impairment</label><br>
+            <label><input type="checkbox" name="healthConditions" value="lossOfSensations">Loss of Sensations</label><br>
+            <label><input type="checkbox" name="healthConditions" value="mobility limitations from stroke or injury"> Mobility Limitations from Stroke or Injury</label><br>
+            <label><input type="checkbox" name="healthConditions" value="parkinsonsOrOtherTremors">Parkinsons or other tremors</label>
         </div><br>
-        
 
-        <label class="section-title">Do you have any accessibility needs? (Select all that apply)</label><br>
+        <label class="section-title">7. Do you have any accessibility needs? (Select all that apply)</label><br>
         <div class="checkbox-group">
             <label><input type="checkbox" name="accessibilityNeeds" value="Wheelchair accessibility">Wheelchair accessibility</label><br>
             <label><input type="checkbox" name="accessibilityNeeds" value="assistanceWithMobility">Assistance with Mobility</label><br>
             <label><input type="checkbox" name="accessibilityNeeds" value="visionSupport"> Vision support</label><br>
             <label><input type="checkbox" name="accessibilityNeeds" value="hearingSupport"> Hearing support </label><br>
+            <label><input type="checkbox" name="accessibilityNeeds" value="speechSupport">Speech support </label><br>
         </div><br>
 
-        <label class="section-title" for="availableHours">Available Hours:</label><br>
+        <label class="section-title" for="availableHours">8. How much time are you available per week for recreation (in hours)?:</label><br>
         <input type="number" id="availableHours" name="availableHours" required placeholder="Enter available hours"><br><br>
 
-        <label class="section-title" for="monthlyBudget">Monthly Budget:</label><br>
+        <label class="section-title" for="monthlyBudget">9. What is your monthly budget for recreation (in CAD)?</label><br>
         <input type="number" id="monthlyBudget" name="monthlyBudget" required placeholder="Enter monthly budget"><br><br>
 
-        <label class="section-title" for="independentTravel">Can you travel independently using public or personal transport?</label><br>
+        <label class="section-title" for="independentTravel">10. Can you travel independently using public or personal transport?</label><br>
         <label>
             <input type="radio" id="travelYes" name="independentTravel" value="Yes" required> Yes
         </label>
@@ -218,80 +211,66 @@ input[type="submit"]:focus {
             <input type="radio" id="travelNo" name="independentTravel" value="No"> No
         </label>
 
-        <label class="section-title" for="zipCode">Postal Code:</label><br>
+        <label class="section-title" for="zipCode">11. What is your residential pincode?</label><br>
         <input type="text" id="zipCode" name="zipCode" pattern="[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d" title="Please enter a valid Canadian postal code (e.g., A1A 1A1)" required><br><br>
 
-
-        <label class="section-title">Preferred Activity Type:</label><br>
+        <label class="section-title">12. What is your activity location preference?</label><br>
         <div class="checkbox-group">
             <label><input type="checkbox" name="activityPreference" value="online"> Online</label><br>
             <label><input type="checkbox" name="activityPreference" value="in-person"> In-Person</label>
+            <label><input type="checkbox" name="activityPreference" value="noPreference">No Preference</label>
         </div><br>
 
-
-        <label class="section-title" for="distanceOptions">Preferred Distance:</label><br>
+        <label class="section-title" for="distanceOptions">12a. If in-person, what distance are you willing to travel?</label><br>
         <select id="distanceOptions" name="distanceOptions" required>
             <option value="close">Less than 1 km</option>
             <option value="moderate">1-5 km</option>
             <option value="far">5-10 km</option>
+            <option value="veryFar">>10 km</option>
         </select><br><br>
 
-        <label class="section-title">Group Size Preference:</label><br>
+        <label class="section-title">13. What is your preferred group size for activities?</label><br>
         <div class="checkbox-group">
             <label><input type="checkbox" name="groupSizePreference" value="small">2-5 person (Small)</label><br>
             <label><input type="checkbox" name="groupSizePreference" value="medium">5-10 people (Medium)</label><br>
             <label><input type="checkbox" name="groupSizePreference" value="large">10+ people (Large)</label>
+            <label><input type="checkbox" name="groupSizePreference" value="noPreference">No preference</label>
         </div><br>
         
-        <label class="section-title">Time Preference:</label><br>
+        <label class="section-title">14. What is your preferred time for doing activities?</label><br>
         <div class="checkbox-group">
             <label><input type="checkbox" name="timePreference" value="morning">Morning (7am-12pm)</label><br>
             <label><input type="checkbox" name="timePreference" value="afternoon">Afternoon(12pm-5pm)</label><br>
             <label><input type="checkbox" name="timePreference" value="evening">Evening(5pm-9pm)</label><br>
+            <label><input type="checkbox" name="timePreference" value="noPreference">No preference</label>
         </div><br>
         
 
-        <label class="section-title" for="language">Language:</label><br>
+        <label class="section-title" for="language">15. What is your preferred language for activities?:</label><br>
         <select id="language" name="language" required>
             <option value="English">English</option>
             <option value="French">French</option>
         </select><br><br>
 
+
+        <label class="section-title">16. What are the barriers that prevent you from participating more in activities?</label><br>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="barriersFromParticipating" value="lackOfTransportation">Lack of Transportation</label><br>
+            <label><input type="checkbox" name="barriersFromParticipating" value="healthOrMobilityIssues">Health or Mobility Issues</label>
+            <label><input type="checkbox" name="barriersFromParticipating" value="financialLimitations">Financial Limitations</label>
+            <label><input type="checkbox" name="barriersFromParticipating" value="lackOfInformationOrAwareness">Lack of Information or Awareness</label>
+            <label><input type="checkbox" name="barriersFromParticipating" value="noOneToParticipatewWith">No One to Participate With</label>
+            <label><input type="checkbox" name="barriersFromParticipating" value="anxietyOrEmotionalBarriers">Anxiety or Emotional Barriers</label>
+            <label><input type="checkbox" name="barriersFromParticipating" value="difficultyWithTechnology">Difficulty with Technology</label>
+            <label><input type="checkbox" name="barriersFromParticipating" value="timeConstraints">Time Constraints</label>
+        </div><br>
+
+
         <h1>Social Classifier:</h1>
 
-            
-
-        <label class="section-title">1. How often do you eat your meals with others? </label>
-        <br>
-        <div class="radio-group">
-            <label><input type="radio" name="socClas1EatWOthers" value="never">Never</label><br>
-            <label><input type="radio" name="socClas1EatWOthers" value="1-3TimesAYear">1-3 times a year</label><br>
-            <label><input type="radio" name="socClas1EatWOthers" value="quarterly">Quarterly</label><br>
-            <label><input type="radio" name="socClas1EatWOthers" value="twiceInThreeMonths">Twice in three months</label><br>
-            <label><input type="radio" name="socClas1EatWOthers" value="onceAMonth">Once a month</label><br>
-            <label><input type="radio" name="socClas1EatWOthers" value="twiceAMonth">Twice a month</label><br>
-            <label><input type="radio" name="socClas1EatWOthers" value="threeTimesAMonth">Three times a month</label><br>
-            <label><input type="radio" name="socClas1EatWOthers" value="1-3TimesAWeek">1-3 times a week</label><br>
-            <label><input type="radio" name="socClas1EatWOthers" value="4-6TimesAWeek">4-6 times a week</label><br>
-            <label><input type="radio" name="socClas1EatWOthers" value="everyDay">Every day</label><br>
-        </div>
-        <br>
-
-        
-
-        <div id="socClas1aEatWOthersDisplay" style="display:none;">
-            <label class="section-title">1a. Do you wish to participate in meals or social dining events?</label><br>
-            <select id="socClas1aEatWOthers" name="socClas1aEatWOthers" required>
-                <option value="Yes">Yes</option>
-                <option value="No" selected>No</option>
-            </select><br><br>
-        </div>
-
-        
-
-        <div id="socClas1bEatWOthersDisplay" style="display:none;">
-            <label class="section-title">1b. What types of meals or social dining events would you participate in?</label>
-            <br>
+        <div id="socClas1EatWOthersDisplay" style="display:block;">
+            <label class="section-title">1. What types of meals or social dining events would you participate in?</label>
+            <!-- <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas1bEatWOthers" value="communityDining">Eat in the cafeteria or community dining</label><br>
                     <label><input type="checkbox" name="socClas1bEatWOthers" value="teaAndCoffeeSocials">Tea and Coffee Socials</label><br>
@@ -304,43 +283,29 @@ input[type="submit"]:focus {
                     <label><input type="checkbox" name="socClas1bEatWOthers" value="iceCreamSocials">Ice Cream Socials</label><br>
                     <label><input type="checkbox" name="socClas1bEatWOthers" value="happyhour">Happy Hour</label><br>                    
                 </div>
-            <br>
+            <br> -->
         </div>
 
-        <div id="socClas1cEatWOthersDisplay" style="display:none;">
-            <label class="section-title">1c. What types of meals or social dining events do you participate in?</label>
-            <br>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="communityDining">Community dining</label><br>
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="teaAndCoffeeSocials">Tea and Coffee Socials</label><br>
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="birthdayAnniversaryMeals">Birthday or Anniversary Meals</label><br>
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="buffetOrBrunchGatherings">Buffet or Brunch Gatherings</label><br>
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="holidayFeastEvents">Holiday Feast Events</label><br>
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="outdoorBBQs">Outdoor BBQs</label><br>
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="picnicLunches">Picnic Lunches</label><br>
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="familyBBQDays">Family BBQ Days</label><br>
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="iceCreamSocials">Ice Cream Socials</label><br>
-                    <label><input type="checkbox" name="socClas1cEatWOthers" value="happyhour">Happy Hour</label><br>                    
-                </div>
-            <br>
-        </div>
+        
 
         <div class="radio-grid">
             <!-- Column Headers -->
             <div></div> <!-- Empty cell for top-left corner -->
-            <div class="header">1-3 times a year</div>
-            <div class="header">Quarterly</div>
-            <div class="header">Twice in three months</div>
+            <div class="header">Never</div>
+            <div class="header">1-3 times a Year</div>
+            <div class="header">Once in 3 months</div>
+            <div class="header">Twice in 3 months</div>
             <div class="header">Once a month</div>
             <div class="header">Twice a month </div>
-            <div class="header">Three times a month</div>
+            <div class="header">Thrice a month</div>
             <div class="header">1-3 times a week</div>
             <div class="header">4-6 times a week</div>
             <div class="header">Every day</div>
             <div class="header"></div>
 
             <!-- Row 1 with Row Header -->
-            <div class="row-header">Community dining</div>
+            <div class="row-header">Community Dining</div>
+            <label><input type="radio" name="communityDining" value="never"></label>
             <label><input type="radio" name="communityDining" value="1-3TimesAYear"></label>
             <label><input type="radio" name="communityDining" value="quarterly"></label>
             <label><input type="radio" name="communityDining" value="twiceInThreeMonths"></label>
@@ -354,6 +319,7 @@ input[type="submit"]:focus {
 
             <!-- Row 2 with Row Header -->
             <div class="row-header">Tea and Coffee Socials</div>
+            <label><input type="radio" name="teaAndCoffeeSocials" value="never"></label>
             <label><input type="radio" name="teaAndCoffeeSocials" value="1-3TimesAYear"></label>
             <label><input type="radio" name="teaAndCoffeeSocials" value="quarterly"></label>
             <label><input type="radio" name="teaAndCoffeeSocials" value="twiceInThreeMonths"></label>
@@ -366,6 +332,7 @@ input[type="submit"]:focus {
             <div class="header"></div>
 
             <div class="row-header">Birthday or Anniversary Meals</div>
+            <label><input type="radio" name="birthdayAnniversaryMeals" value="never"></label>
             <label><input type="radio" name="birthdayAnniversaryMeals" value="1-3TimesAYear"></label>
             <label><input type="radio" name="birthdayAnniversaryMeals" value="quarterly"></label>
             <label><input type="radio" name="birthdayAnniversaryMeals" value="twiceInThreeMonths"></label>
@@ -375,67 +342,110 @@ input[type="submit"]:focus {
             <label><input type="radio" name="birthdayAnniversaryMeals" value="1-3TimesAWeek"></label>
             <label><input type="radio" name="birthdayAnniversaryMeals" value="4-6TimesAWeek"></label>
             <label><input type="radio" name="birthdayAnniversaryMeals" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Buffet or Brunch Gatherings</div>
+            <label><input type="radio" name="buffetOrBrunchGatherings" value="never"></label>
+            <label><input type="radio" name="buffetOrBrunchGatherings" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="buffetOrBrunchGatherings" value="quarterly"></label>
+            <label><input type="radio" name="buffetOrBrunchGatherings" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="buffetOrBrunchGatherings" value="onceAMonth"></label>
+            <label><input type="radio" name="buffetOrBrunchGatherings" value="twiceAMonth"></label>
+            <label><input type="radio" name="buffetOrBrunchGatherings" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="buffetOrBrunchGatherings" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="buffetOrBrunchGatherings" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="buffetOrBrunchGatherings" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Holiday Feast Events</div>
+            <label><input type="radio" name="holidayFeastEvents" value="never"></label>
+            <label><input type="radio" name="holidayFeastEvents" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="holidayFeastEvents" value="quarterly"></label>
+            <label><input type="radio" name="holidayFeastEvents" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="holidayFeastEvents" value="onceAMonth"></label>
+            <label><input type="radio" name="holidayFeastEvents" value="twiceAMonth"></label>
+            <label><input type="radio" name="holidayFeastEvents" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="holidayFeastEvents" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="holidayFeastEvents" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="holidayFeastEvents" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Outdoor BBQs</div>
+            <label><input type="radio" name="outdoorBBQs" value="never"></label>
+            <label><input type="radio" name="outdoorBBQs" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="outdoorBBQs" value="quarterly"></label>
+            <label><input type="radio" name="outdoorBBQs" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="outdoorBBQs" value="onceAMonth"></label>
+            <label><input type="radio" name="outdoorBBQs" value="twiceAMonth"></label>
+            <label><input type="radio" name="outdoorBBQs" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="outdoorBBQs" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="outdoorBBQs" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="outdoorBBQs" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Picnic Lunches</div>
+            <label><input type="radio" name="picnicLunches" value="never"></label>
+            <label><input type="radio" name="picnicLunches" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="picnicLunches" value="quarterly"></label>
+            <label><input type="radio" name="picnicLunches" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="picnicLunches" value="onceAMonth"></label>
+            <label><input type="radio" name="picnicLunches" value="twiceAMonth"></label>
+            <label><input type="radio" name="picnicLunches" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="picnicLunches" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="picnicLunches" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="picnicLunches" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Family BBQ Days</div>
+            <label><input type="radio" name="familyBBQDays" value="never"></label>
+            <label><input type="radio" name="familyBBQDays" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="familyBBQDays" value="quarterly"></label>
+            <label><input type="radio" name="familyBBQDays" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="familyBBQDays" value="onceAMonth"></label>
+            <label><input type="radio" name="familyBBQDays" value="twiceAMonth"></label>
+            <label><input type="radio" name="familyBBQDays" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="familyBBQDays" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="familyBBQDays" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="familyBBQDays" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Ice Cream Socials</div>
+            <label><input type="radio" name="iceCreamSocials" value="never"></label>
+            <label><input type="radio" name="iceCreamSocials" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="iceCreamSocials" value="quarterly"></label>
+            <label><input type="radio" name="iceCreamSocials" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="iceCreamSocials" value="onceAMonth"></label>
+            <label><input type="radio" name="iceCreamSocials" value="twiceAMonth"></label>
+            <label><input type="radio" name="iceCreamSocials" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="iceCreamSocials" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="iceCreamSocials" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="iceCreamSocials" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Happy Hour</div>
+            <label><input type="radio" name="happyhour" value="never"></label>
+            <label><input type="radio" name="happyhour" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="happyhour" value="quarterly"></label>
+            <label><input type="radio" name="happyhour" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="happyhour" value="onceAMonth"></label>
+            <label><input type="radio" name="happyhour" value="twiceAMonth"></label>
+            <label><input type="radio" name="happyhour" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="happyhour" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="happyhour" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="happyhour" value="everyDay"></label>
+            <div class="header"></div>
         </div>
 
-        
-
-        <div id="socClas1dEatWOthersDisplay" style="display:none;">
-            <label class="section-title">1d. Do you wish to participate in more meals or social dining events?</label><br>
-            <select id="socClas1dEatWOthers" name="socClas1dEatWOthers" required>
+        <div id="socClas1aEatWOthersDisplay" style="display:block;">
+            <label class="section-title">1a. Do you wish to participate in more meals or social dining events?</label><br>
+            <select id="socClas1aEatWOthers" name="socClas1aEatWOthers" required>
                 <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="No" selected>No</option>
             </select><br><br>
         </div>
 
-        <label class="section-title">2. How often do you spend time on hobbies or recreational activities inside your apartment?</label>
-        <br>
-            <div class="radio-group">
-                <label><input type="radio" name="socClas2HobbiesInside" value="never">Never</label><br>
-                <label><input type="radio" name="socClas2HobbiesInside" value="1-3TimesAYear">1-3 times a year</label><br>
-                <label><input type="radio" name="socClas2HobbiesInside" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas2HobbiesInside" value="twiceInThreeMonths">Twice in three months</label><br>
-                <label><input type="radio" name="socClas2HobbiesInside" value="onceAMonth">Once a month</label><br>
-                <label><input type="radio" name="socClas2HobbiesInside" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas2HobbiesInside" value="threeTimesAMonth">Three times a month</label><br>
-                <label><input type="radio" name="socClas2HobbiesInside" value="1-3TimesAWeek">1-3 times a week</label><br>
-                <label><input type="radio" name="socClas2HobbiesInside" value="4-6TimesAWeek">4-6 times a week</label><br>
-                <label><input type="radio" name="socClas2HobbiesInside" value="everyDay">Every day</label><br>
-            </div>
-        <br>
-
-        <div id="socClas2aHobbiesInsideDisplay" style="display:none;">
-            <label class="section-title">2a. Do you wish to spend time on hobbies or recreational activities inside the home?</label><br>
-            <select id="socClas2aHobbiesInside" name="socClas2aHobbiesInside" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
-        </div>
-
-        <div id="socClas2bHobbiesInsideDisplay" style="display:none;">
-            <label class="section-title">2b. What types of meals or social dining events would you participate in?</label>
-            <br>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="readingBooks">Reading Books or Magazines</label><br>
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="knittingAndCrochet">Knitting or Crocheting</label><br>
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="gardening">Gardening Indoors</label><br>
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="listeningToMusic">Listening to Music</label><br>
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="watchingMoviesTvShows">Watching Movies or TV Shows</label><br>
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="playingPuzzleOrGames">Playing Puzzles or Games</label><br>
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="craftingOrPainting">Crafting or Painting</label><br>
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="cookingBaking">Cooking or Baking</label><br>
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="photography">Photography</label><br>
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="writing">Writing (journals, blogs, etc.)</label><br>
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="brainGamesMemoryExercises">Brain Games and Memory Exercises</label><br>
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="meditationRelaxation">Meditation and Relaxation Sessions</label><br>
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="indoorBowlingGolfPutting">Indoor Bowling or Golf Putting</label><br>
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="learningNewSkills">Learning New Skills (e.g., Technology)</label><br>     
-                    <label><input type="checkbox" name="socClas2bHobbiesInside" value="exercising">Exercising at Home (yoga, weights, etc.)</label><br>                                   
-                </div>
-            <br>
-        </div>
-
-        <div id="socClas2cHobbiesInsideDisplay" style="display:none;">
-            <label class="section-title">2c. What types of indoor hobbies or recreational activities do you participate in?</label>
+        <div id="socClas2HobbiesInsideDisplay" style="display:block;">
+            <label class="section-title">2. What types of indoor hobbies or recreational activities do you participate in?</label>
             <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas2cHobbiesInside" value="readingBooks">Reading Books or Magazines</label><br>
@@ -457,70 +467,261 @@ input[type="submit"]:focus {
             <br>
         </div>
 
-        <div id="socClas2dHobbiesInsideDisplay" style="display:none;">
-            <label class="section-title">2d. Do you wish to spend more time on hobbies or recreational activities inside the home?</label><br>
-            <select id="socClas2dHobbiesInside" name="socClas2dHobbiesInside" required>
+        <div class="radio-grid">
+            <!-- Column Headers -->
+            <div></div> <!-- Empty cell for top-left corner -->
+            <div class="header">Never</div>
+            <div class="header">1-3 times a Year</div>
+            <div class="header">Once in 3 months</div>
+            <div class="header">Twice in 3 months</div>
+            <div class="header">Once a month</div>
+            <div class="header">Twice a month </div>
+            <div class="header">Thrice a month</div>
+            <div class="header">1-3 times a week</div>
+            <div class="header">4-6 times a week</div>
+            <div class="header">Every day</div>
+            <div class="header"></div>
+
+            <!-- Row 1 with Row Header -->
+            <div class="row-header">Reading Books or Magazines</div>
+            <label><input type="radio" name="readingBooks" value="never"></label>
+            <label><input type="radio" name="readingBooks" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="readingBooks" value="quarterly"></label>
+            <label><input type="radio" name="readingBooks" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="readingBooks" value="onceAMonth"></label>
+            <label><input type="radio" name="readingBooks" value="twiceAMonth"></label>
+            <label><input type="radio" name="readingBooks" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="readingBooks" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="readingBooks" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="readingBooks" value="everyDay"></label>
+            <div class="header"></div>
+
+            <!-- Row 2 with Row Header -->
+            <div class="row-header">Knitting or Crocheting</div>
+            <label><input type="radio" name="knittingAndCrochet" value="never"></label>
+            <label><input type="radio" name="knittingAndCrochet" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="knittingAndCrochet" value="quarterly"></label>
+            <label><input type="radio" name="knittingAndCrochet" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="knittingAndCrochet" value="onceAMonth"></label>
+            <label><input type="radio" name="knittingAndCrochet" value="twiceAMonth"></label>
+            <label><input type="radio" name="knittingAndCrochet" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="knittingAndCrochet" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="knittingAndCrochet" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="knittingAndCrochet" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Gardening Indoors</div>
+            <label><input type="radio" name="gardening" value="never"></label>
+            <label><input type="radio" name="gardening" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="gardening" value="quarterly"></label>
+            <label><input type="radio" name="gardening" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="gardening" value="onceAMonth"></label>
+            <label><input type="radio" name="gardening" value="twiceAMonth"></label>
+            <label><input type="radio" name="gardening" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="gardening" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="gardening" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="gardening" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Listening To Music</div>
+            <label><input type="radio" name="listeningToMusic" value="never"></label>
+            <label><input type="radio" name="listeningToMusic" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="listeningToMusic" value="quarterly"></label>
+            <label><input type="radio" name="listeningToMusic" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="listeningToMusic" value="onceAMonth"></label>
+            <label><input type="radio" name="listeningToMusic" value="twiceAMonth"></label>
+            <label><input type="radio" name="listeningToMusic" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="listeningToMusic" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="listeningToMusic" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="listeningToMusic" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Watching Movies or TV Shows</div>
+            <label><input type="radio" name="watchingMoviesTvShows" value="never"></label>
+            <label><input type="radio" name="watchingMoviesTvShows" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="watchingMoviesTvShows" value="quarterly"></label>
+            <label><input type="radio" name="watchingMoviesTvShows" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="watchingMoviesTvShows" value="onceAMonth"></label>
+            <label><input type="radio" name="watchingMoviesTvShows" value="twiceAMonth"></label>
+            <label><input type="radio" name="watchingMoviesTvShows" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="watchingMoviesTvShows" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="watchingMoviesTvShows" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="watchingMoviesTvShows" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Playing Puzzles or Games</div>
+            <label><input type="radio" name="playingPuzzleOrGames" value="never"></label>
+            <label><input type="radio" name="playingPuzzleOrGames" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="playingPuzzleOrGames" value="quarterly"></label>
+            <label><input type="radio" name="playingPuzzleOrGames" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="playingPuzzleOrGames" value="onceAMonth"></label>
+            <label><input type="radio" name="playingPuzzleOrGames" value="twiceAMonth"></label>
+            <label><input type="radio" name="playingPuzzleOrGames" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="playingPuzzleOrGames" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="playingPuzzleOrGames" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="playingPuzzleOrGames" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Crafting or Painting</div>
+            <label><input type="radio" name="craftingOrPainting" value="never"></label>
+            <label><input type="radio" name="craftingOrPainting" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="craftingOrPainting" value="quarterly"></label>
+            <label><input type="radio" name="craftingOrPainting" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="craftingOrPainting" value="onceAMonth"></label>
+            <label><input type="radio" name="craftingOrPainting" value="twiceAMonth"></label>
+            <label><input type="radio" name="craftingOrPainting" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="craftingOrPainting" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="craftingOrPainting" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="craftingOrPainting" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Cooking or Baking</div>
+            <label><input type="radio" name="cookingBaking" value="never"></label>
+            <label><input type="radio" name="cookingBaking" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="cookingBaking" value="quarterly"></label>
+            <label><input type="radio" name="cookingBaking" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="cookingBaking" value="onceAMonth"></label>
+            <label><input type="radio" name="cookingBaking" value="twiceAMonth"></label>
+            <label><input type="radio" name="cookingBaking" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="cookingBaking" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="cookingBaking" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="cookingBaking" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Photography</div>
+            <label><input type="radio" name="photography" value="never"></label>
+            <label><input type="radio" name="photography" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="photography" value="quarterly"></label>
+            <label><input type="radio" name="photography" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="photography" value="onceAMonth"></label>
+            <label><input type="radio" name="photography" value="twiceAMonth"></label>
+            <label><input type="radio" name="photography" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="photography" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="photography" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="photography" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Writing</div>
+            <label><input type="radio" name="writing" value="never"></label>
+            <label><input type="radio" name="writing" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="writing" value="quarterly"></label>
+            <label><input type="radio" name="writing" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="writing" value="onceAMonth"></label>
+            <label><input type="radio" name="writing" value="twiceAMonth"></label>
+            <label><input type="radio" name="writing" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="writing" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="writing" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="writing" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Writing</div>
+            <label><input type="radio" name="writing" value="never"></label>
+            <label><input type="radio" name="writing" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="writing" value="quarterly"></label>
+            <label><input type="radio" name="writing" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="writing" value="onceAMonth"></label>
+            <label><input type="radio" name="writing" value="twiceAMonth"></label>
+            <label><input type="radio" name="writing" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="writing" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="writing" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="writing" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Brain games and Memory exercises</div>
+            <label><input type="radio" name="brainGamesMemoryExercises" value="never"></label>
+            <label><input type="radio" name="brainGamesMemoryExercises" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="brainGamesMemoryExercises" value="quarterly"></label>
+            <label><input type="radio" name="brainGamesMemoryExercises" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="brainGamesMemoryExercises" value="onceAMonth"></label>
+            <label><input type="radio" name="brainGamesMemoryExercises" value="twiceAMonth"></label>
+            <label><input type="radio" name="brainGamesMemoryExercises" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="brainGamesMemoryExercises" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="brainGamesMemoryExercises" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="brainGamesMemoryExercises" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Meditation relaxation</div>
+            <label><input type="radio" name="meditationRelaxation" value="never"></label>
+            <label><input type="radio" name="meditationRelaxation" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="meditationRelaxation" value="quarterly"></label>
+            <label><input type="radio" name="meditationRelaxation" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="meditationRelaxation" value="onceAMonth"></label>
+            <label><input type="radio" name="meditationRelaxation" value="twiceAMonth"></label>
+            <label><input type="radio" name="meditationRelaxation" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="meditationRelaxation" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="meditationRelaxation" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="meditationRelaxation" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Indoor bowling and Golf putting</div>
+            <label><input type="radio" name="indoorBowlingGolfPutting" value="never"></label>
+            <label><input type="radio" name="indoorBowlingGolfPutting" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="indoorBowlingGolfPutting" value="quarterly"></label>
+            <label><input type="radio" name="indoorBowlingGolfPutting" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="indoorBowlingGolfPutting" value="onceAMonth"></label>
+            <label><input type="radio" name="indoorBowlingGolfPutting" value="twiceAMonth"></label>
+            <label><input type="radio" name="indoorBowlingGolfPutting" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="indoorBowlingGolfPutting" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="indoorBowlingGolfPutting" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="indoorBowlingGolfPutting" value="everyDay"></label>
+            <div class="header"></div>
+
+            
+
+            <div class="row-header">Learning new skills</div>
+            <label><input type="radio" name="learningNewSkills" value="never"></label>
+            <label><input type="radio" name="learningNewSkills" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="learningNewSkills" value="quarterly"></label>
+            <label><input type="radio" name="learningNewSkills" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="learningNewSkills" value="onceAMonth"></label>
+            <label><input type="radio" name="learningNewSkills" value="twiceAMonth"></label>
+            <label><input type="radio" name="learningNewSkills" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="learningNewSkills" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="learningNewSkills" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="learningNewSkills" value="everyDay"></label>
+            <div class="header"></div>
+
+            
+
+            <div class="row-header">Exercising</div>
+            <label><input type="radio" name="exercising" value="never"></label>
+            <label><input type="radio" name="exercising" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="exercising" value="quarterly"></label>
+            <label><input type="radio" name="exercising" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="exercising" value="onceAMonth"></label>
+            <label><input type="radio" name="exercising" value="twiceAMonth"></label>
+            <label><input type="radio" name="exercising" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="exercising" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="exercising" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="exercising" value="everyDay"></label>
+            <div class="header"></div>
+
+        </div>
+
+        
+
+        <div id="socClas2aHobbiesInsideDisplay" style="display:block;">
+            <label class="section-title">2a. Do you wish to spend more time on hobbies or recreational activities inside the home?</label><br>
+            <select id="socClas2aHobbiesInside" name="socClas2aHobbiesInside" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <label class="section-title">3. How often do you spend time on hobbies or recreational activities outside your apartment?</label>
-        <br>
-            <div class="radio-group">
-                <label><input type="radio" name="socClas3HobbiesOutside" value="never">Never</label><br>
-                <label><input type="radio" name="socClas3HobbiesOutside" value="1-3TimesAYear">1-3 times a year</label><br>
-                <label><input type="radio" name="socClas3HobbiesOutside" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas3HobbiesOutside" value="twiceInThreeMonths">Twice in three months</label><br>
-                <label><input type="radio" name="socClas3HobbiesOutside" value="onceAMonth">Once a month</label><br>
-                <label><input type="radio" name="socClas3HobbiesOutside" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas3HobbiesOutside" value="threeTimesAMonth">Three times a month</label><br>
-                <label><input type="radio" name="socClas3HobbiesOutside" value="1-3TimesAWeek">1-3 times a week</label><br>
-                <label><input type="radio" name="socClas3HobbiesOutside" value="4-6TimesAWeek">4-6 times a week</label><br>
-                <label><input type="radio" name="socClas3HobbiesOutside" value="everyDay">Every day</label><br>
-            </div>
-        <br>
-
         <div id="socClas3aHobbiesOutsideDisplay" style="display:none;">
-            <label class="section-title">3a. Do you wish you to spend time on outdoor hobbies or recreational activities?</label><br>
+            <label class="section-title">3a. Do you wish to spend more time on outdoor hobbies or recreational activities?</label><br>
             <select id="socClas3aHobbiesOutside" name="socClas3aHobbiesOutside" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <div id="socClas3bHobbiesOutsideDisplay" style="display:none;">
-            <label class="section-title">3b. What types of outdoor hobbies or recreational activities do you wish to participate in?</label>
-            <br>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="bookClubs">Book Clubs</label><br>
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="knittingClubs">Knitting Clubs</label><br>
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="gardeningClubs">Gardening Clubs</label><br>
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="attendingExerciseOrFitnessClasses">Attending Exercise or Fitness Classes</label><br>
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="gentleExerciseClasses">Gentle Exercise Classes</label><br>
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="walkingGroups">Walking Groups</label><br>
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="walkingAloneOrWithAPet">Walking Alone or With a Pet</label><br>
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="chairExercisesForLimitedMobility">Chair Exercises for Limited Mobility</label><br>
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="dancingSessionsWithMusicFromTheirEra">Dancing Sessions with Music from Their Era</label><br>
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="attendingMusicConcertsOrPerformances">Attending Music Concerts or Performances</label><br>
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="theaterOrMovieOutings">Theater or Movie Outings</label><br>
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="attendingCommunityCenterClasses">Attending Community Center Classes</label><br>
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="tripsToMuseumsOrArtGalleries">Trips to Museums or Art Galleries</label><br>
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="outdoorPhotographyExcursions">Outdoor Photography Excursions</label><br>     
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="participatingInGroupTravelOrDayTrips">Participating in Group Travel or Day Trips</label><br>            
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="shortBikeRide">Short Bike Ride</label><br>                                   
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="artAndCraftWorkshops">Art and Craft Workshops</label><br>                                   
-                    <label><input type="checkbox" name="socClas3bHobbiesOutside" value="educationalTalksAndLectures">Educational Talks and Lectures</label><br>                                   
-                       
-                </div>
-            <br>
-        </div>
 
-        <div id="socClas3cHobbiesOutsideDisplay" style="display:none;">
-            <label class="section-title">3c. What types of outdoor hobbies or recreational activities do you participate in?</label>
+        <div id="socClas3HobbiesOutsideDisplay" style="display:none;">
+            <label class="section-title">3. What types of outdoor hobbies or recreational activities do you participate in?</label>
             <br>
             <div class="checkbox-group">
-                <label><input type="checkbox" name="socClas3cHobbiesOutside" value="bookClubs">Book Clubs</label><br>
+                <!-- <label><input type="checkbox" name="socClas3cHobbiesOutside" value="bookClubs">Book Clubs</label><br>
                 <label><input type="checkbox" name="socClas3cHobbiesOutside" value="knittingClubs">Knitting Clubs</label><br>
                 <label><input type="checkbox" name="socClas3cHobbiesOutside" value="gardeningClubs">Gardening Clubs</label><br>
                 <label><input type="checkbox" name="socClas3cHobbiesOutside" value="attendingExerciseOrFitnessClasses">Attending Exercise or Fitness Classes</label><br>
@@ -537,18 +738,152 @@ input[type="submit"]:focus {
                 <label><input type="checkbox" name="socClas3cHobbiesOutside" value="participatingInGroupTravelOrDayTrips">Participating in Group Travel or Day Trips</label><br>            
                 <label><input type="checkbox" name="socClas3cHobbiesOutside" value="shortBikeRide">Short Bike Ride</label><br>                                   
                 <label><input type="checkbox" name="socClas3cHobbiesOutside" value="artAndCraftWorkshops">Art and Craft Workshops</label><br>                                   
-                <label><input type="checkbox" name="socClas3cHobbiesOutside" value="educationalTalksAndLectures">Educational Talks and Lectures</label><br>                                   
+                <label><input type="checkbox" name="socClas3cHobbiesOutside" value="educationalTalksAndLectures">Educational Talks and Lectures</label><br>                                    -->
                    
             </div>
             <br>
         </div>
 
-        <div id="socClas3dHobbiesOutsideDisplay" style="display:none;">
-            <label class="section-title">3d. Do you wish you spend more time on hobbies or recreational activities outside the home?</label><br>
-            <select id="socClas3dHobbiesOutside" name="socClas3dHobbiesOutside" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
+        <div class="radio-grid">
+            <!-- Column Headers -->
+            <div></div> <!-- Empty cell for top-left corner -->
+            <div class="header">Never</div>
+            <div class="header">1-3 times a Year</div>
+            <div class="header">Once in 3 months</div>
+            <div class="header">Twice in 3 months</div>
+            <div class="header">Once a month</div>
+            <div class="header">Twice a month </div>
+            <div class="header">Thrice a month</div>
+            <div class="header">1-3 times a week</div>
+            <div class="header">4-6 times a week</div>
+            <div class="header">Every day</div>
+            <div class="header"></div>
+
+            <!-- Row 1 with Row Header -->
+            <div class="row-header">Book Clubs</div>
+            <label><input type="radio" name="bookClubs" value="never"></label>
+            <label><input type="radio" name="bookClubs" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="bookClubs" value="quarterly"></label>
+            <label><input type="radio" name="bookClubs" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="bookClubs" value="onceAMonth"></label>
+            <label><input type="radio" name="bookClubs" value="twiceAMonth"></label>
+            <label><input type="radio" name="bookClubs" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="bookClubs" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="bookClubs" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="bookClubs" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Knitting Clubs</div>
+            <label><input type="radio" name="knittingClubs" value="never"></label>
+            <label><input type="radio" name="knittingClubs" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="knittingClubs" value="quarterly"></label>
+            <label><input type="radio" name="knittingClubs" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="knittingClubs" value="onceAMonth"></label>
+            <label><input type="radio" name="knittingClubs" value="twiceAMonth"></label>
+            <label><input type="radio" name="knittingClubs" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="knittingClubs" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="knittingClubs" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="knittingClubs" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Gardening Clubs</div>
+            <label><input type="radio" name="gardeningClubs" value="never"></label>
+            <label><input type="radio" name="gardeningClubs" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="gardeningClubs" value="quarterly"></label>
+            <label><input type="radio" name="gardeningClubs" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="gardeningClubs" value="onceAMonth"></label>
+            <label><input type="radio" name="gardeningClubs" value="twiceAMonth"></label>
+            <label><input type="radio" name="gardeningClubs" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="gardeningClubs" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="gardeningClubs" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="gardeningClubs" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Attending exercise or Fitness classes</div>
+            <label><input type="radio" name="attendingExerciseOrFitnessClasses" value="never"></label>
+            <label><input type="radio" name="attendingExerciseOrFitnessClasses" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="attendingExerciseOrFitnessClasses" value="quarterly"></label>
+            <label><input type="radio" name="attendingExerciseOrFitnessClasses" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="attendingExerciseOrFitnessClasses" value="onceAMonth"></label>
+            <label><input type="radio" name="attendingExerciseOrFitnessClasses" value="twiceAMonth"></label>
+            <label><input type="radio" name="attendingExerciseOrFitnessClasses" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="attendingExerciseOrFitnessClasses" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="attendingExerciseOrFitnessClasses" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="attendingExerciseOrFitnessClasses" value="everyDay"></label>
+            <div class="header"></div>
+
+            
+
+            <div class="row-header">Gentle exercise classes</div>
+            <label><input type="radio" name="gentleExerciseClasses" value="never"></label>
+            <label><input type="radio" name="gentleExerciseClasses" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="gentleExerciseClasses" value="quarterly"></label>
+            <label><input type="radio" name="gentleExerciseClasses" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="gentleExerciseClasses" value="onceAMonth"></label>
+            <label><input type="radio" name="gentleExerciseClasses" value="twiceAMonth"></label>
+            <label><input type="radio" name="gentleExerciseClasses" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="gentleExerciseClasses" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="gentleExerciseClasses" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="gentleExerciseClasses" value="everyDay"></label>
+            <div class="header"></div>
+
+            
+
+            <div class="row-header">Walking Groups</div>
+            <label><input type="radio" name="walkingGroups" value="never"></label>
+            <label><input type="radio" name="walkingGroups" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="walkingGroups" value="quarterly"></label>
+            <label><input type="radio" name="walkingGroups" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="walkingGroups" value="onceAMonth"></label>
+            <label><input type="radio" name="walkingGroups" value="twiceAMonth"></label>
+            <label><input type="radio" name="walkingGroups" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="walkingGroups" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="walkingGroups" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="walkingGroups" value="everyDay"></label>
+            <div class="header"></div>
+
+
+            <div class="row-header">Walking alone or with a pet</div>
+            <label><input type="radio" name="walkingAloneOrWithAPet" value="never"></label>
+            <label><input type="radio" name="walkingAloneOrWithAPet" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="walkingAloneOrWithAPet" value="quarterly"></label>
+            <label><input type="radio" name="walkingAloneOrWithAPet" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="walkingAloneOrWithAPet" value="onceAMonth"></label>
+            <label><input type="radio" name="walkingAloneOrWithAPet" value="twiceAMonth"></label>
+            <label><input type="radio" name="walkingAloneOrWithAPet" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="walkingAloneOrWithAPet" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="walkingAloneOrWithAPet" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="walkingAloneOrWithAPet" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Chair exercises for limited mobility</div>
+            <label><input type="radio" name="chairExercisesForLimitedMobility" value="never"></label>
+            <label><input type="radio" name="chairExercisesForLimitedMobility" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="chairExercisesForLimitedMobility" value="quarterly"></label>
+            <label><input type="radio" name="chairExercisesForLimitedMobility" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="chairExercisesForLimitedMobility" value="onceAMonth"></label>
+            <label><input type="radio" name="chairExercisesForLimitedMobility" value="twiceAMonth"></label>
+            <label><input type="radio" name="chairExercisesForLimitedMobility" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="chairExercisesForLimitedMobility" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="chairExercisesForLimitedMobility" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="chairExercisesForLimitedMobility" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Dancing sessions with music from their era</div>
+            <label><input type="radio" name="dancingSessionsWithMusicFromTheirEra" value="never"></label>
+            <label><input type="radio" name="dancingSessionsWithMusicFromTheirEra" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="dancingSessionsWithMusicFromTheirEra" value="quarterly"></label>
+            <label><input type="radio" name="dancingSessionsWithMusicFromTheirEra" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="dancingSessionsWithMusicFromTheirEra" value="onceAMonth"></label>
+            <label><input type="radio" name="dancingSessionsWithMusicFromTheirEra" value="twiceAMonth"></label>
+            <label><input type="radio" name="dancingSessionsWithMusicFromTheirEra" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="dancingSessionsWithMusicFromTheirEra" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="dancingSessionsWithMusicFromTheirEra" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="dancingSessionsWithMusicFromTheirEra" value="everyDay"></label>
+            <div class="header"></div>
+
+            
+
         </div>
 
 
@@ -1356,6 +1691,20 @@ input[type="submit"]:focus {
             } else if (selectedValue === 'No') {
                 document.getElementById('socClas11bEssentials').style.display = 'none'; // Hide 1b
             }
+        });
+
+        document.querySelectorAll('.checkbox-group').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                // Get the target row id from the checkbox's data attribute
+                const targetRow = document.getElementById(this.dataset.target);
+
+                // Show or hide the target row based on checkbox checked state
+                if (this.checked) {
+                    targetRow.style.display = 'flex'; // Change to 'block' if using block layout
+                } else {
+                    targetRow.style.display = 'none';
+                }
+            });
         });
 
 

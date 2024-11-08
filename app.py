@@ -68,6 +68,10 @@ def home():
 def page1():
     return render_template('addUser.html')
 
+@app.route('/addPrescriptionDemographic')
+def addPrescriptionDemographic():
+    return render_template('addPrescriptionDemographic.html')
+
 @app.route('/addActivity')
 def page2():
     return render_template('addActivity.html')
