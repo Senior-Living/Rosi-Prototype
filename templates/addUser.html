@@ -1183,45 +1183,12 @@ input[type="submit"]:focus {
         </div>
 
 
-        <label class="section-title">6. How often do you spend time talking on the phone?</label>
-        <br>
-            <div class="radio-group">
-                <label><input type="radio" name="socClas6TalkPhone" value="never">Never</label><br>
-                <label><input type="radio" name="socClas6TalkPhone" value="1-3TimesAYear">1-3 times a year</label><br>
-                <label><input type="radio" name="socClas6TalkPhone" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas6TalkPhone" value="twiceInThreeMonths">Twice in three months</label><br>
-                <label><input type="radio" name="socClas6TalkPhone" value="onceAMonth">Once a month</label><br>
-                <label><input type="radio" name="socClas6TalkPhone" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas6TalkPhone" value="threeTimesAMonth">Three times a month</label><br>
-                <label><input type="radio" name="socClas6TalkPhone" value="1-3TimesAWeek">1-3 times a week</label><br>
-                <label><input type="radio" name="socClas6TalkPhone" value="4-6TimesAWeek">4-6 times a week</label><br>
-                <label><input type="radio" name="socClas6TalkPhone" value="everyDay">Every day</label><br>
-            </div>
-        <br>
 
-        <div id="socClas6aTalkPhoneDisplay" style="display:block;">
-            <label class="section-title">6a.  Do you wish to spend time talking on the phone or video calling others?</label><br>
-            <select id="socClas6aTalkPhone" name="socClas6aTalkPhone" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
-        </div>
+        
 
-        <div id="socClas6bTalkPhoneDisplay" style="display:none;">
-            <label class="section-title">6b. Whom do you wish to talk to on the phone or video call?</label>
-            <br>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="socClas6bTalkPhone" value="spouseOrPartner">Spouse or Partner</label><br>
-                    <label><input type="checkbox" name="socClas6bTalkPhone" value="family">Family</label><br>
-                    <label><input type="checkbox" name="socClas6bTalkPhone" value="friends">Friends</label><br>
-                    <label><input type="checkbox" name="socClas6bTalkPhone" value="acquaintances">Acquaintances</label><br>
-                    <label><input type="checkbox" name="socClas6bTalkPhone" value="healthOrServiceProviders">Health or Service Providers</label><br>
-                </div>
-            <br>
-        </div>
 
-        <div id="socClas6cTalkPhoneDisplay" style="display:none;">
-            <label class="section-title">6c. Who do you usually talk to on the phone or video call?</label>
+        <div id="socClas6TalkPhoneDisplay" style="display:none;">
+            <label class="section-title">6. Who do you usually talk to on the phone or video call?</label>
             <br>
             <div class="checkbox-group">
                 <label><input type="checkbox" name="socClas6cTalkPhone" value="spouseOrPartner">Spouse or Partner</label><br>
@@ -1233,87 +1200,246 @@ input[type="submit"]:focus {
             <br>
         </div>
 
-        <div id="socClas6dTalkPhoneDisplay" style="display:none;">
-            <label class="section-title">6d. Do you wish to spend more time talking on the phone or video calling others?</label><br>
-            <select id="socClas6dTalkPhone" name="socClas6dTalkPhone" required>
+        <div class="radio-grid">
+            <!-- Column Headers -->
+            <div></div> <!-- Empty cell for top-left corner -->
+            <div class="header">Never</div>
+            <div class="header">1-3 times a Year</div>
+            <div class="header">Once in 3 months</div>
+            <div class="header">Twice in 3 months</div>
+            <div class="header">Once a month</div>
+            <div class="header">Twice a month </div>
+            <div class="header">Thrice a month</div>
+            <div class="header">1-3 times a week</div>
+            <div class="header">4-6 times a week</div>
+            <div class="header">Every day</div>
+            <div class="header"></div>
+
+            <!-- Row 1 with Row Header -->
+            <div class="row-header">Spouse or Partner</div>
+            <label><input type="radio" name="spouseOrPartner" value="never"></label>
+            <label><input type="radio" name="spouseOrPartner" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="spouseOrPartner" value="quarterly"></label>
+            <label><input type="radio" name="spouseOrPartner" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="spouseOrPartner" value="onceAMonth"></label>
+            <label><input type="radio" name="spouseOrPartner" value="twiceAMonth"></label>
+            <label><input type="radio" name="spouseOrPartner" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="spouseOrPartner" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="spouseOrPartner" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="spouseOrPartner" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Family</div>
+            <label><input type="radio" name="family" value="never"></label>
+            <label><input type="radio" name="family" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="family" value="quarterly"></label>
+            <label><input type="radio" name="family" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="family" value="onceAMonth"></label>
+            <label><input type="radio" name="family" value="twiceAMonth"></label>
+            <label><input type="radio" name="family" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="family" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="family" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="family" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Friends</div>
+            <label><input type="radio" name="friends" value="never"></label>
+            <label><input type="radio" name="friends" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="friends" value="quarterly"></label>
+            <label><input type="radio" name="friends" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="friends" value="onceAMonth"></label>
+            <label><input type="radio" name="friends" value="twiceAMonth"></label>
+            <label><input type="radio" name="friends" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="friends" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="friends" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="friends" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Acquaintances</div>
+            <label><input type="radio" name="acquaintances" value="never"></label>
+            <label><input type="radio" name="acquaintances" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="acquaintances" value="quarterly"></label>
+            <label><input type="radio" name="acquaintances" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="acquaintances" value="onceAMonth"></label>
+            <label><input type="radio" name="acquaintances" value="twiceAMonth"></label>
+            <label><input type="radio" name="acquaintances" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="acquaintances" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="acquaintances" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="acquaintances" value="everyDay"></label>
+            <div class="header"></div>
+            
+
+            <div class="row-header">Health or Service Providers</div>
+            <label><input type="radio" name="healthOrServiceProviders" value="never"></label>
+            <label><input type="radio" name="healthOrServiceProviders" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="healthOrServiceProviders" value="quarterly"></label>
+            <label><input type="radio" name="healthOrServiceProviders" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="healthOrServiceProviders" value="onceAMonth"></label>
+            <label><input type="radio" name="healthOrServiceProviders" value="twiceAMonth"></label>
+            <label><input type="radio" name="healthOrServiceProviders" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="healthOrServiceProviders" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="healthOrServiceProviders" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="healthOrServiceProviders" value="everyDay"></label>
+            <div class="header"></div>
+
+        </div>
+
+        <div id="socClas6aTalkPhoneDisplay" style="display:block;">
+            <label class="section-title">6a. Do you wish to spend more time talking on the phone or video calling others?</label><br>
+            <select id="socClas6aTalkPhone" name="socClas6aTalkPhone" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <label class="section-title">7. How often do you meet with family, friends or acquaintances in person?</label>
-        <br>
-            <div class="radio-group">
-                <label><input type="radio" name="socClas7MeetFFA" value="never">Never</label><br>
-                <label><input type="radio" name="socClas7MeetFFA" value="1-3TimesAYear">1-3 times a year</label><br>
-                <label><input type="radio" name="socClas7MeetFFA" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas7MeetFFA" value="twiceInThreeMonths">Twice in three months</label><br>
-                <label><input type="radio" name="socClas7MeetFFA" value="onceAMonth">Once a month</label><br>
-                <label><input type="radio" name="socClas7MeetFFA" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas7MeetFFA" value="threeTimesAMonth">Three times a month</label><br>
-                <label><input type="radio" name="socClas7MeetFFA" value="1-3TimesAWeek">1-3 times a week</label><br>
-                <label><input type="radio" name="socClas7MeetFFA" value="4-6TimesAWeek">4-6 times a week</label><br>
-                <label><input type="radio" name="socClas7MeetFFA" value="everyDay">Every day</label><br>
-            </div>
-        <br>
 
-        <div id="socClas7aMeetFFADisplay" style="display:none;">
-            <label class="section-title">7a. Do you wish to meet family, friends, or acquaintances in person?</label><br>
-            <select id="socClas7aMeetFFA" name="socClas7aMeetFFA" required>
+        <div id="socClas7MeetFFADisplay" style="display:block;">
+            <label class="section-title">7.  Where do you typically meet them?</label>
+        </div>
+
+        <div class="radio-grid">
+            <!-- Column Headers -->
+            <div></div> <!-- Empty cell for top-left corner -->
+            <div class="header">Never</div>
+            <div class="header">1-3 times a Year</div>
+            <div class="header">Once in 3 months</div>
+            <div class="header">Twice in 3 months</div>
+            <div class="header">Once a month</div>
+            <div class="header">Twice a month </div>
+            <div class="header">Thrice a month</div>
+            <div class="header">1-3 times a week</div>
+            <div class="header">4-6 times a week</div>
+            <div class="header">Every day</div>
+            <div class="header"></div>
+
+            <!-- Row 1 with Row Header -->
+            <div class="row-header">At Home</div>
+            <label><input type="radio" name="atHome" value="never"></label>
+            <label><input type="radio" name="atHome" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="atHome" value="quarterly"></label>
+            <label><input type="radio" name="atHome" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="atHome" value="onceAMonth"></label>
+            <label><input type="radio" name="atHome" value="twiceAMonth"></label>
+            <label><input type="radio" name="atHome" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="atHome" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="atHome" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="atHome" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">At a friend or family member’s home</div>
+            <label><input type="radio" name="atFriendFamilyHome" value="never"></label>
+            <label><input type="radio" name="atFriendFamilyHome" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="atFriendFamilyHome" value="quarterly"></label>
+            <label><input type="radio" name="atFriendFamilyHome" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="atFriendFamilyHome" value="onceAMonth"></label>
+            <label><input type="radio" name="atFriendFamilyHome" value="twiceAMonth"></label>
+            <label><input type="radio" name="atFriendFamilyHome" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="atFriendFamilyHome" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="atFriendFamilyHome" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="atFriendFamilyHome" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">At an outdoor location</div>
+            <label><input type="radio" name="atOutdoorLocation" value="never"></label>
+            <label><input type="radio" name="atOutdoorLocation" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="atOutdoorLocation" value="quarterly"></label>
+            <label><input type="radio" name="atOutdoorLocation" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="atOutdoorLocation" value="onceAMonth"></label>
+            <label><input type="radio" name="atOutdoorLocation" value="twiceAMonth"></label>
+            <label><input type="radio" name="atOutdoorLocation" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="atOutdoorLocation" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="atOutdoorLocation" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="atOutdoorLocation" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">At a restaurant or cafe</div>
+            <label><input type="radio" name="atRestaurantCafe" value="never"></label>
+            <label><input type="radio" name="atRestaurantCafe" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="atRestaurantCafe" value="quarterly"></label>
+            <label><input type="radio" name="atRestaurantCafe" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="atRestaurantCafe" value="onceAMonth"></label>
+            <label><input type="radio" name="atRestaurantCafe" value="twiceAMonth"></label>
+            <label><input type="radio" name="atRestaurantCafe" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="atRestaurantCafe" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="atRestaurantCafe" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="atRestaurantCafe" value="everyDay"></label>
+            <div class="header"></div>
+
+        </div>
+
+        <div id="socClas7aMeetFFADisplay">
+            <label class="section-title">7a. Do you wish you met family, friends, or acquaintances in person more often?</label><br>
+            <select id="socClas7aMoreMeetFFA" name="socClas7aMoreMeetFFA" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <div id="socClas7bMeetFFADisplay" style="display:none;">
-            <label class="section-title">7b. Where would you like to meet them?</label>
-            <br>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="socClas7bMeetFFA" value="atHome">At Home</label><br>
-                    <label><input type="checkbox" name="socClas7bMeetFFA" value="atFriendFamilyHome">At a friend or family member’s home</label><br>
-                    <label><input type="checkbox" name="socClas7bMeetFFA" value="atOutdoorLocation">At an outdoor location</label><br>
-                    <label><input type="checkbox" name="socClas7bMeetFFA" value="atRestaurantCafe">At a restaurant or cafe</label><br>
-                </div>
-            <br>
+
+
+        <div id="socClas8GroupConvoDisplay">
+            <label class="section-title">8. Where do you typically engage in these group conversations?</label>
         </div>
 
-        <div id="socClas7cMeetFFADisplay" style="display:none;">
-            <label class="section-title">7c.  Where do you typically meet them?</label>
-            <br>
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="socClas7cMeetFFA" value="atHome">At Home</label><br>
-                <label><input type="checkbox" name="socClas7cMeetFFA" value="atFriendFamilyHome">At a friend or family member’s home</label><br>
-                <label><input type="checkbox" name="socClas7cMeetFFA" value="atOutdoorLocation">At an outdoor location</label><br>
-                <label><input type="checkbox" name="socClas7cMeetFFA" value="atRestaurantCafe">At a restaurant or cafe</label><br>
-            </div>
-            <br>
+        <div class="radio-grid">
+            <!-- Column Headers -->
+            <div></div> <!-- Empty cell for top-left corner -->
+            <div class="header">Never</div>
+            <div class="header">1-3 times a Year</div>
+            <div class="header">Once in 3 months</div>
+            <div class="header">Twice in 3 months</div>
+            <div class="header">Once a month</div>
+            <div class="header">Twice a month </div>
+            <div class="header">Thrice a month</div>
+            <div class="header">1-3 times a week</div>
+            <div class="header">4-6 times a week</div>
+            <div class="header">Every day</div>
+            <div class="header"></div>
+
+            <!-- Row 1 with Row Header -->
+            <div class="row-header">In-person (family or friends’ gatherings)</div>
+            <label><input type="radio" name="InPersonFamilyOrFriendsGatherings" value="never"></label>
+            <label><input type="radio" name="InPersonFamilyOrFriendsGatherings" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="InPersonFamilyOrFriendsGatherings" value="quarterly"></label>
+            <label><input type="radio" name="InPersonFamilyOrFriendsGatherings" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="InPersonFamilyOrFriendsGatherings" value="onceAMonth"></label>
+            <label><input type="radio" name="InPersonFamilyOrFriendsGatherings" value="twiceAMonth"></label>
+            <label><input type="radio" name="InPersonFamilyOrFriendsGatherings" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="InPersonFamilyOrFriendsGatherings" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="InPersonFamilyOrFriendsGatherings" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="InPersonFamilyOrFriendsGatherings" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">In-person (hobby or community groups)</div>
+            <label><input type="radio" name="InPersonHobbyOrCommunityGroups" value="never"></label>
+            <label><input type="radio" name="InPersonHobbyOrCommunityGroups" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="InPersonHobbyOrCommunityGroups" value="quarterly"></label>
+            <label><input type="radio" name="InPersonHobbyOrCommunityGroups" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="InPersonHobbyOrCommunityGroups" value="onceAMonth"></label>
+            <label><input type="radio" name="InPersonHobbyOrCommunityGroups" value="twiceAMonth"></label>
+            <label><input type="radio" name="InPersonHobbyOrCommunityGroups" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="InPersonHobbyOrCommunityGroups" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="InPersonHobbyOrCommunityGroups" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="InPersonHobbyOrCommunityGroups" value="everyDay"></label>
+            <div class="header"></div>
+
+
+            <div class="row-header">Online (video calls, discussion forums)</div>
+            <label><input type="radio" name="OnlineVideoCallsDiscussionForums" value="never"></label>
+            <label><input type="radio" name="OnlineVideoCallsDiscussionForums" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="OnlineVideoCallsDiscussionForums" value="quarterly"></label>
+            <label><input type="radio" name="OnlineVideoCallsDiscussionForums" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="OnlineVideoCallsDiscussionForums" value="onceAMonth"></label>
+            <label><input type="radio" name="OnlineVideoCallsDiscussionForums" value="twiceAMonth"></label>
+            <label><input type="radio" name="OnlineVideoCallsDiscussionForums" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="OnlineVideoCallsDiscussionForums" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="OnlineVideoCallsDiscussionForums" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="OnlineVideoCallsDiscussionForums" value="everyDay"></label>
+            <div class="header"></div>
+        
         </div>
 
-        <div id="socClas7dMeetFFADisplay" style="display:none;">
-            <label class="section-title">7d. Do you wish you met family, friends, or acquaintances in person more often?</label><br>
-            <select id="socClas7dMoreMeetFFA" name="socClas7dMoreMeetFFA" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
-        </div>
-
-        <label class="section-title">8. How frequently do you participate in group conversations, either in person or online, with three or more people?</label>
-        <br>
-            <div class="radio-group">
-                <label><input type="radio" name="socClas8GroupConvo" value="never">Never</label><br>
-                <label><input type="radio" name="socClas8GroupConvo" value="1-3TimesAYear">1-3 times a year</label><br>
-                <label><input type="radio" name="socClas8GroupConvo" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas8GroupConvo" value="twiceInThreeMonths">Twice in three months</label><br>
-                <label><input type="radio" name="socClas8GroupConvo" value="onceAMonth">Once a month</label><br>
-                <label><input type="radio" name="socClas8GroupConvo" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas8GroupConvo" value="threeTimesAMonth">Three times a month</label><br>
-                <label><input type="radio" name="socClas8GroupConvo" value="1-3TimesAWeek">1-3 times a week</label><br>
-                <label><input type="radio" name="socClas8GroupConvo" value="4-6TimesAWeek">4-6 times a week</label><br>
-                <label><input type="radio" name="socClas8GroupConvo" value="everyDay">Every day</label><br>
-            </div>
-        <br>
-
-        <div id="socClas8aGroupConvoDisplay" style="display:none;">
+        <div id="socClas8aGroupConvoDisplay">
             <label class="section-title">8a. Do you wish to engage in group conversations more often?</label><br>
             <select id="socClas8aGroupConvo" name="socClas8aGroupConvo" required>
                 <option value="Yes">Yes</option>
@@ -1321,137 +1447,100 @@ input[type="submit"]:focus {
             </select><br><br>
         </div>
 
-        <div id="socClas8bGroupConvoDisplay" style="display:none;">
-            <label class="section-title">8b. Where do you wish to engage in these group conversations?</label>
-            <br>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="socClas8bGroupConvo" value="InPersonFamilyOrFriendsGatherings">In-person (family or friends’ gatherings)</label><br>
-                    <label><input type="checkbox" name="socClas8bGroupConvo" value="InPersonHobbyOrCommunityGroups">In-person (hobby or community groups)</label><br>
-                    <label><input type="checkbox" name="socClas8bGroupConvo" value="OnlineVideoCallsDiscussionForums">Online (video calls, discussion forums)</label><br>
-                </div>
-            <br>
-        </div>
 
-        <div id="socClas8cGroupConvoDisplay" style="display:none;">
-            <label class="section-title">8c. Where do you typically engage in these group conversations?</label>
-            <br>
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="socClas8cGroupConvo" value="InPersonFamilyOrFriendsGatherings">In-person (family or friends’ gatherings)</label><br>
-                <label><input type="checkbox" name="socClas8cGroupConvo" value="InPersonHobbyOrCommunityGroups">In-person (hobby or community groups)</label><br>
-                <label><input type="checkbox" name="socClas8cGroupConvo" value="OnlineVideoCallsDiscussionForums">Online (video calls, discussion forums)</label><br>
-            </div>
-            <br>
-        </div>
-
-        <div id="socClas8dGroupConvoDisplay" style="display:none;">
-            <label class="section-title">8d. Do you wish to engage in group conversations more often?</label><br>
-            <select id="socClas8dGroupConvo" name="socClas8dGroupConvo" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
-        </div>
-
-        <label class="section-title">9. How frequently do you text people?</label>
-        <br>
-            <div class="radio-group">
-                <label><input type="radio" name="socClas9Text" value="never">Never</label><br>
-                <label><input type="radio" name="socClas9Text" value="1-3TimesAYear">1-3 times a year</label><br>
-                <label><input type="radio" name="socClas9Text" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas9Text" value="twiceInThreeMonths">Twice in three months</label><br>
-                <label><input type="radio" name="socClas9Text" value="onceAMonth">Once a month</label><br>
-                <label><input type="radio" name="socClas9Text" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas9Text" value="threeTimesAMonth">Three times a month</label><br>
-                <label><input type="radio" name="socClas9Text" value="1-3TimesAWeek">1-3 times a week</label><br>
-                <label><input type="radio" name="socClas9Text" value="4-6TimesAWeek">4-6 times a week</label><br>
-                <label><input type="radio" name="socClas9Text" value="everyDay">Every day</label><br>
-            </div>
-        <br>
-
-        <div id="socClas9aTextDisplay" style="display:none;">
-            <label class="section-title">9a. Do you wish to text or message others?</label><br>
-            <select id="socClas9aText" name="socClas9aText" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
-        </div>
-
-        <div id="socClas9bTextDisplay" style="display:none;">
-            <label class="section-title">9b. What platform(s) do you wish to use for texting?</label>
-            <br>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="socClas9bText" value="sms">SMS (standard text messages)</label><br>
-                    <label><input type="checkbox" name="socClas9bText" value="whatsApp">WhatsApp</label><br>
-                    <label><input type="checkbox" name="socClas9bText" value="facebookMessenger">Facebook Messenger</label><br>
-                    <label><input type="checkbox" name="socClas9bText" value="iMessage">iMessage</label><br>
-                </div>
-            <br>
-        </div>
-
-        <div id="socClas9cTextDisplay" style="display:none;">
-            <label class="section-title">9c. What platform(s) do you typically use for texting?</label>
-            <br>
+        <div id="socClas9TextDisplay">
+            <label class="section-title">9. What platform(s) do you typically use for texting?</label>
+            <!-- <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas9cText" value="sms">SMS (standard text messages)</label><br>
                     <label><input type="checkbox" name="socClas9cText" value="whatsApp">WhatsApp</label><br>
                     <label><input type="checkbox" name="socClas9cText" value="facebookMessenger">Facebook Messenger</label><br>
                     <label><input type="checkbox" name="socClas9cText" value="iMessage">iMessage</label><br>
                 </div>
-            <br>
+            <br> -->
         </div>
 
-        <div id="socClas9dTextDisplay" style="display:none;">
-            <label class="section-title">9d. Do you wish to text or message others more often?</label><br>
-            <select id="socClas9dText" name="socClas9dText" required>
+        <div class="radio-grid">
+            <!-- Column Headers -->
+            <div></div> <!-- Empty cell for top-left corner -->
+            <div class="header">Never</div>
+            <div class="header">1-3 times a Year</div>
+            <div class="header">Once in 3 months</div>
+            <div class="header">Twice in 3 months</div>
+            <div class="header">Once a month</div>
+            <div class="header">Twice a month </div>
+            <div class="header">Thrice a month</div>
+            <div class="header">1-3 times a week</div>
+            <div class="header">4-6 times a week</div>
+            <div class="header">Every day</div>
+            <div class="header"></div>
+
+            <!-- Row 1 with Row Header -->
+            <div class="row-header">Text messages</div>
+            <label><input type="radio" name="sms" value="never"></label>
+            <label><input type="radio" name="sms" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="sms" value="quarterly"></label>
+            <label><input type="radio" name="sms" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="sms" value="onceAMonth"></label>
+            <label><input type="radio" name="sms" value="twiceAMonth"></label>
+            <label><input type="radio" name="sms" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="sms" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="sms" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="sms" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">WhatsApp</div>
+            <label><input type="radio" name="whatsApp" value="never"></label>
+            <label><input type="radio" name="whatsApp" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="whatsApp" value="quarterly"></label>
+            <label><input type="radio" name="whatsApp" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="whatsApp" value="onceAMonth"></label>
+            <label><input type="radio" name="whatsApp" value="twiceAMonth"></label>
+            <label><input type="radio" name="whatsApp" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="whatsApp" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="whatsApp" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="whatsApp" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Facebook Messenger</div>
+            <label><input type="radio" name="facebookMessenger" value="never"></label>
+            <label><input type="radio" name="facebookMessenger" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="facebookMessenger" value="quarterly"></label>
+            <label><input type="radio" name="facebookMessenger" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="facebookMessenger" value="onceAMonth"></label>
+            <label><input type="radio" name="facebookMessenger" value="twiceAMonth"></label>
+            <label><input type="radio" name="facebookMessenger" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="facebookMessenger" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="facebookMessenger" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="facebookMessenger" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">iMessage</div>
+            <label><input type="radio" name="iMessage" value="never"></label>
+            <label><input type="radio" name="iMessage" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="iMessage" value="quarterly"></label>
+            <label><input type="radio" name="iMessage" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="iMessage" value="onceAMonth"></label>
+            <label><input type="radio" name="iMessage" value="twiceAMonth"></label>
+            <label><input type="radio" name="iMessage" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="iMessage" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="iMessage" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="iMessage" value="everyDay"></label>
+            <div class="header"></div>
+        
+        </div>
+
+        <div id="socClas9aTextDisplay">
+            <label class="section-title">9a. Do you wish to text or message others more often?</label><br>
+            <select id="socClas9aText" name="socClas9aText" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <label class="section-title">10. How frequently do you volunteer?</label>
-        <br>
-            <div class="radio-group">
-                <label><input type="radio" name="socClas10Volunteer" value="never">Never</label><br>
-                <label><input type="radio" name="socClas10Volunteer" value="1-3TimesAYear">1-3 times a year</label><br>
-                <label><input type="radio" name="socClas10Volunteer" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas10Volunteer" value="twiceInThreeMonths">Twice in three months</label><br>
-                <label><input type="radio" name="socClas10Volunteer" value="onceAMonth">Once a month</label><br>
-                <label><input type="radio" name="socClas10Volunteer" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas10Volunteer" value="threeTimesAMonth">Three times a month</label><br>
-                <label><input type="radio" name="socClas10Volunteer" value="1-3TimesAWeek">1-3 times a week</label><br>
-                <label><input type="radio" name="socClas10Volunteer" value="4-6TimesAWeek">4-6 times a week</label><br>
-                <label><input type="radio" name="socClas10Volunteer" value="everyDay">Every day</label><br>
-            </div>
-        <br>
-
-        <div id="socClas10aVolunteerDisplay" style="display:none;">
-            <label class="section-title">10a. Do you wish you to volunteer?</label><br>
-            <select id="socClas10aVolunteer" name="socClas10aVolunteer" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
-        </div>
-
-        <div id="socClas10bVolunteerDisplay" style="display:none;">
-            <label class="section-title">10b. Please select the types of volunteer or helping activities you wish to participate in</label>
-            <br>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="socClas10bVolunteer" value="supportingFamilyFriendsOrCommunityMembers">Supporting Family, Friends, or Community Members</label><br>
-                    <label><input type="checkbox" name="socClas10bVolunteer" value="communityAndEnvironmentalProjects">Community and Environmental Projects</label><br>
-                    <label><input type="checkbox" name="socClas10bVolunteer" value="mentoringTutoringAndEducationSupport">Mentoring, Tutoring, and Education Support</label><br>
-                    <label><input type="checkbox" name="socClas10bVolunteer" value="charityAndFundraisingActivities">Charity and Fundraising Activities</label><br>
-                    <label><input type="checkbox" name="socClas10bVolunteer" value="directAssistanceToVulnerablePopulations">Direct Assistance to Vulnerable Populations</label><br>
-                    <label><input type="checkbox" name="socClas10bVolunteer" value="foodAndEssentialsDistribution">Food and Essentials Distribution</label><br>
-                    <label><input type="checkbox" name="socClas10bVolunteer" value="artsAndCulturalEventSupport">Arts and Cultural Event Support</label><br>
-                    <label><input type="checkbox" name="socClas10bVolunteer" value="animalWelfareVolunteering">Animal Welfare Volunteering</label><br>
-                    <label><input type="checkbox" name="socClas10bVolunteer" value="advocacyAndCampaigningForSocialCauses">Advocacy and Campaigning for Social Causes</label><br>
-                    <label><input type="checkbox" name="socClas10bVolunteer" value="virtualVolunteering">Virtual Volunteering</label><br>
-                </div>
-            <br>
-        </div>
-
-        <div id="socClas10cVolunteerDisplay" style="display:none;">
-            <label class="section-title">10c. Please select the types of volunteer or helping activities you participate in</label>
-            <br>
+        <div id="socClas10VolunteerDisplay">
+            <label class="section-title">10. Please select the types of volunteer or helping activities you participate in</label>
+            <!-- <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas10cVolunteer" value="supportingFamilyFriendsOrCommunityMembers">Supporting Family, Friends, or Community Members</label><br>
                     <label><input type="checkbox" name="socClas10cVolunteer" value="communityAndEnvironmentalProjects">Community and Environmental Projects</label><br>
@@ -1464,68 +1553,249 @@ input[type="submit"]:focus {
                     <label><input type="checkbox" name="socClas10cVolunteer" value="advocacyAndCampaigningForSocialCauses">Advocacy and Campaigning for Social Causes</label><br>
                     <label><input type="checkbox" name="socClas10cVolunteer" value="virtualVolunteering">Virtual Volunteering</label><br>
                 </div>
-            <br>
+            <br> -->
         </div>
 
-        <div id="socClas10dVolunteerDisplay" style="display:none;">
-            <label class="section-title"> 10d. Do you wish to volunteer more often?</label><br>
-            <select id="socClas10dVolunteer" name="socClas10dVolunteer" required>
+        <div class="radio-grid">
+            <!-- Column Headers -->
+            <div></div> <!-- Empty cell for top-left corner -->
+            <div class="header">Never</div>
+            <div class="header">1-3 times a Year</div>
+            <div class="header">Once in 3 months</div>
+            <div class="header">Twice in 3 months</div>
+            <div class="header">Once a month</div>
+            <div class="header">Twice a month </div>
+            <div class="header">Thrice a month</div>
+            <div class="header">1-3 times a week</div>
+            <div class="header">4-6 times a week</div>
+            <div class="header">Every day</div>
+            <div class="header"></div>
+
+            <!-- Row 1 with Row Header -->
+            <div class="row-header">Supporting Family, Friends, or Community Members</div>
+            <label><input type="radio" name="supportingFamilyFriendsOrCommunityMembers" value="never"></label>
+            <label><input type="radio" name="supportingFamilyFriendsOrCommunityMembers" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="supportingFamilyFriendsOrCommunityMembers" value="quarterly"></label>
+            <label><input type="radio" name="supportingFamilyFriendsOrCommunityMembers" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="supportingFamilyFriendsOrCommunityMembers" value="onceAMonth"></label>
+            <label><input type="radio" name="supportingFamilyFriendsOrCommunityMembers" value="twiceAMonth"></label>
+            <label><input type="radio" name="supportingFamilyFriendsOrCommunityMembers" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="supportingFamilyFriendsOrCommunityMembers" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="supportingFamilyFriendsOrCommunityMembers" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="supportingFamilyFriendsOrCommunityMembers" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Community and Environmental Projects</div>
+            <label><input type="radio" name="communityAndEnvironmentalProjects" value="never"></label>
+            <label><input type="radio" name="communityAndEnvironmentalProjects" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="communityAndEnvironmentalProjects" value="quarterly"></label>
+            <label><input type="radio" name="communityAndEnvironmentalProjects" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="communityAndEnvironmentalProjects" value="onceAMonth"></label>
+            <label><input type="radio" name="communityAndEnvironmentalProjects" value="twiceAMonth"></label>
+            <label><input type="radio" name="communityAndEnvironmentalProjects" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="communityAndEnvironmentalProjects" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="communityAndEnvironmentalProjects" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="communityAndEnvironmentalProjects" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Mentoring, Tutoring, and Education Support</div>
+            <label><input type="radio" name="mentoringTutoringAndEducationSupport" value="never"></label>
+            <label><input type="radio" name="mentoringTutoringAndEducationSupport" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="mentoringTutoringAndEducationSupport" value="quarterly"></label>
+            <label><input type="radio" name="mentoringTutoringAndEducationSupport" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="mentoringTutoringAndEducationSupport" value="onceAMonth"></label>
+            <label><input type="radio" name="mentoringTutoringAndEducationSupport" value="twiceAMonth"></label>
+            <label><input type="radio" name="mentoringTutoringAndEducationSupport" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="mentoringTutoringAndEducationSupport" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="mentoringTutoringAndEducationSupport" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="mentoringTutoringAndEducationSupport" value="everyDay"></label>
+            <div class="header"></div>
+
+            
+
+            <div class="row-header">Charity and FundraisingActivities</div>
+            <label><input type="radio" name="charityAndFundraisingActivities" value="never"></label>
+            <label><input type="radio" name="charityAndFundraisingActivities" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="charityAndFundraisingActivities" value="quarterly"></label>
+            <label><input type="radio" name="charityAndFundraisingActivities" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="charityAndFundraisingActivities" value="onceAMonth"></label>
+            <label><input type="radio" name="charityAndFundraisingActivities" value="twiceAMonth"></label>
+            <label><input type="radio" name="charityAndFundraisingActivities" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="charityAndFundraisingActivities" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="charityAndFundraisingActivities" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="charityAndFundraisingActivities" value="everyDay"></label>
+            <div class="header"></div>
+
+            
+
+            <div class="row-header">Direct Assistance to Vulnerable Populations</div>
+            <label><input type="radio" name="directAssistanceToVulnerablePopulations" value="never"></label>
+            <label><input type="radio" name="directAssistanceToVulnerablePopulations" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="directAssistanceToVulnerablePopulations" value="quarterly"></label>
+            <label><input type="radio" name="directAssistanceToVulnerablePopulations" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="directAssistanceToVulnerablePopulations" value="onceAMonth"></label>
+            <label><input type="radio" name="directAssistanceToVulnerablePopulations" value="twiceAMonth"></label>
+            <label><input type="radio" name="directAssistanceToVulnerablePopulations" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="directAssistanceToVulnerablePopulations" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="directAssistanceToVulnerablePopulations" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="directAssistanceToVulnerablePopulations" value="everyDay"></label>
+            <div class="header"></div>
+
+            
+
+            <div class="row-header">Food and Essentials Distribution</div>
+            <label><input type="radio" name="foodAndEssentialsDistribution" value="never"></label>
+            <label><input type="radio" name="foodAndEssentialsDistribution" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="foodAndEssentialsDistribution" value="quarterly"></label>
+            <label><input type="radio" name="foodAndEssentialsDistribution" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="foodAndEssentialsDistribution" value="onceAMonth"></label>
+            <label><input type="radio" name="foodAndEssentialsDistribution" value="twiceAMonth"></label>
+            <label><input type="radio" name="foodAndEssentialsDistribution" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="foodAndEssentialsDistribution" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="foodAndEssentialsDistribution" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="foodAndEssentialsDistribution" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Arts and Cultural Event Support</div>
+            <label><input type="radio" name="artsAndCulturalEventSupport" value="never"></label>
+            <label><input type="radio" name="artsAndCulturalEventSupport" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="artsAndCulturalEventSupport" value="quarterly"></label>
+            <label><input type="radio" name="artsAndCulturalEventSupport" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="artsAndCulturalEventSupport" value="onceAMonth"></label>
+            <label><input type="radio" name="artsAndCulturalEventSupport" value="twiceAMonth"></label>
+            <label><input type="radio" name="artsAndCulturalEventSupport" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="artsAndCulturalEventSupport" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="artsAndCulturalEventSupport" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="artsAndCulturalEventSupport" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Animal Welfare Volunteering</div>
+            <label><input type="radio" name="animalWelfareVolunteering" value="never"></label>
+            <label><input type="radio" name="animalWelfareVolunteering" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="animalWelfareVolunteering" value="quarterly"></label>
+            <label><input type="radio" name="animalWelfareVolunteering" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="animalWelfareVolunteering" value="onceAMonth"></label>
+            <label><input type="radio" name="animalWelfareVolunteering" value="twiceAMonth"></label>
+            <label><input type="radio" name="animalWelfareVolunteering" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="animalWelfareVolunteering" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="animalWelfareVolunteering" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="animalWelfareVolunteering" value="everyDay"></label>
+            <div class="header"></div>
+
+            
+
+            <div class="row-header">Advocacy and Campaigning for Social Causes</div>
+            <label><input type="radio" name="advocacyAndCampaigningForSocialCauses" value="never"></label>
+            <label><input type="radio" name="advocacyAndCampaigningForSocialCauses" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="advocacyAndCampaigningForSocialCauses" value="quarterly"></label>
+            <label><input type="radio" name="advocacyAndCampaigningForSocialCauses" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="advocacyAndCampaigningForSocialCauses" value="onceAMonth"></label>
+            <label><input type="radio" name="advocacyAndCampaigningForSocialCauses" value="twiceAMonth"></label>
+            <label><input type="radio" name="advocacyAndCampaigningForSocialCauses" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="advocacyAndCampaigningForSocialCauses" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="advocacyAndCampaigningForSocialCauses" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="advocacyAndCampaigningForSocialCauses" value="everyDay"></label>
+            <div class="header"></div>
+
+            
+
+            <div class="row-header">Virtual Volunteering</div>
+            <label><input type="radio" name="virtualVolunteering" value="never"></label>
+            <label><input type="radio" name="virtualVolunteering" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="virtualVolunteering" value="quarterly"></label>
+            <label><input type="radio" name="virtualVolunteering" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="virtualVolunteering" value="onceAMonth"></label>
+            <label><input type="radio" name="virtualVolunteering" value="twiceAMonth"></label>
+            <label><input type="radio" name="virtualVolunteering" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="virtualVolunteering" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="virtualVolunteering" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="virtualVolunteering" value="everyDay"></label>
+            <div class="header"></div>
+
+            
+
+        </div>
+
+        <div id="socClas10aVolunteerDisplay">
+            <label class="section-title"> 10a. Do you wish to volunteer more often?</label><br>
+            <select id="socClas10aVolunteer" name="socClas10aVolunteer" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
         </div>
 
-        <label class="section-title">11. How frequently do you go out for essential activities (Shopping, Medical, etc.)?</label>
-        <br>
-            <div class="radio-group">
-                <label><input type="radio" name="socClas11Essential" value="never">Never</label><br>
-                <label><input type="radio" name="socClas11Essential" value="1-3TimesAYear">1-3 times a year</label><br>
-                <label><input type="radio" name="socClas11Essential" value="quarterly">Quarterly</label><br>
-                <label><input type="radio" name="socClas11Essential" value="twiceInThreeMonths">Twice in three months</label><br>
-                <label><input type="radio" name="socClas11Essential" value="onceAMonth">Once a month</label><br>
-                <label><input type="radio" name="socClas11Essential" value="twiceAMonth">Twice a month</label><br>
-                <label><input type="radio" name="socClas11Essential" value="threeTimesAMonth">Three times a month</label><br>
-                <label><input type="radio" name="socClas11Essential" value="1-3TimesAWeek">1-3 times a week</label><br>
-                <label><input type="radio" name="socClas11Essential" value="4-6TimesAWeek">4-6 times a week</label><br>
-                <label><input type="radio" name="socClas11Essential" value="everyDay">Every day</label><br>
-            </div>
-        <br>
-
-        <div id="socClas10aEssentialDisplay" style="display:none;">
-            <label class="section-title">11a. Do you wish you went out for essential activities often?</label><br>
-            <select id="socClas10aEssential" name="socClas10aEssential" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
-        </div>
-
-        <div id="socClas11bEssentialDisplay" style="display:none;">
-            <label class="section-title">11b. What types of essential activities do you wish to go out for? </label>
-            <br>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="socClas10bEssential" value="groceryShopping">Grocery Shopping</label><br>
-                    <label><input type="checkbox" name="socClas10bEssential" value="medicalAppointments">Medical Appointments</label><br>
-                    <label><input type="checkbox" name="socClas10bEssential" value="pharmacyVisits">Pharmacy Visits</label><br>
-                    <label><input type="checkbox" name="socClas10bEssential" value="bankingOrPostOffice">Banking or Post Office</label><br>
-                </div>
-            <br>
-        </div>
-
-        <div id="socClas11cEssentialDisplay" style="display:none;">
-            <label class="section-title">11c. What types of essential activities do you go out for?</label>
-            <br>
+        <div id="socClas11EssentialDisplay">
+            <label class="section-title">11. What types of essential activities do you go out for?</label>
+            <!-- <br>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="socClas10cEssential" value="groceryShopping">Grocery Shopping</label><br>
                     <label><input type="checkbox" name="socClas10cEssential" value="medicalAppointments">Medical Appointments</label><br>
                     <label><input type="checkbox" name="socClas10cEssential" value="pharmacyVisits">Pharmacy Visits</label><br>
                     <label><input type="checkbox" name="socClas10cEssential" value="bankingOrPostOffice">Banking or Post Office</label><br>
                 </div>
-            <br>
+            <br> -->
         </div>
 
-        <div id="socClas11dEssentialDisplay" style="display:none;">
-            <label class="section-title">11d. Do you wish to go out for essential activities more often?</label><br>
-            <select id="socClas11dEssential" name="socClas11dEssential" required>
+        <div class="radio-grid">
+            <!-- Column Headers -->
+            <div></div> <!-- Empty cell for top-left corner -->
+            <div class="header">Never</div>
+            <div class="header">1-3 times a Year</div>
+            <div class="header">Once in 3 months</div>
+            <div class="header">Twice in 3 months</div>
+            <div class="header">Once a month</div>
+            <div class="header">Twice a month </div>
+            <div class="header">Thrice a month</div>
+            <div class="header">1-3 times a week</div>
+            <div class="header">4-6 times a week</div>
+            <div class="header">Every day</div>
+            <div class="header"></div>
+
+            <!-- Row 1 with Row Header -->
+            <div class="row-header">Grocery Shopping</div>
+            <label><input type="radio" name="groceryShopping" value="never"></label>
+            <label><input type="radio" name="groceryShopping" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="groceryShopping" value="quarterly"></label>
+            <label><input type="radio" name="groceryShopping" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="groceryShopping" value="onceAMonth"></label>
+            <label><input type="radio" name="groceryShopping" value="twiceAMonth"></label>
+            <label><input type="radio" name="groceryShopping" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="groceryShopping" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="groceryShopping" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="groceryShopping" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Medical Appointments</div>
+            <label><input type="radio" name="medicalAppointments" value="never"></label>
+            <label><input type="radio" name="medicalAppointments" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="medicalAppointments" value="quarterly"></label>
+            <label><input type="radio" name="medicalAppointments" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="medicalAppointments" value="onceAMonth"></label>
+            <label><input type="radio" name="medicalAppointments" value="twiceAMonth"></label>
+            <label><input type="radio" name="medicalAppointments" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="medicalAppointments" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="medicalAppointments" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="medicalAppointments" value="everyDay"></label>
+            <div class="header"></div>
+
+            <div class="row-header">Pharmacy Visits</div>
+            <label><input type="radio" name="pharmacyVisits" value="never"></label>
+            <label><input type="radio" name="pharmacyVisits" value="1-3TimesAYear"></label>
+            <label><input type="radio" name="pharmacyVisits" value="quarterly"></label>
+            <label><input type="radio" name="pharmacyVisits" value="twiceInThreeMonths"></label>
+            <label><input type="radio" name="pharmacyVisits" value="onceAMonth"></label>
+            <label><input type="radio" name="pharmacyVisits" value="twiceAMonth"></label>
+            <label><input type="radio" name="pharmacyVisits" value="threeTimesAMonth"></label>
+            <label><input type="radio" name="pharmacyVisits" value="1-3TimesAWeek"></label>
+            <label><input type="radio" name="pharmacyVisits" value="4-6TimesAWeek"></label>
+            <label><input type="radio" name="pharmacyVisits" value="everyDay"></label>
+            <div class="header"></div>
+
+        </div>
+
+        <div id="socClas11aEssentialDisplay">
+            <label class="section-title">11a. Do you wish to go out for essential activities more often?</label><br>
+            <select id="socClas11aEssential" name="socClas11aEssential" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select><br><br>
