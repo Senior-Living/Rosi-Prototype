@@ -98,72 +98,43 @@ def submitUser():
     time_preference = request.form.getlist('timePreference')
     language = request.form.get('language')
 
-    socClas1EatWOthers = request.form.get('socClas1EatWOthers')    
-    socClas2HobbiesInside = request.form.get('socClas2HobbiesInside')    
-    socClas3HobbiesOutside = request.form.get('socClas3HobbiesOutside')    
-    socClas4TV = request.form.get('socClas4TV')    
-    socClas5Browsing = request.form.get('socClas5Browsing')    
-    socClas6TalkPhone = request.form.get('socClas6TalkPhone')    
-    socClas7MeetFamFriend = request.form.get('socClas7MeetFamFriend')    
-    socClas8GroupConvo = request.form.get('socClas8GroupConvo')    
-    socClas9Text = request.form.get('socClas9Text')    
-    socClas10Volunteer = request.form.get('socClas10Volunteer')    
-    socClas11Essential = request.form.get('socClas11Essential')    
+    socClas1aEatWOthers = request.form.get('socClas1aEatWOthers')    
+    socClas2aHobbiesInside = request.form.get('socClas2aHobbiesInside')    
+    socClas3aHobbiesOutside = request.form.get('socClas3aHobbiesOutside')    
+    socClas4aTV = request.form.get('socClas4aTV')    
+    socClas5aBrowsing = request.form.get('socClas5aBrowsing')    
+    socClas6aTalkPhone = request.form.get('socClas6aTalkPhone')    
+    socClas7aMoreMeetFFA = request.form.get('socClas7aMoreMeetFFA')    
+    socClas8aGroupConvo = request.form.get('socClas8aGroupConvo')    
+    socClas9aText = request.form.get('socClas9aText')    
+    socClas10aVolunteer = request.form.get('socClas10aVolunteer')    
+    socClas11aEssential = request.form.get('socClas11aEssential')  
 
-    socClas1aEatWOthers = request.form.get('socClas1aEatWOthers')
-    socClas1bEatWOthers = request.form.getlist('socClas1bEatWOthers')
-    socClas1cEatWOthers = request.form.getlist('socClas1cEatWOthers')
-    socClas1dEatWOthers = request.form.get('socClas1dEatWOthers')
+    socialActivity1communityDining = request.form.get('1communityDining')
+    socialActivity1teaAndCoffeeSocials = request.form.get('1teaAndCoffeeSocials')
+    socialActivity1birthdayAnniversaryMeals = request.form.get('1birthdayAnniversaryMeals')
+    socialActivity1buffetOrBrunchGatherings = request.form.get('1buffetOrBrunchGatherings')
+    socialActivity1holidayFeastEvents = request.form.get('1holidayFeastEvents')
+    socialActivity1outdoorBBQs = request.form.get('1outdoorBBQs')
+    socialActivity1picnicLunches = request.form.get('1picnicLunches')
+    socialActivity1familyBBQDay = request.form.get('1familyBBQDay')
+    socialActivity1iceCreamSocials = request.form.get('1iceCreamSocials')
+    socialActivity1happyhour = request.form.get('1happyhour')
 
-    socClas2aHobbiesInside = request.form.get('socClas2aHobbiesInside')
-    socClas2bHobbiesInside = request.form.getlist('socClas2bHobbiesInside')
-    socClas2cHobbiesInside = request.form.getlist('socClas2cHobbiesInside')
-    socClas2dHobbiesInside = request.form.get('socClas2dHobbiesInside')
 
-    socClas3aHobbiesOutside = request.form.get('socClas3aHobbiesOutside')
-    socClas3bHobbiesOutside = request.form.get('socClas3bHobbiesOutside')
-    socClas3cHobbiesOutside = request.form.get('socClas3cHobbiesOutside')
-    socClas3dHobbiesOutside = request.form.get('socClas3dHobbiesOutside')
+    print(f"  Community Dining: {socialActivity1communityDining}")
+    print(f"  Tea and Coffee Socials: {socialActivity1teaAndCoffeeSocials}")
+    print(f"  Birthday/Anniversary Meals: {socialActivity1birthdayAnniversaryMeals}")
+    print(f"  Buffet or Brunch Gatherings: {socialActivity1buffetOrBrunchGatherings}")
+    print(f"  Holiday Feast Events: {socialActivity1holidayFeastEvents}")
+    print(f"  Outdoor BBQs: {socialActivity1outdoorBBQs}")
+    print(f"  Picnic Lunches: {socialActivity1picnicLunches}")
+    print(f"  Family BBQ Day: {socialActivity1familyBBQDay}")
+    print(f"  Ice Cream Socials: {socialActivity1iceCreamSocials}")
+    print(f"  Happy Hour: {socialActivity1happyhour}")
 
-    socClas4aTV = request.form.get('socClas4aTV')
-    socClas4bTV = request.form.get('socClas4bTV')
-    socClas4cTV = request.form.get('socClas4cTV')
-    socClas4dTV = request.form.get('socClas4dTV')
 
-    socClas5aBrowsing = request.form.get('socClas5aBrowsing')
-    socClas5bBrowsing = request.form.get('socClas5bBrowsing')
-    socClas5cBrowsing = request.form.get('socClas5cBrowsing')
-    socClas5dBrowsing = request.form.get('socClas5dBrowsing')
 
-    socClas6aTalkPhone = request.form.get('socClas6aTalkPhone')
-    socClas6bTalkPhone = request.form.get('socClas6bTalkPhone')
-    socClas6cTalkPhone = request.form.get('socClas6cTalkPhone')
-    socClas6dTalkPhone = request.form.get('socClas6dTalkPhone')
-
-    socClas7aMeetFFA = request.form.get('socClas7aMeetFFA')
-    socClas7bMeetFFA = request.form.get('socClas7bMeetFFA')
-    socClas7cMeetFFA = request.form.get('socClas7cMeetFFA')
-    socClas7dMeetFFA = request.form.get('socClas7dMeetFFA')
-
-    socClas8aGroupConvo = request.form.get('socClas8aGroupConvo')
-    socClas8bGroupConvo = request.form.get('socClas8bGroupConvo')
-    socClas8cGroupConvo = request.form.get('socClas8cGroupConvo')
-    socClas8dGroupConvo = request.form.get('socClas8dGroupConvo')
-
-    socClas9aText = request.form.get('socClas9aText')
-    socClas9bText = request.form.get('socClas9bText')
-    socClas9cText = request.form.get('socClas9cText')
-    socClas9dText = request.form.get('socClas9dText')
-
-    socClas10aVolunteer = request.form.get('socClas10aVolunteer')
-    socClas10bVolunteer = request.form.get('socClas10bVolunteer')
-    socClas10cVolunteer = request.form.get('socClas10cVolunteer')
-    socClas10dVolunteer = request.form.get('socClas10dVolunteer')
-
-    socClas11aEssential = request.form.get('socClas11aEssential')
-    socClas11bEssential = request.form.get('socClas11bEssential')
-    socClas11cEssential = request.form.get('socClas11cEssential')
-    socClas11dEssential = request.form.get('socClas11dEssential')
 
 
     # Print statements for all retrieved data
@@ -188,126 +159,76 @@ def submitUser():
 
     print("Social Classifiers")
 
-    print("Eating with Others:", socClas1EatWOthers)
-    print("Hobbies Inside:", socClas2HobbiesInside)
-    print("Hobbies Outside:", socClas3HobbiesOutside)
-    print("Watching TV:", socClas4TV)
-    print("Browsing the Internet:", socClas5Browsing)
-    print("Talking on the phone", socClas6TalkPhone)
-    print("Meeting Family and Friends:", socClas7MeetFamFriend)
-    print("Group Conversations:", socClas8GroupConvo)
-    print("Text Messaging:", socClas9Text)
-    print("Volunteering:", socClas10Volunteer)
-    print("Essential Activities:", socClas11Essential)
 
     print(f"1a. Wish to participate in meals or social dining events: {socClas1aEatWOthers}")
-    print(f"1b. Types of meals the user is interested in: {', '.join(socClas1bEatWOthers) if socClas1bEatWOthers else 'None'}")
-    print(f"1c. Types of meals the user has participated in: {', '.join(socClas1cEatWOthers) if socClas1cEatWOthers else 'None'}")
-    print(f"1d. Wish to participate in more social activities around meals: {socClas1dEatWOthers}")
 
     print(f"2a. Wish to spend time on hobbies or recreational activities inside the home: {socClas2aHobbiesInside}")
-    print(f"2b. Types of indoor hobbies the user is interested in: {', '.join(socClas2bHobbiesInside) if socClas2bHobbiesInside else 'None'}")
-    print(f"2c. Types of indoor activities the user has participated in: {', '.join(socClas2cHobbiesInside) if socClas2cHobbiesInside else 'None'}")
-    print(f"2d. Wish to participate in more indoor activities: {socClas2dHobbiesInside}")
 
     print("Hobbies Outside 3a:", socClas3aHobbiesOutside or "Not provided")
-    print("Hobbies Outside 3b:", socClas3bHobbiesOutside or "Not provided")
-    print("Hobbies Outside 3c:", socClas3cHobbiesOutside or "Not provided")
-    print("Hobbies Outside 3d:", socClas3dHobbiesOutside or "Not provided")
 
-    print("TV 4a:", socClas4aTV or "Not provided")
-    print("TV 4b:", socClas4bTV or "Not provided")
-    print("TV 4c:", socClas4cTV or "Not provided")
-    print("TV 4d:", socClas4dTV or "Not provided")
+
+    print("TV 4a:", socClas4aTV)
+
 
     print("Browsing 5a:", socClas5aBrowsing or "Not provided")
-    print("Browsing 5b:", socClas5bBrowsing or "Not provided")
-    print("Browsing 5c:", socClas5cBrowsing or "Not provided")
-    print("Browsing 5d:", socClas5dBrowsing or "Not provided")
+
 
     print("Talk Phone 6a:", socClas6aTalkPhone or "Not provided")
-    print("Talk Phone 6b:", socClas6bTalkPhone or "Not provided")
-    print("Talk Phone 6c:", socClas6cTalkPhone or "Not provided")
-    print("Talk Phone 6d:", socClas6dTalkPhone or "Not provided")
 
-    print("Meet FFA 7a:", socClas7aMeetFFA or "Not provided")
-    print("Meet FFA 7b:", socClas7bMeetFFA or "Not provided")
-    print("Meet FFA 7c:", socClas7cMeetFFA or "Not provided")
-    print("Meet FFA 7d:", socClas7dMeetFFA or "Not provided")
+
+    print("Meet FFA 7a:", socClas7aMoreMeetFFA or "Not provided")
+
 
     print("Group Conversation 8a:", socClas8aGroupConvo or "Not provided")
-    print("Group Conversation 8b:", socClas8bGroupConvo or "Not provided")
-    print("Group Conversation 8c:", socClas8cGroupConvo or "Not provided")
-    print("Group Conversation 8d:", socClas8dGroupConvo or "Not provided")
+
 
     print("Text 9a:", socClas9aText or "Not provided")
-    print("Text 9b:", socClas9bText or "Not provided")
-    print("Text 9c:", socClas9cText or "Not provided")
-    print("Text 9d:", socClas9dText or "Not provided")
+
 
     print("Volunteer 10a:", socClas10aVolunteer or "Not provided")
-    print("Volunteer 10b:", socClas10bVolunteer or "Not provided")
-    print("Volunteer 10c:", socClas10cVolunteer or "Not provided")
-    print("Volunteer 10d:", socClas10dVolunteer or "Not provided")
+
 
     print("Essential 11a:", socClas11aEssential or "Not provided")
-    print("Essential 11b:", socClas11bEssential or "Not provided")
-    print("Essential 11c:", socClas11cEssential or "Not provided")
-    print("Essential 11d:", socClas11dEssential or "Not provided")
 
 
 
-    socialClassifierStats = [
-        socClas1EatWOthers,
-        socClas2HobbiesInside,
-        socClas3HobbiesOutside,
-        socClas4TV,
-        socClas5Browsing,
-        socClas6TalkPhone,
-        socClas7MeetFamFriend,
-        socClas8GroupConvo,
-        socClas9Text,
-        socClas10Volunteer,
-        socClas11Essential
-    ]
 
-    # extraClassifierStats1 = [
-    #     socClas1aWishPart,
-    #     socClas1bTypesOfMealsInterested,
-    #     socClas1cTypesOfMealsParticipated,
-    #     socClas1dWishPartMoreActivity,
-    #     socClas2aWishTimeInsideHobbies,
-    #     socClas2bTypesOfInsideHobbies,
-    #     socClas2cTypesOfIndoorActivitiesParticipated,
-    #     socClas2dWishPartMoreIndoorActivities
+    # socialClassifierStats = [
+    #     socClas1EatWOthers,
+    #     socClas2HobbiesInside,
+    #     socClas3HobbiesOutside,
+    #     socClas4TV,
+    #     socClas5Browsing,
+    #     socClas6TalkPhone,
+    #     socClas7MeetFamFriend,
+    #     socClas8GroupConvo,
+    #     socClas9Text,
+    #     socClas10Volunteer,
+    #     socClas11Essential
     # ]
 
-    extraClassifierStatsFreq = [
-        socClas1cTypesOfMealsParticipated,
-        socClas2cTypesOfIndoorActivitiesParticipated
-    ]
 
     #Step 1
-    activeDomains = determineActiveDomain(socialClassifierStats)
+    #activeDomains = determineActiveDomain(socialClassifierStats)
 
     #Step 2
-    freqPerDomain = countActivitiesPerDomain(extraClassifierStatsFreq)
+    #freqPerDomain = countActivitiesPerDomain(extraClassifierStatsFreq)
 
     #Step 3
-    pointsPerDomain = determineScorePerDomain(freqPerDomain,extraClassifierStatsFreq)
+    #pointsPerDomain = determineScorePerDomain(freqPerDomain,extraClassifierStatsFreq)
 
 
     #Step 4
-    primaryDomain, primaryDomainFreq = findPrimaryDomain(socialClassifierStats)
+    #primaryDomain, primaryDomainFreq = findPrimaryDomain(socialClassifierStats)
 
 
 
     
-    print(primaryDomain)
-    print(primaryDomainFreq)
-    print(freqPerDomain)
+    # print(primaryDomain)
+    # print(primaryDomainFreq)
+    # #print(freqPerDomain)
 
-    socialScore = calcSocialScore(socialClassifierStats)
+    # socialScore = calcSocialScore(socialClassifierStats)
 
 
     user_submission_data = {
@@ -329,39 +250,16 @@ def submitUser():
         "group_size_preference": group_size_preference,
         "time_preference": time_preference,
         "language": language,
-        "socialScore": socialScore
+        #"socialScore": socialScore
     }
 
     user_insert_result = collectionUser.insert_one(user_submission_data)
     user_id = user_insert_result.inserted_id  # Get the userId
 
-    socialClassifier_submission_data = {
-        "user_id": str(user_id),
-        "social_score": socialScore,
-        "socClas1EatWOthers" : socClas1EatWOthers,
-        "socClas2HobbiesInside" : socClas2HobbiesInside,
-        "socClas3HobbiesOutside": socClas3HobbiesOutside,
-        "socClas4TV": socClas4TV,
-        "socClas5Browsing": socClas5Browsing,
-        "socClas6TalkPhone": socClas6TalkPhone,
-        "socClas7MeetFamFriend": socClas7MeetFamFriend,
-        "socClas8GroupConvo": socClas8GroupConvo,
-        "socClas9Text": socClas9Text,
-        "socClas10Volunteer": socClas10Volunteer,
-        "socClas11Essential": socClas11Essential,
-        "socClas1aWishPart": socClas1aWishPart,
-        "socClas1bTypesOfMealsInterested": socClas1bTypesOfMealsInterested,
-        "socClas1cTypesOfMealsParticipated": socClas1cTypesOfMealsParticipated,
-        "socClas1dWishPartMoreActivity": socClas1dWishPartMoreActivity,
-        "socClas2aWishTimeInsideHobbies": socClas2aWishTimeInsideHobbies,
-        "socClas2bTypesOfInsideHobbies": socClas2bTypesOfInsideHobbies,
-        "socClas2cTypesOfIndoorActivitiesParticipated": socClas2cTypesOfIndoorActivitiesParticipated,
-        "socClas2dWishPartMoreIndoorActivities": socClas2dWishPartMoreIndoorActivities
-    }
-    
-    print("socialScore: " + socialScore)
 
-    collectionSocialClassifier.insert_one(socialClassifier_submission_data)
+    
+
+    #collectionSocialClassifier.insert_one(socialClassifier_submission_data)
 
 
     return f"Form submitted successfully!"
