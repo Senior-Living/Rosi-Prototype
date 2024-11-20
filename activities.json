@@ -1,530 +1,504 @@
 [
   {
-    "ActivityID": "RA001",
-    "ActivityName": "Coffee/ Tea Socials",
-    "ActivityDescription": "A social gathering where residents come together to enjoy coffee or tea and engage in conversations",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "1.5",
-    "EquipmentNeeded": "Teapots, teacups, tea assortments, coffee, mugs",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Weekly, Bi-Weekly",
-    "SafetyConsiderations": "None",
-    "PhysicalBenefits": " Provides a comfortable and relaxed environment for social interaction",
-    "EmotionalBenefits": "Fosters a sense of belonging and community among residents",
-    "SocialBenefits": "Promotes social connections and friendships among residents",
-    "CognitiveBenefits": "Stimulates conversation and reminiscence, enhancing cognitive engagement",
-    "GroupSize": "2 to 15",
-    "FacilitatorNeeded": "yes",
-    "SocialElements/Exchange": "Engaging in casual conversations, sharing stories, and enjoying tea together "
+      "Activity Number": "A1",
+      "Activity": "Eat in the cafeteria or community dining",
+      "Category": "Social",
+      "Sub-category ": "Social Dining"
   },
   {
-    "ActivityID": "RA002",
-    "ActivityName": "Group exercise classes",
-    "ActivityDescription": "Seniors participate in group exercise sessions led by a qualified instructor to improve physical fitness and well-being",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Moderate",
-    "Duration(Hours)": "1",
-    "EquipmentNeeded": "Exercise mats, resistance bands, light weights ",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Three times a week",
-    "SafetyConsiderations": "Exercise modifications provided for individual needs ",
-    "PhysicalBenefits": "Enhances strength, flexibility, and cardiovascular health",
-    "EmotionalBenefits": "Boosts mood, reduces stress, and promotes a sense of accomplishment",
-    "SocialBenefits": "Encourages camaraderie and mutual support among participants",
-    "CognitiveBenefits": "May incorporate coordination exercises to stimulate cognitive functions",
-    "GroupSize": "2 to 20",
-    "FacilitatorNeeded": "yes",
-    "SocialElements/Exchange": "Greeting and encouraging each other during workouts"
+      "Activity Number": "A2",
+      "Activity": "Tea and Coffee Socials",
+      "Category": "Social",
+      "Sub-category ": "Social Dining"
   },
   {
-    "ActivityID": "RA003",
-    "ActivityName": "Card games/ board games/ puzzles",
-    "ActivityDescription": "Friendly board games or card games in a group setting for social interaction and entertainment.",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "1",
-    "EquipmentNeeded": "Board games, playing cards",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Weekly",
-    "SafetyConsiderations": "None",
-    "PhysicalBenefits": "Promotes fine motor skills and hand-eye coordination",
-    "EmotionalBenefits": "Provides opportunities for social connection and reduces feelings of isolation",
-    "SocialBenefits": "Encourages teamwork, communication, and positive social interactions",
-    "CognitiveBenefits": "Stimulates strategic thinking, problem-solving, and memory recall",
-    "GroupSize": "2 to 8",
-    "FacilitatorNeeded": "No",
-    "SocialElements/Exchange": "Engaging conversations and laughter during gameplay"
+      "Activity Number": "A3",
+      "Activity": "Birthday or Anniversary Meals",
+      "Category": "Social",
+      "Sub-category ": "Social Dining"
   },
   {
-    "ActivityID": "RA004",
-    "ActivityName": "Themed parties and celebrations",
-    "ActivityDescription": "Residents come together to celebrate special occasions and holidays with themed parties and festive decorations",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "1-2",
-    "EquipmentNeeded": "Themed decorations, music, costumes",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Seasonal or Monthly",
-    "SafetyConsiderations": "None",
-    "PhysicalBenefits": "Provides an enjoyable and festive atmosphere",
-    "EmotionalBenefits": "Creates a sense of joy and celebration among residents",
-    "SocialBenefits": "Strengthens the sense of community and shared experiences",
-    "CognitiveBenefits": "May involve memory recall of past celebrations and traditions",
-    "GroupSize": "4 or more",
-    "FacilitatorNeeded": "Yes",
-    "SocialElements/Exchange": " Interacting and celebrating together during themed parties"
+      "Activity Number": "A4",
+      "Activity": "Brunch Gatherings",
+      "Category": "Social",
+      "Sub-category ": "Social Dining"
   },
   {
-    "ActivityID": "RA005",
-    "ActivityName": "Book clubs or Discussion Groups",
-    "ActivityDescription": "Seniors participate in book clubs or discussion groups to read and discuss books, fostering intellectual engagement and meaningful conversations",
-    "ActivityImage": "2023-08-01",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "1.5",
-    "EquipmentNeeded": "Books or reading materials, comfortable seating, screen reader",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Monthly or bi-weekly",
-    "SafetyConsiderations": "None",
-    "PhysicalBenefits": "Promotes a relaxed and enjoyable reading experience",
-    "EmotionalBenefits": "Fosters empathy, emotional connection with characters, and self-reflection",
-    "SocialBenefits": "Facilitates meaningful discussions and shared perspectives",
-    "CognitiveBenefits": "Stimulates critical thinking, analysis, and expression of ideas",
-    "GroupSize": " 4 to 12",
-    "FacilitatorNeeded": "Yes",
-    "SocialElements/Exchange": "Engaging in thoughtful discussions and sharing personal insights on books "
+      "Activity Number": "A5",
+      "Activity": "Holiday Feast Events",
+      "Category": "Social",
+      "Sub-category ": "Social Dining"
   },
   {
-    "ActivityID": "RA006",
-    "ActivityName": "Gentle exercise classes like yoga or tai chi for mobility and balance",
-    "ActivityDescription": "Seniors participate in gentle exercise sessions designed for individuals with varying mobility levels, promoting physical activity and overall well-being",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "0.75",
-    "EquipmentNeeded": "Exercise mats, light weights, resistance bands",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Twice a week",
-    "SafetyConsiderations": "Modifications provided for individual needs",
-    "PhysicalBenefits": "Improves flexibility, balance, and muscle strength",
-    "EmotionalBenefits": " Enhances mood and reduces stress",
-    "SocialBenefits": "Encourages a supportive and friendly exercise environment",
-    "CognitiveBenefits": "May incorporate simple coordination exercises to stimulate cognitive functions",
-    "GroupSize": "4 or more",
-    "FacilitatorNeeded": "Yes",
-    "SocialElements/Exchange": "Interacting and encouraging each other during the exercise session"
+      "Activity Number": "A6",
+      "Activity": "Outdoor BBQs",
+      "Category": "Social",
+      "Sub-category ": "Social Dining"
   },
   {
-    "ActivityID": "RA007",
-    "ActivityName": "Walking groups around the facility's garden or nearby parks",
-    "ActivityDescription": "Seniors form walking groups to go for walks together, promoting physical activity and social interaction in a safe and enjoyable manner",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": " Low to Moderate",
-    "Duration(Hours)": "0.5-1",
-    "EquipmentNeeded": "Comfortable walking shoes, optional walking sticks or walkers or poles",
-    "Indoor/Outdoor": "Outdoor",
-    "Group/Individual": "Group",
-    "Frequency": "Weekly ",
-    "SafetyConsiderations": "Choose accessible and safe walking paths",
-    "PhysicalBenefits": "Enhances cardiovascular health and stamina",
-    "EmotionalBenefits": "Provides a sense of well-being and reduces stress",
-    "SocialBenefits": "Fosters camaraderie and meaningful connections among participants",
-    "CognitiveBenefits": "Fosters camaraderie and meaningful connections among participants",
-    "GroupSize": "2 or more",
-    "FacilitatorNeeded": "yes",
-    "SocialElements/Exchange": "Engaging in conversations and enjoying nature during walks"
+      "Activity Number": "A7",
+      "Activity": "Picnic Lunches",
+      "Category": "Social",
+      "Sub-category ": "Social Dining"
   },
   {
-    "ActivityID": "RA008",
-    "ActivityName": "Chair exercises for those with limited mobility",
-    "ActivityDescription": "Seniors engage in seated exercises designed to improve strength, flexibility, and overall physical well-being",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": " Low to Moderate",
-    "Duration(Hours)": "0.5-1",
-    "EquipmentNeeded": "Sturdy chairs, resistance bands",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Twice a week",
-    "SafetyConsiderations": " Provide seated modifications for individual needs",
-    "PhysicalBenefits": "Enhances muscle strength, joint mobility, and balance",
-    "EmotionalBenefits": "Boosts mood and reduces stress through gentle movements",
-    "SocialBenefits": "Fosters a sense of camaraderie and encouragement among participants",
-    "CognitiveBenefits": " May incorporate coordination exercises to stimulate cognitive functions",
-    "GroupSize": "4 or more",
-    "FacilitatorNeeded": "Yes",
-    "SocialElements/Exchange": "Engaging in exercises together and providing positive reinforcement"
+      "Activity Number": "A8",
+      "Activity": "Icecream Socials",
+      "Category": "Social",
+      "Sub-category ": "Social Dining"
   },
   {
-    "ActivityID": "RA009",
-    "ActivityName": "Dancing sessions with music from their era",
-    "ActivityDescription": "Seniors participate in dance sessions accompanied by music, promoting physical activity, and enjoyment",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low to Moderate",
-    "Duration(Hours)": "1",
-    "EquipmentNeeded": "Music player or speaker, open space for dancing ",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Weekly ",
-    "SafetyConsiderations": "Ensure a safe and clear dance floor",
-    "PhysicalBenefits": "Improves cardiovascular health and coordination",
-    "EmotionalBenefits": "Elevates mood and provides a sense of joy through dancing",
-    "SocialBenefits": "Encourages social interaction and a shared passion for dancing",
-    "CognitiveBenefits": "May involve remembering dance moves and following rhythms",
-    "GroupSize": "4 or more",
-    "FacilitatorNeeded": "Yes",
-    "SocialElements/Exchange": "Dancing together and exchanging dance styles"
+      "Activity Number": "A9",
+      "Activity": " Reading Books or Magazines",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies"
   },
   {
-    "ActivityID": "RA010",
-    "ActivityName": "Indoor bowling or golf putting",
-    "ActivityDescription": "Seniors participate in indoor bowling or golf putting games, providing a fun and accessible recreational activity",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": " Low to Moderate",
-    "Duration(Hours)": "0.5-1",
-    "EquipmentNeeded": "Bowling pins and balls or golf putting equipment",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Both",
-    "Frequency": "Monthly or bi-weekly",
-    "SafetyConsiderations": "Ensure a safe and obstacle-free indoor space",
-    "PhysicalBenefits": "Promotes hand-eye coordination and balance",
-    "EmotionalBenefits": "Provides enjoyment and a sense of accomplishment",
-    "SocialBenefits": "Fosters friendly competition and shared laughter among participants",
-    "CognitiveBenefits": "May involve strategic thinking and planning shots",
-    "GroupSize": "4 to 10",
-    "FacilitatorNeeded": "No",
-    "SocialElements/Exchange": "Interacting during the game and celebrating successes together"
+      "Activity Number": "A10",
+      "Activity": " Knitting or Crocheting",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies"
   },
   {
-    "ActivityID": "RA011",
-    "ActivityName": "Educational talks and lectures on various topics",
-    "ActivityDescription": "Seniors attend informative talks and lectures on various topics, enhancing knowledge and intellectual engagement",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "1-1.5",
-    "EquipmentNeeded": "Projector, screen, microphone",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Monthly or bi-weekly",
-    "SafetyConsiderations": "None",
-    "PhysicalBenefits": "Mental stimulation and knowledge retention",
-    "EmotionalBenefits": "Promotes curiosity and a sense of discovery",
-    "SocialBenefits": "Encourages discussion and shared learning experiences",
-    "CognitiveBenefits": "Expands cognitive abilities and critical thinking skills",
-    "GroupSize": "4 or more",
-    "FacilitatorNeeded": "Yes",
-    "SocialElements/Exchange": "Engaging in post-talk discussions and exchanging ideas"
+      "Activity Number": "A11",
+      "Activity": " Gardening Indoors",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies"
   },
   {
-    "ActivityID": "RA012",
-    "ActivityName": "Art and craft workshops, such as painting or pottery",
-    "ActivityDescription": "Seniors participate in creative art and craft workshops, exploring their artistic talents and expressing themselves through various mediums",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "1-1.5",
-    "EquipmentNeeded": "Art supplies (paints, brushes, canvases, etc.) and craft materials",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Weekly",
-    "SafetyConsiderations": "Provide safe handling instructions for art materials",
-    "PhysicalBenefits": "Enhances fine motor skills and hand-eye coordination",
-    "EmotionalBenefits": "Provides a sense of accomplishment and creative expression",
-    "SocialBenefits": " Encourages social interaction and appreciation of each other's artistry",
-    "CognitiveBenefits": "Stimulates imagination and problem-solving abilities through creative projects",
-    "GroupSize": "4 or more",
-    "FacilitatorNeeded": "Yes",
-    "SocialElements/Exchange": "Sharing artwork and feedback during the workshop"
+      "Activity Number": "A12",
+      "Activity": " Listening to Music",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies"
   },
   {
-    "ActivityID": "RA013",
-    "ActivityName": "Brain games and memory exercises",
-    "ActivityDescription": "Seniors participate in cognitive games and exercises to challenge their minds and improve memory and mental agility",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "0.75-1",
-    "EquipmentNeeded": "Puzzle books, memory cards, brain training apps ",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Both",
-    "Frequency": "Twice a week",
-    "SafetyConsiderations": "None",
-    "PhysicalBenefits": "Stimulates the brain and promotes mental alertness",
-    "EmotionalBenefits": " Boosts confidence and satisfaction from problem-solving",
-    "SocialBenefits": " Encourages friendly competition and camaraderie in group settings",
-    "CognitiveBenefits": " Improves memory, focus, and cognitive functions",
-    "GroupSize": "4 or more",
-    "FacilitatorNeeded": "No",
-    "SocialElements/Exchange": " Interacting during the games and sharing strategies"
+      "Activity Number": "A13",
+      "Activity": " Watching Movies or TV Shows",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies"
   },
   {
-    "ActivityID": "RA014",
-    "ActivityName": "Learning new skills like technology usage",
-    "ActivityDescription": "Seniors engage in workshops and sessions to learn how to use technology devices and applications for communication and entertainment",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "0.75-1",
-    "EquipmentNeeded": " Computers, tablets, smartphones",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Monthly or bi-weekly",
-    "SafetyConsiderations": "Provide guidance on using technology safely",
-    "PhysicalBenefits": "Enhances hand-eye coordination and digital dexterity",
-    "EmotionalBenefits": "Boosts confidence in using modern technology",
-    "SocialBenefits": "Fosters connections through digital communication tools",
-    "CognitiveBenefits": "Stimulates cognitive functions through learning new skills",
-    "GroupSize": "4 or more",
-    "FacilitatorNeeded": "Yes",
-    "SocialElements/Exchange": "Collaborating on tech-based projects and sharing experiences"
+      "Activity Number": "A14",
+      "Activity": " Playing Puzzles or Games",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies"
   },
   {
-    "ActivityID": "RA015",
-    "ActivityName": "Language Classes",
-    "ActivityDescription": "Seniors participate in language classes to learn and practice a new language, fostering cultural appreciation and communication skills",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "1-1.5",
-    "EquipmentNeeded": "Language learning materials (books, audio resources, etc.)",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Both",
-    "Frequency": "Weekly",
-    "SafetyConsiderations": "None",
-    "PhysicalBenefits": "Mental stimulation and focus during language practice",
-    "EmotionalBenefits": "Cultivates a sense of achievement and connection to other cultures",
-    "SocialBenefits": "Enhances communication and understanding among participants",
-    "CognitiveBenefits": "Boosts memory and cognitive flexibility through language learning",
-    "GroupSize": "1 or more",
-    "FacilitatorNeeded": "No",
-    "SocialElements/Exchange": "Conversing in the target language and cultural discussions"
+      "Activity Number": "A15",
+      "Activity": " Crafting",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies"
   },
   {
-    "ActivityID": "RA016",
-    "ActivityName": "Reminiscence therapy to share and recall memories",
-    "ActivityDescription": "Seniors engage in guided discussions and activities to recall and share past memories, promoting emotional well-being and social connections",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "1",
-    "EquipmentNeeded": "Memory prompts and nostalgic materials",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Weekly",
-    "SafetyConsiderations": "Provide a safe and supportive environment",
-    "PhysicalBenefits": "May evoke positive emotions and relaxation",
-    "EmotionalBenefits": "Encourages emotional expression and reminiscing",
-    "SocialBenefits": "Fosters bonding and empathy among participants",
-    "CognitiveBenefits": "Stimulates memory recall and cognitive engagement",
-    "GroupSize": "4 or more",
-    "FacilitatorNeeded": "Yes",
-    "SocialElements/Exchange": "Sharing personal stories and experiences"
+      "Activity Number": "A16",
+      "Activity": " Painting",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies"
   },
   {
-    "ActivityID": "RA017",
-    "ActivityName": "Meditation and relaxation sessions to reduce stress and anxiety",
-    "ActivityDescription": "Seniors practice meditation and relaxation techniques to reduce stress and promote inner peace and tranquility",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "0.5-0.75",
-    "EquipmentNeeded": "Yoga mats, chairs, cushions, soothing music ",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Weekly",
-    "SafetyConsiderations": "Provide comfortable seating and space for meditation",
-    "PhysicalBenefits": "Promotes relaxation and reduces tension",
-    "EmotionalBenefits": "Enhances emotional well-being and mindfulness",
-    "SocialBenefits": "Cultivates a sense of unity and shared serenity in the group",
-    "CognitiveBenefits": "Fosters mental clarity and focus through meditation",
-    "GroupSize": "4 or more",
-    "FacilitatorNeeded": "Yes",
-    "SocialElements/Exchange": "Sharing reflections and experiences after meditation"
+      "Activity Number": "A17",
+      "Activity": " Cooking or Baking",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies"
   },
   {
-    "ActivityID": "RA018",
-    "ActivityName": "Pet therapy visits with friendly animals",
-    "ActivityDescription": " Seniors experience the joy and comfort of interacting with therapy animals, providing emotional support and happiness",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "1",
-    "EquipmentNeeded": "Trained therapy animals",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Both",
-    "Frequency": "Monthly or bi-weekly",
-    "SafetyConsiderations": " Follow safety guidelines for animal interactions",
-    "PhysicalBenefits": "May provide comfort and a sense of companionship",
-    "EmotionalBenefits": "Elevates mood and reduces feelings of isolation",
-    "SocialBenefits": "Encourages social interactions with therapy animals and other participants",
-    "CognitiveBenefits": "Stimulates positive emotions and engagement",
-    "GroupSize": "4 or more",
-    "FacilitatorNeeded": "No",
-    "SocialElements/Exchange": "Engaging with therapy animals and sharing pet stories"
+      "Activity Number": "A18",
+      "Activity": " Photography",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies"
   },
   {
-    "ActivityID": "RA019",
-    "ActivityName": "Music therapy and sing-alongs to boost mood and emotional well-being",
-    "ActivityDescription": "Seniors participate in music therapy sessions and group sing-alongs, promoting emotional well-being and self-expression through music",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": " Low ",
-    "Duration(Hours)": "0.75-1",
-    "EquipmentNeeded": "Musical instruments, song lyrics, and audio equipment",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Weekly",
-    "SafetyConsiderations": "Ensure appropriate sound levels and comfortable seating",
-    "PhysicalBenefits": "May encourage movement and toe-tapping to the music",
-    "EmotionalBenefits": " Elevates mood and evokes positive emotions through music",
-    "SocialBenefits": "Fosters a sense of unity and joy in group singing",
-    "CognitiveBenefits": "Stimulates memory recall through familiar songs",
-    "GroupSize": "4 or more",
-    "FacilitatorNeeded": "Yes",
-    "SocialElements/Exchange": "Singing together and discussing favorite songs"
+      "Activity Number": "A19",
+      "Activity": " Writing (journals, blogs, etc.)",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies"
+  },
+
+  {
+    "Activity Number": "A20",
+    "Activity": " Brain Games and Memory Exercises",
+    "Category": "Solitary",
+    "Sub-category ": "Indoor Hobbies"
   },
   {
-    "ActivityID": "RA020",
-    "ActivityName": "Group therapy sessions to discuss shared experiences",
-    "ActivityDescription": "Seniors engage in supportive group therapy sessions led by a licensed therapist, addressing emotional well-being and personal growth",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": " Low ",
-    "Duration(Hours)": "1.5",
-    "EquipmentNeeded": "Therapeutic materials and handouts",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": " Once a month",
-    "SafetyConsiderations": "Provide a confidential and supportive environment",
-    "PhysicalBenefits": "Emotional release and stress reduction through therapy",
-    "EmotionalBenefits": "Provides a space for emotional expression and healing",
-    "SocialBenefits": "Fosters a sense of support and camaraderie among participants",
-    "CognitiveBenefits": "Promotes self-awareness and emotional intelligence",
-    "GroupSize": "6 to 10 participants",
-    "FacilitatorNeeded": "Yes",
-    "SocialElements/Exchange": "Sharing personal experiences and insights during the sessions"
+      "Activity Number": "A21",
+      "Activity": " Meditation and Relaxation Sessions",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies"
   },
   {
-    "ActivityID": "RA021",
-    "ActivityName": "Volunteer opportunities within the community",
-    "ActivityDescription": "Seniors have the chance to engage in meaningful volunteer work, contributing their skills and time to the community",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "Varies",
-    "EquipmentNeeded": "Varies based on volunteer tasks",
-    "Indoor/Outdoor": "Both",
-    "Group/Individual": "Both",
-    "Frequency": "Based on volunteer opportunities ",
-    "SafetyConsiderations": "Provide proper safety guidelines and training for volunteers",
-    "PhysicalBenefits": "Engaging in volunteer activities can promote light physical activity",
-    "EmotionalBenefits": "Provides a sense of fulfillment and purpose through giving back",
-    "SocialBenefits": "Offers opportunities to connect with others in the community",
-    "CognitiveBenefits": "May enhance cognitive abilities through diverse tasks",
-    "GroupSize": "1 or more",
-    "FacilitatorNeeded": "Varies based on volunteer tasks",
-    "SocialElements/Exchange": "Engaging in volunteer tasks and collaborating with other volunteers"
+      "Activity Number": "A22",
+      "Activity": " Indoor Bowling or Golf Putting",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies"
   },
   {
-    "ActivityID": "RA022",
-    "ActivityName": "Visits to local museums, galleries, or cultural events",
-    "ActivityDescription": "Seniors explore local museums, galleries, and cultural events to appreciate art, history, and cultural diversity",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "2-4",
-    "EquipmentNeeded": "Comfortable shoes, walking aids if required",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": " Once a month",
-    "SafetyConsiderations": "Ensure accessibility and comfortable pacing for the visits",
-    "PhysicalBenefits": "Walking and exploring museums can promote light physical activity",
-    "EmotionalBenefits": "Fosters appreciation for art, culture, and history",
-    "SocialBenefits": "Encourages social interactions and discussions during visits",
-    "CognitiveBenefits": "Stimulates curiosity and mental engagement through learning experiences",
-    "GroupSize": "4 or more",
-    "FacilitatorNeeded": "Yes",
-    "SocialElements/Exchange": "Sharing impressions and reflections on the exhibits"
+      "Activity Number": "A23",
+      "Activity": " Learning New Skills (e.g., Technology)",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies"
   },
   {
-    "ActivityID": "RA023",
-    "ActivityName": "Picnics in nearby parks or outdoor spaces",
-    "ActivityDescription": "Seniors enjoy outdoor picnics in nearby parks or scenic outdoor locations, surrounded by nature and fresh air",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "2-3",
-    "EquipmentNeeded": "Picnic blankets, food, drinks, and outdoor supplies",
-    "Indoor/Outdoor": "Outdoor",
-    "Group/Individual": "Group",
-    "Frequency": " Once a month",
-    "SafetyConsiderations": "Ensure accessible locations and weather considerations",
-    "PhysicalBenefits": "Walking and being in nature can promote light physical activity",
-    "EmotionalBenefits": "Provides a sense of relaxation and connection to nature",
-    "SocialBenefits": "Facilitates social interactions and shared outdoor experiences",
-    "CognitiveBenefits": "Promotes a sense of well-being and mental rejuvenation",
-    "GroupSize": "10 to 30",
-    "FacilitatorNeeded": "Yes",
-    "SocialElements/Exchange": "Sharing meals and engaging in outdoor games"
+      "Activity Number": "A24",
+      "Activity": " Exercising at Home (yoga, weights, etc.)",
+      "Category": "Solitary",
+      "Sub-category ": "Indoor Hobbies" 
   },
   {
-    "ActivityID": "RA024",
-    "ActivityName": "Shopping trips to local markets or malls.",
-    "ActivityDescription": "Seniors enjoy shopping trips to nearby markets or malls, exploring and purchasing items of interest",
-    "ActivityImage": "",
-    "DateAdded": "2023-08-01",
-    "LastUpdated": "2023-08-01",
-    "IntensityLevel": "Low",
-    "Duration(Hours)": "2-4",
-    "EquipmentNeeded": "Comfortable shoes, walking aids if required",
-    "Indoor/Outdoor": "Indoor",
-    "Group/Individual": "Group",
-    "Frequency": "Monthly or bi-weekly",
-    "SafetyConsiderations": "Ensure accessible locations and weather considerations",
-    "PhysicalBenefits": "Enjoying a leisurely walk while exploring the market",
-    "EmotionalBenefits": "Provides enjoyment and appreciation for local produce and crafts",
-    "SocialBenefits": "Encourages shared experiences and interactions with local vendors",
-    "CognitiveBenefits": "Stimulates sensory perception and observation of products",
-    "GroupSize": "2 or more",
-    "FacilitatorNeeded": "No",
-    "SocialElements/Exchange": "Conversing with vendors and fellow participants during the visit"
+      "Activity Number": "A25",
+      "Activity": "Book Clubs",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A26",
+      "Activity": "Knitting Clubs",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A27",
+      "Activity": "Gardening Clubs",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A28",
+      "Activity": "Attending Exercise or Fitness Classes (e.g., yoga, Tai Chi)",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A29",
+      "Activity": "Gentle Exercise Classes",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A30",
+      "Activity": "Walking Groups",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A31",
+      "Activity": "Walking Alone or With a Pet",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A32",
+      "Activity": "Chair Exercises for Limited Mobility",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A33",
+      "Activity": "Dancing Sessions with Music from Their Era",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A34",
+      "Activity": "Attending Music Concerts or Performances",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A35",
+      "Activity": "Theater or Movie Outings",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A36",
+      "Activity": "Attending Community Center Classes (art, music, languages)",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A37",
+      "Activity": "Trips to Museums or Art Galleries",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A38",
+      "Activity": "Outdoor Photography Excursions",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+
+  {
+    "Activity Number": "A39",
+    "Activity": "Dining Out (restaurants, cafes, etc.)",
+    "Category": "Social",
+    "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A40",
+      "Activity": "Participating in Group Travel or Day Trips",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A41",
+      "Activity": "Short Bike Ride",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A42",
+      "Activity": "Art and Craft Workshops",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A43",
+      "Activity": "Educational Talks and Lectures",
+      "Category": "Social",
+      "Sub-category ": "Outdoor Hobbies"
+  },
+  {
+      "Activity Number": "A44",
+      "Activity": "Watching News",
+      "Category": "Solitary",
+      "Sub-category ": "Watching TV"
+  },
+  {
+      "Activity Number": "A45",
+      "Activity": "TV Shows (e.g., dramas, comedies)",
+      "Category": "Solitary",
+      "Sub-category ": "Watching TV"
+  },
+  {
+      "Activity Number": "A46",
+      "Activity": "Documentaries",
+      "Category": "Solitary",
+      "Sub-category ": "Watching TV"
+  },
+  {
+      "Activity Number": "A47",
+      "Activity": "Movies",
+      "Category": "Solitary",
+      "Sub-category ": "Watching TV"
+  },
+  {
+      "Activity Number": "A48",
+      "Activity": "Sports",
+      "Category": "Solitary",
+      "Sub-category ": "Watching TV"
+  },
+  {
+      "Activity Number": "A49",
+      "Activity": "YouTube Videos",
+      "Category": "Solitary",
+      "Sub-category ": "Watching TV"
+  },
+  {
+      "Activity Number": "A50",
+      "Activity": "Reading news websites",
+      "Category": "Solitary",
+      "Sub-category ": "BrowsingOnline"
+  },
+  {
+      "Activity Number": "A51",
+      "Activity": "Social Media (Facebook, YouTube, etc.)",
+      "Category": "Solitary",
+      "Sub-category ": "BrowsingOnline"
+  },
+  {
+      "Activity Number": "A52",
+      "Activity": "Blogs or Articles",
+      "Category": "Solitary",
+      "Sub-category ": "BrowsingOnline"
+  },
+  {
+      "Activity Number": "A53",
+      "Activity": "Online Forums or Discussion Groups",
+      "Category": "Solitary",
+      "Sub-category ": "BrowsingOnline"
+  },
+  {
+      "Activity Number": "A54",
+      "Activity": "Shopping Sites",
+      "Category": "Solitary",
+      "Sub-category ": "BrowsingOnline"
+  },
+  {
+      "Activity Number": "A55",
+      "Activity": "Calling Spouse or Partner",
+      "Category": "Social",
+      "Sub-category ": "Phone Calls"
+  },
+  {
+      "Activity Number": "A56",
+      "Activity": "Calling Family",
+      "Category": "Social",
+      "Sub-category ": "Phone Calls"
+  },
+  {
+      "Activity Number": "A57",
+      "Activity": "Calling Friends",
+      "Category": "Social",
+      "Sub-category ": "Phone Calls"
+  },
+
+  {
+    "Activity Number": "A58",
+    "Activity": "Calling Acquaintances",
+    "Category": "Social",
+    "Sub-category ": "Phone Calls"
+  },
+  {
+      "Activity Number": "A59",
+      "Activity": "Calling Health or Service Providers",
+      "Category": "Social",
+      "Sub-category ": "Phone Calls"
+  },
+  {
+      "Activity Number": "A60",
+      "Activity": "Meeting friends, family or aquanitances in person at home",
+      "Category": "Social",
+      "Sub-category ": "Meeting people"
+  },
+  {
+      "Activity Number": "A61",
+      "Activity": "Meeting friends, family or aquanitances in person at a friend or family member’s home",
+      "Category": "Social",
+      "Sub-category ": "Meeting people"
+  },
+  {
+      "Activity Number": "A62",
+      "Activity": "Meeting friends, family or aquanitances in person at an outdoor location",
+      "Category": "Social",
+      "Sub-category ": "Meeting people"
+  },
+  {
+      "Activity Number": "A63",
+      "Activity": "Meeting friends, family or aquanitances in person at a restaurant or cafe",
+      "Category": "Social",
+      "Sub-category ": "Meeting people"
+  },
+  {
+      "Activity Number": "A64",
+      "Activity": "SMS (standard text messages) ",
+      "Category": "Social",
+      "Sub-category ": "Texting People"
+  },
+  {
+      "Activity Number": "A65",
+      "Activity": "WhatsApp ",
+      "Category": "Social",
+      "Sub-category ": "Texting People"
+  },
+  {
+      "Activity Number": "A66",
+      "Activity": " Facebook Messenger",
+      "Category": "Social",
+      "Sub-category ": "Texting People"
+  },
+  {
+      "Activity Number": "A67",
+      "Activity": " iMessage",
+      "Category": "Social",
+      "Sub-category ": "Texting People"
+  },
+  {
+      "Activity Number": "A68",
+      "Activity": "Supporting Family, Friends, or Community Members",
+      "Category": "Social",
+      "Sub-category ": "Helping People"
+  },
+  {
+      "Activity Number": "A69",
+      "Activity": "Community and Environmental Projects",
+      "Category": "Social",
+      "Sub-category ": "Helping People"
+  },
+  {
+      "Activity Number": "A70",
+      "Activity": "Mentoring, Tutoring, and Education Support",
+      "Category": "Social",
+      "Sub-category ": "Helping People"
+  },
+  {
+      "Activity Number": "A71",
+      "Activity": "Charity and Fundraising Activities",
+      "Category": "Social",
+      "Sub-category": "Helping People"
+  },
+  {
+      "Activity Number": "A72",
+      "Activity": "Direct Assistance to Vulnerable Populations",
+      "Category": "Social",
+      "Sub-category ": "Helping People"
+  },
+  {
+    "Activity Number": "A73",
+    "Activity": "Food and Essentials Distribution",
+    "Category": "Social",
+    "Sub-category ": "Helping People"
+  },
+
+  {
+    "Activity Number": "A74",
+    "Activity": "Arts and Cultural Event Support",
+    "Category": "Social",
+    "Sub-category ": "Helping People"
+  },
+  {
+    "Activity Number": "A75",
+    "Activity": "Animal Welfare Volunteering",
+    "Category": "Social",
+    "Sub-category ": "Helping People"
+  },
+  {
+    "Activity Number": "A76",
+    "Activity": "Virtual Volunteering",
+    "Category": "Social",
+    "Sub-category ": "Helping People"
+  },
+  {
+    "Activity Number": "A77",
+    "Activity": "Grocery Shopping",
+    "Category": "Solitary",
+    "Sub-category ": "Essential Activities"
+  },
+  {
+      "Activity Number": "A78",
+      "Activity": "Medical Appointments",
+      "Category": "Solitary",
+      "Sub-category ": "Essential Activities"
+  },
+  {
+      "Activity Number": "A79",
+      "Activity": "Pharmacy Visits",
+      "Category": "Solitary",
+      "Sub-category ": "Essential Activities"
+  },
+  {
+      "Activity Number": "A80",
+      "Activity": "Banking or Post Office",
+      "Category": "Solitary",
+      "Sub-category ": "Essential Activities"
+  },
+  {
+      "Activity Number": "A81",
+      "Activity": "Group conversation In-person (family or friends’ gatherings)",
+      "Category": "Social",
+      "Sub-category ": "Group Conversations"
+  },
+  {
+      "Activity Number": "A82",
+      "Activity": "Group conversation In-person (hobby or community groups)",
+      "Category": "Social",
+      "Sub-category ": "Group Conversations"
+  },
+  {
+      "Activity Number": "A83",
+      "Activity": "Group conversation Online (video calls, discussion forums)",
+      "Category": "Social",
+      "Sub-category ": "Group Conversations"
   }
 ]
