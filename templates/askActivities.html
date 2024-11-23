@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosi</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 50px;
+        }
+
+        .activity-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .activity-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .rectangle {
+            width: 150px;
+            height: 40px;
+            margin: 5px;
+            background-color: lightblue;
+            border: 2px solid #0044cc;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #0044cc;
+            font-size: 16px;
+        }
+
+        .activity-container:last-child .rectangle {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1> Form Submitted Successfully</h1>
+
+    <h2> Here is your prescription {{firstname}} </h2>
+    <h2> You are {{engagementRange}} </h2>
+
+    <form action="{{ url_for('next_page') }}" method="POST">
+
+
+        {% for (subcategory, frequency), activities in subCategoriesWActivities.items() %}
+        <div class="box">
+            <!-- Display subcategory and frequency -->
+            <h3>{{ subcategory }} - {{ frequency }}</h3>
+            <ul class="activity-list">
+                <!-- Loop through the list of activities -->
+                {% for activity in activities %}
+                    <li>
+                        <!-- Add a radio button for each activity -->
+                        <input type="radio" id="{{ subcategory }}_{{ activity }}" name="{{ subcategory }}" value="{{ activity }}">
+                        <label for="{{ subcategory }}_{{ activity }}">{{ activity }}</label>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+
+</body>
+</html>

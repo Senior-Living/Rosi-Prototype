@@ -1,3 +1,4 @@
+from collections import defaultdict
 import json
 from flask import Flask, render_template, request
 from pymongo import MongoClient
@@ -465,36 +466,32 @@ def submitUser():
 
     print("Social Classifiers")
 
+    print(f"1a. Eat with Others: {socClas1aEatWOthers or 'Not provided'}")
+    print(f"2a. Hobbies Inside: {socClas2aHobbiesInside or 'Not provided'}")
+    print(f"3a. Hobbies Outside: {socClas3aHobbiesOutside or 'Not provided'}")
+    print(f"4a. TV: {socClas4aTV or 'Not provided'}")
+    print(f"5a. Browsing: {socClas5aBrowsing or 'Not provided'}")
+    print(f"6a. Talk Phone: {socClas6aTalkPhone or 'Not provided'}")
+    print(f"7a. Meet FFA: {socClas7aMoreMeetFFA or 'Not provided'}")
+    print(f"8a. Group Conversation: {socClas8aGroupConvo or 'Not provided'}")
+    print(f"9a. Text: {socClas9aText or 'Not provided'}")
+    print(f"10a. Volunteer: {socClas10aVolunteer or 'Not provided'}")
+    print(f"11a. Essential: {socClas11aEssential or 'Not provided'}")
 
-    print(f"1a. Wish to participate in meals or social dining events: {socClas1aEatWOthers}")
+    allSocClasDesires = [
+        socClas1aEatWOthers,
+        socClas2aHobbiesInside,
+        socClas3aHobbiesOutside,
+        socClas4aTV,
+        socClas5aBrowsing,
+        socClas6aTalkPhone,
+        socClas7aMoreMeetFFA,
+        socClas8aGroupConvo,
+        socClas9aText,
+        socClas10aVolunteer,
+        socClas11aEssential
+    ]
 
-    print(f"2a. Wish to spend time on hobbies or recreational activities inside the home: {socClas2aHobbiesInside}")
-
-    print("Hobbies Outside 3a:", socClas3aHobbiesOutside or "Not provided")
-
-
-    print("TV 4a:", socClas4aTV)
-
-
-    print("Browsing 5a:", socClas5aBrowsing or "Not provided")
-
-
-    print("Talk Phone 6a:", socClas6aTalkPhone or "Not provided")
-
-
-    print("Meet FFA 7a:", socClas7aMoreMeetFFA or "Not provided")
-
-
-    print("Group Conversation 8a:", socClas8aGroupConvo or "Not provided")
-
-
-    print("Text 9a:", socClas9aText or "Not provided")
-
-
-    print("Volunteer 10a:", socClas10aVolunteer or "Not provided")
-
-
-    print("Essential 11a:", socClas11aEssential or "Not provided")
 
     allActivitiesInDomains = [
         socialActivities1, 
@@ -521,16 +518,27 @@ def submitUser():
     freqPerDomain = countActivitiesPerDomain(allActivitiesInActiveDomains, activeDomains)
 
     print("Step 2: Frequency Per Domain")
-    print(freqPerDomain)
+    print("freqPerDomain" + str(freqPerDomain))
 
     #Step 3
     primaryDomain, primaryDomainFreq = findPrimaryDomain(freqPerDomain)
 
     print("Step 3: Primary Domain")
-    print(primaryDomain)
-    print(primaryDomainFreq)
+    print("Primary Domain "+ str(primaryDomain))
+    print("Primary Domain Freq" + str(primaryDomainFreq))
 
+    print("Step 3.5 Determine Current Engagement Range")
+    engagementScore, engagementRange, subCategories = determineCurrentEngagementRange(freqPerDomain, allSocClasDesires)
 
+    print("Engagement score" + str(engagementScore))
+    print("Engagement range" + str(engagementRange))
+    print("Sub Categories " + str(subCategories))
+
+    #Step 4
+
+    subCategoriesWActivities = getSubCategoriesActivities(subCategories)
+
+    print("subCategoriesWActivities" + str(subCategoriesWActivities))
 
     
     # print(primaryDomain)
@@ -571,122 +579,160 @@ def submitUser():
     #collectionSocialClassifier.insert_one(socialClassifier_submission_data)
 
 
-    return f"Form submitted successfully!"
-
-@app.route('/submitActivity', methods=['POST'])
-def submit_activity():
-    activity_name = request.form.get('activityName')
-    activity_type = request.form.get('activityType')
-    frequency = request.form.get('frequency')
-    duration = request.form.get('duration')
-    activity_description = request.form.get('activityDescription')
-    precautions = request.form.get('precautions')
-    followup = request.form.get('followup')
-
-    submission_data = {
-        "activity_name": activity_name,
-        "activity_type": activity_type,
-        "frequency": frequency,
-        "duration": duration,
-        "activity_description": activity_description,
-        "precautions": precautions,
-        "followup": followup
-    }
-
-    collectionActivity.insert_one(submission_data)  # Insert data into MongoDB collection
-
-    
-    # You can process the data here (e.g., store in database, print, etc.)
-    return f"""
-        <h1>Activity Submitted</h1>
-        <p><strong>Activity Name:</strong> {activity_name}</p>
-        <p><strong>Activity Type:</strong> {activity_type}</p>
-        <p><strong>Frequency:</strong> {frequency}</p>
-        <p><strong>Duration:</strong> {duration}</p>
-        <p><strong>Activity Description:</strong> {activity_description}</p>
-        <p><strong>Precautions:</strong> {precautions}</p>
-        <p><strong>Followup:</strong> {followup}</p>
-    """
-@app.route('/introvertedActivities')
-def introverted_activities():
-    activities = collectionActivity.find({"activity_type": "Introverted"})  # Adjust the filter based on your data structure
+    return render_template('askActivities.html', firstname=firstname, subCategories = subCategories, engagementRange = engagementRange, subCategoriesWActivities = subCategoriesWActivities)
 
 
-    for activity in introverted_activities:
-        print(activity.get("activity_type"))  # This will print each activity document
+#Step 3.5 Determine Current Engagement Range
+def determineCurrentEngagementRange(freqPerDomain, allSocClasDesires):
+    print("Current Engagement Range")
+    print(freqPerDomain)
+    engagementScore = 0
+    engagementRange = ""
+    subcategoriesRecommendations = []
 
-    return introverted_activities
+    socClas1aEatWOthers = allSocClasDesires[0]
+    socClas2aHobbiesInside = allSocClasDesires[1]
+    socClas3aHobbiesOutside =  allSocClasDesires[2]
+    socClas4aTV = allSocClasDesires[3]
+    socClas5aBrowsing =  allSocClasDesires[4]
+    socClas6aTalkPhone = allSocClasDesires[5]
+    socClas7aMoreMeetFFA =  allSocClasDesires[6]
+    socClas8aGroupConvo =  allSocClasDesires[7]
+    socClas9aText =  allSocClasDesires[8]
+    socClas10aVolunteer =  allSocClasDesires[9]
+    socClas11aEssential = allSocClasDesires[10]
+
+    activityToFreqMapping = {}
+    setOfSubCategories = list()
+
+    for elem in freqPerDomain:
+        engagementScore = engagementScore + elem[1]
+
+    if engagementScore < 0.121:
+        engagementRange = "Not Engaged"
+
+        conditions = [
+            socClas7aMoreMeetFFA,
+            socClas3aHobbiesOutside,
+            socClas1aEatWOthers,
+            socClas2aHobbiesInside,
+            socClas6aTalkPhone,
+            socClas9aText,
+        ]
+
+        true_count = 0
+
+        for elem in conditions:
+            if elem == "Yes":
+                true_count = true_count + 1
 
 
-def calcSocialScore(stats):
+        # Keep adding conditions until true_count == 3
+        i = 0  # Start from the first condition
+        while true_count < 3 and i < len(conditions):
+            if conditions[i] == "No":  # If the condition is False
+                conditions[i] = "Yes"  # Set it to True
+                true_count += 1  # Increment true_count
+            i += 1
 
-    scoring_map = {
-        "never": 0,
-        "1-3TimesAYear": 1,
-        "quarterly": 2,
-        "twiceInThreeMonths": 3,
-        "onceAMonth": 4,
-        "twiceAMonth": 5,
-        "threeTimesAMonth": 6,
-        "1-3TimesAWeek": 7,
-        "4-6TimesAWeek": 8,
-        "everyDay": 9
-    }
+        
+        if conditions[0] == "Yes":
+            activityToFreqMapping["Meeting People"] = "Once a Month"
+            setOfSubCategories.append("Meeting People")
 
+        if conditions[1]  == "Yes":
+            activityToFreqMapping["Outdoor Hobbies"] = "Twice a Month"
+            setOfSubCategories.append("Outdoor Hobbies")
 
-    totalScore = 0
-    res = ""
+        if conditions[2]  == "Yes":
+            activityToFreqMapping["Social Dining"] = "Once a Month"
+            setOfSubCategories.append("Social Dining")
 
+        if conditions[3]  == "Yes":
+            activityToFreqMapping["Indoor Hobbies"] = "Once a Week"
+            setOfSubCategories.append("Indoor Hobbies")
 
-    for elem in stats:
-        print(elem)
-        print(scoring_map.get(elem))
-        totalScore = totalScore + scoring_map.get(elem)
+        if conditions[4]  == "Yes":
+            activityToFreqMapping["Phone Calls"] = "Twice a Week"
+            setOfSubCategories.append("Phone Calls")
+        
+        if conditions[5]  == "Yes":
+            activityToFreqMapping["Texting People"] = "Twice a Week"
+            setOfSubCategories.append("Texting People")
 
-    print(totalScore)
+    elif engagementScore < 0.500:
+        engagementRange = "Mildy Engaged"
+        subcategoriesRecommendations.append(["Indoor Hobbies","Once a Week"])
+        subcategoriesRecommendations.append(["Social Dining","Twice a Month"])
+        subcategoriesRecommendations.append(["Meeting People","Twice a Month"])
+        subcategoriesRecommendations.append(["Texting PeopleTexting People","Once a Week"])
+        subcategoriesRecommendations.append(["Phone Calls","Once a Week"])
+        subcategoriesRecommendations.append(["Outdoor Hobbies","Once a Week"])
+        subcategoriesRecommendations.append(["Group Conversations ","Once a Month"])
 
-    if totalScore <30:
-        res = "Low"
-    elif totalScore <45:
-        res = "Low-Medium"
-    elif totalScore <60:
-        res = "Medium"
-    elif totalScore <70:
-        res = "High"
+    elif engagementScore < 1.500:
+        engagementRange = "Moderately Engaged"
+        subcategoriesRecommendations.append(["Volunteering","Once a Month"])
+        subcategoriesRecommendations.append(["Group Conversations","Once a Week"])
+        subcategoriesRecommendations.append(["Outdoor Hobbies","Once a Week"])
+        subcategoriesRecommendations.append(["Social Dining","Once a Week"])
+        subcategoriesRecommendations.append(["Meeting People","Once a Week"])
+
+    elif engagementScore < 3.500:
+        engagementRange = "Highly Engaged"
+        subcategoriesRecommendations.append(["Volunteering","Once a Week"])
+        subcategoriesRecommendations.append(["Group Conversations","Once a Week"])
+        subcategoriesRecommendations.append(["Outdoor Hobbies","Twice a Week"])
+        subcategoriesRecommendations.append(["Social Dining","Once a Week"])
+        subcategoriesRecommendations.append(["Meeting People","Once a Week"])
     else:
-        res = "Very High"
+        engagementRange = "Very Highly Engaged"
 
-    return res
+
+    indexFreqPerDomain = 0
+
+    while len(subcategoriesRecommendations) < 3 and indexFreqPerDomain < len(freqPerDomain):
+
+        currentSubCat = freqPerDomain[indexFreqPerDomain]
+        nameOfSubCat = currentSubCat[0]
+
+        if nameOfSubCat in setOfSubCategories and nameOfSubCat not in subcategoriesRecommendations:
+            frequency = activityToFreqMapping.get(nameOfSubCat, "Frequency Not Available")  # Default if no mapping found
+            subcategoriesRecommendations.append((nameOfSubCat, frequency))  # Append a tuple with activity name and frequency
+
+        indexFreqPerDomain+=1
+
+
+    while len(subcategoriesRecommendations) < 3:
+        for elem in setOfSubCategories:
+            if elem not in subcategoriesRecommendations:
+                frequency = activityToFreqMapping.get(elem, "Frequency Not Available")  # Default if no mapping found
+                subcategoriesRecommendations.append((elem, frequency))  # Append a tuple with activity name and frequency
+
+    return engagementScore, engagementRange, subcategoriesRecommendations
+
 
 #Step 3 
 def findPrimaryDomain(freqPerDomain):
+    return freqPerDomain[0][0],freqPerDomain[0][1]
 
-    kingDomain = ""
-    kingValue = 0
-
-    for elem in freqPerDomain:
-        if elem[1] > kingValue:
-            kingDomain = elem[0]
-            kingValue = elem[1]
-
-    return kingDomain,kingValue
 
 
 
 #Step 2 Finished
 def countActivitiesPerDomain(allActivitiesInActiveDomains,activeDomains):
     domainMap = [
-        "1. eatingMealsWithOthers",
-        "2. spendingTimeOnHobbiesOrRecreationAtHome",
-        "3. attendingHobbiesOrRecreationalActivitiesOutsideHome",
-        "4. watchingTV",
-        "5. browsingOnline",
-        "6. talkingOnThePhoneOrVideoCall",
-        "7. meetingFamilyFriendsOrAcquaintancesInPerson",
-        "8. engagingInGroupConversations",
-        "9. texting",
-        "10. volunteeringOrHelpingOthers",
-        "11. goingOutForEssentialActivities",
+        "Social Dining",
+        "Indoor Hobbies",
+        "Outdoor Hobbies",
+        "Watching TV",
+        "Browsing Online",
+        "Phone Calls",
+        "Meeting People",
+        "Group Conversations",
+        "Texting People",
+        "Volunteering",
+        "Essential Activities",
     ]
 
     freqMap = {
@@ -703,25 +749,20 @@ def countActivitiesPerDomain(allActivitiesInActiveDomains,activeDomains):
     }
 
     subCatNormalizedScore = {
-        "1. eatingMealsWithOthers": 0.6,
-        "2. spendingTimeOnHobbiesOrRecreationAtHome": 0.5,
-        "3. attendingHobbiesOrRecreationalActivitiesOutsideHome": 0.7,
-        "4. watchingTV": 0,
-        "5. browsingOnline": 0.1,
-        "6. talkingOnThePhoneOrVideoCall": 0.4,
-        "7. meetingFamilyFriendsOrAcquaintancesInPerson": 0.8,
-        "8. engagingInGroupConversations": 0.9,
-        "9. texting": 0.2,
-        "10. volunteeringOrHelpingOthers": 1,
-        "11. goingOutForEssentialActivities": 0.3,
+        "Social Dining": 0.6,
+        "Indoor Hobbies": 0.5,
+        "Outdoor Hobbies": 0.7,
+        "Watching TV": 0,
+        "Browsing Online": 0.1,
+        "Phone Calls": 0.4,
+        "Meeting People": 0.8,
+        "Group Conversations": 0.9,
+        "Texting People": 0.2,
+        "Volunteering": 1,
+        "Essential Activities": 0.3,
     }
 
-    
-
     res = []
-
-
-    
 
     for i in range(len(allActivitiesInActiveDomains)):
         currentDomain = allActivitiesInActiveDomains[i]
@@ -735,6 +776,8 @@ def countActivitiesPerDomain(allActivitiesInActiveDomains,activeDomains):
 
         res.append([activeDomains[i],sumOfActivities])
 
+    res.sort(key=lambda x: x[1], reverse=True)
+
     return res
         
             
@@ -744,17 +787,17 @@ def countActivitiesPerDomain(allActivitiesInActiveDomains,activeDomains):
 def determineActiveDomain(allActivitiesInDomains):
 
     domainMap = [
-        "1. eatingMealsWithOthers",
-        "2. spendingTimeOnHobbiesOrRecreationAtHome",
-        "3. attendingHobbiesOrRecreationalActivitiesOutsideHome",
-        "4. watchingTV",
-        "5. browsingOnline",
-        "6. talkingOnThePhoneOrVideoCall",
-        "7. meetingFamilyFriendsOrAcquaintancesInPerson",
-        "8. engagingInGroupConversations",
-        "9. texting",
-        "10. volunteeringOrHelpingOthers",
-        "11. goingOutForEssentialActivities",
+        "Social Dining",
+        "Indoor Hobbies",
+        "Outdoor Hobbies",
+        "Watching TV",
+        "Browsing Online",
+        "Phone Calls",
+        "Meeting People",
+        "Group Conversations",
+        "Texting People",
+        "Volunteering",
+        "Essential Activities",
     ]
 
     activeDomains = []
@@ -774,6 +817,36 @@ def determineActiveDomain(allActivitiesInDomains):
 
     return activeDomains,activitiesForActiveDomains
 
+#Step 4
+def getSubCategoriesActivities(subcategories):
+    with open("activities.json", 'r') as file:
+        activities_data = json.load(file)
+
+    activities_by_subcategory = defaultdict(list)
+
+    freqList = []
+
+    for subcategory in subcategories:
+        activities_by_subcategory[subcategory[0]] = []
+        freqList.append(subcategory[1])
+
+    for entry in activities_data:
+        subcategory = entry.get("Sub-category ")
+
+        if subcategory in activities_by_subcategory:
+            activities_by_subcategory[subcategory].append(entry.get("Activity"))
+
+    result = {}
+    freqListIndex = 0
+    for subcategory, activities in activities_by_subcategory.items():
+        # Use the first character of the subcategory as part of the key
+        result[(subcategory,freqList[freqListIndex])] = activities
+        freqListIndex+= 1
+
+    return result
+
+
+    return dict(activities_by_subcategory)
 
 
 

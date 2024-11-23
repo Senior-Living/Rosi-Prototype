@@ -49,98 +49,98 @@
   },
   {
       "Activity Number": "A9",
-      "Activity": " Reading Books or Magazines",
+      "Activity": "Reading Books or Magazines",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies"
   },
   {
       "Activity Number": "A10",
-      "Activity": " Knitting or Crocheting",
+      "Activity": "Knitting or Crocheting",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies"
   },
   {
       "Activity Number": "A11",
-      "Activity": " Gardening Indoors",
+      "Activity": "Gardening Indoors",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies"
   },
   {
       "Activity Number": "A12",
-      "Activity": " Listening to Music",
+      "Activity": "Listening to Music",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies"
   },
   {
       "Activity Number": "A13",
-      "Activity": " Watching Movies or TV Shows",
+      "Activity": "Watching Movies or TV Shows",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies"
   },
   {
       "Activity Number": "A14",
-      "Activity": " Playing Puzzles or Games",
+      "Activity": "Playing Puzzles or Games",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies"
   },
   {
       "Activity Number": "A15",
-      "Activity": " Crafting",
+      "Activity": "Crafting",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies"
   },
   {
       "Activity Number": "A16",
-      "Activity": " Painting",
+      "Activity": "Painting",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies"
   },
   {
       "Activity Number": "A17",
-      "Activity": " Cooking or Baking",
+      "Activity": "Cooking or Baking",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies"
   },
   {
       "Activity Number": "A18",
-      "Activity": " Photography",
+      "Activity": "Photography",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies"
   },
   {
       "Activity Number": "A19",
-      "Activity": " Writing (journals, blogs, etc.)",
+      "Activity": "Writing (journals, blogs, etc.)",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies"
   },
 
   {
     "Activity Number": "A20",
-    "Activity": " Brain Games and Memory Exercises",
+    "Activity": "Brain Games and Memory Exercises",
     "Category": "Solitary",
     "Sub-category ": "Indoor Hobbies"
   },
   {
       "Activity Number": "A21",
-      "Activity": " Meditation and Relaxation Sessions",
+      "Activity": "Meditation and Relaxation Sessions",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies"
   },
   {
       "Activity Number": "A22",
-      "Activity": " Indoor Bowling or Golf Putting",
+      "Activity": "Indoor Bowling or Golf Putting",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies"
   },
   {
       "Activity Number": "A23",
-      "Activity": " Learning New Skills (e.g., Technology)",
+      "Activity": "Learning New Skills (e.g., Technology)",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies"
   },
   {
       "Activity Number": "A24",
-      "Activity": " Exercising at Home (yoga, weights, etc.)",
+      "Activity": "Exercising at Home (yoga, weights, etc.)",
       "Category": "Solitary",
       "Sub-category ": "Indoor Hobbies" 
   },
@@ -360,25 +360,25 @@
       "Activity Number": "A60",
       "Activity": "Meeting friends, family or aquanitances in person at home",
       "Category": "Social",
-      "Sub-category ": "Meeting people"
+      "Sub-category ": "Meeting People"
   },
   {
       "Activity Number": "A61",
-      "Activity": "Meeting friends, family or aquanitances in person at a friend or family member’s home",
+      "Activity": "Meeting friends, family or acquaintances in person at a friend or family members home",
       "Category": "Social",
-      "Sub-category ": "Meeting people"
+      "Sub-category ": "Meeting People"
   },
   {
       "Activity Number": "A62",
-      "Activity": "Meeting friends, family or aquanitances in person at an outdoor location",
+      "Activity": "Meeting friends, family or acquaintances in person at an outdoor location",
       "Category": "Social",
       "Sub-category ": "Meeting people"
   },
   {
       "Activity Number": "A63",
-      "Activity": "Meeting friends, family or aquanitances in person at a restaurant or cafe",
+      "Activity": "Meeting friends, family or acquaintances in person at a restaurant or cafe",
       "Category": "Social",
-      "Sub-category ": "Meeting people"
+      "Sub-category ": "Meeting People"
   },
   {
       "Activity Number": "A64",
