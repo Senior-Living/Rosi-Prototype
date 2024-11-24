@@ -622,10 +622,55 @@ def determineCurrentEngagementRange(freqPerDomain, allSocClasDesires):
 
     elif engagementScore < 0.500:
         engagementRange = "Mildy Engaged"
-        subcategoriesRecommendations.append(["Indoor Hobbies","Once a Week"])
-        subcategoriesRecommendations.append(["Social Dining","Twice a Month"])
+
+        conditions = [
+            socClas2aHobbiesInside,
+            socClas1aEatWOthers,
+            socClas7aMoreMeetFFA,
+            socClas9aText,
+            socClas6aTalkPhone,
+            socClas3aHobbiesOutside,
+            socClas8aGroupConvo,
+        ]
+
+        true_count = 0
+
+        for elem in conditions:
+            if elem == "Yes":
+                true_count = true_count + 1
+
+
+        # Keep adding conditions until true_count == 3
+        i = 0  # Start from the first condition
+        while true_count < 3 and i < len(conditions):
+            if conditions[i] == "No":  # If the condition is False
+                conditions[i] = "Yes"  # Set it to True
+                true_count += 1  # Increment true_count
+            i += 1
+
+        if conditions[0] == "Yes":
+            activityToFreqMapping["Indoor Hobbies"] = "Once a Week"
+            setOfSubCategories.append("Indoor Hobbies")
+
+        if conditions[1]  == "Yes":
+            activityToFreqMapping["Social Dining"] = "Twice a Month"
+            setOfSubCategories.append("Social Dining")
+
+        if conditions[2]  == "Yes":
+            pass
+
+        if conditions[3]  == "Yes":
+            pass
+
+        if conditions[4]  == "Yes":
+            pass
+        
+        if conditions[5]  == "Yes":
+            pass
+
+
         subcategoriesRecommendations.append(["Meeting People","Twice a Month"])
-        subcategoriesRecommendations.append(["Texting PeopleTexting People","Once a Week"])
+        subcategoriesRecommendations.append(["Texting People","Once a Week"])
         subcategoriesRecommendations.append(["Phone Calls","Once a Week"])
         subcategoriesRecommendations.append(["Outdoor Hobbies","Once a Week"])
         subcategoriesRecommendations.append(["Group Conversations ","Once a Month"])
