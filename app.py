@@ -17,50 +17,6 @@ collectionSocialClassifier = db['ROSISocialClassifierConn']  # Collection name
 
 
 
-# Route to insert data from JSON file into MongoDB
-@app.route('/import_activities')
-def import_activities():
-    # Path to your JSON file
-    json_file_path = 'activities.json'
-
-    try:
-        # Open and load the JSON file
-        with open(json_file_path, 'r') as file:
-            activities = json.load(file)  # This should be a list of dictionaries
-
-        # Insert the activities into the collection
-        if isinstance(activities, list):
-            collectionActivity.insert_many(activities)
-        else:
-            collectionActivity.insert_one(activities)
-
-        return "Activities imported successfully!"
-    
-    except Exception as e:
-        return f"An error occurred: {str(e)}"
-    
-# Route to insert data from JSON file into MongoDB
-@app.route('/import_users')
-def import_users():
-    # Path to your JSON file
-    json_file_path = 'users.json'
-
-    try:
-        # Open and load the JSON file
-        with open(json_file_path, 'r') as file:
-            users = json.load(file)  # This should be a list of dictionaries
-
-        # Insert the activities into the collection
-        if isinstance(users, list):
-            collectionUser.insert_many(users)
-        else:
-            collectionActivity.insert_one(users)
-
-        return "Users imported successfully!"
-    
-    except Exception as e:
-        return f"An error occurred: {str(e)}"
-
 @app.route('/')
 def home():
     return render_template('homepage.html')
@@ -73,9 +29,9 @@ def page1():
 def addPrescriptionDemographic():
     return render_template('addPrescriptionDemographic.html')
 
-@app.route('/addActivity')
-def page2():
-    return render_template('addActivity.html')
+# @app.route('/addActivity')
+# def page2():
+#     return render_template('addActivity.html')
 
 @app.route('/submitUser', methods=['POST'])
 def submitUser():
@@ -525,27 +481,20 @@ def submitUser():
 
     print("Step 3: Primary Domain")
     print("Primary Domain "+ str(primaryDomain))
-    print("Primary Domain Freq" + str(primaryDomainFreq))
+    print("Primary Domain Freq: " + str(primaryDomainFreq))
 
     print("Step 3.5 Determine Current Engagement Range")
     engagementScore, engagementRange, subCategories = determineCurrentEngagementRange(freqPerDomain, allSocClasDesires)
 
-    print("Engagement score" + str(engagementScore))
-    print("Engagement range" + str(engagementRange))
-    print("Sub Categories " + str(subCategories))
+    print("Engagement score: " + str(engagementScore))
+    print("Engagement range: " + str(engagementRange))
+    print("Sub Categories: " + str(subCategories))
 
     #Step 4
 
     subCategoriesWActivities = getSubCategoriesActivities(subCategories)
 
     print("subCategoriesWActivities" + str(subCategoriesWActivities))
-
-    
-    # print(primaryDomain)
-    # print(primaryDomainFreq)
-    # #print(freqPerDomain)
-
-    # socialScore = calcSocialScore(socialClassifierStats)
 
 
     user_submission_data = {
@@ -573,13 +522,8 @@ def submitUser():
     user_insert_result = collectionUser.insert_one(user_submission_data)
     user_id = user_insert_result.inserted_id  # Get the userId
 
-
-    
-
-    #collectionSocialClassifier.insert_one(socialClassifier_submission_data)
-
-
     return render_template('askActivities.html', firstname=firstname, subCategories = subCategories, engagementRange = engagementRange, subCategoriesWActivities = subCategoriesWActivities)
+    #return render_template('askActivities.html')
 
 
 #Step 3.5 Determine Current Engagement Range
@@ -708,6 +652,9 @@ def determineCurrentEngagementRange(freqPerDomain, allSocClasDesires):
             if elem not in subcategoriesRecommendations:
                 frequency = activityToFreqMapping.get(elem, "Frequency Not Available")  # Default if no mapping found
                 subcategoriesRecommendations.append((elem, frequency))  # Append a tuple with activity name and frequency
+
+            if len(subcategoriesRecommendations) == 3:
+                break
 
     return engagementScore, engagementRange, subcategoriesRecommendations
 
