@@ -537,7 +537,7 @@ def submitActivities():
     # Print the selected activities for debugging purposes
     print("Selected Activities:")
     for subcategory, data in selected_activities.items():
-        print(f"{subcategory}: {data['activity']} ({data['frequency']})")
+        print(f"{subcategory}: {data['activity']}")
 
     # Pass both the firstname and the selected activities (with frequency) to the next page
     return render_template('endPrescriptionPage.html', firstname=firstname, selected_activities=selected_activities)
@@ -657,39 +657,117 @@ def determineCurrentEngagementRange(freqPerDomain, allSocClasDesires):
             setOfSubCategories.append("Social Dining")
 
         if conditions[2]  == "Yes":
-            pass
+            activityToFreqMapping["Meeting People"] = "Twice a Month"
+            setOfSubCategories.append("Meeting People")
 
         if conditions[3]  == "Yes":
-            pass
+            activityToFreqMapping["Texting People"] = "Once a Week"
+            setOfSubCategories.append("Texting People")
 
         if conditions[4]  == "Yes":
-            pass
+            activityToFreqMapping["Phone Calls"] = "Once a Week"
+            setOfSubCategories.append("Phone Calls")
         
         if conditions[5]  == "Yes":
-            pass
+            activityToFreqMapping["Outdoor Hobbies"] = "Once a Week"
+            setOfSubCategories.append("Outdoor Hobbies")
 
-
-        subcategoriesRecommendations.append(["Meeting People","Twice a Month"])
-        subcategoriesRecommendations.append(["Texting People","Once a Week"])
-        subcategoriesRecommendations.append(["Phone Calls","Once a Week"])
-        subcategoriesRecommendations.append(["Outdoor Hobbies","Once a Week"])
-        subcategoriesRecommendations.append(["Group Conversations ","Once a Month"])
+        if conditions[6]  == "Yes":
+            activityToFreqMapping["Group Conversations"] = "Once a Month"
+            setOfSubCategories.append("Group Conversations")
 
     elif engagementScore < 1.500:
         engagementRange = "Moderately Engaged"
-        subcategoriesRecommendations.append(["Volunteering","Once a Month"])
-        subcategoriesRecommendations.append(["Group Conversations","Once a Week"])
-        subcategoriesRecommendations.append(["Outdoor Hobbies","Once a Week"])
-        subcategoriesRecommendations.append(["Social Dining","Once a Week"])
-        subcategoriesRecommendations.append(["Meeting People","Once a Week"])
+
+        conditions = [
+            socClas10aVolunteer,
+            socClas8aGroupConvo,
+            socClas3aHobbiesOutside,
+            socClas1aEatWOthers,
+            socClas7aMoreMeetFFA,
+        ]
+
+        true_count = 0
+
+        for elem in conditions:
+            if elem == "Yes":
+                true_count = true_count + 1
+
+
+        # Keep adding conditions until true_count == 3
+        i = 0  # Start from the first condition
+        while true_count < 3 and i < len(conditions):
+            if conditions[i] == "No":  # If the condition is False
+                conditions[i] = "Yes"  # Set it to True
+                true_count += 1  # Increment true_count
+            i += 1
+
+        if conditions[0] == "Yes":
+            activityToFreqMapping["Volunteering"] = "Once a Month"
+            setOfSubCategories.append("Volunteering")
+
+        if conditions[1]  == "Yes":
+            activityToFreqMapping["Group Conversations"] = "Once a Week"
+            setOfSubCategories.append("Group Conversations")
+
+        if conditions[2]  == "Yes":
+            activityToFreqMapping["Outdoor Hobbies"] = "Once a Week"
+            setOfSubCategories.append("Outdoor Hobbies")
+
+        if conditions[3]  == "Yes":
+            activityToFreqMapping["Social Dining"] = "Once a Week"
+            setOfSubCategories.append("Social Dining")
+
+        if conditions[4]  == "Yes":
+            activityToFreqMapping["Meeting People"] = "Once a Week"
+            setOfSubCategories.append("Meeting People")
 
     elif engagementScore < 3.500:
         engagementRange = "Highly Engaged"
-        subcategoriesRecommendations.append(["Volunteering","Once a Week"])
-        subcategoriesRecommendations.append(["Group Conversations","Once a Week"])
-        subcategoriesRecommendations.append(["Outdoor Hobbies","Twice a Week"])
-        subcategoriesRecommendations.append(["Social Dining","Once a Week"])
-        subcategoriesRecommendations.append(["Meeting People","Once a Week"])
+
+        conditions = [
+            socClas10aVolunteer,
+            socClas8aGroupConvo,
+            socClas3aHobbiesOutside,
+            socClas1aEatWOthers,
+            socClas7aMoreMeetFFA,
+        ]
+
+        true_count = 0
+
+        for elem in conditions:
+            if elem == "Yes":
+                true_count = true_count + 1
+
+
+        # Keep adding conditions until true_count == 3
+        i = 0  # Start from the first condition
+        while true_count < 3 and i < len(conditions):
+            if conditions[i] == "No":  # If the condition is False
+                conditions[i] = "Yes"  # Set it to True
+                true_count += 1  # Increment true_count
+            i += 1
+
+        if conditions[0] == "Yes":
+            activityToFreqMapping["Volunteering"] = "Once a Week"
+            setOfSubCategories.append("Volunteering")
+
+        if conditions[1]  == "Yes":
+            activityToFreqMapping["Group Conversations"] = "Once a Week"
+            setOfSubCategories.append("Group Conversations")
+
+        if conditions[2]  == "Yes":
+            activityToFreqMapping["Outdoor Hobbies"] = "Twice a Week"
+            setOfSubCategories.append("Outdoor Hobbies")
+
+        if conditions[3]  == "Yes":
+            activityToFreqMapping["Social Dining"] = "Once a Week"
+            setOfSubCategories.append("Social Dining")
+
+        if conditions[4]  == "Yes":
+            activityToFreqMapping["Meeting People"] = "Once a Week"
+            setOfSubCategories.append("Meeting People")
+
     else:
         engagementRange = "Very Highly Engaged"
 
@@ -721,7 +799,10 @@ def determineCurrentEngagementRange(freqPerDomain, allSocClasDesires):
 
 #Step 3 
 def findPrimaryDomain(freqPerDomain):
-    return freqPerDomain[0][0],freqPerDomain[0][1]
+    if freqPerDomain and len(freqPerDomain) > 0 and len(freqPerDomain[0]) >= 2:
+        return freqPerDomain[0][0], freqPerDomain[0][1]
+    else:
+        return None, None
 
 
 

@@ -25,7 +25,6 @@
 
         .rectangle {
             width: 250px;
-            height: 50px;
             margin: 10px;
             background-color: lightblue;
             border: 2px solid #0044cc;
@@ -56,13 +55,17 @@
         {% for subcategory, data in selected_activities.items() %}
             <div class="activity-container">
                 <div class="activity-title">{{ subcategory }}:</div>
-                <div class="rectangle">{{ data['activity'] }}</div>
+                <div class="rectangle">
+                    {% for part in data['activity'].split('|') %}
+                        {{ part }}<br>
+                    {% endfor %}
+                </div>
             </div>
         {% endfor %}
     </div>
 
 
-
+    <a href="/" class="back-button">Back to Home</a>
 
 </body>
 </html>
