@@ -29,10 +29,6 @@ def page1():
 def addPrescriptionDemographic():
     return render_template('addPrescriptionDemographic.html')
 
-# @app.route('/addActivity')
-# def page2():
-#     return render_template('addActivity.html')
-
 @app.route('/submitUser', methods=['POST'])
 def submitUser():
     #User Demographics 
@@ -523,8 +519,28 @@ def submitUser():
     user_id = user_insert_result.inserted_id  # Get the userId
 
     return render_template('askActivities.html', firstname=firstname, subCategories = subCategories, engagementRange = engagementRange, subCategoriesWActivities = subCategoriesWActivities)
-    #return render_template('askActivities.html')
 
+@app.route('/submitActivities', methods=['POST'])
+def submitActivities():
+    firstname = request.form.get('firstname')  # Retrieve firstname
+
+    selected_activities = {}
+    
+    # Iterate through the submitted form data
+    for subcategory in request.form:
+        if subcategory != "firstname":
+            # Get the selected activity and its frequency
+            activity = request.form[subcategory]
+            frequency = request.form.get(subcategory + "_frequency")  # Assuming frequency is passed with the activity
+            selected_activities[subcategory] = {"activity": activity, "frequency": frequency}
+    
+    # Print the selected activities for debugging purposes
+    print("Selected Activities:")
+    for subcategory, data in selected_activities.items():
+        print(f"{subcategory}: {data['activity']} ({data['frequency']})")
+
+    # Pass both the firstname and the selected activities (with frequency) to the next page
+    return render_template('endPrescriptionPage.html', firstname=firstname, selected_activities=selected_activities)
 
 #Step 3.5 Determine Current Engagement Range
 def determineCurrentEngagementRange(freqPerDomain, allSocClasDesires):
@@ -657,7 +673,6 @@ def determineCurrentEngagementRange(freqPerDomain, allSocClasDesires):
                 break
 
     return engagementScore, engagementRange, subcategoriesRecommendations
-
 
 #Step 3 
 def findPrimaryDomain(freqPerDomain):

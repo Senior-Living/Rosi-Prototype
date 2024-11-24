@@ -51,7 +51,8 @@
     <h2> Here is your prescription {{firstname}} </h2>
     <h2> You are {{engagementRange}} </h2>
 
-    <form action="/new" method="POST">
+    <form action="/submitActivities" method="POST">
+        <input type="hidden" name="firstname" value="{{ firstname }}">
 
 
         {% for (subcategory, frequency), activities in subCategoriesWActivities.items() %}
@@ -63,7 +64,7 @@
                 {% for activity in activities %}
                     <li>
                         <!-- Add a radio button for each activity -->
-                        <input type="radio" id="{{ subcategory }}_{{ activity }}" name="{{ subcategory }}" value="{{ activity }}">
+                        <input type="radio" id="{{ subcategory }}_{{ activity }}" name="{{ subcategory }}" value="{{ activity }}|{{ frequency }}">
                         <label for="{{ subcategory }}_{{ activity }}">{{ activity }}</label>
                     </li>
                 {% endfor %}
