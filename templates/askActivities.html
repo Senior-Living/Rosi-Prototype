@@ -13,11 +13,17 @@
             align-items: center;
             justify-content: center;
             margin: 50px;
+            background-color: #f4f4f9;
         }
 
         .activity-container {
             margin-bottom: 20px;
             text-align: center;
+        }
+
+        .activity-list {
+            list-style: none; /* Removes bullet points */
+            padding: 0; /* Removes default padding */
         }
 
         .activity-title {
@@ -43,13 +49,23 @@
         .activity-container:last-child .rectangle {
             background-color: lightgreen;
         }
+
+        .fundinglogo {
+            max-width: 30%;
+        }
+
+        .section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
     </style>
 </head>
 <body>
     <h1> Form Submitted Successfully</h1>
 
-    <h2> Here is your prescription {{firstname}} </h2>
-    <h2> You are {{engagementRange}} </h2>
+    <h2> Here is your recreational prescription {{firstname}} </h2>
+    <!-- <h2> You are {{engagementRange}} </h2> -->
 
     <form action="/submitActivities" method="POST">
         <input type="hidden" name="firstname" value="{{ firstname }}">
@@ -64,7 +80,13 @@
                 {% for activity in activities %}
                     <li>
                         <!-- Add a radio button for each activity -->
-                        <input type="radio" id="{{ subcategory }}_{{ activity }}" name="{{ subcategory }}" value="{{ activity }}|{{ frequency }}">
+                        <input 
+                            type="radio" 
+                            id="{{ subcategory }}_{{ activity }}" 
+                            name="{{ subcategory }}" 
+                            value="{{ activity }}|{{ frequency }}"
+                            {% if loop.first %}checked{% endif %}
+                        >
                         <label for="{{ subcategory }}_{{ activity }}">{{ activity }}</label>
                     </li>
                 {% endfor %}
@@ -73,6 +95,12 @@
         {% endfor %}
 
         <button type="submit">Submit</button>
+
+        <div class="section">
+            <h2 class="section-title">Our Funders</h2>
+            <img class = "fundinglogo" src="{{ url_for('static', filename='images/uottawa.png') }}" alt="Logo" >
+            <img class = "fundinglogo" src="{{ url_for('static', filename='images/NSERC.png') }}" alt="Logo" >
+        </div>
 
         
 

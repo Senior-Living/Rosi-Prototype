@@ -42,12 +42,21 @@
             align-items: center;
         }
 
+        .fundinglogo {
+            max-width: 30%;
+        }
+
+        .section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
     </style>
 </head>
 <body>
     <h1> Form Submitted Successfully</h1>
 
-    <h2> Here is your prescription {{firstname}} </h2>
+    <h2> Here is your recreational prescription {{firstname}} </h2>
 
     <h2>Your selected activities:</h2>
 
@@ -66,6 +75,12 @@
 
 
     <a href="/" class="back-button">Back to Home</a>
+
+    <div class="section">
+        <h2 class="section-title">Our Funders</h2>
+        <img class = "fundinglogo" src="{{ url_for('static', filename='images/uottawa.png') }}" alt="Logo" >
+        <img class = "fundinglogo" src="{{ url_for('static', filename='images/NSERC.png') }}" alt="Logo" >
+    </div>
 
 </body>
 </html>

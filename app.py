@@ -1,19 +1,18 @@
 from collections import defaultdict
 import json
 from flask import Flask, render_template, request
-from pymongo import MongoClient
+#from pymongo import MongoClient
 
 app = Flask(__name__)
 
 # Connect to local MongoDB
-client = MongoClient('mongodb://localhost:27017/')
-db = client['local']  # Database name
-collectionUser = db['ROSIUserConn']  # Collection name
-collectionActivity = db['ROSIActivityConn']  # Collection name
-collectionSocialClassifier = db['ROSISocialClassifierConn']  # Collection name
+# client = MongoClient('mongodb://localhost:27017/')
+# db = client['local']  # Database name
+# collectionUser = db['ROSIUserConn']  # Collection name
+# collectionActivity = db['ROSIActivityConn']  # Collection name
+# collectionSocialClassifier = db['ROSISocialClassifierConn']  # Collection name
 
 #℞OSI, not ROSI
-
 
 
 
@@ -24,10 +23,6 @@ def home():
 @app.route('/addUser')
 def page1():
     return render_template('addUser.html')
-
-@app.route('/addPrescriptionDemographic')
-def addPrescriptionDemographic():
-    return render_template('addPrescriptionDemographic.html')
 
 @app.route('/submitUser', methods=['POST'])
 def submitUser():
@@ -44,12 +39,31 @@ def submitUser():
     available_hours = request.form.get('availableHours')
     monthly_budget = request.form.get('monthlyBudget')
     independent_travel = request.form.get('independentTravel')
-    zip_code = request.form.get('zipCode')
     activity_preferences = request.form.getlist('activityPreference')
     preferred_distance = request.form.get('distanceOptions')
     group_size_preference = request.form.getlist('groupSizePreference')
     time_preference = request.form.getlist('timePreference')
     language = request.form.get('language')
+
+    print("User Demographic Information")
+    # Print statements for all retrieved data
+    print("First Name:", firstname)
+    print("Last Name:", lastname)
+    print("Date of Birth:", dateOfBirth)
+    print("Gender:", gender)
+    print("Interests:", interests)
+    print("Personality:", personality)
+    print("Social Goals:", social_goals)
+    print("Health Conditions:", health_conditions)
+    print("Accessibility Needs:", accessibility_needs)
+    print("Available Hours:", available_hours)
+    print("Monthly Budget:", monthly_budget)
+    print("Can Travel Independently:", independent_travel)
+    print("Activity Preferences:", activity_preferences)
+    print("Preferred Distance:", preferred_distance)
+    print("Group Size Preference:", group_size_preference)
+    print("Time Preference:", time_preference)
+    print("Language:", language)
 
     socClas1aEatWOthers = request.form.get('socClas1aEatWOthers')    
     socClas2aHobbiesInside = request.form.get('socClas2aHobbiesInside')    
@@ -63,6 +77,34 @@ def submitUser():
     socClas10aVolunteer = request.form.get('socClas10aVolunteer')    
     socClas11aEssential = request.form.get('socClas11aEssential')  
 
+    print("Social Classifiers")
+
+    print(f"1a. Eat with Others: {socClas1aEatWOthers or 'Not provided'}")
+    print(f"2a. Hobbies Inside: {socClas2aHobbiesInside or 'Not provided'}")
+    print(f"3a. Hobbies Outside: {socClas3aHobbiesOutside or 'Not provided'}")
+    print(f"4a. TV: {socClas4aTV or 'Not provided'}")
+    print(f"5a. Browsing: {socClas5aBrowsing or 'Not provided'}")
+    print(f"6a. Talk Phone: {socClas6aTalkPhone or 'Not provided'}")
+    print(f"7a. Meet FFA: {socClas7aMoreMeetFFA or 'Not provided'}")
+    print(f"8a. Group Conversation: {socClas8aGroupConvo or 'Not provided'}")
+    print(f"9a. Text: {socClas9aText or 'Not provided'}")
+    print(f"10a. Volunteer: {socClas10aVolunteer or 'Not provided'}")
+    print(f"11a. Essential: {socClas11aEssential or 'Not provided'}")
+
+    allSocClasDesires = [
+        socClas1aEatWOthers,
+        socClas2aHobbiesInside,
+        socClas3aHobbiesOutside,
+        socClas4aTV,
+        socClas5aBrowsing,
+        socClas6aTalkPhone,
+        socClas7aMoreMeetFFA,
+        socClas8aGroupConvo,
+        socClas9aText,
+        socClas10aVolunteer,
+        socClas11aEssential
+    ]
+
     socialActivity1communityDining = request.form.get('1communityDining')
     socialActivity1teaAndCoffeeSocials = request.form.get('1teaAndCoffeeSocials')
     socialActivity1birthdayAnniversaryMeals = request.form.get('1birthdayAnniversaryMeals')
@@ -73,6 +115,22 @@ def submitUser():
     socialActivity1familyBBQDay = request.form.get('1familyBBQDay')
     socialActivity1iceCreamSocials = request.form.get('1iceCreamSocials')
     socialActivity1happyhour = request.form.get('1happyhour')
+
+    print("Social Classifier Information")
+
+    print("Question 1")
+
+    print(f"  Community Dining: {socialActivity1communityDining}")
+    print(f"  Tea and Coffee Socials: {socialActivity1teaAndCoffeeSocials}")
+    print(f"  Birthday/Anniversary Meals: {socialActivity1birthdayAnniversaryMeals}")
+    print(f"  Buffet or Brunch Gatherings: {socialActivity1buffetOrBrunchGatherings}")
+    print(f"  Holiday Feast Events: {socialActivity1holidayFeastEvents}")
+    print(f"  Outdoor BBQs: {socialActivity1outdoorBBQs}")
+    print(f"  Picnic Lunches: {socialActivity1picnicLunches}")
+    print(f"  Family BBQ Day: {socialActivity1familyBBQDay}")
+    print(f"  Ice Cream Socials: {socialActivity1iceCreamSocials}")
+    print(f"  Happy Hour: {socialActivity1happyhour}")
+
 
     socialActivities1 = [
         socialActivity1communityDining,
@@ -102,6 +160,24 @@ def submitUser():
     socialActivity2indoorBowlingGolfPutting = request.form.get('2indoorBowlingGolfPutting')
     socialActivity2learningNewSkills = request.form.get('2learningNewSkills')
     socialActivity2exercising = request.form.get('2exercising')
+
+    print("Question 2")
+
+    print(f"  Reading Books: {socialActivity2readingBooks}")
+    print(f"  Knitting and Crochet: {socialActivity2knittingAndCrochet}")
+    print(f"  Gardening: {socialActivity2gardening}")
+    print(f"  Listening to Music: {socialActivity2listeningToMusic}")
+    print(f"  Watching Movies/TV Shows: {socialActivity2watchingMoviesTvShows}")
+    print(f"  Playing Puzzle or Games: {socialActivity2playingPuzzleOrGames}")
+    print(f"  Crafting or Painting: {socialActivity2craftingOrPainting}")
+    print(f"  Cooking/Baking: {socialActivity2cookingBaking}")
+    print(f"  Photography: {socialActivity2photography}")
+    print(f"  Writing: {socialActivity2writing}")
+    print(f"  Brain Games/Memory Exercises: {socialActivity2brainGamesMemoryExercises}")
+    print(f"  Meditation/Relaxation: {socialActivity2meditationRelaxation}")
+    print(f"  Indoor Bowling/Golf Putting: {socialActivity2indoorBowlingGolfPutting}")
+    print(f"  Learning New Skills: {socialActivity2learningNewSkills}")
+    print(f"  Exercising: {socialActivity2exercising}")
 
     socialActivities2 = [
         socialActivity2readingBooks,
@@ -274,39 +350,9 @@ def submitUser():
         socialActivity11bankingOrPostOffice
     ]
 
-    print("Social Classifier Information")
+   
 
-    print("Question 1")
-
-    print(f"  Community Dining: {socialActivity1communityDining}")
-    print(f"  Tea and Coffee Socials: {socialActivity1teaAndCoffeeSocials}")
-    print(f"  Birthday/Anniversary Meals: {socialActivity1birthdayAnniversaryMeals}")
-    print(f"  Buffet or Brunch Gatherings: {socialActivity1buffetOrBrunchGatherings}")
-    print(f"  Holiday Feast Events: {socialActivity1holidayFeastEvents}")
-    print(f"  Outdoor BBQs: {socialActivity1outdoorBBQs}")
-    print(f"  Picnic Lunches: {socialActivity1picnicLunches}")
-    print(f"  Family BBQ Day: {socialActivity1familyBBQDay}")
-    print(f"  Ice Cream Socials: {socialActivity1iceCreamSocials}")
-    print(f"  Happy Hour: {socialActivity1happyhour}")
-
-
-    print("Question 2")
-
-    print(f"  Reading Books: {socialActivity2readingBooks}")
-    print(f"  Knitting and Crochet: {socialActivity2knittingAndCrochet}")
-    print(f"  Gardening: {socialActivity2gardening}")
-    print(f"  Listening to Music: {socialActivity2listeningToMusic}")
-    print(f"  Watching Movies/TV Shows: {socialActivity2watchingMoviesTvShows}")
-    print(f"  Playing Puzzle or Games: {socialActivity2playingPuzzleOrGames}")
-    print(f"  Crafting or Painting: {socialActivity2craftingOrPainting}")
-    print(f"  Cooking/Baking: {socialActivity2cookingBaking}")
-    print(f"  Photography: {socialActivity2photography}")
-    print(f"  Writing: {socialActivity2writing}")
-    print(f"  Brain Games/Memory Exercises: {socialActivity2brainGamesMemoryExercises}")
-    print(f"  Meditation/Relaxation: {socialActivity2meditationRelaxation}")
-    print(f"  Indoor Bowling/Golf Putting: {socialActivity2indoorBowlingGolfPutting}")
-    print(f"  Learning New Skills: {socialActivity2learningNewSkills}")
-    print(f"  Exercising: {socialActivity2exercising}")
+    
 
     print("Question 3")
 
@@ -395,57 +441,7 @@ def submitUser():
     print(f"  Pharmacy Visits: {socialActivity11pharmacyVisits}")
     print(f"  Banking or Post Office: {socialActivity11bankingOrPostOffice}")
 
-
-    # Print statements for all retrieved data
-    print("First Name:", firstname)
-    print("Last Name:", lastname)
-    print("Date of Birth:", dateOfBirth)
-    print("Gender:", gender)
-    print("Interests:", interests)
-    print("Personality:", personality)
-    print("Social Goals:", social_goals)
-    print("Health Conditions:", health_conditions)
-    print("Accessibility Needs:", accessibility_needs)
-    print("Available Hours:", available_hours)
-    print("Monthly Budget:", monthly_budget)
-    print("Can Travel Independently:", independent_travel)
-    print("ZIP Code:", zip_code)
-    print("Activity Preferences:", activity_preferences)
-    print("Preferred Distance:", preferred_distance)
-    print("Group Size Preference:", group_size_preference)
-    print("Time Preference:", time_preference)
-    print("Language:", language)
-
-    print("Social Classifiers")
-
-    print(f"1a. Eat with Others: {socClas1aEatWOthers or 'Not provided'}")
-    print(f"2a. Hobbies Inside: {socClas2aHobbiesInside or 'Not provided'}")
-    print(f"3a. Hobbies Outside: {socClas3aHobbiesOutside or 'Not provided'}")
-    print(f"4a. TV: {socClas4aTV or 'Not provided'}")
-    print(f"5a. Browsing: {socClas5aBrowsing or 'Not provided'}")
-    print(f"6a. Talk Phone: {socClas6aTalkPhone or 'Not provided'}")
-    print(f"7a. Meet FFA: {socClas7aMoreMeetFFA or 'Not provided'}")
-    print(f"8a. Group Conversation: {socClas8aGroupConvo or 'Not provided'}")
-    print(f"9a. Text: {socClas9aText or 'Not provided'}")
-    print(f"10a. Volunteer: {socClas10aVolunteer or 'Not provided'}")
-    print(f"11a. Essential: {socClas11aEssential or 'Not provided'}")
-
-    allSocClasDesires = [
-        socClas1aEatWOthers,
-        socClas2aHobbiesInside,
-        socClas3aHobbiesOutside,
-        socClas4aTV,
-        socClas5aBrowsing,
-        socClas6aTalkPhone,
-        socClas7aMoreMeetFFA,
-        socClas8aGroupConvo,
-        socClas9aText,
-        socClas10aVolunteer,
-        socClas11aEssential
-    ]
-
-
-    allActivitiesInDomains = [
+    allActivitiesInSubCategories = [
         socialActivities1, 
         socialActivities2, 
         socialActivities3, 
@@ -460,33 +456,31 @@ def submitUser():
     ]
 
     #Step 1 Done
-    activeDomains,allActivitiesInActiveDomains  = determineActiveDomain(allActivitiesInDomains)
+    activeSubCategories,allActivitiesInActiveSubCategories  = determineActiveSubcategories(allActivitiesInSubCategories)
 
-    print("Step 1: Active Domains")
-    print(activeDomains)
-    print(allActivitiesInActiveDomains)
+    print("Step 1: Active SubCategories")
+    print("Active Sub-Categories: " + str(activeSubCategories))
+    print("All Activities In Active Sub-Categories: " + str(allActivitiesInActiveSubCategories))
 
     #Step 2
-    freqPerDomain = countActivitiesPerDomain(allActivitiesInActiveDomains, activeDomains)
+    freqPerSubCategories = countActivitiesPerSubCategories(allActivitiesInActiveSubCategories, activeSubCategories)
 
-    print("Step 2: Frequency Per Domain")
-    print("freqPerDomain" + str(freqPerDomain))
+    print("Step 2: Frequency Per SubCategories")
+    print("freqPerSubCategories" + str(freqPerSubCategories))
 
     #Step 3
-    primaryDomain, primaryDomainFreq = findPrimaryDomain(freqPerDomain)
+    primarySubCategories, primarySubCategoriesFreq = findPrimarySubCategories(freqPerSubCategories)
 
-    print("Step 3: Primary Domain")
-    print("Primary Domain "+ str(primaryDomain))
-    print("Primary Domain Freq: " + str(primaryDomainFreq))
+    print("Step 3: Primary SubCategories")
+    print("Primary SubCategories "+ str(primarySubCategories))
+    print("Primary SubCategories Freq: " + str(primarySubCategoriesFreq))
 
     print("Step 3.5 Determine Current Engagement Range")
-    engagementScore, engagementRange, subCategories = determineCurrentEngagementRange(freqPerDomain, allSocClasDesires)
+    engagementScore, engagementRange, subCategories = determineCurrentEngagementRange(freqPerSubCategories, allSocClasDesires)
 
     print("Engagement score: " + str(engagementScore))
     print("Engagement range: " + str(engagementRange))
     print("Sub Categories: " + str(subCategories))
-
-    #Step 4
 
     subCategoriesWActivities = getSubCategoriesActivities(subCategories)
 
@@ -506,7 +500,6 @@ def submitUser():
         "available_hours": available_hours,
         "monthly_budget": monthly_budget,
         "independent_travel": independent_travel,
-        "zip_code": zip_code,
         "activity_preferences": activity_preferences,
         "preferred_distance": preferred_distance,
         "group_size_preference": group_size_preference,
@@ -515,8 +508,8 @@ def submitUser():
         #"socialScore": socialScore
     }
 
-    user_insert_result = collectionUser.insert_one(user_submission_data)
-    user_id = user_insert_result.inserted_id  # Get the userId
+    #user_insert_result = collectionUser.insert_one(user_submission_data)
+    #user_id = user_insert_result.inserted_id  # Get the userId
 
     return render_template('askActivities.html', firstname=firstname, subCategories = subCategories, engagementRange = engagementRange, subCategoriesWActivities = subCategoriesWActivities)
 
@@ -542,10 +535,114 @@ def submitActivities():
     # Pass both the firstname and the selected activities (with frequency) to the next page
     return render_template('endPrescriptionPage.html', firstname=firstname, selected_activities=selected_activities)
 
+
+#Step 1
+#Determines which subcategory are active (meaning a at least 1 activity has a value which is not "Never")
+def determineActiveSubcategories(allActivitiesInSubcategories):
+
+    SubCategoriesMap = [
+        "Social Dining",
+        "Indoor Hobbies",
+        "Outdoor Hobbies",
+        "Watching TV",
+        "Browsing Online",
+        "Phone Calls",
+        "Meeting People",
+        "Group Conversations",
+        "Texting People",
+        "Volunteering",
+        "Essential Activities",
+    ]
+
+    activeSubCategories = []
+    activitiesForActiveSubCategories = []
+    
+
+    for i in range(len(allActivitiesInSubcategories)):
+        currentSubCategories = allActivitiesInSubcategories[i]
+        added = False
+
+        for activity in currentSubCategories:
+            if activity != "never" and not added:
+                activeSubCategories.append(SubCategoriesMap[i])
+                activitiesForActiveSubCategories.append(currentSubCategories)
+                added = True
+
+
+    return activeSubCategories,activitiesForActiveSubCategories
+
+#Step 2 Finished
+def countActivitiesPerSubCategories(allActivitiesInActiveSubCategories,activeSubCategories):
+    subCategoriesMap = [
+        "Social Dining",
+        "Indoor Hobbies",
+        "Outdoor Hobbies",
+        "Watching TV",
+        "Browsing Online",
+        "Phone Calls",
+        "Meeting People",
+        "Group Conversations",
+        "Texting People",
+        "Volunteering",
+        "Essential Activities",
+    ]
+
+    freqMap = {
+        "never" : 0,
+        "1-3TimesAYear": 2/365,
+        "onceInThreeMonths": 4/365,
+        "twiceInThreeMonths": 8/365,
+        "onceAMonth": 12/365,
+        "twiceAMonth": 24/365,
+        "threeTimesAMonth": 36/365,
+        "1-3TimesAWeek": 104/365,
+        "4-6TimesAWeek": 260/365,
+        "everyDay": 1,
+    }
+
+    subCatNormalizedScore = {
+        "Social Dining": 0.6,
+        "Indoor Hobbies": 0.5,
+        "Outdoor Hobbies": 0.7,
+        "Watching TV": 0,
+        "Browsing Online": 0.1,
+        "Phone Calls": 0.4,
+        "Meeting People": 0.8,
+        "Group Conversations": 0.9,
+        "Texting People": 0.2,
+        "Volunteering": 1,
+        "Essential Activities": 0.3,
+    }
+
+    res = []
+
+    for i in range(len(allActivitiesInActiveSubCategories)):
+        currentSubCategory = allActivitiesInActiveSubCategories[i]
+        sumOfActivities = 0
+
+        for activity in currentSubCategory:
+            value = freqMap[activity]
+            sumOfActivities = sumOfActivities + value
+
+        sumOfActivities = sumOfActivities * subCatNormalizedScore[activeSubCategories[i]]
+
+        res.append([activeSubCategories[i],sumOfActivities])
+
+    res.sort(key=lambda x: x[1], reverse=True)
+
+    return res
+        
+#Step 3 
+def findPrimarySubCategories(freqPerSubCategories):
+    if freqPerSubCategories and len(freqPerSubCategories) > 0 and len(freqPerSubCategories[0]) >= 2:
+        return freqPerSubCategories[0][0], freqPerSubCategories[0][1]
+    else:
+        return None, None
+    
 #Step 3.5 Determine Current Engagement Range
-def determineCurrentEngagementRange(freqPerDomain, allSocClasDesires):
+def determineCurrentEngagementRange(freqPerSubCategories, allSocClasDesires):
     print("Current Engagement Range")
-    print(freqPerDomain)
+    print(freqPerSubCategories)
     engagementScore = 0
     engagementRange = ""
     subcategoriesRecommendations = []
@@ -565,7 +662,7 @@ def determineCurrentEngagementRange(freqPerDomain, allSocClasDesires):
     activityToFreqMapping = {}
     setOfSubCategories = list()
 
-    for elem in freqPerDomain:
+    for elem in freqPerSubCategories:
         engagementScore = engagementScore + elem[1]
 
     if engagementScore < 0.121:
@@ -772,18 +869,18 @@ def determineCurrentEngagementRange(freqPerDomain, allSocClasDesires):
         engagementRange = "Very Highly Engaged"
 
 
-    indexFreqPerDomain = 0
+    indexFreqPerSubCategories = 0
 
-    while len(subcategoriesRecommendations) < 3 and indexFreqPerDomain < len(freqPerDomain):
+    while len(subcategoriesRecommendations) < 3 and indexFreqPerSubCategories < len(freqPerSubCategories):
 
-        currentSubCat = freqPerDomain[indexFreqPerDomain]
+        currentSubCat = freqPerSubCategories[indexFreqPerSubCategories]
         nameOfSubCat = currentSubCat[0]
 
         if nameOfSubCat in setOfSubCategories and nameOfSubCat not in subcategoriesRecommendations:
             frequency = activityToFreqMapping.get(nameOfSubCat, "Frequency Not Available")  # Default if no mapping found
             subcategoriesRecommendations.append((nameOfSubCat, frequency))  # Append a tuple with activity name and frequency
 
-        indexFreqPerDomain+=1
+        indexFreqPerSubCategories+=1
 
 
     while len(subcategoriesRecommendations) < 3:
@@ -796,114 +893,6 @@ def determineCurrentEngagementRange(freqPerDomain, allSocClasDesires):
                 break
 
     return engagementScore, engagementRange, subcategoriesRecommendations
-
-#Step 3 
-def findPrimaryDomain(freqPerDomain):
-    if freqPerDomain and len(freqPerDomain) > 0 and len(freqPerDomain[0]) >= 2:
-        return freqPerDomain[0][0], freqPerDomain[0][1]
-    else:
-        return None, None
-
-
-
-
-#Step 2 Finished
-def countActivitiesPerDomain(allActivitiesInActiveDomains,activeDomains):
-    domainMap = [
-        "Social Dining",
-        "Indoor Hobbies",
-        "Outdoor Hobbies",
-        "Watching TV",
-        "Browsing Online",
-        "Phone Calls",
-        "Meeting People",
-        "Group Conversations",
-        "Texting People",
-        "Volunteering",
-        "Essential Activities",
-    ]
-
-    freqMap = {
-        "never" : 0,
-        "1-3TimesAYear": 2/365,
-        "onceInThreeMonths": 4/365,
-        "twiceInThreeMonths": 8/365,
-        "onceAMonth": 12/365,
-        "twiceAMonth": 24/365,
-        "threeTimesAMonth": 36/365,
-        "1-3TimesAWeek": 104/365,
-        "4-6TimesAWeek": 260/365,
-        "everyDay": 1,
-    }
-
-    subCatNormalizedScore = {
-        "Social Dining": 0.6,
-        "Indoor Hobbies": 0.5,
-        "Outdoor Hobbies": 0.7,
-        "Watching TV": 0,
-        "Browsing Online": 0.1,
-        "Phone Calls": 0.4,
-        "Meeting People": 0.8,
-        "Group Conversations": 0.9,
-        "Texting People": 0.2,
-        "Volunteering": 1,
-        "Essential Activities": 0.3,
-    }
-
-    res = []
-
-    for i in range(len(allActivitiesInActiveDomains)):
-        currentDomain = allActivitiesInActiveDomains[i]
-        sumOfActivities = 0
-
-        for activity in currentDomain:
-            value = freqMap[activity]
-            sumOfActivities = sumOfActivities + value
-
-        sumOfActivities = sumOfActivities * subCatNormalizedScore[activeDomains[i]]
-
-        res.append([activeDomains[i],sumOfActivities])
-
-    res.sort(key=lambda x: x[1], reverse=True)
-
-    return res
-        
-            
-
-#Finished
-#Step 1
-def determineActiveDomain(allActivitiesInDomains):
-
-    domainMap = [
-        "Social Dining",
-        "Indoor Hobbies",
-        "Outdoor Hobbies",
-        "Watching TV",
-        "Browsing Online",
-        "Phone Calls",
-        "Meeting People",
-        "Group Conversations",
-        "Texting People",
-        "Volunteering",
-        "Essential Activities",
-    ]
-
-    activeDomains = []
-    activitiesForActiveDomains = []
-    
-
-    for i in range(len(allActivitiesInDomains)):
-        currentDomain = allActivitiesInDomains[i]
-        added = False
-
-        for activity in currentDomain:
-            if activity != "never" and not added:
-                activeDomains.append(domainMap[i])
-                activitiesForActiveDomains.append(currentDomain)
-                added = True
-
-
-    return activeDomains,activitiesForActiveDomains
 
 #Step 4
 def getSubCategoriesActivities(subcategories):
@@ -934,9 +923,7 @@ def getSubCategoriesActivities(subcategories):
     return result
 
 
-    return dict(activities_by_subcategory)
-
-
-
+#For Flask
+#To prevent running this file from another file
 if __name__ == '__main__':
     app.run(debug=True)

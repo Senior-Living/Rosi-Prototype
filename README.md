@@ -1,48 +1,15 @@
-# Rosi-Prototype
+ROSI Prototype 
 
+This is a prototype version of ROSI (Recreational _ Social Prescriptions) application 
 
-## To run locally 
+The goal of this application is to prescript elderly people with social activities to cure loneliness 
 
-Install VS Code https://code.visualstudio.com/download 
-Install Python https://www.python.org/downloads/ (Pip should be autoinstalled) 
-Install Flask 
-pip --version (check if pip installer is installed)
+1. User selects to start a new prescription 
+2. User provides there personal information 
+3. User provides the social activities they already complete and their desired activities 
+4. User is provided 3 different activtiy sub catoergories from which activity options are provided 
+5. User selects which activities they would like to complete 
 
-Install the program's files
-pip3 install -r requirements.txt
-or
-pip install -r requirements.txt
-
-
-Run the application 
-python app.py or
-python3 app.py
-
-
-### Mongodb (Database)
-
-https://www.mongodb.com/try/download/community 
-
-![image](https://github.com/user-attachments/assets/e96f38ee-8038-4c10-9d78-72af472f5d38)
-
-## Application
-
-### Templates Folder 
-
--Front end files (What we see on the computer screen)
-
-### App.py
-
--Backend behind the scenes stuff 
-
-Import Options are for flooding the database 
-
-Submit User is for adding a user 
-
-calcSocialScore is for calculating the social Score 
-
-### Website 
-
-Add a user / Activity 
+Insert images here 
 
 

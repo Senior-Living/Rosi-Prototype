@@ -71,6 +71,11 @@
             margin-top: 20px;         /* Space above the image */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
         }
+
+        .fundinglogo {
+            max-width: 30%;
+        }
+
     </style>
 </head>
 <body>
@@ -81,12 +86,13 @@
     
     <div class="section">
         <h2 class="section-title">Would you like a personally selected activity?</h2>
-        <a href="/addUser" class="btn">Get Prescription</a>
+        <a href="/addUser" class="btn">Get Recreational Prescription</a>
     </div>
 
     <div class="section">
-        <h2 class="section-title">Our Sponsors</h2>
-        <img src="{{ url_for('static', filename='images/uottawa.png') }}" alt="Logo" >
+        <h2 class="section-title">Our Funders</h2>
+        <img class = "fundinglogo" src="{{ url_for('static', filename='images/uottawa.png') }}" alt="Logo" >
+        <img class = "fundinglogo" src="{{ url_for('static', filename='images/NSERC.png') }}" alt="Logo" >
     </div>
 
 </body>
