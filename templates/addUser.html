@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosi</title>
+    <title>℞OSI</title>
 </head>
 <body>
     <style>
@@ -179,7 +179,7 @@ input[type="submit"]:focus {
         <div class="spacer"></div>
         
         <div class="form-group">
-            <label class="section-title" for="dateOfBirth">2. Date of birth:</label><br>
+            <label class="section-title" for="dateOfBirth">2. Date of birth:</label>
             <input type="date" id="dateOfBirth" name="dateOfBirth" required>
               
             <div class = "horzsSpacer"> </div>
@@ -296,34 +296,38 @@ input[type="submit"]:focus {
         <div class="spacer"> </div>
 
         <div class="form-group">
-            <label class="section-title">12. What is your activity location preference?</label>
+            <label class="section-title">11. What is your activity location preference?</label>
 
         </div>
 
         <div class="form-group">
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="activityPreference" value="online">Online</label>
-                <label><input type="checkbox" name="activityPreference" value="in-person">In-person</label>
-                <label><input type="checkbox" name="activityPreference" value="noPreference">No preference</label>
+            <div class="radio-group">
+                <label><input type="radio" name="activityPreference" value="online" required>Online</label>
+                <label><input type="radio" name="activityPreference" value="in-person">In-person</label>
+                <label><input type="radio" name="activityPreference" value="noPreference">No preference</label>
             </div>
         </div>
+
+        <div class="spacer"> </div>
         
         <div class="form-group">
-            <label class="section-title" for="distanceOptions">12a. If in-person, what distance are you willing to travel?</label>
+            <label class="section-title" for="distanceOptions">11a. If in-person, what distance are you willing to travel?</label>
+        </div>
+
+        <div class="form-group">
             <select id="distanceOptions" name="distanceOptions" required>
                 <option value="close">Less than 1 km</option>
                 <option value="moderate">1-5 km</option>
                 <option value="far">5-10 km</option>
                 <option value="veryFar">>10 km</option>
             </select>
-
         </div>
+
+        <div class="spacer"> </div>
         
         <div class="form-group">
-            <label class="section-title">13. What is your preferred group size for activities?</label>
+            <label class="section-title">12. What is your preferred group size for activities?</label>
         </div>
-
-        <div class="spacer"></div>
 
         <div class="form-group">
             <div class="checkbox-group">
@@ -333,9 +337,11 @@ input[type="submit"]:focus {
                 <label><input type="checkbox" name="groupSizePreference" value="noPreference">No preference</label>
             </div>
         </div>
+
+        <div class="spacer"></div>
         
         <div class="form-group">
-            <label class="section-title">14. What is your preferred time for doing activities?</label>
+            <label class="section-title">13. What is your preferred time for doing activities?</label>
         </div>
 
         <div class="spacer"></div>
@@ -351,10 +357,9 @@ input[type="submit"]:focus {
         
         
         <div class="form-group">
-            <label class="section-title" for="language">15. What is your preferred language for activities?:</label>
+            <label class="section-title" for="language">14. What is your preferred language for activities?:</label>
         </div>
 
-        <div class="spacer"></div>
         <div class="form-group">
             <select id="language" name="language" required>
                 <option value="English">English</option>
@@ -362,10 +367,10 @@ input[type="submit"]:focus {
             </select>
         </div>
 
+        <div class="spacer"></div>
 
         <div class="form-group">
-            <label class="section-title">16. What are the barriers that prevent you from participating more in activities?</label>
-            <div class="spacer"></div>
+            <label class="section-title">15. What are the barriers that prevent you from participating more in activities?</label>
         </div>
 
         <div class="form-group">
@@ -384,6 +389,7 @@ input[type="submit"]:focus {
 
 
         <h1>Social Classifier:</h1>
+        <h2>Please check all options which apply:</h2>
 
         <div id="socClas1EatWOthersDisplay" style="display:block;">
             <label class="section-title">1. What types of meals or social dining events would you participate in?</label>
@@ -539,12 +545,14 @@ input[type="submit"]:focus {
         <div class="spacer"></div>
 
         <div id="socClas1aEatWOthersDisplay">
-            <label class="section-title">1a. Do you wish to participate in more meals or social dining events?</label><br>
+            <label class="section-title">1a. Do you wish to participate in more meals or social dining events?</label>
             <select id="socClas1aEatWOthers" name="socClas1aEatWOthers" required>
-                <option value="Yes" selected>Yes</option>
-                <option value="No" >No</option>
-            </select><br><br>
+                <option value="Yes" >Yes</option>
+                <option value="No" selected >No</option>
+            </select>
         </div>
+
+        <div class="spacer"></div>
 
         <div id="socClas2HobbiesInsideDisplay">
             <label class="section-title">2. What types of indoor hobbies or recreational activities do you participate in?</label>
@@ -775,17 +783,16 @@ input[type="submit"]:focus {
             <div class="aQuestionsOptions"> 
                 <select id="socClas2aHobbiesInside" name="socClas2aHobbiesInside" required>
                     <option value="Yes">Yes</option>
-                    <option value="No">No</option>
+                    <option value="No" selected >No</option>
                 </select>
             </div>
         </div>
 
+        <div class="spacer"></div>
 
 
         <div id="socClas3HobbiesOutsideDisplay" style="display:block;">
             <label class="section-title">3. What types of outdoor hobbies or recreational activities do you participate in?</label>
-            <br>
-            <br>
         </div>
 
         <div class="radio-grid">
@@ -1056,12 +1063,14 @@ input[type="submit"]:focus {
         <div class="spacer"></div>
 
         <div id="socClas3aHobbiesOutsideDisplay" style="display:block;">
-            <label class="section-title">3a. Do you wish to spend more time on outdoor hobbies or recreational activities?</label><br>
+            <label class="section-title">3a. Do you wish to spend more time on outdoor hobbies or recreational activities?</label>
             <select id="socClas3aHobbiesOutside" name="socClas3aHobbiesOutside" required>
                 <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
+                <option value="No"selected>No</option>
+            </select>
         </div>
+
+        <div class="spacer"></div>
 
 
         <div id="socClas4TVDisplay" style="display:block;">
@@ -1177,9 +1186,11 @@ input[type="submit"]:focus {
             <label class="section-title">4a. Do you wish to watch more TV shows or movies?</label>
             <select id="socClas4aTV" name="socClas4aTV" required>
                 <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="No" selected>No</option>
             </select>
         </div>
+
+        <div class="spacer"></div>
 
         <label class="section-title">5. Which of the following topics do you browse online?</label>
 
@@ -1268,12 +1279,17 @@ input[type="submit"]:focus {
 
 
         <div id="socClas5aBrowsingDisplay" style="display:block;">
-            <label class="section-title">5a. Do you wish to spend more time browsing online or engaging in online activities?</label><br>
+            <label class="section-title">5a. Do you wish to spend more time browsing online or engaging in online activities?</label>
             <select id="socClas5aBrowsing" name="socClas5aBrowsing" required>
                 <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
+                <option value="No" selected>No</option>
+            </select>
         </div>
+
+        <div class="spacer"></div>
+
+        <label class="section-title">5. Who do you usually talk to on the phone or video call?</label>
+
 
         <div class="radio-grid">
             <div></div> <!-- Empty cell for top-left corner -->
@@ -1361,12 +1377,14 @@ input[type="submit"]:focus {
         <div class="spacer"></div>
 
         <div id="socClas6aTalkPhoneDisplay" style="display:block;">
-            <label class="section-title">6a. Do you wish to spend more time talking on the phone or video calling others?</label><br>
+            <label class="section-title">6a. Do you wish to spend more time talking on the phone or video calling others?</label>
             <select id="socClas6aTalkPhone" name="socClas6aTalkPhone" required>
                 <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
+                <option value="No" selected>No</option>
+            </select>
         </div>
+
+        <div class="spacer"></div>
 
 
         <div id="socClas7MeetFFADisplay" style="display:block;">
@@ -1444,12 +1462,14 @@ input[type="submit"]:focus {
         <div class="spacer"></div>
 
         <div id="socClas7aMeetFFADisplay">
-            <label class="section-title">7a. Do you wish you met family, friends, or acquaintances in person more often?</label><br>
+            <label class="section-title">7a. Do you wish you met family, friends, or acquaintances in person more often?</label>
             <select id="socClas7aMoreMeetFFA" name="socClas7aMoreMeetFFA" required>
                 <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
+                <option value="No" selected>No</option>
+            </select>
         </div>
+
+        <div class="spacer"></div>
 
 
 
@@ -1516,12 +1536,14 @@ input[type="submit"]:focus {
         <div class="spacer"></div>
 
         <div id="socClas8aGroupConvoDisplay">
-            <label class="section-title">8a. Do you wish to engage in group conversations more often?</label><br>
+            <label class="section-title">8a. Do you wish to engage in group conversations more often?</label>
             <select id="socClas8aGroupConvo" name="socClas8aGroupConvo" required>
                 <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
+                <option value="No" selected>No</option>
+            </select>
         </div>
+
+        <div class="spacer"></div>
 
 
         <div id="socClas9TextDisplay">
@@ -1600,12 +1622,14 @@ input[type="submit"]:focus {
         <div class="spacer"></div>
 
         <div id="socClas9aTextDisplay">
-            <label class="section-title">9a. Do you wish to text or message others more often?</label><br>
+            <label class="section-title">9a. Do you wish to text or message others more often?</label>
             <select id="socClas9aText" name="socClas9aText" required>
                 <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
+                <option value="No" selected>No</option>
+            </select>
         </div>
+
+        <div class="spacer"></div>
 
         <div id="socClas10VolunteerDisplay">
             <label class="section-title">10. Please select the types of volunteer or helping activities you participate in</label>
@@ -1771,12 +1795,14 @@ input[type="submit"]:focus {
         <div class="spacer"></div>
 
         <div id="socClas10aVolunteerDisplay">
-            <label class="section-title"> 10a. Do you wish to volunteer more often?</label><br>
+            <label class="section-title"> 10a. Do you wish to volunteer more often?</label>
             <select id="socClas10aVolunteer" name="socClas10aVolunteer" required>
                 <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
+                <option value="No" selected>No</option>
+            </select>
         </div>
+
+        <div class="spacer"></div>
 
         <div id="socClas11EssentialDisplay">
             <label class="section-title">11. What types of essential activities do you go out for?</label>
@@ -1848,9 +1874,7 @@ input[type="submit"]:focus {
             <label><input type="radio" name="bankingOrPostOffice" value="1-3TimesAWeek"></label>
             <label><input type="radio" name="bankingOrPostOffice" value="4-6TimesAWeek"></label>
             <label><input type="radio" name="bankingOrPostOffice" value="everyDay"></label>
-            <div class="header"></div>
-
-            
+            <div class="header"></div>        
 
         </div>
 
@@ -1859,12 +1883,14 @@ input[type="submit"]:focus {
 
 
         <div id="socClas11aEssentialDisplay">
-            <label class="section-title">11a. Do you wish to go out for essential activities more often?</label><br>
+            <label class="section-title">11a. Do you wish to go out for essential activities more often?</label>
             <select id="socClas11aEssential" name="socClas11aEssential" required>
                 <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
+                <option value="No" selected>No</option>
+            </select>
         </div>
+
+        <div class="spacer"> </div>
 
         <input type="submit" value="Submit">
     </form>

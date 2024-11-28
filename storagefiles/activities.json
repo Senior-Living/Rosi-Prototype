@@ -3,502 +3,502 @@
       "Activity Number": "A1",
       "Activity": "Eat in the cafeteria or community dining",
       "Category": "Social",
-      "Sub-category ": "Social Dining"
+      "Sub-Category": "Social Dining"
   },
   {
       "Activity Number": "A2",
       "Activity": "Tea and Coffee Socials",
       "Category": "Social",
-      "Sub-category ": "Social Dining"
+      "Sub-Category": "Social Dining"
   },
   {
       "Activity Number": "A3",
       "Activity": "Birthday or Anniversary Meals",
       "Category": "Social",
-      "Sub-category ": "Social Dining"
+      "Sub-Category": "Social Dining"
   },
   {
       "Activity Number": "A4",
       "Activity": "Brunch Gatherings",
       "Category": "Social",
-      "Sub-category ": "Social Dining"
+      "Sub-Category": "Social Dining"
   },
   {
       "Activity Number": "A5",
       "Activity": "Holiday Feast Events",
       "Category": "Social",
-      "Sub-category ": "Social Dining"
+      "Sub-Category": "Social Dining"
   },
   {
       "Activity Number": "A6",
       "Activity": "Outdoor BBQs",
       "Category": "Social",
-      "Sub-category ": "Social Dining"
+      "Sub-Category": "Social Dining"
   },
   {
       "Activity Number": "A7",
       "Activity": "Picnic Lunches",
       "Category": "Social",
-      "Sub-category ": "Social Dining"
+      "Sub-Category": "Social Dining"
   },
   {
       "Activity Number": "A8",
       "Activity": "Icecream Socials",
       "Category": "Social",
-      "Sub-category ": "Social Dining"
+      "Sub-Category": "Social Dining"
   },
   {
       "Activity Number": "A9",
       "Activity": "Reading Books or Magazines",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies"
+      "Sub-Category": "Indoor Hobbies"
   },
   {
       "Activity Number": "A10",
       "Activity": "Knitting or Crocheting",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies"
+      "Sub-Category": "Indoor Hobbies"
   },
   {
       "Activity Number": "A11",
       "Activity": "Gardening Indoors",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies"
+      "Sub-Category": "Indoor Hobbies"
   },
   {
       "Activity Number": "A12",
       "Activity": "Listening to Music",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies"
+      "Sub-Category": "Indoor Hobbies"
   },
   {
       "Activity Number": "A13",
       "Activity": "Watching Movies or TV Shows",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies"
+      "Sub-Category": "Indoor Hobbies"
   },
   {
       "Activity Number": "A14",
       "Activity": "Playing Puzzles or Games",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies"
+      "Sub-Category": "Indoor Hobbies"
   },
   {
       "Activity Number": "A15",
       "Activity": "Crafting",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies"
+      "Sub-Category": "Indoor Hobbies"
   },
   {
       "Activity Number": "A16",
       "Activity": "Painting",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies"
+      "Sub-Category": "Indoor Hobbies"
   },
   {
       "Activity Number": "A17",
       "Activity": "Cooking or Baking",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies"
+      "Sub-Category": "Indoor Hobbies"
   },
   {
       "Activity Number": "A18",
       "Activity": "Photography",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies"
+      "Sub-Category": "Indoor Hobbies"
   },
   {
       "Activity Number": "A19",
       "Activity": "Writing (journals, blogs, etc.)",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies"
+      "Sub-Category": "Indoor Hobbies"
   },
 
   {
     "Activity Number": "A20",
     "Activity": "Brain Games and Memory Exercises",
     "Category": "Solitary",
-    "Sub-category ": "Indoor Hobbies"
+    "Sub-Category": "Indoor Hobbies"
   },
   {
       "Activity Number": "A21",
       "Activity": "Meditation and Relaxation Sessions",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies"
+      "Sub-Category": "Indoor Hobbies"
   },
   {
       "Activity Number": "A22",
       "Activity": "Indoor Bowling or Golf Putting",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies"
+      "Sub-Category": "Indoor Hobbies"
   },
   {
       "Activity Number": "A23",
       "Activity": "Learning New Skills (e.g., Technology)",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies"
+      "Sub-Category": "Indoor Hobbies"
   },
   {
       "Activity Number": "A24",
       "Activity": "Exercising at Home (yoga, weights, etc.)",
       "Category": "Solitary",
-      "Sub-category ": "Indoor Hobbies" 
+      "Sub-Category": "Indoor Hobbies" 
   },
   {
       "Activity Number": "A25",
       "Activity": "Book Clubs",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A26",
       "Activity": "Knitting Clubs",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A27",
       "Activity": "Gardening Clubs",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A28",
       "Activity": "Attending Exercise or Fitness Classes (e.g., yoga, Tai Chi)",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A29",
       "Activity": "Gentle Exercise Classes",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A30",
       "Activity": "Walking Groups",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A31",
       "Activity": "Walking Alone or With a Pet",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A32",
       "Activity": "Chair Exercises for Limited Mobility",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A33",
       "Activity": "Dancing Sessions with Music from Their Era",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A34",
       "Activity": "Attending Music Concerts or Performances",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A35",
       "Activity": "Theater or Movie Outings",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A36",
       "Activity": "Attending Community Center Classes (art, music, languages)",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A37",
       "Activity": "Trips to Museums or Art Galleries",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A38",
       "Activity": "Outdoor Photography Excursions",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
 
   {
     "Activity Number": "A39",
     "Activity": "Dining Out (restaurants, cafes, etc.)",
     "Category": "Social",
-    "Sub-category ": "Outdoor Hobbies"
+    "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A40",
       "Activity": "Participating in Group Travel or Day Trips",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A41",
       "Activity": "Short Bike Ride",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A42",
       "Activity": "Art and Craft Workshops",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A43",
       "Activity": "Educational Talks and Lectures",
       "Category": "Social",
-      "Sub-category ": "Outdoor Hobbies"
+      "Sub-Category": "Outdoor Hobbies"
   },
   {
       "Activity Number": "A44",
       "Activity": "Watching News",
       "Category": "Solitary",
-      "Sub-category ": "Watching TV"
+      "Sub-Category": "Watching TV"
   },
   {
       "Activity Number": "A45",
       "Activity": "TV Shows (e.g., dramas, comedies)",
       "Category": "Solitary",
-      "Sub-category ": "Watching TV"
+      "Sub-Category": "Watching TV"
   },
   {
       "Activity Number": "A46",
       "Activity": "Documentaries",
       "Category": "Solitary",
-      "Sub-category ": "Watching TV"
+      "Sub-Category": "Watching TV"
   },
   {
       "Activity Number": "A47",
       "Activity": "Movies",
       "Category": "Solitary",
-      "Sub-category ": "Watching TV"
+      "Sub-Category": "Watching TV"
   },
   {
       "Activity Number": "A48",
       "Activity": "Sports",
       "Category": "Solitary",
-      "Sub-category ": "Watching TV"
+      "Sub-Category": "Watching TV"
   },
   {
       "Activity Number": "A49",
       "Activity": "YouTube Videos",
       "Category": "Solitary",
-      "Sub-category ": "Watching TV"
+      "Sub-Category": "Watching TV"
   },
   {
       "Activity Number": "A50",
       "Activity": "Reading news websites",
       "Category": "Solitary",
-      "Sub-category ": "BrowsingOnline"
+      "Sub-Category": "BrowsingOnline"
   },
   {
       "Activity Number": "A51",
       "Activity": "Social Media (Facebook, YouTube, etc.)",
       "Category": "Solitary",
-      "Sub-category ": "BrowsingOnline"
+      "Sub-Category": "BrowsingOnline"
   },
   {
       "Activity Number": "A52",
       "Activity": "Blogs or Articles",
       "Category": "Solitary",
-      "Sub-category ": "BrowsingOnline"
+      "Sub-Category": "BrowsingOnline"
   },
   {
       "Activity Number": "A53",
       "Activity": "Online Forums or Discussion Groups",
       "Category": "Solitary",
-      "Sub-category ": "BrowsingOnline"
+      "Sub-Category": "BrowsingOnline"
   },
   {
       "Activity Number": "A54",
       "Activity": "Shopping Sites",
       "Category": "Solitary",
-      "Sub-category ": "BrowsingOnline"
+      "Sub-Category": "BrowsingOnline"
   },
   {
       "Activity Number": "A55",
       "Activity": "Calling Spouse or Partner",
       "Category": "Social",
-      "Sub-category ": "Phone Calls"
+      "Sub-Category": "Phone Calls"
   },
   {
       "Activity Number": "A56",
       "Activity": "Calling Family",
       "Category": "Social",
-      "Sub-category ": "Phone Calls"
+      "Sub-Category": "Phone Calls"
   },
   {
       "Activity Number": "A57",
       "Activity": "Calling Friends",
       "Category": "Social",
-      "Sub-category ": "Phone Calls"
+      "Sub-Category": "Phone Calls"
   },
 
   {
     "Activity Number": "A58",
     "Activity": "Calling Acquaintances",
     "Category": "Social",
-    "Sub-category ": "Phone Calls"
+    "Sub-Category": "Phone Calls"
   },
   {
       "Activity Number": "A59",
       "Activity": "Calling Health or Service Providers",
       "Category": "Social",
-      "Sub-category ": "Phone Calls"
+      "Sub-category": "Phone Calls"
   },
   {
       "Activity Number": "A60",
       "Activity": "Meeting friends, family or acquaintances in person at home",
       "Category": "Social",
-      "Sub-category ": "Meeting People"
+      "Sub-Category": "Meeting People"
   },
   {
       "Activity Number": "A61",
       "Activity": "Meeting friends, family or acquaintances in person at a friend or family members home",
       "Category": "Social",
-      "Sub-category ": "Meeting People"
+      "Sub-Category": "Meeting People"
   },
   {
       "Activity Number": "A62",
       "Activity": "Meeting friends, family or acquaintances in person at an outdoor location",
       "Category": "Social",
-      "Sub-category ": "Meeting people"
+      "Sub-Category": "Meeting people"
   },
   {
       "Activity Number": "A63",
       "Activity": "Meeting friends, family or acquaintances in person at a restaurant or cafe",
       "Category": "Social",
-      "Sub-category ": "Meeting People"
+      "Sub-Category": "Meeting People"
   },
   {
       "Activity Number": "A64",
       "Activity": "SMS (standard text messages) ",
       "Category": "Social",
-      "Sub-category ": "Texting People"
+      "Sub-Category": "Texting People"
   },
   {
       "Activity Number": "A65",
       "Activity": "WhatsApp ",
       "Category": "Social",
-      "Sub-category ": "Texting People"
+      "Sub-Category": "Texting People"
   },
   {
       "Activity Number": "A66",
       "Activity": " Facebook Messenger",
       "Category": "Social",
-      "Sub-category ": "Texting People"
+      "Sub-Category": "Texting People"
   },
   {
       "Activity Number": "A67",
       "Activity": " iMessage",
       "Category": "Social",
-      "Sub-category ": "Texting People"
+      "Sub-Category": "Texting People"
   },
   {
       "Activity Number": "A68",
       "Activity": "Supporting Family, Friends, or Community Members",
       "Category": "Social",
-      "Sub-category ": "Volunteering"
+      "Sub-Category": "Volunteering"
   },
   {
       "Activity Number": "A69",
       "Activity": "Community and Environmental Projects",
       "Category": "Social",
-      "Sub-category ": "Volunteering"
+      "Sub-Category": "Volunteering"
   },
   {
       "Activity Number": "A70",
       "Activity": "Mentoring, Tutoring, and Education Support",
       "Category": "Social",
-      "Sub-category ": "Volunteering"
+      "Sub-Category": "Volunteering"
   },
   {
       "Activity Number": "A71",
       "Activity": "Charity and Fundraising Activities",
       "Category": "Social",
-      "Sub-category": "Volunteering"
+      "Sub-Category": "Volunteering"
   },
   {
       "Activity Number": "A72",
       "Activity": "Direct Assistance to Vulnerable Populations",
       "Category": "Social",
-      "Sub-category ": "Volunteering"
+      "Sub-Category": "Volunteering"
   },
   {
     "Activity Number": "A73",
     "Activity": "Food and Essentials Distribution",
     "Category": "Social",
-    "Sub-category ": "Volunteering"
+    "Sub-Category": "Volunteering"
   },
 
   {
     "Activity Number": "A74",
     "Activity": "Arts and Cultural Event Support",
     "Category": "Social",
-    "Sub-category ": "Volunteering"
+    "Sub-Category": "Volunteering"
   },
   {
     "Activity Number": "A75",
     "Activity": "Animal Welfare Volunteering",
     "Category": "Social",
-    "Sub-category ": "Volunteering"
+    "Sub-Category": "Volunteering"
   },
   {
     "Activity Number": "A76",
     "Activity": "Virtual Volunteering",
     "Category": "Social",
-    "Sub-category ": "Volunteering"
+    "Sub-Category": "Volunteering"
   },
   {
     "Activity Number": "A77",
     "Activity": "Grocery Shopping",
     "Category": "Solitary",
-    "Sub-category ": "Essential Activities"
+    "Sub-Category": "Essential Activities"
   },
   {
       "Activity Number": "A78",
       "Activity": "Medical Appointments",
       "Category": "Solitary",
-      "Sub-category ": "Essential Activities"
+      "Sub-Category": "Essential Activities"
   },
   {
       "Activity Number": "A79",
       "Activity": "Pharmacy Visits",
       "Category": "Solitary",
-      "Sub-category ": "Essential Activities"
+      "Sub-Category": "Essential Activities"
   },
   {
       "Activity Number": "A80",
       "Activity": "Banking or Post Office",
       "Category": "Solitary",
-      "Sub-category ": "Essential Activities"
+      "Sub-Category": "Essential Activities"
   },
   {
       "Activity Number": "A81",
       "Activity": "Group conversation In-person (family or friend's gatherings)",
       "Category": "Social",
-      "Sub-category ": "Group Conversations"
+      "Sub-Category": "Group Conversations"
   },
   {
       "Activity Number": "A82",
       "Activity": "Group conversation In-person (hobby or community groups)",
       "Category": "Social",
-      "Sub-category ": "Group Conversations"
+      "Sub-Category": "Group Conversations"
   },
   {
       "Activity Number": "A83",
       "Activity": "Group conversation Online (video calls, discussion forums)",
       "Category": "Social",
-      "Sub-category ": "Group Conversations"
+      "Sub-Category": "Group Conversations"
   }
 ]
