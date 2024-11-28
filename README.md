@@ -1,15 +1,38 @@
-ROSI Prototype 
+# ROSI Prototype: Recreational Social Prescriptions for the Elderly
 
-This is a prototype version of ROSI (Recreational _ Social Prescriptions) application 
+**Objective**: The ROSI application aims to combat loneliness in elderly individuals by prescribing social activities that align with their personal preferences and lifestyle.
 
-The goal of this application is to prescript elderly people with social activities to cure loneliness 
+---
 
-1. User selects to start a new prescription 
-2. User provides there personal information 
-3. User provides the social activities they already complete and their desired activities 
-4. User is provided 3 different activtiy sub catoergories from which activity options are provided 
-5. User selects which activities they would like to complete 
+## 1. **Start a New Prescription**
 
-Insert images here 
+- **Action**: The user initiates the process by selecting the option to start a new prescription.
 
+---
 
+## 2. **Personal Information**
+
+- **Action**: The user enters basic personal details (e.g., age, interests, health conditions).
+
+---
+
+## 3. **Current and Desired Activities**
+
+- **Action**: The user lists social activities they currently engage in and the activities they wish to try.
+
+---
+
+## 4. **Activity Subcategories**
+
+- **Action**: The application provides 3 main subcategories of activities. The user can explore these options:
+  - Example: *Outdoor Activities, Arts & Crafts, Group Hobbies*
+
+---
+
+## 5. **Activity Selection**
+
+- **Action**: The user selects the activities they would like to participate in from the list of options.
+
+---
+
+### [Insert Images Here]
