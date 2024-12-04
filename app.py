@@ -15,9 +15,9 @@ app = Flask(__name__)
 def home():
     return render_template('homepage.html')
 
-@app.route('/addUser')
-def page1():
-    return render_template('addUser.html')
+@app.route('/questionnaire')
+def questionnaire():
+    return render_template('questionnaire.html')
 
 @app.route('/addActivity')
 def page2():
@@ -509,7 +509,7 @@ def submitUser():
     #user_insert_result = collectionUser.insert_one(user_submission_data)
     #user_id = user_insert_result.inserted_id  # Get the userId
 
-    return render_template('askActivities.html', firstname=firstname, subCategories = subCategories, engagementRange = engagementRange, subCategoriesWActivities = subCategoriesWActivities)
+    return render_template('selectActivities.html', firstname=firstname, subCategories = subCategories, engagementRange = engagementRange, subCategoriesWActivities = subCategoriesWActivities)
 
 #After a user has selected their activities 
 @app.route('/submitActivities', methods=['POST'])
@@ -532,7 +532,7 @@ def submitActivities():
         print(f"{subcategory}: {data['activity']}")
 
     # Pass both the firstname and the selected activities (with frequency) to the next page
-    return render_template('endPrescriptionPage.html', firstname=firstname, selected_activities=selected_activities)
+    return render_template('finalPrescription.html', firstname=firstname, selected_activities=selected_activities)
 
 
 #For Flask
