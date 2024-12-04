@@ -1,13 +1,12 @@
 
-
-#Step 1
-#Determines which subcategory are active (meaning a at least 1 activity has a value which is not "Never")
 from collections import defaultdict
 import json
 
-
+#Step 1
+#Determines which subcategory are active (meaning a at least 1 activity has a value which is not "Never")
 def determineActiveSubcategories(allActivitiesInSubcategories):
 
+    #All Subcats
     SubCategoriesMap = [
         "Social Dining",
         "Indoor Hobbies",
@@ -22,24 +21,29 @@ def determineActiveSubcategories(allActivitiesInSubcategories):
         "Essential Activities",
     ]
 
+    #Return values
     activeSubCategories = []
     activitiesForActiveSubCategories = []
     
-
+    #For every subcat
     for i in range(len(allActivitiesInSubcategories)):
         currentSubCategories = allActivitiesInSubcategories[i]
+        #To prevent dups (Don't make the same cat twice)
         added = False
 
+        #For every activity in a subcat
         for activity in currentSubCategories:
+            #For a non never value, means the subcat is active 
             if activity != "never" and not added:
                 activeSubCategories.append(SubCategoriesMap[i])
                 activitiesForActiveSubCategories.append(currentSubCategories)
                 added = True
 
-
+    #Return values
     return activeSubCategories,activitiesForActiveSubCategories
 
 #Step 2
+#For each subcategory, normalize the data (e.g., convert "once a month" to 12/365 per year) and apply the score multiplier per category.
 
 def countActivitiesPerSubCategories(allActivitiesInActiveSubCategories,activeSubCategories):
     subCategoriesMap = [
@@ -56,6 +60,7 @@ def countActivitiesPerSubCategories(allActivitiesInActiveSubCategories,activeSub
         "Essential Activities",
     ]
 
+    #Converting words into numbers (per year)
     freqMap = {
         "never" : 0,
         "1-3TimesAYear": 2/365,
@@ -69,6 +74,7 @@ def countActivitiesPerSubCategories(allActivitiesInActiveSubCategories,activeSub
         "everyDay": 1,
     }
 
+    #Multipler for each subcat 
     subCatNormalizedScore = {
         "Social Dining": 0.6,
         "Indoor Hobbies": 0.5,
@@ -83,18 +89,23 @@ def countActivitiesPerSubCategories(allActivitiesInActiveSubCategories,activeSub
         "Essential Activities": 0.3,
     }
 
+    #Has both the name of the subcar and the score 
     res = []
 
+    #For every subcat thats active
     for i in range(len(allActivitiesInActiveSubCategories)):
         currentSubCategory = allActivitiesInActiveSubCategories[i]
         sumOfActivities = 0
 
+        #For every activity in the subcat
         for activity in currentSubCategory:
+            #Get the value
             value = freqMap[activity]
+            #add to sum
             sumOfActivities = sumOfActivities + value
 
+        #Multiple by the subCat
         sumOfActivities = sumOfActivities * subCatNormalizedScore[activeSubCategories[i]]
-
         res.append([activeSubCategories[i],sumOfActivities])
 
     res.sort(key=lambda x: x[1], reverse=True)
@@ -112,6 +123,7 @@ def findPrimarySubCategories(freqPerSubCategories):
         return None, None
     
 #Step 4 Determine Current Engagement Range
+#Generate the required subcategories and frequencies for output.
 def determineCurrentEngagementRange(freqPerSubCategories, allSocClasDesires):
     engagementScore = 0
     engagementRange = ""
@@ -296,7 +308,7 @@ def determineCurrentEngagementRange(freqPerSubCategories, allSocClasDesires):
             activityToFreqMapping["Meeting People"] = "Once a Week"
             setOfSubCategories.append("Meeting People")
 
-    elif engagementScore < 3.500:
+    else:
         engagementRange = "Highly Engaged"
 
         conditions = [
@@ -342,12 +354,9 @@ def determineCurrentEngagementRange(freqPerSubCategories, allSocClasDesires):
             activityToFreqMapping["Meeting People"] = "Once a Week"
             setOfSubCategories.append("Meeting People")
 
-    else:
-        engagementRange = "Very Highly Engaged"
-
 
     indexFreqPerSubCategories = 0
-
+    #Get most active subcats and sees if they can be prescripted 
     while len(subcategoriesRecommendations) < 3 and indexFreqPerSubCategories < len(freqPerSubCategories):
 
         currentSubCat = freqPerSubCategories[indexFreqPerSubCategories]
@@ -359,19 +368,21 @@ def determineCurrentEngagementRange(freqPerSubCategories, allSocClasDesires):
 
         indexFreqPerSubCategories+=1
 
-
+    #If the less than 3 subcats have ben added, add more until we get 3 via the order, (If subcats are inactive)
     while len(subcategoriesRecommendations) < 3:
         for elem in setOfSubCategories:
             if elem not in subcategoriesRecommendations:
                 frequency = activityToFreqMapping.get(elem, "Frequency Not Available")  # Default if no mapping found
                 subcategoriesRecommendations.append((elem, frequency))  # Append a tuple with activity name and frequency
-
+            
+            #Get out to ensure at most 3 categories are selected
             if len(subcategoriesRecommendations) == 3:
                 break
 
     return engagementScore, engagementRange, subcategoriesRecommendations
 
 #Step 5
+#Using the backend, retrieve all activities associated with the selected subcategories.
 def getSubCategoriesActivities(subcategories):
     #Opens files and loads data
     with open("storagefiles/activities.json", 'r') as file:

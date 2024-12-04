@@ -1,16 +1,11 @@
 
+#Imports
 from flask import Flask, render_template, request
 from algo import *
 #from pymongo import MongoClient
 
 app = Flask(__name__)
 
-# Connect to local MongoDB
-# client = MongoClient('mongodb://localhost:27017/')
-# db = client['local']  # Database name
-# collectionUser = db['ROSIUserConn']  # Collection name
-# collectionActivity = db['ROSIActivityConn']  # Collection name
-# collectionSocialClassifier = db['ROSISocialClassifierConn']  # Collection name
 
 #℞OSI, not ROSI
 
@@ -23,6 +18,10 @@ def home():
 @app.route('/addUser')
 def page1():
     return render_template('addUser.html')
+
+@app.route('/addActivity')
+def page2():
+    return render_template('addActivity.html')
 
 @app.route('/submitUser', methods=['POST'])
 def submitUser():
