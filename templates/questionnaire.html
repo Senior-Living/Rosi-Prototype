@@ -277,14 +277,13 @@ input[type="submit"]:focus {
         <div class="spacer"> </div>
 
         <div class="form-group">
-        <label class="section-title" for="independentTravel">10. Can you travel independently using public or personal transport?</label>
-        <label>
-            <input type="radio" id="travelYes" name="independentTravel" value="Yes" required> Yes
-        </label>
-        <label>
-            <input type="radio" id="travelNo" name="independentTravel" value="No"> No
-        </label>
+            <label class="section-title" for="independentTravel">10. Can you travel independently using public or personal transport?</label>
+            <select id="independentTravel" name="independentTravel" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
         </div>
+        
 
         <div class="spacer"> </div>
 
@@ -296,17 +295,14 @@ input[type="submit"]:focus {
         <div class="spacer"> </div>
 
         <div class="form-group">
-            <label class="section-title">11. What is your activity location preference?</label>
-
+            <label class="section-title" for="activityPreference">11. What is your activity location preference?</label>
+            <select id="activityPreference" name="activityPreference" required>
+                <option value="online">Online</option>
+                <option value="in-person">In-person</option>
+                <option value="noPreference">No preference</option>
+            </select>
         </div>
-
-        <div class="form-group">
-            <div class="radio-group">
-                <label><input type="radio" name="activityPreference" value="online" required>Online</label>
-                <label><input type="radio" name="activityPreference" value="in-person">In-person</label>
-                <label><input type="radio" name="activityPreference" value="noPreference">No preference</label>
-            </div>
-        </div>
+        
 
         <div class="spacer"> </div>
         
@@ -326,35 +322,29 @@ input[type="submit"]:focus {
         <div class="spacer"> </div>
         
         <div class="form-group">
-            <label class="section-title">12. What is your preferred group size for activities?</label>
+            <label class="section-title" for="groupSizePreference">12. What is your preferred group size for activities?</label>
+            <select id="groupSizePreference" name="groupSizePreference" required>
+                <option value="small">2-5 persons (Small)</option>
+                <option value="medium">5-10 people (Medium)</option>
+                <option value="large">10+ people (Large)</option>
+                <option value="noPreference">No preference</option>
+            </select>
         </div>
-
-        <div class="form-group">
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="groupSizePreference" value="small">2-5 person (Small)</label>
-                <label><input type="checkbox" name="groupSizePreference" value="medium">5-10 people (Medium)</label>
-                <label><input type="checkbox" name="groupSizePreference" value="large">10+ people (Large)</label>
-                <label><input type="checkbox" name="groupSizePreference" value="noPreference">No preference</label>
-            </div>
-        </div>
-
-        <div class="spacer"></div>
         
-        <div class="form-group">
-            <label class="section-title">13. What is your preferred time for doing activities?</label>
-        </div>
-
         <div class="spacer"></div>
 
         <div class="form-group">
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="timePreference" value="morning">Morning (7am-12pm)</label>
-                <label><input type="checkbox" name="timePreference" value="afternoon">Afternoon(12pm-5pm)</label>
-                <label><input type="checkbox" name="timePreference" value="evening">Evening(5pm-9pm)</label>
-                <label><input type="checkbox" name="timePreference" value="noPreference">No preference</label>
-            </div>
+            <label class="section-title" for="timePreference">13. What is your time preference?</label>
+            <select id="timePreference" name="timePreference" required>
+                <option value="morning">Morning (7am-12pm)</option>
+                <option value="afternoon">Afternoon (12pm-5pm)</option>
+                <option value="evening">Evening (5pm-9pm)</option>
+                <option value="noPreference">No preference</option>
+            </select>
         </div>
         
+        <div class="spacer"></div>
+
         
         <div class="form-group">
             <label class="section-title" for="language">14. What is your preferred language for activities?:</label>

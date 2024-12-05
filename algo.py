@@ -368,10 +368,12 @@ def determineCurrentEngagementRange(freqPerSubCategories, allSocClasDesires):
 
         indexFreqPerSubCategories+=1
 
+    print(subcategoriesRecommendations)
+
     #If the less than 3 subcats have ben added, add more until we get 3 via the order, (If subcats are inactive)
     while len(subcategoriesRecommendations) < 3:
         for elem in setOfSubCategories:
-            if elem not in subcategoriesRecommendations:
+            if elem not in [item[0] for item in subcategoriesRecommendations]:
                 frequency = activityToFreqMapping.get(elem, "Frequency Not Available")  # Default if no mapping found
                 subcategoriesRecommendations.append((elem, frequency))  # Append a tuple with activity name and frequency
             

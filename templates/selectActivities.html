@@ -59,6 +59,24 @@
             margin: 20px 0;
         }
 
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #000000;
+            background-color: #F6E58D;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #BDA55D;
+        }
+
     </style>
 </head>
 <body>
@@ -94,7 +112,7 @@
         </div>
         {% endfor %}
 
-        <button type="submit">Submit</button>
+        <button class="button" type="submit">Submit</button>
 
         <div class="section">
             <h2 class="section-title">Our Funders</h2>
