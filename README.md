@@ -35,4 +35,3 @@
 
 ---
 
-### [Insert Images Here]
