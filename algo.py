@@ -368,7 +368,6 @@ def determineCurrentEngagementRange(freqPerSubCategories, allSocClasDesires):
 
         indexFreqPerSubCategories+=1
 
-    print(subcategoriesRecommendations)
 
     #If the less than 3 subcats have ben added, add more until we get 3 via the order, (If subcats are inactive)
     while len(subcategoriesRecommendations) < 3:
